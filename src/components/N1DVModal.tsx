@@ -1,11 +1,6 @@
-import { X, ExternalLink } from 'lucide-react';
+import { X } from 'lucide-react';
 import { useEffect } from 'react';
-import { ENZYME_VAULT_ADDRESS } from '../api/enzymeSubgraph';
-
-/** Vault app / explorer link. Set VITE_VAULT_APP_URL in .env to override. */
-const VAULT_APP_URL =
-  (import.meta.env?.VITE_VAULT_APP_URL as string) ||
-  `https://basescan.org/address/${ENZYME_VAULT_ADDRESS}`;
+import { Link } from 'react-router-dom';
 
 interface N1DVModalProps {
   isOpen: boolean;
@@ -55,7 +50,7 @@ export function N1DVModal({ isOpen, onClose }: N1DVModalProps) {
             <h2 className="text-2xl font-bold text-white">N1DV Investment Thesis</h2>
             <button
               onClick={onClose}
-              className="p-2 text-gray-400 hover:text-white hover:bg-white/10 transition-colors rounded-lg"
+              className="p-2 text-gray-400 hover:text-white hover:bg-white/10 transition-colors"
               aria-label="Close modal"
             >
               <X size={24} />
@@ -325,15 +320,13 @@ export function N1DVModal({ isOpen, onClose }: N1DVModalProps) {
           </div>
 
           <div className="sticky bottom-0 px-8 py-6 border-t border-white/10 bg-[#0A0A0A]/95 backdrop-blur-sm flex justify-center">
-            <a
-              href={VAULT_APP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/vault"
+              onClick={onClose}
               className="inline-flex items-center gap-3 px-8 py-3 bg-gray-100 text-black text-base font-bold hover:bg-gray-200 transition-all shadow-lg"
             >
               Enter Vault
-              <ExternalLink size={18} />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

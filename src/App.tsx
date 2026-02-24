@@ -22,6 +22,7 @@ import { UniswapFeeSwitchDilemma } from './pages/UniswapFeeSwitchDilemma';
 import { OptimismDCFAnalysis } from './pages/OptimismDCFAnalysis';
 import { ScrollToTop } from './components/ScrollToTop';
 import { ReferralRegister } from './components/ReferralRegister';
+import { VaultDetail } from './pages/VaultDetail';
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
         <Route path="/insights/uniswap-fee-switch-dilemma" element={<UniswapFeeSwitchDilemma />} />
         <Route path="/insights/optimism-op-dcf-analysis" element={<OptimismDCFAnalysis />} />
         <Route path="/partners" element={<Partners />} />
+        <Route path="/vault" element={<VaultDetail />} />
         <Route path="/referral" element={<ReferralRegister />} />
       </Routes>
     </>

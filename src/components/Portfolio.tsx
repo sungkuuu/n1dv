@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ExternalLink } from 'lucide-react';
+import { MultiChainBadge } from './MultiChainBadge';
 import {
   fetchEnzymeVaultData,
   ENZYME_VAULT_ADDRESS,
@@ -75,10 +76,7 @@ export const Portfolio = () => {
         <h1 className="text-3xl sm:text-5xl font-bold mb-12">Live Onchain Portfolio</h1>
 
         <div className="mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 border border-emerald-600/30 bg-emerald-950/20 text-white text-sm font-mono-num">
-            <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-            Live Onchain Feed
-          </div>
+          <MultiChainBadge />
         </div>
 
         <div className="border border-white/10 bg-[#111111] p-8 mb-8 rounded">

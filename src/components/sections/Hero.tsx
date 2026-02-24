@@ -1,5 +1,6 @@
 import React from 'react';
-import { ExternalLink } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
 export function Hero() {
   return (
@@ -25,15 +26,13 @@ export function Hero() {
         </p>
 
         <div className="flex justify-center">
-          <a
-            href="https://app.nexusone.io"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/vault"
             className="group flex items-center gap-2 bg-white px-8 py-4 text-lg font-bold text-black transition-all hover:bg-neutral-200 rounded-lg"
           >
             View Live Vault (N1DV)
-            <ExternalLink className="h-5 w-5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-          </a>
+            <ArrowRight className="h-5 w-5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+          </Link>
         </div>
       </div>
     </section>

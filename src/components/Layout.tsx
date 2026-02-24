@@ -1,21 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { ExternalLink, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { ENZYME_VAULT_ADDRESS } from '../api/enzymeSubgraph';
+import { VaultAccessDrawer } from './VaultAccessDrawer';
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
-/** Vault app / explorer link. Set VITE_VAULT_APP_URL in .env to override. */
-const VAULT_APP_URL =
-  (import.meta.env?.VITE_VAULT_APP_URL as string) ||
-  `https://basescan.org/address/${ENZYME_VAULT_ADDRESS}`;
-
 export function Layout({ children }: LayoutProps) {
   const navigate = useNavigate();
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isVaultDrawerOpen, setIsVaultDrawerOpen] = useState(false);
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
@@ -102,14 +98,12 @@ export function Layout({ children }: LayoutProps) {
               Insights
             </button>
 
-            <a
-              href={VAULT_APP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gray-100 text-black px-5 py-2.5 font-bold text-xs hover:bg-gray-200 transition-colors flex items-center gap-2"
+            <button
+              onClick={() => setIsVaultDrawerOpen(true)}
+              className="bg-gray-100 text-black px-5 py-2.5 font-bold text-xs hover:bg-gray-200 transition-colors"
             >
-              Enter Vault <ExternalLink size={12}/>
-            </a>
+              Connect Wallet
+            </button>
           </div>
 
           <button
@@ -170,16 +164,16 @@ export function Layout({ children }: LayoutProps) {
               </button>
 
               <div className="mt-4 pt-4 border-t border-white/10">
-                <a
-                  href={VAULT_APP_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full bg-gray-100 text-black px-6 py-4 font-bold text-base hover:bg-gray-200 transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                <button
+                  type="button"
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    setIsVaultDrawerOpen(true);
+                  }}
+                  className="w-full bg-gray-100 text-black px-6 py-4 font-bold text-base hover:bg-gray-200 transition-colors"
                 >
-                  View Live Vault
-                  <ExternalLink size={16} />
-                </a>
+                  Connect Wallet
+                </button>
               </div>
             </nav>
           </div>
@@ -189,6 +183,8 @@ export function Layout({ children }: LayoutProps) {
       <main>
         {children}
       </main>
+
+      <VaultAccessDrawer isOpen={isVaultDrawerOpen} onClose={() => setIsVaultDrawerOpen(false)} />
 
       {/* Footer */}
       <footer className="py-16 bg-gradient-to-b from-[#0a0a0a] to-[#111111] border-t border-white/10">

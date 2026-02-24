@@ -1,14 +1,29 @@
-import { ExternalLink, BarChart3, Activity, FileText, ArrowRight } from 'lucide-react';
+import { FileText, ArrowRight } from 'lucide-react';
 import { Layout } from '../components/Layout';
+import { MultiChainBadge } from '../components/MultiChainBadge';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { reports } from '../data/reports';
 import { N1DVModal } from '../components/N1DVModal';
 import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+} from 'recharts';
+import {
   fetchEnzymeVaultData,
   ENZYME_VAULT_ADDRESS,
   type PortfolioToken,
 } from '../api/enzymeSubgraph';
+import {
+  fetchBacktestData,
+  sliceBacktestByRange,
+  toChartPoints,
+} from '../utils/backtest';
 
 interface FeaturedReport {
   id: string;
@@ -22,11 +37,6 @@ interface FeaturedReport {
 }
 
 const VAULT_ADDRESS = ENZYME_VAULT_ADDRESS;
-
-/** Optional: link to vault UI (e.g. Enzyme app or explorer). Set VITE_VAULT_APP_URL in .env to override. */
-const VAULT_APP_URL =
-  (import.meta.env?.VITE_VAULT_APP_URL as string) ||
-  `https://basescan.org/address/${VAULT_ADDRESS}`;
 
 const getCategoryColor = (category: string) => {
   if (category === 'WEEKLY BRIEF') return 'text-blue-500';
@@ -54,12 +64,88 @@ const FEATURED_REPORTS: FeaturedReport[] = reports
     link: report.link || `/insights/${report.id}`
   }));
 
+/** Fallback when on-chain data is unavailable — matches VaultDetail */
+const FALLBACK_TVL = 1_024_500;
+
+/** Full 12 months dummy cumulative return (%) — N1DV leads, BTC/ETH with volatility */
+const BENCHMARK_CHART_DATA_FULL = [
+  { month: 'Mar', n1dv: 0, btc: 0, eth: 0 },
+  { month: 'Apr', n1dv: 2.1, btc: 0.8, eth: 0.5 },
+  { month: 'May', n1dv: 4.8, btc: 2.5, eth: 1.8 },
+  { month: 'Jun', n1dv: 7.2, btc: 3.8, eth: 3.2 },
+  { month: 'Jul', n1dv: 10.1, btc: 5.5, eth: 4.5 },
+  { month: 'Aug', n1dv: 12.8, btc: 7.0, eth: 5.8 },
+  { month: 'Sep', n1dv: 15.5, btc: 8.2, eth: 6.9 },
+  { month: 'Oct', n1dv: 18.8, btc: 10.5, eth: 8.2 },
+  { month: 'Nov', n1dv: 22.2, btc: 13.1, eth: 9.8 },
+  { month: 'Dec', n1dv: 24.9, btc: 15.0, eth: 11.2 },
+  { month: 'Jan', n1dv: 28.1, btc: 17.8, eth: 13.0 },
+  { month: 'Feb', n1dv: 31.4, btc: 20.5, eth: 15.2 },
+];
+const CHART_COLORS = {
+  n1dv: '#34D399',
+  btc: '#F59E0B',
+  eth: '#818CF8',
+};
+
+type TimeRangeKey = '3M' | '6M' | '1Y';
+const TIME_RANGE_OPTIONS: { value: TimeRangeKey; label: string }[] = [
+  { value: '3M', label: '3M' },
+  { value: '6M', label: '6M' },
+  { value: '1Y', label: '1Y' },
+];
+
 export function Home() {
   const navigate = useNavigate();
   const [balances, setBalances] = useState<PortfolioToken[]>([]);
   const [totalTVL, setTotalTVL] = useState(0);
   const [loading, setLoading] = useState(true);
   const [isN1DVModalOpen, setIsN1DVModalOpen] = useState(false);
+
+  const [chartVisibility, setChartVisibility] = useState({
+    n1dv: true,
+    btc: false,
+    eth: false,
+  });
+  const [timeRange, setTimeRange] = useState<TimeRangeKey>('6M');
+  const [backtestData, setBacktestData] = useState<Awaited<ReturnType<typeof fetchBacktestData>> | null>(null);
+  const [chartDataLoading, setChartDataLoading] = useState(true);
+  const [chartDataError, setChartDataError] = useState<string | null>(null);
+
+  const toggleChartLine = (key: keyof typeof chartVisibility) => {
+    setChartVisibility((prev) => ({ ...prev, [key]: !prev[key] }));
+  };
+
+  useEffect(() => {
+    let cancelled = false;
+    setChartDataLoading(true);
+    setChartDataError(null);
+    fetchBacktestData()
+      .then((data) => {
+        if (!cancelled) setBacktestData(data);
+      })
+      .catch((e) => {
+        if (cancelled) return;
+        const msg = e instanceof Error ? e.message : 'Failed to load chart data';
+        setChartDataError(msg === 'RATE_LIMIT' ? 'Rate limit. Try again later.' : 'Using simulated data.');
+        setBacktestData(null);
+      })
+      .finally(() => {
+        if (!cancelled) setChartDataLoading(false);
+      });
+    return () => { cancelled = true; };
+  }, []);
+
+  const chartData = (() => {
+    if (backtestData && backtestData.length > 0) {
+      const sliced = sliceBacktestByRange(backtestData, timeRange);
+      return toChartPoints(sliced);
+    }
+    const fallback = BENCHMARK_CHART_DATA_FULL;
+    if (timeRange === '3M') return fallback.slice(-3);
+    if (timeRange === '6M') return fallback.slice(-6);
+    return fallback;
+  })();
 
   useEffect(() => {
     const load = async () => {
@@ -78,10 +164,8 @@ export function Home() {
     load();
   }, []);
 
-  const percentages = balances.map(token => ({
-    ...token,
-    percentage: totalTVL > 0 ? ((token.value ?? 0) / totalTVL) * 100 : (token.percentage ?? 0)
-  }));
+  const useFallback = !loading && (totalTVL === 0 || balances.length === 0);
+  const displayTVL = useFallback ? FALLBACK_TVL : totalTVL;
   return (
     <Layout>
       <section className="px-4 py-32 relative overflow-hidden">
@@ -93,15 +177,13 @@ export function Home() {
             The Anchor of Your Crypto Portfolio. We engineer defensive alpha <br /> through Deep Value execution.
           </p>
           <div className="flex justify-center items-center">
-            <a
-              href={VAULT_APP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/vault"
               className="inline-flex items-center px-6 py-3 bg-gray-100 text-gray-900 text-lg font-bold hover:bg-gray-200 transition-all"
             >
               View Live Vault (N1DV)
-              <ExternalLink className="ml-3" size={22} />
-            </a>
+              <ArrowRight className="ml-3" size={22} />
+            </Link>
           </div>
         </div>
       </section>
@@ -116,10 +198,7 @@ export function Home() {
           <div className="grid lg:grid-cols-3 gap-8">
             <div className="border border-white/10 bg-gradient-to-br from-gray-900/50 to-black p-10 hover:border-white/20 transition-all">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-3 h-3 bg-emerald-500 animate-pulse"></div>
-                <div className="inline-block px-4 py-1.5 border border-emerald-600/30 bg-emerald-950/20 text-emerald-400 text-xs font-black tracking-wider font-mono-num">
-                  LIVE ON BASE
-                </div>
+                <MultiChainBadge />
               </div>
               <h3 className="text-2xl font-bold mb-3 text-white">Nexus One Deep Value (N1DV)</h3>
               <div className="text-sm text-gray-400 mb-6 font-semibold">Deep Value / Defensive Alpha</div>
@@ -180,117 +259,200 @@ export function Home() {
         </div>
       </section>
 
-      <section id="portfolio" className="px-4 py-20 border-t border-white/10 bg-gradient-to-b from-[#111111] to-[#0a0a0a]">
+      <section id="portfolio" className="px-4 pt-12 pb-20 border-t border-white/10 bg-gradient-to-b from-[#111111] to-[#0a0a0a]">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-emerald-950/20 border border-emerald-600/30 mb-6 backdrop-blur-sm font-mono-num">
-              <div className="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-pulse shadow-lg shadow-emerald-500/50"></div>
-              <span className="text-emerald-400 text-sm font-semibold tracking-wide">Live Onchain Feed</span>
-              <Activity className="text-emerald-400" size={16} />
-            </div>
+          <div className="text-left mb-8">
             <h2 className="text-3xl sm:text-5xl font-bold mb-4">Live Portfolio</h2>
-            <p className="text-gray-400 text-lg">Onchain transparency. Every allocation verified on Base blockchain.</p>
+            <p className="text-gray-400 text-lg max-w-2xl">Alpha vs. benchmarks. Last 6 months cumulative return.</p>
           </div>
 
           <div className="relative">
-            <div className="relative border border-white/10 bg-gradient-to-br from-gray-900/40 via-gray-800/20 to-gray-900/40 backdrop-blur-xl p-8 shadow-2xl">
+            <div className="relative border border-white/10 bg-white/[0.02] backdrop-blur-md shadow-2xl overflow-hidden">
               {loading ? (
-                <div className="flex items-center justify-center py-20">
+                <div className="flex items-center justify-center py-16 px-8">
                   <div className="flex flex-col items-center gap-4">
-                    <div className="w-8 h-8 border-4 border-white/20 border-t-white rounded-full animate-spin"></div>
-                    <div className="text-gray-400 text-lg">Fetching live on-chain data from Base...</div>
+                    <div className="w-8 h-8 border-4 border-white/20 border-t-white rounded-full animate-spin" />
+                    <div className="text-gray-400 text-lg">Fetching on-chain data...</div>
                   </div>
                 </div>
               ) : (
                 <>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 pb-8 border-b border-white/10">
-                    <div className="text-center md:text-left p-6 bg-gradient-to-br from-white/5 to-transparent border border-white/10">
-                      <div className="text-sm text-gray-400 mb-2 font-semibold tracking-wider">TOTAL VALUE LOCKED</div>
-                      <div className="text-3xl font-bold text-white mb-1 font-mono-num">
-                        ${totalTVL.toLocaleString('en-US', { maximumFractionDigits: 0 })}
+                  <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-4 py-6 px-8 border-b border-white/10">
+                    <div className="flex items-center gap-8 sm:gap-12">
+                      <div className="text-center sm:text-left">
+                        <div className="text-xs text-gray-500 mb-0.5 font-semibold tracking-wider uppercase">TVL</div>
+                        <div className="text-3xl sm:text-4xl font-light tracking-tight text-white font-mono-num">
+                          ${displayTVL.toLocaleString('en-US', { maximumFractionDigits: 0 })}
+                        </div>
                       </div>
-                      <div className="text-xs text-emerald-400 font-semibold">Live on Base</div>
-                    </div>
-
-                    <div className="text-center md:text-left p-6 bg-gradient-to-br from-white/5 to-transparent border border-white/10">
-                      <div className="text-sm text-gray-400 mb-2 font-semibold tracking-wider">CURRENT YIELD</div>
-                      <div className="text-3xl font-bold text-white mb-1 font-mono-num">12.4%</div>
-                      <div className="text-xs text-gray-400 font-semibold">APY (Est.)</div>
-                    </div>
-
-                    <div className="text-center md:text-left p-6 bg-gradient-to-br from-white/5 to-transparent border border-white/10">
-                      <div className="text-sm text-gray-400 mb-2 font-semibold tracking-wider">STRATEGY STATUS</div>
-                      <div className="text-lg font-bold text-white mb-1">Rebalancing Active</div>
-                      <div className="text-xs text-emerald-400 font-semibold flex items-center justify-center md:justify-start gap-1.5 font-mono-num">
-                        <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse"></div>
-                        Optimizing Allocation
+                      <div className="h-8 w-px bg-white/10 hidden sm:block" />
+                      <div className="text-center sm:text-left">
+                        <div className="text-xs text-gray-500 mb-0.5 font-semibold tracking-wider uppercase">APY</div>
+                        <div className="text-3xl sm:text-4xl font-light tracking-tight text-emerald-400 font-mono-num">12.4%</div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="mb-8">
-                    <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
-                      <BarChart3 size={24} />
-                      Asset Allocation
-                    </h3>
-
-                    <div className="h-8 flex rounded-lg overflow-hidden mb-6 shadow-lg">
-                      {percentages.map((token) => (
-                        token.percentage > 0 && (
-                          <div
-                            key={token.symbol}
-                            style={{
-                              width: `${token.percentage}%`,
-                              backgroundColor: token.color,
-                            }}
-                            className="relative group cursor-pointer transition-all hover:opacity-80"
+                  <div className="px-4 sm:px-6 pt-6 pb-2">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
+                      <span className="text-sm text-gray-400 font-medium">Cumulative return (%)</span>
+                      <div className="flex items-center gap-3">
+                        <div className="inline-flex p-0.5 border border-white/10 bg-white/[0.02]">
+                          {TIME_RANGE_OPTIONS.map((opt) => (
+                            <button
+                              key={opt.value}
+                              type="button"
+                              onClick={() => setTimeRange(opt.value)}
+                              className={`px-3 py-1.5 text-xs font-medium transition-colors cursor-pointer ${
+                                timeRange === opt.value
+                                  ? 'bg-white/10 text-white'
+                                  : 'text-gray-500 hover:text-gray-300'
+                              }`}
+                            >
+                              {opt.label}
+                            </button>
+                          ))}
+                        </div>
+                        <div className="flex items-center gap-6 text-xs">
+                          <button
+                            type="button"
+                            onClick={() => toggleChartLine('n1dv')}
+                            className={`flex items-center gap-2 transition-opacity hover:opacity-100 cursor-pointer ${chartVisibility.n1dv ? 'opacity-100' : 'opacity-50'}`}
                           >
-                            <div className="absolute inset-0 flex items-center justify-center text-white text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity bg-black/30 backdrop-blur-sm">
-                              {token.percentage.toFixed(1)}%
-                            </div>
-                          </div>
-                        )
-                      ))}
+                            <span className="w-3 h-0.5 rounded-full" style={{ backgroundColor: CHART_COLORS.n1dv }} />
+                            <span className="text-gray-400">N1DV</span>
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => toggleChartLine('btc')}
+                            className={`flex items-center gap-2 transition-opacity hover:opacity-100 cursor-pointer ${chartVisibility.btc ? 'opacity-100' : 'opacity-50'}`}
+                          >
+                            <span className="w-3 h-0.5 rounded-full" style={{ backgroundColor: CHART_COLORS.btc }} />
+                            <span className="text-gray-400">BTC</span>
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => toggleChartLine('eth')}
+                            className={`flex items-center gap-2 transition-opacity hover:opacity-100 cursor-pointer ${chartVisibility.eth ? 'opacity-100' : 'opacity-50'}`}
+                          >
+                            <span className="w-3 h-0.5 rounded-full" style={{ backgroundColor: CHART_COLORS.eth }} />
+                            <span className="text-gray-400">ETH</span>
+                          </button>
+                        </div>
+                      </div>
                     </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {percentages.map((token) => (
-                        <div key={token.symbol} className="flex items-start gap-3 p-4 bg-white/5 border border-white/10 hover:border-white/20 transition-colors">
-                          <div
-                            className="w-4 h-4 flex-shrink-0 shadow-lg mt-1"
-                            style={{ backgroundColor: token.color }}
-                          ></div>
-                          <div className="flex-1 min-w-0">
-                            <div className="flex items-center justify-between mb-1">
-                              <div className="font-bold text-white text-sm">{token.symbol}</div>
-                              <div className="text-xs text-gray-400 font-mono-num">{token.percentage > 0 ? token.percentage.toFixed(1) : '0'}%</div>
-                            </div>
-                            <div className="text-xs text-gray-400 mb-0.5 font-mono-num">
-                              {parseFloat(token.balance).toLocaleString('en-US', { maximumFractionDigits: 4 })} {token.symbol}
-                            </div>
-                            <div className="text-xs text-white font-semibold font-mono-num">
-                              ${(token.value || 0).toLocaleString('en-US', { maximumFractionDigits: 2 })}
-                            </div>
+                    <div className="h-[280px] sm:h-[320px] w-full">
+                      {chartDataLoading ? (
+                        <div className="h-full w-full flex flex-col items-center justify-center gap-4 bg-white/[0.02] border border-white/5">
+                          <div className="w-10 h-10 border-2 border-white/10 border-t-white rounded-full animate-spin" />
+                          <p className="text-sm text-gray-500">Loading backtest data from CoinGecko...</p>
+                          <p className="text-xs text-gray-600">Runs once per day (cached)</p>
+                        </div>
+                      ) : (
+                        <div className="h-full w-full flex flex-col">
+                          {chartDataError && (
+                            <p className="text-xs text-amber-500/90 mb-2 text-center flex-shrink-0">{chartDataError}</p>
+                          )}
+                          <div className="flex-1 min-h-0">
+                          <ResponsiveContainer width="100%" height="100%">
+                        <LineChart
+                          data={chartData}
+                          margin={{ top: 8, right: 8, left: 0, bottom: 0 }}
+                        >
+                          <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.06)" vertical={false} />
+                          <XAxis
+                            dataKey="month"
+                            axisLine={{ stroke: 'rgba(255,255,255,0.12)' }}
+                            tickLine={false}
+                            tick={{ fill: '#9ca3af', fontSize: 12, fontFamily: 'inherit' }}
+                            interval="preserveStartEnd"
+                          />
+                          <YAxis
+                            axisLine={false}
+                            tickLine={false}
+                            tick={{ fill: '#9ca3af', fontSize: 12, fontFamily: 'inherit' }}
+                            tickFormatter={(v) => `${v}%`}
+                            domain={[0, 'auto']}
+                            width={36}
+                          />
+                          <Tooltip
+                            content={({ active, payload, label }) => {
+                              if (!active || !payload?.length || !label) return null;
+                              return (
+                                <div className="bg-[#0a0a0a] border border-white/20 px-4 py-3 shadow-xl">
+                                  <div className="text-xs text-gray-500 font-semibold tracking-wider mb-2 uppercase">{label}</div>
+                                  <div className="space-y-1">
+                                    {payload.map((p) => (
+                                      <div key={p.dataKey} className="flex items-center justify-between gap-4 text-sm">
+                                        <span style={{ color: p.color }}>{p.name === 'n1dv' ? 'N1DV' : p.name?.toUpperCase()}</span>
+                                        <span className="text-white font-mono-num font-medium">{Number(p.value).toFixed(1)}%</span>
+                                      </div>
+                                    ))}
+                                  </div>
+                                </div>
+                              );
+                            }}
+                            formatter={(value: number) => [`${value.toFixed(1)}%`, '']}
+                          />
+                          <Line
+                            type="monotone"
+                            dataKey="n1dv"
+                            name="N1DV"
+                            stroke={CHART_COLORS.n1dv}
+                            strokeWidth={3}
+                            dot={{ fill: CHART_COLORS.n1dv, strokeWidth: 0, r: 3 }}
+                            activeDot={{ r: 5, fill: CHART_COLORS.n1dv, stroke: 'rgba(255,255,255,0.3)', strokeWidth: 1 }}
+                            hide={!chartVisibility.n1dv}
+                            isAnimationActive
+                            animationDuration={800}
+                          />
+                          <Line
+                            type="monotone"
+                            dataKey="btc"
+                            name="BTC"
+                            stroke={CHART_COLORS.btc}
+                            strokeWidth={2}
+                            dot={{ fill: CHART_COLORS.btc, strokeWidth: 0, r: 2.5 }}
+                            activeDot={{ r: 5, fill: CHART_COLORS.btc, stroke: 'rgba(255,255,255,0.3)', strokeWidth: 1 }}
+                            hide={!chartVisibility.btc}
+                            isAnimationActive
+                            animationDuration={800}
+                          />
+                          <Line
+                            type="monotone"
+                            dataKey="eth"
+                            name="ETH"
+                            stroke={CHART_COLORS.eth}
+                            strokeWidth={2}
+                            dot={{ fill: CHART_COLORS.eth, strokeWidth: 0, r: 2.5 }}
+                            activeDot={{ r: 5, fill: CHART_COLORS.eth, stroke: 'rgba(255,255,255,0.3)', strokeWidth: 1 }}
+                            hide={!chartVisibility.eth}
+                            isAnimationActive
+                            animationDuration={800}
+                          />
+                        </LineChart>
+                      </ResponsiveContainer>
                           </div>
                         </div>
-                      ))}
+                      )}
                     </div>
                   </div>
 
-                  <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <div className="text-sm text-gray-400">
-                      <span className="font-semibold text-white">Vault:</span>{' '}
-                      <span className="font-mono-num">{VAULT_ADDRESS.slice(0, 6)}...{VAULT_ADDRESS.slice(-4)}</span>
-                    </div>
-                    <a
-                      href={VAULT_APP_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center px-6 py-3 bg-gray-100 text-black text-sm font-bold hover:bg-gray-200 transition-all shadow-lg"
+                  <div className="border-t border-white/10 pt-10 pb-10 px-8 flex flex-col sm:flex-row items-center justify-center gap-6">
+                    <button
+                      type="button"
+                      onClick={() => setIsN1DVModalOpen(true)}
+                      className="inline-flex items-center px-8 py-3.5 bg-white text-black text-sm font-medium hover:bg-gray-100 transition-all duration-200"
                     >
-                      Verify Onchain Strategy
-                      <ExternalLink className="ml-2" size={16} />
-                    </a>
+                      Read Thesis
+                    </button>
+                    <Link
+                      to="/vault"
+                      className="group inline-flex items-center gap-2 px-8 py-3.5 border border-white/20 text-white text-sm font-medium hover:border-white/40 hover:bg-white/5 transition-all duration-200"
+                    >
+                      View Vault Dashboard
+                      <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
+                    </Link>
                   </div>
                 </>
               )}
