@@ -74,7 +74,7 @@ export function Insights() {
                 onClick={() => handleReportClick(report)}
                 className="border border-white/10 bg-gradient-to-br from-gray-900/50 to-black p-10 hover:border-white/30 transition-all cursor-pointer group rounded-xl h-full flex flex-col"
               >
-                <div className={`inline-block px-3 py-1 text-xs font-bold mb-3 uppercase tracking-wider ${getCategoryStyle(report.category)}`}>
+                <div className={`inline-block w-fit px-3 py-1 text-xs font-bold mb-3 uppercase tracking-wider ${getCategoryStyle(report.category)}`}>
                   {report.category}
                 </div>
                 <div className="text-xs text-gray-500 mb-4">{report.date}</div>
@@ -101,7 +101,7 @@ export function Insights() {
               <X size={28} />
             </button>
 
-            <div className={`inline-block px-3 py-1 text-xs font-bold mb-4 uppercase tracking-wider ${getCategoryStyle(selectedReport.category)}`}>
+            <div className={`inline-block w-fit px-3 py-1 text-xs font-bold mb-4 uppercase tracking-wider ${getCategoryStyle(selectedReport.category)}`}>
               {selectedReport.category}
             </div>
 

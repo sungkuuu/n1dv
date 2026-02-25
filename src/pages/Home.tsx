@@ -484,9 +484,9 @@ export function Home() {
                 className="group p-10 bg-[#0a0a0a] border border-white/10 hover:border-white/30 hover:-translate-y-1 transition-all duration-300 flex flex-col h-full min-h-[320px] cursor-pointer"
               >
                 <div className="flex-1 flex flex-col">
-                  <div className="mb-4 flex items-center gap-2">
+                  <div className="mb-4 flex items-center gap-2 w-fit">
                     {report.category === 'DEEP RESEARCH' ? (
-                      <span className="bg-transparent border border-emerald-500 text-emerald-500 rounded-md px-3 py-1 text-xs font-bold uppercase tracking-wider">
+                      <span className="inline-block w-fit bg-transparent border border-emerald-500 text-emerald-500 rounded-md px-3 py-1 text-xs font-bold uppercase tracking-wider">
                         {report.category}
                       </span>
                     ) : (
