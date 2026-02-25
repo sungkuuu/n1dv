@@ -43,7 +43,7 @@ export function Insights() {
       case 'WEEKLY BRIEF':
         return 'bg-cyan-900/50 text-cyan-300 border border-cyan-600/30';
       case 'DEEP RESEARCH':
-        return 'bg-emerald-900/50 text-emerald-300 border border-emerald-600/30';
+        return 'bg-transparent border border-emerald-500 text-emerald-500 rounded-md px-3 py-1 text-xs font-bold uppercase tracking-wider';
       default:
         return 'bg-[#333333] text-gray-300';
     }

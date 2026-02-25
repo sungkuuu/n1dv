@@ -23,6 +23,7 @@ import { OptimismDCFAnalysis } from './pages/OptimismDCFAnalysis';
 import { ScrollToTop } from './components/ScrollToTop';
 import { ReferralRegister } from './components/ReferralRegister';
 import { VaultDetail } from './pages/VaultDetail';
+import { BitcoinMarketCycle2026Analysis } from './pages/BitcoinMarketCycle2026Analysis';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         <Route path="/thesis" element={<Thesis />} />
         <Route path="/letter" element={<Letter />} />
         <Route path="/insights" element={<Insights />} />
+        <Route path="/research/bitcoin-market-cycle-2026-analysis" element={<BitcoinMarketCycle2026Analysis />} />
         <Route path="/insights/ethereum-agentic-layer" element={<EthereumAgenticLayer />} />
         <Route path="/insights/fat-app-thesis" element={<FatAppThesis />} />
         <Route path="/insights/bittensor-500x-narrative" element={<BittensorNarrative />} />

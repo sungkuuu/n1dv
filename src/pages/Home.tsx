@@ -485,10 +485,18 @@ export function Home() {
               >
                 <div className="flex-1 flex flex-col">
                   <div className="mb-4 flex items-center gap-2">
-                    <FileText className={`w-4 h-4 ${report.categoryColor}`} />
-                    <span className={`text-xs font-bold tracking-wider uppercase ${report.categoryColor}`}>
-                      {report.category}
-                    </span>
+                    {report.category === 'DEEP RESEARCH' ? (
+                      <span className="bg-transparent border border-emerald-500 text-emerald-500 rounded-md px-3 py-1 text-xs font-bold uppercase tracking-wider">
+                        {report.category}
+                      </span>
+                    ) : (
+                      <>
+                        <FileText className={`w-4 h-4 ${report.categoryColor}`} />
+                        <span className={`text-xs font-bold tracking-wider uppercase ${report.categoryColor}`}>
+                          {report.category}
+                        </span>
+                      </>
+                    )}
                   </div>
                   <h3 className="text-xl font-bold mb-4 text-white group-hover:text-gray-200 transition-colors">
                     {report.title}

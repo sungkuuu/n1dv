@@ -11,6 +11,16 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'bitcoin-market-cycle-2026-analysis',
+    title: '2026 BTC Market Cycle: 70% Crash vs. $60K Floor',
+    date: 'Feb 26, 2026',
+    category: 'DEEP RESEARCH',
+    summary: 'A comprehensive probability assessment comparing a 70% historical drawdown against a $60K structural support driven by institutional ETF flows and on-chain fundamentals.',
+    author: 'Nexus One Research Desk',
+    content: '',
+    link: '/research/bitcoin-market-cycle-2026-analysis'
+  },
+  {
     id: 'optimism-op-dcf-analysis',
     title: '90% Margins & The $270M Wipeout: Why Base Really Left Optimism',
     date: 'Feb 23, 2026',

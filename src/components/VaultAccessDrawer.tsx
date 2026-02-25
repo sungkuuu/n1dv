@@ -34,7 +34,7 @@ export function VaultAccessDrawer({ isOpen, onClose }: VaultAccessDrawerProps) {
 
       {/* Panel */}
       <div
-        className="absolute top-0 right-0 h-full w-full max-w-md bg-[#0a0a0a] border-l border-white/20 shadow-2xl flex flex-col"
+        className="absolute top-0 right-0 h-full w-full sm:w-[380px] bg-[#0a0a0a] border-l border-white/20 shadow-2xl flex flex-col"
         style={{ animation: 'slideInRight 0.25s ease-out' }}
       >
         <style>{`
@@ -45,7 +45,7 @@ export function VaultAccessDrawer({ isOpen, onClose }: VaultAccessDrawerProps) {
         `}</style>
 
         {/* Header */}
-        <div className="flex items-center justify-between px-8 py-8 border-b border-white/10">
+        <div className="flex items-center justify-between px-6 py-8 border-b border-white/10">
           <h2 className="text-3xl font-bold tracking-tight text-white">
             Access N1DV Vault
           </h2>
@@ -60,7 +60,7 @@ export function VaultAccessDrawer({ isOpen, onClose }: VaultAccessDrawerProps) {
         </div>
 
         {/* Content */}
-        <div className="flex-1 overflow-y-auto px-8 py-10">
+        <div className="flex-1 overflow-y-auto px-6 py-10">
           <p className="text-gray-400 font-light text-sm leading-relaxed mb-10">
             현재 N1DV는 프라이빗 베타 기간입니다.
           </p>
