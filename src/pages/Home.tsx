@@ -107,7 +107,7 @@ export function Home() {
     btc: false,
     eth: false,
   });
-  const [timeRange, setTimeRange] = useState<TimeRangeKey>('6M');
+  const [timeRange, setTimeRange] = useState<TimeRangeKey>('1Y');
   const [backtestData, setBacktestData] = useState<Awaited<ReturnType<typeof fetchBacktestData>> | null>(null);
   const [chartDataLoading, setChartDataLoading] = useState(true);
   const [chartDataError, setChartDataError] = useState<string | null>(null);
@@ -259,7 +259,7 @@ export function Home() {
         </div>
       </section>
 
-      <section id="portfolio" className="px-4 pt-12 pb-20 border-t border-white/10 bg-gradient-to-b from-[#111111] to-[#0a0a0a]">
+      <section id="portfolio" className="scroll-mt-28 px-4 pt-12 pb-20 border-t border-white/10 bg-gradient-to-b from-[#111111] to-[#0a0a0a]">
         <div className="max-w-6xl mx-auto">
           <div className="text-left mb-8">
             <h2 className="text-3xl sm:text-5xl font-bold mb-4">Live Portfolio</h2>
