@@ -16,3 +16,11 @@
     letter-spacing: -0.02em;
   }
 }
+
+/* RainbowKit Connect Wallet button - compact but slightly larger than minimal */
+[data-testid="rk-connect-button"] {
+  padding: 0.5625rem 1rem !important;
+  font-size: 1rem !important;
+  min-height: unset !important;
+  height: auto !important;
+}

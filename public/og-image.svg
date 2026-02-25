@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630">
+      <stop offset="0" stop-color="#0a0a0a"/>
+      <stop offset="1" stop-color="#111111"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="600" y="320" text-anchor="middle" font-family="Arial Black, Helvetica, sans-serif" font-size="160" font-weight="900" letter-spacing="0.14em" fill="#ffffff">n1dv</text>
+  <text x="600" y="400" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="500" letter-spacing="0.25em" fill="rgba(255,255,255,0.4)">n1dv.io</text>
+  <rect x="530" y="420" width="140" height="2" fill="rgba(16,185,129,0.5)"/>
+</svg>

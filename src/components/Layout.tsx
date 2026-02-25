@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { VaultAccessDrawer } from './VaultAccessDrawer';
 
 interface LayoutProps {
@@ -67,7 +68,7 @@ export function Layout({ children }: LayoutProps) {
                 navigate('/');
               }
             }}
-            className="flex items-center cursor-pointer"
+            className="flex items-center cursor-pointer bg-[#0a0a0a]"
           >
             <img
               src="/nexus_one_logo.jpg"
@@ -98,12 +99,9 @@ export function Layout({ children }: LayoutProps) {
               Insights
             </button>
 
-            <button
-              onClick={() => setIsVaultDrawerOpen(true)}
-              className="bg-gray-100 text-black px-5 py-2.5 font-bold text-xs hover:bg-gray-200 transition-colors"
-            >
-              Connect Wallet
-            </button>
+            <ConnectButton
+              showBalance={{ smallScreen: false, largeScreen: true }}
+            />
           </div>
 
           <button
@@ -124,7 +122,7 @@ export function Layout({ children }: LayoutProps) {
       >
         <div className="flex flex-col h-full">
           <div className="flex items-center justify-between px-6 py-6 border-b border-white/10">
-            <div className="flex items-center">
+            <div className="flex items-center bg-[#0a0a0a]">
               <img
                 src="/nexus_one_logo.jpg"
                 alt="NEXUS ONE"
@@ -164,16 +162,9 @@ export function Layout({ children }: LayoutProps) {
               </button>
 
               <div className="mt-4 pt-4 border-t border-white/10">
-                <button
-                  type="button"
-                  onClick={() => {
-                    setIsMobileMenuOpen(false);
-                    setIsVaultDrawerOpen(true);
-                  }}
-                  className="w-full bg-gray-100 text-black px-6 py-4 font-bold text-base hover:bg-gray-200 transition-colors"
-                >
-                  Connect Wallet
-                </button>
+                <div className="flex justify-center">
+                  <ConnectButton showBalance={{ smallScreen: true, largeScreen: true }} />
+                </div>
               </div>
             </nav>
           </div>
