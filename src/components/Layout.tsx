@@ -3,6 +3,7 @@ import { Menu, X } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { VaultAccessDrawer } from './VaultAccessDrawer';
+import { ReferralDrawer } from './ReferralDrawer';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -13,6 +14,7 @@ export function Layout({ children }: LayoutProps) {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isVaultDrawerOpen, setIsVaultDrawerOpen] = useState(false);
+  const [isReferralDrawerOpen, setIsReferralDrawerOpen] = useState(false);
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
@@ -99,6 +101,15 @@ export function Layout({ children }: LayoutProps) {
               Insights
             </button>
 
+            <span className="text-white/20 mx-2" aria-hidden>|</span>
+
+            <button
+              onClick={() => setIsReferralDrawerOpen(true)}
+              className="text-gray-400 hover:text-white transition-colors"
+            >
+              Referral
+            </button>
+
             <ConnectButton
               showBalance={{ smallScreen: false, largeScreen: true }}
             />
@@ -161,6 +172,18 @@ export function Layout({ children }: LayoutProps) {
                 Insights
               </button>
 
+              <div className="my-2 border-t border-white/10" />
+
+              <button
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  setIsReferralDrawerOpen(true);
+                }}
+                className="text-left text-white text-lg font-medium py-4 px-4 hover:bg-white/5 transition-colors rounded-lg"
+              >
+                Referral
+              </button>
+
               <div className="mt-4 pt-4 border-t border-white/10">
                 <div className="flex justify-center">
                   <ConnectButton showBalance={{ smallScreen: true, largeScreen: true }} />
@@ -176,6 +199,7 @@ export function Layout({ children }: LayoutProps) {
       </main>
 
       <VaultAccessDrawer isOpen={isVaultDrawerOpen} onClose={() => setIsVaultDrawerOpen(false)} />
+      <ReferralDrawer isOpen={isReferralDrawerOpen} onClose={() => setIsReferralDrawerOpen(false)} />
 
       {/* Footer */}
       <footer className="py-16 bg-gradient-to-b from-[#0a0a0a] to-[#111111] border-t border-white/10">
