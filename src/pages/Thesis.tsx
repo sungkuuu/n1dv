@@ -9,14 +9,6 @@ export function Thesis() {
   return (
     <Layout>
       <div className="min-h-screen bg-gradient-to-b from-[#0A0A0A] via-[#050505] to-[#0A0A0A] relative">
-        {/* Animated Grid Background */}
-        <div className="absolute inset-0 opacity-[0.015] pointer-events-none">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)',
-            backgroundSize: '50px 50px'
-          }}></div>
-        </div>
-
         <div className="max-w-3xl mx-auto px-6 py-24 relative z-10">
         <div className="mb-32">
           <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight bg-gradient-to-br from-white via-gray-300 to-gray-600 bg-clip-text text-transparent pb-2">

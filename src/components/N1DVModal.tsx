@@ -321,7 +321,7 @@ export function N1DVModal({ isOpen, onClose }: N1DVModalProps) {
 
           <div className="sticky bottom-0 px-8 py-6 border-t border-white/10 bg-[#0A0A0A]/95 backdrop-blur-sm flex justify-center">
             <Link
-              to="/vault"
+              to="/dashboard"
               onClick={onClose}
               className="inline-flex items-center gap-3 px-8 py-3 bg-gray-100 text-black text-base font-bold hover:bg-gray-200 transition-all shadow-lg"
             >

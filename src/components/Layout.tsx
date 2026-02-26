@@ -56,8 +56,10 @@ export function Layout({ children }: LayoutProps) {
     navigate(path);
   };
 
+  const isDashboard = location.pathname === '/dashboard';
+
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-gray-300 font-sans selection:bg-white/20 selection:text-white">
+    <div className={`min-h-screen bg-[#0a0a0a] text-gray-300 font-sans selection:bg-white/20 selection:text-white ${isDashboard ? 'flex flex-col' : ''}`}>
       {/* Navbar */}
       <nav className="border-b border-white/10 sticky top-0 bg-[#0a0a0a]/90 backdrop-blur-md z-50">
         <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
@@ -79,40 +81,49 @@ export function Layout({ children }: LayoutProps) {
             />
           </div>
 
-          <div className="hidden md:flex gap-8 text-sm font-medium items-center">
-            <button
-              onClick={() => navigate('/letter')}
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              Letter
-            </button>
-
-            <button
-              onClick={() => scrollToSection('portfolio')}
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              Portfolio
-            </button>
-
-            <button
-              onClick={() => navigate('/insights')}
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              Insights
-            </button>
-
-            <span className="text-white/20 mx-2" aria-hidden>|</span>
-
-            <button
-              onClick={() => setIsReferralDrawerOpen(true)}
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              Referral
-            </button>
-
-            <ConnectButton
-              showBalance={{ smallScreen: false, largeScreen: true }}
-            />
+          {/* Right: Group 1 (info) | Divider | Group 2 (user action) — unified across landing & dashboard */}
+          <div className="hidden md:flex items-center gap-8">
+            {/* Group 1: Main info & service */}
+            <div className="flex items-center gap-6">
+              <button
+                onClick={() => handleNavigate('/letter')}
+                className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+              >
+                Letter
+              </button>
+              <button
+                onClick={() => scrollToSection('portfolio')}
+                className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+              >
+                Portfolio
+              </button>
+              <button
+                onClick={() => handleNavigate('/insights')}
+                className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+              >
+                Insights
+              </button>
+              <button
+                onClick={() => handleNavigate('/dashboard')}
+                className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+              >
+                Dashboard
+              </button>
+            </div>
+            {/* Divider */}
+            <div className="w-[1px] h-6 bg-gray-600 flex-shrink-0" aria-hidden />
+            {/* Group 2: User action */}
+            <div className="flex items-center gap-6">
+              <button
+                onClick={() => setIsReferralDrawerOpen(true)}
+                className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+              >
+                Referral
+              </button>
+              <ConnectButton
+                showBalance={{ smallScreen: false, largeScreen: true }}
+              />
+            </div>
           </div>
 
           <button
@@ -125,7 +136,7 @@ export function Layout({ children }: LayoutProps) {
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu — same order: Letter, Portfolio, Insights, Dashboard | Referral, Connect Wallet */}
       <div
         className={`fixed inset-0 bg-black/95 backdrop-blur-lg z-50 md:hidden transition-all duration-300 ${
           isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
@@ -149,31 +160,33 @@ export function Layout({ children }: LayoutProps) {
             </button>
           </div>
 
-          <div className="flex-1 overflow-y-auto">
-            <nav className="flex flex-col p-6 gap-2">
+          <div className="flex-1 overflow-y-auto p-6">
+            <nav className="flex flex-col gap-1">
               <button
                 onClick={() => handleNavigate('/letter')}
                 className="text-left text-white text-lg font-medium py-4 px-4 hover:bg-white/5 transition-colors rounded-lg"
               >
                 Letter
               </button>
-
               <button
                 onClick={() => scrollToSection('portfolio')}
                 className="text-left text-white text-lg font-medium py-4 px-4 hover:bg-white/5 transition-colors rounded-lg"
               >
                 Portfolio
               </button>
-
               <button
                 onClick={() => handleNavigate('/insights')}
                 className="text-left text-white text-lg font-medium py-4 px-4 hover:bg-white/5 transition-colors rounded-lg"
               >
                 Insights
               </button>
-
+              <button
+                onClick={() => handleNavigate('/dashboard')}
+                className="text-left text-white text-lg font-medium py-4 px-4 hover:bg-white/5 transition-colors rounded-lg"
+              >
+                Dashboard
+              </button>
               <div className="my-2 border-t border-white/10" />
-
               <button
                 onClick={() => {
                   setIsMobileMenuOpen(false);
@@ -183,25 +196,22 @@ export function Layout({ children }: LayoutProps) {
               >
                 Referral
               </button>
-
-              <div className="mt-4 pt-4 border-t border-white/10">
-                <div className="flex justify-center">
-                  <ConnectButton showBalance={{ smallScreen: true, largeScreen: true }} />
-                </div>
+              <div className="mt-4 pt-4 border-t border-white/10 flex justify-center">
+                <ConnectButton showBalance={{ smallScreen: true, largeScreen: true }} />
               </div>
             </nav>
           </div>
         </div>
       </div>
 
-      <main>
+      <main className={isDashboard ? 'flex-1 flex flex-col' : ''}>
         {children}
       </main>
 
       <VaultAccessDrawer isOpen={isVaultDrawerOpen} onClose={() => setIsVaultDrawerOpen(false)} />
       <ReferralDrawer isOpen={isReferralDrawerOpen} onClose={() => setIsReferralDrawerOpen(false)} />
 
-      {/* Footer */}
+      {!isDashboard && (
       <footer className="py-16 bg-gradient-to-b from-[#0a0a0a] to-[#111111] border-t border-white/10">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <p className="text-xs font-bold tracking-[0.2em] text-gray-500 mb-6 uppercase">
@@ -235,6 +245,7 @@ export function Layout({ children }: LayoutProps) {
           </p>
         </div>
       </footer>
+      )}
     </div>
   );
 }

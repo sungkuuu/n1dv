@@ -27,10 +27,10 @@ export function Hero() {
 
         <div className="flex justify-center">
           <Link
-            to="/vault"
+            to="/dashboard"
             className="group flex items-center gap-2 bg-white px-8 py-4 text-lg font-bold text-black transition-all hover:bg-neutral-200 rounded-lg"
           >
-            View Live Vault (N1DV)
+            Enter Vault
             <ArrowRight className="h-5 w-5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
           </Link>
         </div>

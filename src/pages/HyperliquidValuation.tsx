@@ -6,13 +6,6 @@ export function HyperliquidValuation() {
   return (
     <Layout>
       <article className="min-h-screen bg-gradient-to-b from-[#0A0A0A] via-[#050505] to-[#0A0A0A] relative">
-        <div className="absolute inset-0 opacity-[0.015] pointer-events-none">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)',
-            backgroundSize: '50px 50px'
-          }}></div>
-        </div>
-
         <div className="max-w-5xl mx-auto px-4 py-8 relative z-10">
           <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8">
             <Link to="/" className="hover:text-white transition-colors">Home</Link>
