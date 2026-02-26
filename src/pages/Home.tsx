@@ -178,20 +178,20 @@ export function Home() {
           </p>
           <div className="flex justify-center items-center">
             <Link
-              to="/vault"
+              to="/dashboard"
               className="inline-flex items-center px-6 py-3 bg-gray-100 text-gray-900 text-lg font-bold hover:bg-gray-200 transition-all"
             >
-              View Live Vault (N1DV)
+              Enter Vault
               <ArrowRight className="ml-3" size={22} />
             </Link>
           </div>
         </div>
       </section>
 
-      <section id="strategy-section" className="px-4 py-20 border-t border-gray-800 bg-gradient-to-b from-[#0a0a0a] to-[#111111]">
+      <section id="strategy-section" className="scroll-mt-36 px-4 py-20 border-t border-gray-800 bg-gradient-to-b from-[#0a0a0a] to-[#111111]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-5xl font-bold mb-4">Our Strategies</h2>
+            <h2 className="text-3xl sm:text-5xl font-bold mb-4">Our Vaults</h2>
             <p className="text-gray-400 text-lg">Institutional-grade onchain capital deployment vehicles tailored for every market cycle.</p>
           </div>
 
@@ -203,7 +203,7 @@ export function Home() {
               <h3 className="text-2xl font-bold mb-3 text-white">Nexus One Deep Value (N1DV)</h3>
               <div className="text-sm text-gray-400 mb-6 font-semibold">Deep Value / Defensive Alpha</div>
               <p className="text-gray-300 text-base leading-relaxed mb-6">
-                A dynamic barbell strategy balancing 40% yield-bearing working capital with 60% high-conviction growth assets (BTC, ETH).
+                A dynamic barbell vault balancing 40% yield-bearing working capital with 60% high-conviction growth assets (BTC, ETH).
               </p>
               <div className="border-t border-gray-700 pt-6 mb-6">
                 <h4 className="text-sm font-bold text-white mb-4">KEY FEATURES</h4>
@@ -259,7 +259,7 @@ export function Home() {
         </div>
       </section>
 
-      <section id="portfolio" className="scroll-mt-28 px-4 pt-12 pb-20 border-t border-white/10 bg-gradient-to-b from-[#111111] to-[#0a0a0a]">
+      <section id="portfolio" className="scroll-mt-36 px-4 pt-12 pb-20 border-t border-white/10 bg-gradient-to-b from-[#111111] to-[#0a0a0a]">
         <div className="max-w-6xl mx-auto">
           <div className="text-left mb-8">
             <h2 className="text-3xl sm:text-5xl font-bold mb-4">Live Portfolio</h2>
@@ -447,7 +447,7 @@ export function Home() {
                       Read Thesis
                     </button>
                     <Link
-                      to="/vault"
+                      to="/dashboard"
                       className="group inline-flex items-center gap-2 px-8 py-3.5 border border-white/20 text-white text-sm font-medium hover:border-white/40 hover:bg-white/5 transition-all duration-200"
                     >
                       View Vault Dashboard

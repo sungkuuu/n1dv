@@ -17,6 +17,21 @@
   }
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* Shared grid pattern — Letter, Insights, Dashboard (same size, opacity, color) */
+.bg-grid-unified {
+  background-image: linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.015;
+}
+
 /* RainbowKit Connect Wallet button - compact but slightly larger than minimal */
 [data-testid="rk-connect-button"] {
   padding: 0.5625rem 1rem !important;

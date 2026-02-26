@@ -52,14 +52,7 @@ export function Insights() {
   return (
     <Layout>
       <section className="px-4 py-20 bg-gradient-to-b from-[#0A0A0A] via-[#050505] to-[#0A0A0A] min-h-[60vh] relative">
-        {/* Animated Grid Background */}
-        <div className="absolute inset-0 opacity-[0.015] pointer-events-none">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)',
-            backgroundSize: '50px 50px'
-          }}></div>
-        </div>
-
+        <div className="absolute inset-0 pointer-events-none bg-grid-unified" aria-hidden />
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h1 className="text-4xl sm:text-6xl font-bold mb-4 pb-2 bg-gradient-to-br from-white via-gray-300 to-gray-600 bg-clip-text text-transparent">Market Insights</h1>
