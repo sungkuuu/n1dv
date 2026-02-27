@@ -1,5 +1,8 @@
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { useAccount } from 'wagmi';
 import { Layout } from '../components/Layout';
+import { CustomConnectButton } from '../components/CustomConnectButton';
 import { Wallet, PieChart as PieChartIcon, TrendingUp } from 'lucide-react';
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 
@@ -14,7 +17,19 @@ const ALLOCATION_DATA = [
 ];
 
 export function Dashboard() {
-  const [isConnected, setIsConnected] = useState(false);
+  const { isConnected } = useAccount();
+  const [isWithdrawModalOpen, setIsWithdrawModalOpen] = useState(false);
+  const [withdrawAmount, setWithdrawAmount] = useState('');
+
+  const closeWithdrawModal = () => {
+    setIsWithdrawModalOpen(false);
+    setWithdrawAmount('');
+  };
+
+  const handleApproveAndWithdraw = () => {
+    console.log('Withdraw action triggered');
+    closeWithdrawModal();
+  };
 
   return (
     <Layout>
@@ -71,13 +86,7 @@ export function Dashboard() {
               <p className="text-gray-400 text-sm sm:text-base leading-relaxed mb-8 max-w-sm mx-auto">
                 Connect your wallet to view your personal portfolio, live PnL, and manage deposits.
               </p>
-              <button
-                type="button"
-                onClick={() => setIsConnected(true)}
-                className="w-full py-3.5 px-6 bg-white text-black font-semibold text-base rounded-lg hover:bg-gray-200 transition-colors shadow-lg"
-              >
-                Connect Wallet
-              </button>
+              <CustomConnectButton variant="fullWidth" />
             </div>
           </div>
         )}
@@ -199,14 +208,15 @@ export function Dashboard() {
                 </div>
 
                 <div className="lg:col-span-1 flex flex-col gap-4">
-                  <button
-                    type="button"
-                    className="w-full py-3.5 px-6 rounded-lg bg-emerald-500 text-white font-semibold hover:bg-emerald-600 transition-colors"
+                  <Link
+                    to="/vaults"
+                    className="w-full py-3.5 px-6 rounded-lg bg-emerald-500 text-white font-semibold hover:bg-emerald-600 transition-colors text-center"
                   >
                     Deposit
-                  </button>
+                  </Link>
                   <button
                     type="button"
+                    onClick={() => setIsWithdrawModalOpen(true)}
                     className="w-full py-3.5 px-6 rounded-lg border border-white/20 text-white font-semibold hover:bg-white/5 transition-colors"
                   >
                     Withdraw
@@ -221,6 +231,60 @@ export function Dashboard() {
         )}
       </div>
     </div>
+
+      {/* Withdraw Modal */}
+      {isWithdrawModalOpen && (
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4" aria-modal="true" role="dialog">
+          <div
+            className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+            onClick={closeWithdrawModal}
+            aria-hidden
+          />
+          <div
+            className="relative z-10 w-full max-w-md rounded-xl border border-white/10 bg-[#0a0a0a]/95 shadow-2xl backdrop-blur-md"
+            style={{ boxShadow: '0 0 0 1px rgba(255,255,255,0.06), 0 25px 50px -12px rgba(0,0,0,0.5)' }}
+          >
+            <div className="p-6 sm:p-8">
+              <h2 className="text-xl font-bold text-white mb-6">Withdraw from Nexus One</h2>
+              <p className="text-xs text-gray-500 mb-3">Available to withdraw: 0.00 USDC</p>
+              <div className="relative flex items-center">
+                <input
+                  type="text"
+                  inputMode="decimal"
+                  placeholder="0.00"
+                  value={withdrawAmount}
+                  onChange={(e) => setWithdrawAmount(e.target.value)}
+                  className="w-full py-4 pl-4 pr-16 text-lg font-mono-num bg-white/[0.04] border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500/40 focus:border-red-500/30"
+                />
+                <button
+                  type="button"
+                  onClick={() => setWithdrawAmount('0.00')}
+                  className="absolute right-3 px-2.5 py-1 text-xs font-bold text-gray-400 hover:text-gray-300 transition-colors"
+                >
+                  MAX
+                </button>
+              </div>
+              <p className="text-xs text-gray-500 mt-2 mb-6">Enter amount to withdraw (USDC)</p>
+              <div className="flex gap-3">
+                <button
+                  type="button"
+                  onClick={closeWithdrawModal}
+                  className="flex-1 py-3 px-6 rounded-lg border border-white/20 bg-white/[0.04] text-gray-400 text-sm font-medium hover:bg-white/10 hover:text-gray-300 transition-colors"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="button"
+                  onClick={handleApproveAndWithdraw}
+                  className="flex-1 py-3 px-6 rounded-lg bg-red-500/90 text-white text-sm font-bold hover:bg-red-500 transition-colors"
+                >
+                  Approve & Withdraw
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </Layout>
   );
 }

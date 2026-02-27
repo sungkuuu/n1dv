@@ -11,6 +11,16 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'weekly-brief-feb-27-2026',
+    title: 'Nexus One Weekly Report: Macro Shocks, ETF Reversals, and the $6B March Mega Unlock',
+    date: 'Feb 27, 2026',
+    category: 'WEEKLY BRIEF',
+    summary: 'Macro tariff shocks, VIX spike, Bitcoin short squeeze, ETF flow reversal, and the $6B March token unlock risk. Full analysis of on-chain indicators, NUPL/MVRV, and strategic suggestions.',
+    author: 'Nexus One Research Desk',
+    content: '',
+    link: '/insight/weekly-brief-feb-27-2026'
+  },
+  {
     id: 'bitcoin-market-cycle-2026-analysis',
     title: '2026 BTC Market Cycle: 70% Crash vs. $60K Floor',
     date: 'Feb 26, 2026',

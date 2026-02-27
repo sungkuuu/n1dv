@@ -11,18 +11,21 @@ import { MarketInsightFeb2026 } from './pages/MarketInsightFeb2026';
 import { USDeSyntheticDollarParadox } from './pages/USDeSyntheticDollarParadox';
 import { WeeklyBriefFeb06 } from './pages/WeeklyBriefFeb06';
 import { WeeklyBriefFeb10 } from './pages/WeeklyBriefFeb10';
+import { WeeklyBriefFeb13 } from './pages/WeeklyBriefFeb13';
 import { DencunParadox } from './pages/DencunParadox';
 import { SixSigmaStressTest } from './pages/SixSigmaStressTest';
 import { FatAppThesis } from './pages/FatAppThesis';
 import { EthereumAgenticLayer } from './pages/EthereumAgenticLayer';
 import { BittensorNarrative } from './pages/BittensorNarrative';
 import { ZcashThesis } from './pages/ZcashThesis';
-import { WeeklyBriefFeb13 } from './pages/WeeklyBriefFeb13';
+import { WeeklyBriefFeb27 } from './pages/WeeklyBriefFeb27';
 import { UniswapFeeSwitchDilemma } from './pages/UniswapFeeSwitchDilemma';
 import { OptimismDCFAnalysis } from './pages/OptimismDCFAnalysis';
 import { ScrollToTop } from './components/ScrollToTop';
 import { ReferralRegister } from './components/ReferralRegister';
 import { Dashboard } from './pages/Dashboard';
+import { Vaults } from './pages/Vaults';
+import { VaultDetailN1DV } from './pages/VaultDetailN1DV';
 import { BitcoinMarketCycle2026Analysis } from './pages/BitcoinMarketCycle2026Analysis';
 
 function App() {
@@ -48,11 +51,14 @@ function App() {
         <Route path="/insights/usde-synthetic-dollar-paradox" element={<USDeSyntheticDollarParadox />} />
         <Route path="/insight/weekly-brief-feb-06-2026" element={<WeeklyBriefFeb06 />} />
         <Route path="/insight/weekly-brief-feb-10-2026" element={<WeeklyBriefFeb10 />} />
+        <Route path="/insight/weekly-brief-feb-27-2026" element={<WeeklyBriefFeb27 />} />
         <Route path="/insight/weekly-brief-feb-13-2026" element={<WeeklyBriefFeb13 />} />
         <Route path="/insights/uniswap-fee-switch-dilemma" element={<UniswapFeeSwitchDilemma />} />
         <Route path="/insights/optimism-op-dcf-analysis" element={<OptimismDCFAnalysis />} />
         <Route path="/partners" element={<Partners />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/vaults" element={<Vaults />} />
+        <Route path="/vaults/n1dv" element={<VaultDetailN1DV />} />
         <Route path="/vault" element={<Navigate to="/dashboard" replace />} />
         <Route path="/referral" element={<ReferralRegister />} />
       </Routes>

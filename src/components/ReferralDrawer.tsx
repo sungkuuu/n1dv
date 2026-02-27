@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback } from 'react';
 import { X, Copy, Trophy, Medal, Award, Wallet, Check, Info } from 'lucide-react';
 import { useAccount } from 'wagmi';
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { CustomConnectButton } from './CustomConnectButton';
 import { getProfileByWallet, registerWallet } from '../lib/referral';
 
 interface ReferralDrawerProps {
@@ -221,7 +221,7 @@ export function ReferralDrawer({ isOpen, onClose }: ReferralDrawerProps) {
                   <p className="text-gray-500 text-sm mb-8 max-w-xs">
                     Earn when you refer others. Your unique link and stats will appear here.
                   </p>
-                  <ConnectButton />
+                  <CustomConnectButton variant="fullWidth" />
                 </div>
               ) : isFetching ? (
                 <div className="flex flex-col items-center justify-center py-16 px-4 text-center">

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { X, Wallet } from 'lucide-react';
+import { X } from 'lucide-react';
+import { CustomConnectButton } from './CustomConnectButton';
 
 interface VaultAccessDrawerProps {
   isOpen: boolean;
@@ -65,13 +66,7 @@ export function VaultAccessDrawer({ isOpen, onClose }: VaultAccessDrawerProps) {
             현재 N1DV는 프라이빗 베타 기간입니다.
           </p>
 
-          <button
-            type="button"
-            className="w-full flex items-center justify-center gap-3 py-4 px-6 bg-white text-black font-semibold text-base hover:bg-gray-200 transition-colors border border-white/20"
-          >
-            <Wallet size={20} />
-            Connect Wallet
-          </button>
+          <CustomConnectButton variant="fullWidth" />
           <p className="text-center text-xs text-gray-500 mt-3 mb-10">
             MetaMask, WalletConnect 지원
           </p>

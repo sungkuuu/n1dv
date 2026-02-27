@@ -1,0 +1,13 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+solc = "0.8.19"
+# Arbitrum One mainnet fork — public RPC
+eth_rpc_url = "https://arb1.arbitrum.io/rpc"
+
+[rpc_endpoints]
+arbitrum = "https://arb1.arbitrum.io/rpc"
+
+[profile.default.fuzz]
+runs = 256

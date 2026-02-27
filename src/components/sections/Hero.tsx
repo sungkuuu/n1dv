@@ -15,9 +15,9 @@ export function Hero() {
 
       <div className="container relative z-10 mx-auto px-6 text-center">
         <h1 className="mb-8 text-5xl font-bold tracking-tight text-white md:text-7xl leading-tight">
-          The Onchain Deep Value <br />
+          The Onchain <br className="hidden sm:block" />
           <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-white/50">
-            Active Strategy
+            Deep Value Active Vault
           </span>
         </h1>
 

@@ -1,6 +1,5 @@
 import { FileText, ArrowRight } from 'lucide-react';
 import { Layout } from '../components/Layout';
-import { MultiChainBadge } from '../components/MultiChainBadge';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { reports } from '../data/reports';
@@ -171,7 +170,7 @@ export function Home() {
       <section className="px-4 py-32 relative overflow-hidden">
         <div className="max-w-6xl mx-auto text-center relative z-10">
           <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold mb-6 tracking-tight leading-tight bg-gradient-to-br from-white via-gray-300 to-gray-600 bg-clip-text text-transparent pb-3">
-            The Onchain Deep Value <br /> Active Strategy
+            The Onchain <br className="hidden sm:block" /> Deep Value Active Vault
           </h1>
           <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed">
             The Anchor of Your Crypto Portfolio. We engineer defensive alpha <br /> through Deep Value execution.
@@ -179,7 +178,7 @@ export function Home() {
           <div className="flex justify-center items-center">
             <Link
               to="/dashboard"
-              className="inline-flex items-center px-6 py-3 bg-gray-100 text-gray-900 text-lg font-bold hover:bg-gray-200 transition-all"
+              className="inline-flex items-center px-6 py-3 bg-gray-100 text-gray-900 text-lg font-bold rounded-lg hover:bg-gray-200 transition-all"
             >
               Enter Vault
               <ArrowRight className="ml-3" size={22} />
@@ -198,7 +197,10 @@ export function Home() {
           <div className="grid lg:grid-cols-3 gap-8">
             <div className="border border-white/10 bg-gradient-to-br from-gray-900/50 to-black p-10 hover:border-white/20 transition-all">
               <div className="flex items-center gap-3 mb-6">
-                <MultiChainBadge />
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30">
+                  <span className="animate-live-pulse h-2 w-2 rounded-full bg-emerald-400 flex-shrink-0" />
+                  <span className="text-emerald-400 text-xs font-semibold tracking-wider uppercase">LIVE</span>
+                </span>
               </div>
               <h3 className="text-2xl font-bold mb-3 text-white">Nexus One Deep Value (N1DV)</h3>
               <div className="text-sm text-gray-400 mb-6 font-semibold">Deep Value / Defensive Alpha</div>
@@ -222,12 +224,12 @@ export function Home() {
                   </li>
                 </ul>
               </div>
-              <button
-                onClick={() => setIsN1DVModalOpen(true)}
+              <Link
+                to="/vaults/n1dv"
                 className="block w-full text-center px-6 py-3 bg-gray-100 text-black text-sm font-bold hover:bg-gray-200 transition-all"
               >
                 View Details
-              </button>
+              </Link>
             </div>
 
             <div className="border border-white/10 bg-gradient-to-br from-gray-900/30 to-black p-10 hover:border-white/15 transition-all opacity-50">
@@ -255,6 +257,16 @@ export function Home() {
                 Early exposure to high-conviction narratives. Focused on the convergence of AI, DePIN, and Next-Gen RWA infrastructure.
               </p>
             </div>
+          </div>
+
+          <div className="flex justify-end mt-10">
+            <Link
+              to="/vaults"
+              className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-white/15 bg-white/[0.03] backdrop-blur-sm text-gray-300 hover:text-white hover:border-white/25 transition-all text-sm font-medium"
+            >
+              Explore All Vaults
+              <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
+            </Link>
           </div>
         </div>
       </section>
@@ -439,18 +451,11 @@ export function Home() {
                   </div>
 
                   <div className="border-t border-white/10 pt-10 pb-10 px-8 flex flex-col sm:flex-row items-center justify-center gap-6">
-                    <button
-                      type="button"
-                      onClick={() => setIsN1DVModalOpen(true)}
-                      className="inline-flex items-center px-8 py-3.5 bg-white text-black text-sm font-medium hover:bg-gray-100 transition-all duration-200"
-                    >
-                      Read Thesis
-                    </button>
                     <Link
-                      to="/dashboard"
+                      to="/vaults/n1dv"
                       className="group inline-flex items-center gap-2 px-8 py-3.5 border border-white/20 text-white text-sm font-medium hover:border-white/40 hover:bg-white/5 transition-all duration-200"
                     >
-                      View Vault Dashboard
+                      View N1DV Details
                       <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
                     </Link>
                   </div>
@@ -481,12 +486,16 @@ export function Home() {
               <div
                 key={report.id}
                 onClick={() => { if (report.link) navigate(report.link); }}
-                className="group p-10 bg-[#0a0a0a] border border-white/10 hover:border-white/30 hover:-translate-y-1 transition-all duration-300 flex flex-col h-full min-h-[320px] cursor-pointer"
+                className="group p-10 bg-[#0a0a0a] border border-slate-800 hover:border-slate-700 hover:-translate-y-1 transition-all duration-300 flex flex-col h-full min-h-[320px] cursor-pointer"
               >
                 <div className="flex-1 flex flex-col">
                   <div className="mb-4 flex items-center gap-2 w-fit">
                     {report.category === 'DEEP RESEARCH' ? (
                       <span className="inline-block w-fit bg-transparent border border-emerald-500 text-emerald-500 rounded-md px-3 py-1 text-xs font-bold uppercase tracking-wider">
+                        {report.category}
+                      </span>
+                    ) : report.category === 'WEEKLY BRIEF' ? (
+                      <span className="inline-block w-fit bg-transparent border border-blue-500 text-blue-400 rounded-md px-3 py-1 text-xs font-bold uppercase tracking-wider">
                         {report.category}
                       </span>
                     ) : (

@@ -107,7 +107,7 @@ export function Insights() {
             </div>
 
             <div className="prose prose-invert prose-lg max-w-none">
-              {selectedReport.content.split('\n').map((paragraph, index) => {
+              {(selectedReport.content != null ? selectedReport.content.split('\n') : []).map((paragraph, index) => {
                 if (paragraph.trim().startsWith('**') && paragraph.trim().endsWith('**')) {
                   return (
                     <h3 key={index} className="text-xl font-bold mt-8 mb-4 text-white">

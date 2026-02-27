@@ -20,7 +20,7 @@ createRoot(document.getElementById('root')!).render(
           theme={darkTheme({
             accentColor: '#f3f4f6',
             accentColorForeground: '#111827',
-            borderRadius: 'none',
+            borderRadius: 'medium',
           })}
         >
           <BrowserRouter>

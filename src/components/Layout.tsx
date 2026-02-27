@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { CustomConnectButton } from './CustomConnectButton';
 import { VaultAccessDrawer } from './VaultAccessDrawer';
 import { ReferralDrawer } from './ReferralDrawer';
 
@@ -92,10 +92,10 @@ export function Layout({ children }: LayoutProps) {
                 Letter
               </button>
               <button
-                onClick={() => scrollToSection('portfolio')}
+                onClick={() => handleNavigate('/vaults')}
                 className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
               >
-                Portfolio
+                Vaults
               </button>
               <button
                 onClick={() => handleNavigate('/insights')}
@@ -120,9 +120,7 @@ export function Layout({ children }: LayoutProps) {
               >
                 Referral
               </button>
-              <ConnectButton
-                showBalance={{ smallScreen: false, largeScreen: true }}
-              />
+              <CustomConnectButton />
             </div>
           </div>
 
@@ -136,7 +134,7 @@ export function Layout({ children }: LayoutProps) {
         </div>
       </nav>
 
-      {/* Mobile Menu — same order: Letter, Portfolio, Insights, Dashboard | Referral, Connect Wallet */}
+      {/* Mobile Menu — same order: Letter, Vaults, Insights, Dashboard | Referral, Connect Wallet */}
       <div
         className={`fixed inset-0 bg-black/95 backdrop-blur-lg z-50 md:hidden transition-all duration-300 ${
           isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
@@ -169,10 +167,10 @@ export function Layout({ children }: LayoutProps) {
                 Letter
               </button>
               <button
-                onClick={() => scrollToSection('portfolio')}
+                onClick={() => handleNavigate('/vaults')}
                 className="text-left text-white text-lg font-medium py-4 px-4 hover:bg-white/5 transition-colors rounded-lg"
               >
-                Portfolio
+                Vaults
               </button>
               <button
                 onClick={() => handleNavigate('/insights')}
@@ -197,7 +195,7 @@ export function Layout({ children }: LayoutProps) {
                 Referral
               </button>
               <div className="mt-4 pt-4 border-t border-white/10 flex justify-center">
-                <ConnectButton showBalance={{ smallScreen: true, largeScreen: true }} />
+                <CustomConnectButton variant="fullWidth" className="w-full max-w-xs" />
               </div>
             </nav>
           </div>
