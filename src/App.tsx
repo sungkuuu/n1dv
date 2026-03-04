@@ -28,6 +28,7 @@ import { Vaults } from './pages/Vaults';
 import { VaultDetailN1DV } from './pages/VaultDetailN1DV';
 import { BitcoinMarketCycle2026Analysis } from './pages/BitcoinMarketCycle2026Analysis';
 import { L1InfrastructureMachineEconomy2026 } from './pages/L1InfrastructureMachineEconomy2026';
+import { PumpFunValueCapture2026 } from './pages/PumpFunValueCapture2026';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
         <Route path="/insights" element={<Insights />} />
         <Route path="/research/bitcoin-market-cycle-2026-analysis" element={<BitcoinMarketCycle2026Analysis />} />
         <Route path="/insights/l1-infrastructure-machine-economy-2026" element={<L1InfrastructureMachineEconomy2026 />} />
+        <Route path="/insights/pump-fun-value-capture-2026" element={<PumpFunValueCapture2026 />} />
         <Route path="/insights/ethereum-agentic-layer" element={<EthereumAgenticLayer />} />
         <Route path="/insights/fat-app-thesis" element={<FatAppThesis />} />
         <Route path="/insights/bittensor-500x-narrative" element={<BittensorNarrative />} />

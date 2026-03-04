@@ -11,6 +11,16 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'pump-fun-value-capture-2026',
+    title: 'Pump.fun: Revenue Sustainability & $PUMP Value Capture',
+    date: 'Mar 4, 2026',
+    category: 'DEEP RESEARCH',
+    summary: 'In-depth analysis of Pump.fun\'s business model revenue sustainability, $PUMP token value capture failure, competitive landscape, regulatory risks, and July 2026 cliff unlock.',
+    author: 'Nexus One Research Desk',
+    content: '',
+    link: '/insights/pump-fun-value-capture-2026'
+  },
+  {
     id: 'l1-infrastructure-machine-economy-2026',
     title: 'L1 Blockchain Infrastructure in the Machine Economy Era',
     date: 'Mar 3, 2026',
