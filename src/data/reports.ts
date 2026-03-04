@@ -11,6 +11,16 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'l1-infrastructure-machine-economy-2026',
+    title: 'L1 Blockchain Infrastructure in the Machine Economy Era',
+    date: 'Mar 3, 2026',
+    category: 'DEEP RESEARCH',
+    summary: 'Analysis of L1 blockchain infrastructure competitiveness in the machine economy era: M2M transaction environments, Solana, Sui, Hyperliquid, Base, Tron, Peaq, Monad, Sei, Aptos, and IoTeX.',
+    author: 'Nexus One Research Desk',
+    content: '',
+    link: '/insights/l1-infrastructure-machine-economy-2026'
+  },
+  {
     id: 'weekly-brief-feb-27-2026',
     title: 'Nexus One Weekly Report: Macro Shocks, ETF Reversals, and the $6B March Mega Unlock',
     date: 'Feb 27, 2026',
