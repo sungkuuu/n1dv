@@ -11,6 +11,26 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'weekly-brief-mar-10-2026',
+    title: 'March 2026 Global Digital Asset and Macroeconomic In-Depth Research Report',
+    date: 'Mar 10, 2026',
+    category: 'WEEKLY BRIEF',
+    summary: 'The intersection of institutional capital, RWA, and macro volatility. TL;DR on ETF flows, on-chain vs derivatives divergence, L2 parasitic dilemma, and key sector trends.',
+    author: 'Nexus One Research Desk',
+    content: '',
+    link: '/insight/weekly-brief-mar-10-2026'
+  },
+  {
+    id: 'tron-m2m-ecosystem-analysis',
+    title: "In-Depth Analysis Report on TRON's Architecture and On-chain Metric Deviation within the M2M Machine Economy Ecosystem",
+    date: 'Mar 11, 2026',
+    category: 'DEEP RESEARCH',
+    summary: 'TRON architecture vs M2M/Machine Economy requirements. DPoS centralization, Bandwidth/Energy cost trap, TVM limitations, on-chain metrics 2024-2026, comparison with peaq and IOTA.',
+    author: 'Nexus One Research Desk',
+    content: '',
+    link: '/insights/tron-m2m-ecosystem-analysis'
+  },
+  {
     id: 'pump-fun-value-capture-2026',
     title: 'Pump.fun: Revenue Sustainability & $PUMP Value Capture',
     date: 'Mar 4, 2026',

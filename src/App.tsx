@@ -19,6 +19,7 @@ import { EthereumAgenticLayer } from './pages/EthereumAgenticLayer';
 import { BittensorNarrative } from './pages/BittensorNarrative';
 import { ZcashThesis } from './pages/ZcashThesis';
 import { WeeklyBriefFeb27 } from './pages/WeeklyBriefFeb27';
+import { WeeklyBriefMar10 } from './pages/WeeklyBriefMar10';
 import { UniswapFeeSwitchDilemma } from './pages/UniswapFeeSwitchDilemma';
 import { OptimismDCFAnalysis } from './pages/OptimismDCFAnalysis';
 import { ScrollToTop } from './components/ScrollToTop';
@@ -29,6 +30,7 @@ import { VaultDetailN1DV } from './pages/VaultDetailN1DV';
 import { BitcoinMarketCycle2026Analysis } from './pages/BitcoinMarketCycle2026Analysis';
 import { L1InfrastructureMachineEconomy2026 } from './pages/L1InfrastructureMachineEconomy2026';
 import { PumpFunValueCapture2026 } from './pages/PumpFunValueCapture2026';
+import { TronM2MEcosystemAnalysis } from './pages/TronM2MEcosystemAnalysis';
 
 function App() {
   return (
@@ -42,6 +44,7 @@ function App() {
         <Route path="/research/bitcoin-market-cycle-2026-analysis" element={<BitcoinMarketCycle2026Analysis />} />
         <Route path="/insights/l1-infrastructure-machine-economy-2026" element={<L1InfrastructureMachineEconomy2026 />} />
         <Route path="/insights/pump-fun-value-capture-2026" element={<PumpFunValueCapture2026 />} />
+        <Route path="/insights/tron-m2m-ecosystem-analysis" element={<TronM2MEcosystemAnalysis />} />
         <Route path="/insights/ethereum-agentic-layer" element={<EthereumAgenticLayer />} />
         <Route path="/insights/fat-app-thesis" element={<FatAppThesis />} />
         <Route path="/insights/bittensor-500x-narrative" element={<BittensorNarrative />} />
@@ -56,6 +59,7 @@ function App() {
         <Route path="/insight/weekly-brief-feb-06-2026" element={<WeeklyBriefFeb06 />} />
         <Route path="/insight/weekly-brief-feb-10-2026" element={<WeeklyBriefFeb10 />} />
         <Route path="/insight/weekly-brief-feb-27-2026" element={<WeeklyBriefFeb27 />} />
+        <Route path="/insight/weekly-brief-mar-10-2026" element={<WeeklyBriefMar10 />} />
         <Route path="/insight/weekly-brief-feb-13-2026" element={<WeeklyBriefFeb13 />} />
         <Route path="/insights/uniswap-fee-switch-dilemma" element={<UniswapFeeSwitchDilemma />} />
         <Route path="/insights/optimism-op-dcf-analysis" element={<OptimismDCFAnalysis />} />
