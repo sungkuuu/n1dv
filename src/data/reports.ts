@@ -11,6 +11,36 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'weekly-brief-mar-30-2026',
+    title: 'March 30, 2026 Global Macroeconomic and Digital Asset Market In-Depth Analysis',
+    date: 'Mar 30, 2026',
+    category: 'WEEKLY BRIEF',
+    summary: 'Comprehensive macro and crypto market deep-dive covering core indicators, ETF flows, on-chain sector dynamics, April events, and token unlock implications.',
+    author: 'Nexus One Research Desk',
+    content: '',
+    link: '/insight/weekly-brief-mar-30-2026'
+  },
+  {
+    id: 'weekly-brief-mar-20-2026',
+    title: 'March 2026 Global Digital Asset Market & Macroeconomic In-Depth Analysis',
+    date: 'Mar 20, 2026',
+    category: 'WEEKLY BRIEF',
+    summary: 'In-depth macro and digital asset analysis: on-chain decoupling, ETF flow dynamics, protocol metrics, anomalies, and strategic outlook for the next week.',
+    author: 'Nexus One Research Desk',
+    content: '',
+    link: '/insight/weekly-brief-mar-20-2026'
+  },
+  {
+    id: 'solana-global-infrastructure',
+    title: 'Solana: Breaking the ‘Memecoin Casino’ Shell to Become ‘Global Infrastructure’',
+    date: 'Mar 20, 2026',
+    category: 'DEEP RESEARCH',
+    summary: 'Deconstructing valuation and the structural deficit: on-chain decoupling, memecoin dependency discount, and the path to positive real yield via payments, AI, and DePIN.',
+    author: 'Nexus One Research Desk',
+    content: '',
+    link: '/insights/solana-global-infrastructure'
+  },
+  {
     id: 'weekly-brief-mar-10-2026',
     title: 'March 2026 Global Digital Asset and Macroeconomic In-Depth Research Report',
     date: 'Mar 10, 2026',
