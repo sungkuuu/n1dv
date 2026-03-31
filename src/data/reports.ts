@@ -21,6 +21,16 @@ export const reports: Report[] = [
     link: '/insight/weekly-brief-mar-30-2026'
   },
   {
+    id: 'peaq-m2m-deep-value-analysis',
+    title: 'In-Depth Analysis of the Peaq Network: Its Role in the M2M Transaction Ecosystem and Deep Value Investment Valuation',
+    date: 'Mar 29, 2026',
+    category: 'DEEP RESEARCH',
+    summary: 'Comprehensive analysis of Peaq’s machine-native L1 architecture, DePIN ecosystem moat, real-yield commercialization, tokenomics, regulatory catalysts, and risk-adjusted deep value thesis.',
+    author: 'Nexus One Research Desk',
+    content: '',
+    link: '/insights/peaq-m2m-deep-value-analysis'
+  },
+  {
     id: 'weekly-brief-mar-20-2026',
     title: 'March 2026 Global Digital Asset Market & Macroeconomic In-Depth Analysis',
     date: 'Mar 20, 2026',

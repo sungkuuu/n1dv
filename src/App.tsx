@@ -34,6 +34,7 @@ import { L1InfrastructureMachineEconomy2026 } from './pages/L1InfrastructureMach
 import { PumpFunValueCapture2026 } from './pages/PumpFunValueCapture2026';
 import { TronM2MEcosystemAnalysis } from './pages/TronM2MEcosystemAnalysis';
 import { SolanaGlobalInfrastructure } from './pages/SolanaGlobalInfrastructure';
+import { PeaqM2MDeepValueAnalysis } from './pages/PeaqM2MDeepValueAnalysis';
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
         <Route path="/insights/pump-fun-value-capture-2026" element={<PumpFunValueCapture2026 />} />
         <Route path="/insights/tron-m2m-ecosystem-analysis" element={<TronM2MEcosystemAnalysis />} />
         <Route path="/insights/solana-global-infrastructure" element={<SolanaGlobalInfrastructure />} />
+        <Route path="/insights/peaq-m2m-deep-value-analysis" element={<PeaqM2MDeepValueAnalysis />} />
         <Route path="/insights/ethereum-agentic-layer" element={<EthereumAgenticLayer />} />
         <Route path="/insights/fat-app-thesis" element={<FatAppThesis />} />
         <Route path="/insights/bittensor-500x-narrative" element={<BittensorNarrative />} />
