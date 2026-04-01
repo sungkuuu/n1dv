@@ -11,6 +11,16 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'raoul-pal-macro-liquidity-peak-2026',
+    title: "An In-Depth Verification Report on Raoul Pal's 2026 Bitcoin Macro Liquidity Peak Theory and the 5.4-Year Debt Cycle",
+    date: 'Apr 1, 2026',
+    category: 'DEEP RESEARCH',
+    summary: 'Verification of the 2026 macro liquidity peak thesis: 5.4-year debt cycle, debt-wall rollover dynamics, ISM coupling, demographic debasement pressure, and scenario risks.',
+    author: 'Nexus One Research Desk',
+    content: '',
+    link: '/insights/raoul-pal-macro-liquidity-peak-2026'
+  },
+  {
     id: 'weekly-brief-mar-30-2026',
     title: 'March 30, 2026 Global Macroeconomic and Digital Asset Market In-Depth Analysis',
     date: 'Mar 30, 2026',
