@@ -24,7 +24,7 @@ export function RiskOff() {
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
               Risk-Off Contagion & The Flight to Quality
             </h1>
 
@@ -44,7 +44,7 @@ export function RiskOff() {
 
           {/* Key Takeaways */}
           <div className="bg-neutral-900 border-l-4 border-blue-900 rounded-r-xl p-8 mb-16">
-            <h2 className="text-2xl font-bold mb-6 text-white flex items-center gap-3">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6 flex items-center gap-3">
               <AlertCircle className="text-blue-500" size={24} />
               Key Takeaways
             </h2>
@@ -74,7 +74,7 @@ export function RiskOff() {
           <div className="prose prose-lg max-w-none">
             {/* Section 1 */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold mb-4 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 Market Regime: Macro-to-Crypto Contagion
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -87,7 +87,7 @@ export function RiskOff() {
 
             {/* Section 2 */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold mb-4 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 Federal Reserve Policy Impact
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -124,7 +124,7 @@ export function RiskOff() {
 
             {/* Section 3 */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold mb-4 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 Global Liquidity Dynamics
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -137,7 +137,7 @@ export function RiskOff() {
 
             {/* Section 4 */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold mb-4 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 Token Unlocks & Upcoming Catalysts
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -166,7 +166,7 @@ export function RiskOff() {
 
             {/* Section 5 */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold mb-4 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 Nexus One Strategy: Barbell Positioning
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -205,7 +205,7 @@ export function RiskOff() {
 
             {/* Conclusion */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold mb-4 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 Conclusion
               </h2>
               <p className="text-xl text-white font-semibold mb-4 italic">

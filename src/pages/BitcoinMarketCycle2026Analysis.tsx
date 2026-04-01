@@ -19,7 +19,7 @@ export function BitcoinMarketCycle2026Analysis() {
             <div className="bg-transparent border border-emerald-500 text-emerald-500 rounded-md px-3 py-1 text-xs font-bold uppercase tracking-wider inline-block mb-6">
               DEEP RESEARCH
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white leading-tight tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
               2026 BTC Market Cycle: 70% Crash vs. $60K Floor
             </h1>
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">
@@ -30,7 +30,7 @@ export function BitcoinMarketCycle2026Analysis() {
 
           <div className="prose prose-lg max-w-none">
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 Executive Summary: The Structural Inflection Point and the Prelude to Debate in the 2026 Bitcoin Market
               </h2>
               <p className="text-lg text-slate-200 font-medium leading-relaxed mb-6">
@@ -52,7 +52,7 @@ export function BitcoinMarketCycle2026Analysis() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 1. Dissecting Past Market Cycles and the Law of 'Logarithmic Decay'
               </h2>
               <p className="text-slate-300 leading-relaxed mb-4">
@@ -113,7 +113,7 @@ export function BitcoinMarketCycle2026Analysis() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 2. Fundamental and Technical Grounds for the 70% Crash ($38K) Scenario
               </h2>
               <p className="text-slate-300 leading-relaxed mb-4">
@@ -136,7 +136,7 @@ export function BitcoinMarketCycle2026Analysis() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 3. Macro Catalysts and Structural Vulnerabilities Triggering the 2026 Bear Market
               </h2>
               <p className="text-slate-300 leading-relaxed mb-4">
@@ -175,7 +175,7 @@ export function BitcoinMarketCycle2026Analysis() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 4. The 50% Drawdown (~$60K) Base Case and Fundstrat's Insights
               </h2>
               <p className="text-slate-300 leading-relaxed mb-4">
@@ -211,7 +211,7 @@ export function BitcoinMarketCycle2026Analysis() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 5. The Ultimate Line of Defense Indicated by On-Chain Fundamental Analysis
               </h2>
               <p className="text-slate-300 leading-relaxed mb-4">
@@ -259,7 +259,7 @@ export function BitcoinMarketCycle2026Analysis() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 6. Quantitative Comparative Analysis and Realization Probabilities of the Two Scenarios
               </h2>
               <p className="text-slate-300 leading-relaxed mb-4">
@@ -317,7 +317,7 @@ export function BitcoinMarketCycle2026Analysis() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 Conclusion: A Transition Period for Structural Recovery and Suggestions for Long-Term Investors
               </h2>
               <p className="text-slate-300 leading-relaxed mb-4">

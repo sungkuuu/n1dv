@@ -46,7 +46,7 @@ export function WeeklyBriefMar10() {
               WEEKLY BRIEF
             </div>
 
-            <h1 className="text-5xl font-bold tracking-tight leading-tight mb-4 text-white">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
               March 2026 Global Digital Asset and Macroeconomic In-Depth Research Report: The Intersection of Institutional Capital, RWA, and Macro Volatility
             </h1>
 
@@ -65,7 +65,7 @@ export function WeeklyBriefMar10() {
 
           <div className="prose prose-lg max-w-none">
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 TL;DR: Key Takeaways
               </h2>
               <blockquote className="p-6 my-8 border-l-4 border-indigo-500 bg-indigo-900/10 rounded-r-lg text-slate-200 leading-relaxed">
@@ -80,7 +80,7 @@ export function WeeklyBriefMar10() {
 
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 1. Macroeconomic and Traditional Finance Market Trends (As of March 9, 2026)
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">
@@ -102,7 +102,7 @@ export function WeeklyBriefMar10() {
 
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 2. Early RWA and DeFi Protocol Metric Analysis: Yield Subsidization and Liquidity Structure
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">
@@ -121,7 +121,7 @@ export function WeeklyBriefMar10() {
 
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 3. On-chain Data and Derivatives Market Analysis (As of Feb 27, 2026)
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">
@@ -166,7 +166,7 @@ export function WeeklyBriefMar10() {
 
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 4. North American (US/Canada) Spot ETF Flow Trends (As of Feb 27, 2026)
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">
@@ -210,7 +210,7 @@ export function WeeklyBriefMar10() {
 
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 5. Global Core Research Insights Summary
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">
@@ -258,7 +258,7 @@ export function WeeklyBriefMar10() {
 
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 6. L1/L2 Protocol On-chain Economy Analysis: The Parasitic Rollup Dilemma
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">
@@ -277,7 +277,7 @@ export function WeeklyBriefMar10() {
 
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 7. DeFi TVL and Derivatives (DEX/Perps) Market Trends
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">
@@ -290,7 +290,7 @@ export function WeeklyBriefMar10() {
 
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 8. Key Sector On-chain Trends (NFT, AI, DePIN, Meme)
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">
@@ -306,7 +306,7 @@ export function WeeklyBriefMar10() {
 
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 9. RWA (Tokenized Real-World Assets) Market Share and Trends
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">
@@ -322,7 +322,7 @@ export function WeeklyBriefMar10() {
 
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 10. Top 200 Coin On-chain Anomalies and Whale Trends
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">
@@ -341,7 +341,7 @@ export function WeeklyBriefMar10() {
 
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 11. Future Market Outlook and Key Upcoming Events Summary
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">

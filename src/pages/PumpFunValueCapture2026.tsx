@@ -20,7 +20,7 @@ export function PumpFunValueCapture2026() {
               DEEP RESEARCH
             </div>
 
-            <h1 className="text-3xl md:text-5xl font-sans font-bold text-white tracking-tighter leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
               In-Depth Analysis Report on the Revenue Sustainability of Pump.fun's Business Model and the Value Capture of the $PUMP Token
             </h1>
 
@@ -31,7 +31,7 @@ export function PumpFunValueCapture2026() {
 
           <div className="max-w-5xl mx-auto text-lg leading-relaxed text-slate-300 font-sans">
             <section className="mb-12">
-              <h2 className="text-2xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 TL;DR: Key Takeaways
               </h2>
               <ul className="list-disc list-outside ml-6 space-y-4 text-slate-300 mb-8">
@@ -43,7 +43,7 @@ export function PumpFunValueCapture2026() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 1. Introduction: The Advent of the Web3 Memecoin Economy and the Rise of Capitalization Mechanisms
               </h2>
 
@@ -61,7 +61,7 @@ export function PumpFunValueCapture2026() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 2. Business Model Architecture and Innovative Revenue Generation Structure
               </h2>
 
@@ -121,7 +121,7 @@ export function PumpFunValueCapture2026() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 3. Competitive Landscape and Market Share Defense Capabilities
               </h2>
               <p className="mb-6 text-lg leading-relaxed text-slate-300">Due to the open-source and smart contract nature of the Web3 market, successful business models are immediately forked. Pump.fun's rockstar-like rise spawned numerous imitation platforms not only within the Solana ecosystem but also across other Layer 1 and Layer 2 blockchain networks. Heading into 2026, amid a harsh environment where the total volume of the launchpad market plateaued around the $100 million mark and the number of daily graduated tokens shrank to about 100, each platform is waging a life-or-death battle for market share to secure limited liquidity.</p>
@@ -179,7 +179,7 @@ export function PumpFunValueCapture2026() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 4. The Tokenomics of $PUMP and the Value Capture Dilemma
               </h2>
               <p className="mb-6 text-lg leading-relaxed text-slate-300">The most paradoxical phenomenon in the Pump.fun ecosystem is that while the platform generates record-breaking cash flow, the price trajectory of its governance token, $PUMP—which should reflect the ecosystem's value—is experiencing a miserable collapse. The structural flaw in the 'Value Capture' mechanism, where the platform's profits fail to transfer to token holders, is a textbook case of tokenomics design failure worthy of academic study.</p>
@@ -245,7 +245,7 @@ export function PumpFunValueCapture2026() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 5. Strategic Pivot for Ecosystem Evolution and Survival (Beyond Memecoins)
               </h2>
               <p className="mb-6 text-lg leading-relaxed text-slate-300">Recognizing the extreme fragmentation and volatility of liquidity inherent in a memecoin-centric revenue model, Pump.fun is executing a bold Strategic Pivot entering 2026, fundamentally overhauling its business from a simple launchpad to an 'Integrated Decentralized Finance (DeFi) Ecosystem.' This evolution is an indispensable course correction to repair its brand value, which has been damaged by a memecoin fraud rate exceeding 98%, and to establish a foundation for long-term survival by reducing reliance on short-term speculation.</p>
@@ -258,7 +258,7 @@ export function PumpFunValueCapture2026() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 6. The Detonator Threatening the Ecosystem: Regulatory Uncertainty and Legal Sanction Risks
               </h2>
               <p className="mb-6 text-lg leading-relaxed text-slate-300">Despite technological and business diversification efforts, the most colossal threat that could entirely shake Pump.fun's foundation for existence is external sanctions through the judicial system. The class-action lawsuit filed in the U.S. District Court for the Southern District of New York ('Aguilar v. Baton Corporation Ltd. d/b/a Pump.Fun et al., Case No. 1:25-cv-00880') contains a nuclear-level risk capable of pronouncing a death sentence on the platform's fundamental business legality beyond a simple civil dispute.</p>
@@ -270,7 +270,7 @@ export function PumpFunValueCapture2026() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 7. The Time Bomb of Value Capture: The Massive Cliff Unlock Overhang in July 2026
               </h2>
               <p className="mb-6 text-lg leading-relaxed text-slate-300">The ongoing downward trend in the $PUMP token's price (around $0.0017) might just be a preview. The massive token Unlock event scheduled for July 12, 2026, is the most terrifying Supply Shock risk monitored by fundamental analysts.</p>
@@ -280,7 +280,7 @@ export function PumpFunValueCapture2026() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 8. In-Depth Evaluation of Economic Sustainability and Conclusion
               </h2>
 

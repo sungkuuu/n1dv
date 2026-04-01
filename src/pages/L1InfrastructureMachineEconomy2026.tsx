@@ -20,7 +20,7 @@ export function L1InfrastructureMachineEconomy2026() {
               DEEP RESEARCH
             </div>
 
-            <h1 className="text-3xl md:text-5xl font-sans font-bold text-white tracking-tighter leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
               Analysis of L1 Blockchain Infrastructure Competitiveness in the Machine Economy Era: A Focus on M2M Transaction Environments
             </h1>
 
@@ -31,7 +31,7 @@ export function L1InfrastructureMachineEconomy2026() {
 
           <div className="max-w-5xl mx-auto text-lg leading-relaxed text-slate-300 font-sans">
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 1. Introduction: The Advent of the Machine Economy and New Challenges for Blockchain Infrastructure
               </h2>
 
@@ -46,7 +46,7 @@ export function L1InfrastructureMachineEconomy2026() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 2. Essential Technical Requirements for M2M Communication and Transaction Infrastructure
               </h2>
               <p className="mb-6 text-lg leading-relaxed text-slate-300">To evaluate machine-to-machine transaction networks, we must shift away from human User Experience (UX)-centric thinking and understand the logical and mathematical requirements of machines. To enable scenarios where an AI agent executes dozens of micro-payments per second to another agent for data access rights, or an EV negotiates electricity rates and pays a charging station in real-time, the following four core technical requirements must be met.</p>
@@ -59,7 +59,7 @@ export function L1InfrastructureMachineEconomy2026() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 3. In-depth Analysis of Major Layer 1 (L1) and Layer 2 (L2) Networks
               </h2>
 
@@ -96,7 +96,7 @@ export function L1InfrastructureMachineEconomy2026() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 4. The Rise of Next-Generation Parallel EVM and DePIN-Specific Networks
               </h2>
 
@@ -122,7 +122,7 @@ export function L1InfrastructureMachineEconomy2026() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 5. Comprehensive Performance and Economic Comparison of Networks in the M2M Environment
               </h2>
               <p className="mb-6 text-lg leading-relaxed text-slate-300">Synthesizing the structural characteristics and performance metrics of each blockchain analyzed above from the perspective of M2M transactions yields the following comparison. The table below quantitatively and qualitatively summarizes each project's throughput, latency, fee structure, and core strategic weapons within the machine economy ecosystem.</p>
@@ -210,7 +210,7 @@ export function L1InfrastructureMachineEconomy2026() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 6. Conclusion: Identifying the Ultimate M2M Project with the Most Advanced Competitiveness
               </h2>
 

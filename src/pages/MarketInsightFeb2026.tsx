@@ -40,7 +40,7 @@ export function MarketInsightFeb2026() {
               DEEP RESEARCH
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
               Global Risk Assets: The 'Bear Trap' Debate
             </h1>
 
@@ -64,7 +64,7 @@ export function MarketInsightFeb2026() {
 
           {/* Executive Summary */}
           <div className="bg-neutral-900 border-l-4 border-green-900 rounded-r-xl p-8 mb-16">
-            <h2 className="text-2xl font-bold mb-6 text-white flex items-center gap-3">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6 flex items-center gap-3">
               <AlertCircle className="text-green-500" size={24} />
               Key Takeaways
             </h2>
@@ -94,7 +94,7 @@ export function MarketInsightFeb2026() {
           <div className="prose prose-lg max-w-none">
             {/* Section 1 */}
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 1. The Macro Backdrop: Kevin Warsh & The "Sound Money" Shock
               </h2>
 
@@ -121,7 +121,7 @@ export function MarketInsightFeb2026() {
 
             {/* Section 2 */}
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 2. Equity Markets: The AI Capex Reality Check
               </h2>
 
@@ -161,7 +161,7 @@ export function MarketInsightFeb2026() {
 
             {/* Section 3 */}
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 3. Crypto-Equity Correlation: The 0.80 Convergence
               </h2>
 
@@ -218,7 +218,7 @@ export function MarketInsightFeb2026() {
 
             {/* Section 4 */}
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 4. The Death of the 4-Year Cycle
               </h2>
 
@@ -269,7 +269,7 @@ export function MarketInsightFeb2026() {
 
             {/* Section 5 */}
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 5. Altcoin Carnage & Structural Re-rating
               </h2>
 
@@ -303,7 +303,7 @@ export function MarketInsightFeb2026() {
 
             {/* Section 6: Bear vs Bull Arguments */}
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 6. Market Outlook: Bear Trap or Distribution?
               </h2>
 

@@ -20,7 +20,7 @@ export function HyperliquidValuation() {
               DEEP RESEARCH
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
               Equity Research: Hyperliquid (HYPE) – Structural Alpha and the Valuation Re-Rating
             </h1>
 
@@ -38,7 +38,7 @@ export function HyperliquidValuation() {
           </div>
 
           <div className="bg-neutral-900 border border-neutral-700 border-l-4 border-l-emerald-500 rounded-lg p-8 mb-16">
-            <h2 className="text-2xl font-bold mb-6 text-white flex items-center gap-3">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6 flex items-center gap-3">
               <AlertCircle className="text-gray-400" size={24} />
               Key Takeaways
             </h2>
@@ -66,7 +66,7 @@ export function HyperliquidValuation() {
 
           <div className="prose prose-lg max-w-none">
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 1. Executive Summary: The Efficiency Paradox
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -87,7 +87,7 @@ export function HyperliquidValuation() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 2. The Fallacy of Revenue Multiples: Deconstructing the 100x PSR
               </h2>
 
@@ -138,7 +138,7 @@ export function HyperliquidValuation() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 3. The Benchmark: Structural Cost Analysis of Centralized Exchanges
               </h2>
               <p className="text-gray-300 leading-relaxed mb-6">
@@ -217,7 +217,7 @@ export function HyperliquidValuation() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 4. Hyperliquid's Financial Architecture: The 99% Margin Thesis
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -272,7 +272,7 @@ export function HyperliquidValuation() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 5. Valuation Re-Rating: PER 30 is Justified
               </h2>
               <p className="text-gray-300 leading-relaxed mb-6">
@@ -349,7 +349,7 @@ export function HyperliquidValuation() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 6. L1 Premium: The Earnings Efficiency Ratio (EER)
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -424,7 +424,7 @@ export function HyperliquidValuation() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 7. Competitive Moat: The Landscape of dYdX and Vertex
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -462,7 +462,7 @@ export function HyperliquidValuation() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 8. Risk Factors & Monitoring: The Bear Case
               </h2>
               <p className="text-gray-300 leading-relaxed mb-6">
@@ -515,7 +515,7 @@ export function HyperliquidValuation() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 9. Conclusion: The Rationality of $33 Billion
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">

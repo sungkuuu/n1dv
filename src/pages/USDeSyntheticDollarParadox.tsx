@@ -20,7 +20,7 @@ export function USDeSyntheticDollarParadox() {
               DEEP RESEARCH
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
               The Mirage of the "10/10" Crisis: A Forensic Critique of the USDe Market Event
             </h1>
 
@@ -38,7 +38,7 @@ export function USDeSyntheticDollarParadox() {
           </div>
 
           <div className="bg-neutral-900 border border-neutral-700 border-l-4 border-l-emerald-500 rounded-lg p-8 mb-16">
-            <h2 className="text-2xl font-bold mb-6 text-white flex items-center gap-3">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6 flex items-center gap-3">
               <AlertCircle className="text-gray-400" size={24} />
               Key Takeaways
             </h2>
@@ -66,7 +66,7 @@ export function USDeSyntheticDollarParadox() {
 
           <div className="prose prose-lg max-w-none">
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 1. Introduction: Deconstructing the "Structural Failure" Discourse
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -98,7 +98,7 @@ export function USDeSyntheticDollarParadox() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 2. Epistemological Framework: Defining "Failure" in Crypto Markets
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -173,7 +173,7 @@ export function USDeSyntheticDollarParadox() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 3. The "False Cause" Fallacy: Reconstructing the 10/10 Causality
               </h2>
 
@@ -242,7 +242,7 @@ export function USDeSyntheticDollarParadox() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 4. The Fallacy of False Analogy: Why USDe is Not UST (Luna)
               </h2>
 
@@ -282,7 +282,7 @@ export function USDeSyntheticDollarParadox() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 5. Structural Flaws vs. Market Microstructure
               </h2>
 
@@ -323,7 +323,7 @@ export function USDeSyntheticDollarParadox() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 6. The "Looper" Risk: Valid Concern, Wrong Application
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -346,7 +346,7 @@ export function USDeSyntheticDollarParadox() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 7. Detailed Analysis: Redemption vs. Selling
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -372,7 +372,7 @@ export function USDeSyntheticDollarParadox() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 8. Regulatory & Future Implications
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -395,7 +395,7 @@ export function USDeSyntheticDollarParadox() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 9. Conclusion: Final Verdict on "10/10" Analysis
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">

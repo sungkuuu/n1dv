@@ -46,7 +46,7 @@ export function WeeklyBriefFeb27() {
               WEEKLY BRIEF
             </div>
 
-            <h1 className="text-5xl font-bold tracking-tight leading-tight mb-4 text-white">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
               Nexus One Weekly Report: Macro Shocks, ETF Reversals, and the $6B March Mega Unlock
             </h1>
 
@@ -65,7 +65,7 @@ export function WeeklyBriefFeb27() {
 
           <div className="prose prose-lg max-w-none">
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 1. In-depth Analysis of Macroeconomic Indicators and Macro Environment
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">
@@ -149,7 +149,7 @@ export function WeeklyBriefFeb27() {
 
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 2. Bitcoin & Ethereum Market Outlook: Key On-chain Indicators and Sentiment Analysis
               </h2>
 
@@ -240,7 +240,7 @@ export function WeeklyBriefFeb27() {
 
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 3. Top 10 Spot ETF Fund Flows: Dramatic Reversal After Massive Exodus
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">
@@ -303,7 +303,7 @@ export function WeeklyBriefFeb27() {
 
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 5. In-depth Summary of Key Research-Based Insights
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">
@@ -357,7 +357,7 @@ export function WeeklyBriefFeb27() {
 
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 6. L1/L2, DeFi, NFT, and RWA Sector Trend Analysis
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">
@@ -418,7 +418,7 @@ export function WeeklyBriefFeb27() {
 
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 7. On-chain Data Anomaly Detection and Project of the Week
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">
@@ -431,7 +431,7 @@ export function WeeklyBriefFeb27() {
 
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 8. Next Week's Key Schedule and Maximum Risk: March 'Mega Token Unlock'
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">
@@ -476,7 +476,7 @@ export function WeeklyBriefFeb27() {
 
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 9. Comprehensive Conclusion and Strategic Suggestions
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">

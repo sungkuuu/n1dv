@@ -46,7 +46,7 @@ export function WeeklyBriefMar30() {
               WEEKLY BRIEF
             </div>
 
-            <h1 className="text-5xl font-bold tracking-tight leading-tight mb-4 text-white">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
               March 30, 2026 Global Macroeconomic and Digital Asset Market In-Depth Analysis Report
             </h1>
 
@@ -57,7 +57,7 @@ export function WeeklyBriefMar30() {
 
           <div className="prose prose-lg max-w-none">
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 Summary of Core Macroeconomic and Cryptocurrency Indicators
               </h2>
 
@@ -89,7 +89,7 @@ export function WeeklyBriefMar30() {
 
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 Bitcoin &amp; Ethereum Market Overview (and Key Indicators)
               </h2>
               <ul className="space-y-2 mb-8 list-disc pl-6">
@@ -127,7 +127,7 @@ export function WeeklyBriefMar30() {
 
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 On-Chain Data and Sector In-Depth Analysis (On-Chain &amp; Sector Dynamics)
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">
@@ -214,7 +214,7 @@ export function WeeklyBriefMar30() {
 
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 Summary of Latest Market Insights from Global Research Institutions
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">
@@ -242,7 +242,7 @@ export function WeeklyBriefMar30() {
 
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 Upcoming Major Digital Asset Events and Massive Token Unlock Schedules (Upcoming Events)
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">
@@ -305,7 +305,7 @@ export function WeeklyBriefMar30() {
 
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 Conclusion and Comprehensive Implications (Conclusion)
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">

@@ -20,11 +20,11 @@ export function BittensorNarrative() {
               DEEP RESEARCH
             </div>
 
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-white font-sans mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
               Barry Silbert's Bittensor 500x Narrative: A Replay of Bitcoin 2012?
             </h1>
 
-            <h2 className="text-xl text-gray-400 font-medium mt-4 font-sans mb-8">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
               Analyzing the math and logic behind the $1 Trillion market cap thesis. Is Bittensor the 'Monetary Primitive of Intelligence' or just hype?
             </h2>
 
@@ -39,7 +39,7 @@ export function BittensorNarrative() {
 
           <div className="prose prose-lg prose-invert max-w-none font-sans">
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 1. Introduction: The Weight of $1 Trillion
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -57,7 +57,7 @@ export function BittensorNarrative() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 2. The Origin of the Narrative and Verification of Barry Silbert's Thesis
               </h2>
 
@@ -90,7 +90,7 @@ export function BittensorNarrative() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 3. DCG's Strategic Pivot: Beyond Investment to Ecosystem Dominance
               </h2>
 
@@ -109,7 +109,7 @@ export function BittensorNarrative() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 4. Evolution of Mechanism: Dynamic TAO (dTAO)
               </h2>
 
@@ -131,7 +131,7 @@ export function BittensorNarrative() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 5. Valuation Scenarios: From Niche to Hegemony
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -151,7 +151,7 @@ export function BittensorNarrative() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 6. Critical Risks & Logical Verification
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -202,7 +202,7 @@ export function BittensorNarrative() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 7. Conclusion: The Asymmetric Bet
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">

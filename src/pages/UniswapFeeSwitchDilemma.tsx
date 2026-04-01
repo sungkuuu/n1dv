@@ -20,7 +20,7 @@ export function UniswapFeeSwitchDilemma() {
               DEEP RESEARCH
             </div>
 
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight tracking-tight font-sans">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
               The Uniswap Fee Switch Dilemma: A 25x P/E Call Option and the Market's Hidden Alpha
             </h1>
 
@@ -40,7 +40,7 @@ export function UniswapFeeSwitchDilemma() {
           <div className="max-w-none">
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">TL;DR</h2>
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">TL;DR</h2>
               <ul className="list-disc list-outside ml-6 space-y-6">
                 <li className="leading-relaxed">
                   <p className="text-gray-300 leading-relaxed">
@@ -76,7 +76,7 @@ export function UniswapFeeSwitchDilemma() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 1. The Reality of Valuation: The True Numbers of the 25% Burn Model
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -99,7 +99,7 @@ export function UniswapFeeSwitchDilemma() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 2. What Buying $UNI Today Actually Means: An Expensive Call Option
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -108,7 +108,7 @@ export function UniswapFeeSwitchDilemma() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 3. The Illusion of "Priced-In" and the Pricing Contradiction
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -123,7 +123,7 @@ export function UniswapFeeSwitchDilemma() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 4. The Ultimate Dilemma: LP Flight Fear and Uniswap's v4 Defense
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -138,7 +138,7 @@ export function UniswapFeeSwitchDilemma() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 5. The War with CLOBs: The Long-Tail Moat and the Subsidy Illusion
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -153,7 +153,7 @@ export function UniswapFeeSwitchDilemma() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 6. Tokenomic Dynamic Equilibrium and Structural Downside Support
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -171,7 +171,7 @@ export function UniswapFeeSwitchDilemma() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 7. The Ultimate Fact: Scenario-Based Valuation Re-rating (The Real Upside)
               </h2>
               <p className="text-gray-300 leading-relaxed mb-6">
@@ -234,7 +234,7 @@ export function UniswapFeeSwitchDilemma() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 8. The Final Hurdle: SEC Regulatory Risk and the 'Regulatory Discount'
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -246,7 +246,7 @@ export function UniswapFeeSwitchDilemma() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 Final Conclusion: The True 10-Bagger Beyond Doubt and Fear
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">

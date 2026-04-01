@@ -20,11 +20,11 @@ export function FatAppThesis() {
               DEEP RESEARCH
             </div>
 
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-white font-sans mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
               The End of the Fat Protocol Thesis and the Dawn of the 'Fat App' Era
             </h1>
 
-            <h2 className="text-xl text-gray-400 font-medium mt-4 font-sans mb-8">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
               On the Collapse of the Infrastructure Bubble and the Winner-Takes-All Structure of Consumer Apps
             </h2>
 
@@ -38,7 +38,7 @@ export function FatAppThesis() {
           </div>
 
           <div className="bg-neutral-900 border border-neutral-700 border-l-4 border-l-emerald-500 rounded-lg p-8 mb-16">
-            <h2 className="text-2xl font-bold mb-6 text-white flex items-center gap-3">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6 flex items-center gap-3">
               <AlertCircle className="text-gray-400" size={24} />
               Key Takeaways
             </h2>
@@ -72,7 +72,7 @@ export function FatAppThesis() {
 
           <div className="prose prose-lg prose-invert max-w-none font-sans">
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 1. Introduction: The Beginning of the 'Great Divergence'
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -90,7 +90,7 @@ export function FatAppThesis() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 2. An 8-Year VC's Market Diagnosis: The Commoditization of Infrastructure
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -105,7 +105,7 @@ export function FatAppThesis() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 3. The Truth About Infrastructure Overinvestment: Profitability Collapse and the Spread of Zombie Chains
               </h2>
 
@@ -136,7 +136,7 @@ export function FatAppThesis() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 4. The Consumer Renaissance: Evolution from 'Fat App' to 'App-Chain'
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -192,7 +192,7 @@ export function FatAppThesis() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 5. 'The Great Rotation': A New Valuation Framework
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -214,7 +214,7 @@ export function FatAppThesis() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 6. Conclusion: Investment and Building Strategies for 2026
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -237,7 +237,7 @@ export function FatAppThesis() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 [Appendix] Quantitative Analysis of the 'Zombie Chain' Phenomenon
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">

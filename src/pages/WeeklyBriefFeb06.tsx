@@ -32,7 +32,7 @@ export function WeeklyBriefFeb06() {
               WEEKLY BRIEF
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
               The Great Decoupling & Institutional Capitulation
             </h1>
 
@@ -56,7 +56,7 @@ export function WeeklyBriefFeb06() {
 
           {/* Executive Summary */}
           <div className="mb-16">
-            <h2 className="text-2xl font-bold mb-6 text-white">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
               Executive Summary
             </h2>
             <div className="text-gray-300 leading-[1.8] space-y-6">
@@ -84,7 +84,7 @@ export function WeeklyBriefFeb06() {
           <div className="text-gray-300 leading-[1.8]">
             {/* Section 2 */}
             <section className="mb-16">
-              <h2 className="text-2xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 2. Macroeconomic Environment
               </h2>
 
@@ -175,7 +175,7 @@ export function WeeklyBriefFeb06() {
 
             {/* Section 3 */}
             <section className="mb-16">
-              <h2 className="text-2xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 3. Deep Dive: Crypto Market Capitulation
               </h2>
 
@@ -217,7 +217,7 @@ export function WeeklyBriefFeb06() {
 
             {/* Section 4 */}
             <section className="mb-16">
-              <h2 className="text-2xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 4. News Analysis (Jan 30 – Feb 6)
               </h2>
 
@@ -251,7 +251,7 @@ export function WeeklyBriefFeb06() {
 
             {/* Section 5 */}
             <section className="mb-16">
-              <h2 className="text-2xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 5. Sector Watch
               </h2>
 
@@ -281,7 +281,7 @@ export function WeeklyBriefFeb06() {
 
             {/* Section 6 */}
             <section className="mb-16">
-              <h2 className="text-2xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 6. Outlook & Strategy
               </h2>
 
@@ -320,7 +320,7 @@ export function WeeklyBriefFeb06() {
 
             {/* Section 7 */}
             <section className="mb-16">
-              <h2 className="text-2xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 7. Deep Dive: The Korean Market Anomaly
               </h2>
 
@@ -352,7 +352,7 @@ export function WeeklyBriefFeb06() {
 
             {/* Section 8 - Conclusion */}
             <section className="mb-16">
-              <h2 className="text-2xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 8. Conclusion
               </h2>
 

@@ -20,7 +20,7 @@ export function WeeklyBriefFeb13() {
               WEEKLY BRIEF
             </div>
 
-            <h1 className="text-5xl font-bold tracking-tight leading-tight mb-4 text-white">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
               Nexus One Weekly Report: The Great Decoupling and Liquidity Test
             </h1>
 
@@ -39,7 +39,7 @@ export function WeeklyBriefFeb13() {
 
           <div className="prose prose-lg max-w-none">
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 1. Overview: Capitulation or Accumulation?
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -98,7 +98,7 @@ export function WeeklyBriefFeb13() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 2. Macroeconomic Landscape: The Widening Atlantic Moat
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -157,7 +157,7 @@ export function WeeklyBriefFeb13() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 3. Digital Asset Market Trends & Analysis
               </h2>
 
@@ -241,7 +241,7 @@ export function WeeklyBriefFeb13() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 4. Institutional Capital Flows: The ETF Divergence
               </h2>
               <p className="text-gray-300 leading-relaxed mb-6">
@@ -295,7 +295,7 @@ export function WeeklyBriefFeb13() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 5. On-Chain Forensics: Signals Hunting for the Bottom
               </h2>
               <p className="text-gray-300 leading-relaxed mb-6">
@@ -361,7 +361,7 @@ export function WeeklyBriefFeb13() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 6. Deep Sector Analysis: DePIN, AI, and the Next Narrative
               </h2>
               <p className="text-gray-300 leading-relaxed mb-6">
@@ -412,7 +412,7 @@ export function WeeklyBriefFeb13() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 7. Regulatory & Security Issues: Growing Pains of Institutionalization
               </h2>
 
@@ -455,7 +455,7 @@ export function WeeklyBriefFeb13() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 8. Conclusion: Strategic Outlook
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">

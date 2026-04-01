@@ -46,7 +46,7 @@ export function TronM2MEcosystemAnalysis() {
               DEEP RESEARCH
             </div>
 
-            <h1 className="text-4xl md:text-5xl font-sans font-bold text-white tracking-tight leading-tight mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
               In-Depth Analysis Report on TRON&apos;s Architecture and On-chain Metric Deviation within the M2M Machine Economy Ecosystem
             </h1>
 
@@ -57,7 +57,7 @@ export function TronM2MEcosystemAnalysis() {
 
           <div className="max-w-5xl mx-auto text-lg leading-relaxed text-slate-300 font-sans">
             <section className="mb-12">
-            <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">1. Introduction: Evolution of Blockchain Infrastructure and the Advent of the Machine Economy</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">1. Introduction: Evolution of Blockchain Infrastructure and the Advent of the Machine Economy</h2>
 
             <div className="border-l-2 border-emerald-500/40 pl-5 text-slate-200 mb-8">
               Technological innovation in the 21st century has transcended the boundaries of an internet that merely connects humans, entering the era of the Internet of Things (IoT) and the Machine Economy, where objects and machines autonomously exchange data and create value. The technological progress sparked by the digital revolution of the 1950s gave birth to the new paradigm of IoT through the convergence of Radio Frequency Identification (RFID) chips, micro-sensors, and the internet. Starting from the level where early MIT students monitored a Coke vending machine using cheap sensors, this concept evolved through Reza Raji&apos;s factory automation model via data packet movement in the 1990s, before officially announcing its industrial birth in 2008 when the number of internet-connected electronic devices surpassed the global human population.
@@ -75,7 +75,7 @@ export function TronM2MEcosystemAnalysis() {
               This report conducts an in-depth comparative analysis of TRON&apos;s core architecture (consensus algorithm, resource model, smart contract environment), the latest on-chain metrics from 2024 and 2025, and Machine Economy-specific blockchains like peaq and IOTA. Through this, we verify the validity of the claim that TRON has deviated from the Machine Economy ecosystem, and comprehensively determine whether this deviation is a simple technical failure or a highly strategic pivot to be reborn as a global liquidity Settlement Layer.
             </p>
 
-            <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">2. Essential Blockchain Architecture Prerequisites Demanded by M2M Communication and the Machine Economy</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">2. Essential Blockchain Architecture Prerequisites Demanded by M2M Communication and the Machine Economy</h2>
 
             <p className="mb-6 text-lg font-sans text-slate-300 leading-relaxed tracking-normal">
               To structurally analyze the phenomenon of TRON&apos;s deviation from its ecosystem trajectory, we must first clearly define the technical and economic prerequisites that the Machine Economy of the M2M era demands from its foundational blockchain infrastructure. The Machine Economy requires entirely different traffic patterns and economics compared to human-centric traditional financial systems or asset depositing (DeFi).
@@ -88,7 +88,7 @@ export function TronM2MEcosystemAnalysis() {
               <li><strong>Native Integration of Machine IDs and Verifiable Data Accessibility:</strong> In infrastructures like DePIN, the ability to cryptographically prove a machine&apos;s physical location, state, and the integrity of generated data must be provided at the base layer (Layer-1). This means moving beyond implementation via general-purpose smart contracts; the blockchain protocol itself must be able to recognize the machine&apos;s identity and perform Role-Based Access Control (RBAC).</li>
             </ul>
 
-            <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">3. Limitations of TRON&apos;s Core Architecture: Structural Mismatch with the Machine Economy</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">3. Limitations of TRON&apos;s Core Architecture: Structural Mismatch with the Machine Economy</h2>
 
             <p className="mb-6 text-lg font-sans text-slate-300 leading-relaxed tracking-normal">
               The TRON network was designed as a high-performance blockchain providing high throughput reaching 2,000 transactions per second (TPS), rapid block generation times of 3 seconds, and a consistent fee structure. However, the core architectural choices adopted to achieve these performance metrics are walking the exact opposite path of the essential requirements for M2M communication and the Machine Economy.
@@ -195,7 +195,7 @@ export function TronM2MEcosystemAnalysis() {
               The recent trend among blockchain infrastructures specialized for the Machine Economy is not to rely on general-purpose smart contract environments. Instead, they natively implement core logic frequently used in machine communication—such as machine ID management, data integrity verification, and off-chain routing—at the chain&apos;s base protocol (L1 Primitives) level to minimize computational load and fees. The fact that TRON concentrated solely on the stability and Ethereum compatibility of the TVM to strengthen its identity as a general-purpose platform paradoxically means it has become a system too large and heavy to perform machine-specific operations.
             </p>
 
-            <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">4. On-chain Data and Ecosystem Metric Analysis: Deviation Proven by Numbers (2024-2026)</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">4. On-chain Data and Ecosystem Metric Analysis: Deviation Proven by Numbers (2024-2026)</h2>
 
             <p className="mb-6 text-lg font-sans text-slate-300 leading-relaxed tracking-normal">
               This unsuitability of TRON&apos;s core architecture is ultimately and empirically proven through on-chain numerical data. An in-depth analysis of the 2024 and 2025 year-end reports from major blockchain data analytics firms like Nansen, CryptoQuant, and Arkham clearly reveals numerically that the types of transactions occurring on the TRON network, the composition of active users, and the paths through which value moves are on a trajectory completely unrelated to the Internet of Things (IoT) or the Machine Economy (M2M).
@@ -238,7 +238,7 @@ export function TronM2MEcosystemAnalysis() {
               In the early days of the blockchain industry, there was a vague expectation that networks boasting high throughput and scalability like TRON would become the data backbone framework for the blossoming IoT ecosystem. However, the actual development pattern of the blockchain industry unfolded completely differently from the early predictions of TRON&apos;s architects and the market. TRON optimized its excellent network processing capabilities, compatibility, and rapid block generation speeds for &quot;moving massive human capital (especially dollar-pegged stablecoins) cheaply and quickly.&quot; The market for infinitely fragmented, ultra-micro data communication generated by sensors and machines did not fit TRON&apos;s economic logic and has been thoroughly excluded. This numerically confirms that rather than unintentionally &apos;deviating&apos; from the IoT trajectory, the development direction of its infrastructure perfectly pivoted and settled as a &apos;High-frequency Settlement Layer&apos; for individuals and institutions.
             </p>
 
-            <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">5. Architectural and Philosophical Contrast Analysis with Machine Economy Specific Blockchains (peaq, IOTA)</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">5. Architectural and Philosophical Contrast Analysis with Machine Economy Specific Blockchains (peaq, IOTA)</h2>
 
             <p className="mb-6 text-lg font-sans text-slate-300 leading-relaxed tracking-normal">
               The metric that most starkly reveals how unsuitably generalized TRON is for the M2M ecosystem is its architectural and philosophical contrast with specialized blockchain infrastructures built from the ground up strictly targeting the Machine Economy (DePIN) and physical IoT. While TRON advanced into a financial settlement infrastructure, peaq and IOTA targeted the niche of the Machine Economy abandoned by TRON, building infrastructures with completely different structures.
@@ -277,7 +277,7 @@ export function TronM2MEcosystemAnalysis() {
               IOTA&apos;s feeless nature makes true microtransaction economies physically possible—such as per-second settlements for EV battery charging, resource leasing between smart factory machines, and continuous streaming marketplace sales of sensor data. Recognized for its effectiveness, IOTA recently partnered with the UK government&apos;s Customs authority, receiving £3.5 million in seed capital backing to be adopted as a testbed for the Trade Worldwide Information Network (TWIN) framework. Through this, it is rapidly settling as the global standard for B2B and M2M data exchange in real-world industries by dismantling existing paper-based customs clearance and freight transport procedures and securing data integrity in real-time.
             </p>
 
-            <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">6. Inherent Failure Rate of IoT Projects and TRON&apos;s Macro Strategic Pivot</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">6. Inherent Failure Rate of IoT Projects and TRON&apos;s Macro Strategic Pivot</h2>
 
             <p className="mb-6 text-lg font-sans text-slate-300 leading-relaxed tracking-normal">
               To fully understand why TRON, contrary to its initial vision, abandoned the massive potential market of the Machine Economy and pivoted into a stablecoin network, we must illuminate the industrial and technical difficulties inherent in Internet of Things (IoT) projects themselves. This implies that TRON&apos;s deviation was not a simple &apos;failure&apos; but a cold and successful &apos;strategic choice&apos; based on capitalist market logic.
@@ -295,7 +295,7 @@ export function TronM2MEcosystemAnalysis() {
               It is highly likely that the TRON Foundation and development team keenly recognized the slow commercialization speed typical of the IoT industry, fragmented standards, and the barrenness of business models that must squabble over margins of less than 1 cent. Instead of an M2M economic zone that would yield only a handful of fees after spending years supporting complex sensor network integrations, TRON discovered a much larger and immediate Cash Cow: the &apos;digital asset (Dollar) remittance market,&apos; where human greed and liquidity interlock immediately. By focusing on smart contracts for ERC-20 compatible tokens (like USDT) generated and verified within the chain, rather than dealing with complex off-chain sensor data, TRON was able to explosively grow network availability and TVL while radically reducing technical complexity. Therefore, TRON&apos;s deviation from the Machine Economy should be evaluated not as technical incompetence, but as the most agile and successful Product-Market Fit transition in the history of the blockchain industry—abandoning complex, low-profitability conundrums and seizing explosive market demand (ultra-fast dollar transmission).
             </p>
 
-            <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">7. Secondary Insights and Ripple Effects: Macro Bifurcation of Blockchain Infrastructure Roles</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">7. Secondary Insights and Ripple Effects: Macro Bifurcation of Blockchain Infrastructure Roles</h2>
 
             <p className="mb-6 text-lg font-sans text-slate-300 leading-relaxed tracking-normal">
               The results of the analysis thus far go beyond simply identifying the architectural characteristics of an individual mainnet project like TRON; they suggest a highly macro and important trend that will penetrate the entire blockchain industry for decades to come: the &apos;Bifurcation of Roles&apos; in networks.
@@ -307,7 +307,7 @@ export function TronM2MEcosystemAnalysis() {
               <li><strong>Evolution Towards Autonomous Agents:</strong> In the fully realized Machine Economy ecosystem of the future, machines will transcend the rudimentary stage of simply transmitting data and billing; they will evolve to a level where machines themselves own crypto wallets and capital, combine with AI systems, and act as Autonomous Economic Agents without human control. In this advancement process, highly sophisticated computations—such as Zero-Knowledge Proofs (ZK)-based Privacy-Enhancing Technologies (PETs) to prevent industrial secret data leaks, or Anomaly Detection to block external hacks and sensor faults in real-time—will be required as a baseline. The complex cryptographic machine processing required cannot possibly be accommodated by TRON&apos;s current TVM structure or its high-cost bandwidth burn model.</li>
             </ul>
 
-            <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">8. Overall Evaluation and Conclusion</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">8. Overall Evaluation and Conclusion</h2>
 
             <p className="mb-6 text-lg font-sans text-slate-300 leading-relaxed tracking-normal">
               Regarding the user&apos;s assertion that &quot;it is self-evident that the TRON network has deviated from the trajectory of the Machine Economy ecosystem in the M2M communication era, both numerically and in terms of architecture,&quot; a comprehensive cross-verification of related on-chain databases, academic materials, blockchain system architecture specifications, and industry reports confirms that the claim is an indisputable fact strongly supported by all objective data and technical facts.

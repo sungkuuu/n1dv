@@ -46,7 +46,7 @@ export function WeeklyBriefMar20() {
               WEEKLY BRIEF
             </div>
 
-            <h1 className="text-5xl font-bold tracking-tight leading-tight mb-4 text-white">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
               March 2026 Global Digital Asset Market and Macroeconomic In-Depth Analysis Report
             </h1>
 
@@ -57,7 +57,7 @@ export function WeeklyBriefMar20() {
 
           <div className="prose prose-lg max-w-none">
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 1. In-depth Analysis of Macroeconomic and Traditional Finance Indicators (Macro & TradFi Dynamics)
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">
@@ -85,7 +85,7 @@ export function WeeklyBriefMar20() {
 
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 2. Core Digital Asset Price Trends and On-chain Cycle Indicator Analysis (On-chain & Price Action)
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">
@@ -144,7 +144,7 @@ export function WeeklyBriefMar20() {
 
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 3. Global Digital Asset Spot ETF Fund Flow In-depth Analysis (Institutional Flow)
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">
@@ -231,7 +231,7 @@ export function WeeklyBriefMar20() {
 
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 5. Global Core Research Institution Insights Summary (Institutional Research Insights)
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">
@@ -265,7 +265,7 @@ export function WeeklyBriefMar20() {
 
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 6. L1/L2 Protocol Ecosystem, DeFi, NFT, and Key Sector Trends
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">
@@ -345,7 +345,7 @@ export function WeeklyBriefMar20() {
 
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 7. On-chain Anomalies Detection in Top 200 Market Cap Coins
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">
@@ -364,7 +364,7 @@ export function WeeklyBriefMar20() {
 
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 8. Next Week's Key Events and Tokenomics Schedules (Upcoming Events)
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">
@@ -403,7 +403,7 @@ export function WeeklyBriefMar20() {
 
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
-              <h2 className="text-3xl font-bold mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 9. Comprehensive Conclusion and Strategic Outlook (Conclusion & Strategic Outlook)
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">

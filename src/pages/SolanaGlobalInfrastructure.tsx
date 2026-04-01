@@ -20,7 +20,7 @@ export function SolanaGlobalInfrastructure() {
               DEEP RESEARCH
             </div>
 
-            <h1 className="text-3xl md:text-5xl font-sans font-bold text-white tracking-tighter leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
               Solana: Breaking the ‘Memecoin Casino’ Shell to Become ‘Global Infrastructure’
             </h1>
 
@@ -33,7 +33,7 @@ export function SolanaGlobalInfrastructure() {
 
           <div className="max-w-5xl mx-auto text-lg leading-relaxed text-slate-300 font-sans">
             <section className="mb-12">
-              <h2 className="text-2xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 TL;DR
               </h2>
               <div className="border-l-2 border-emerald-500/40 pl-5 text-slate-200 mb-8">
@@ -46,35 +46,35 @@ export function SolanaGlobalInfrastructure() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 1. Solana’s On-Chain Trends and the Bizarre Decoupling
               </h2>
               <p className="mb-6 text-lg leading-relaxed text-slate-300">Currently, Solana (SOL) is priced around $88 with a market cap of $50B, plummeting about 70% from its 2021 All-Time High ($295). However, on-chain activity traces the exact opposite trajectory. As of early 2026, monthly DEX volume hit $117.7B (twice that of Ethereum), and Monthly Active Users (MAU) reached 45.5 million, breaking all-time highs. On-chain activity is at its absolute peak, yet the price is merely a third of its high. The core reason for this ‘decoupling’ phenomenon is that the market is applying two massive ‘Discounts’ to Solana’s fundamentals.</p>
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 2. Discount Factor ① Memecoin Extinction Risk: What is the Alternative After the Casino Closes?
               </h2>
               <p className="mb-6 text-lg leading-relaxed text-slate-300">The first discount stems from doubts about the Quality of Revenue. Currently, 63% of Solana’s DEX volume comes from memecoin trading. What happens if the memecoin narrative dies out, just as the NFT boom did? We already saw a precedent in September 2025: when memecoin activity declined, daily DEX users plummeted vertically from 4.8 million to 800,000. When speculative traders leave and the casino closes, the protocol must prove whether another innovation can fill that massive void.</p>
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 3. Discount Factor ② The Valuation Illusion: The ‘Structural Deficit’ Hidden Behind a 20x P/F
               </h2>
               <p className="mb-6 text-lg leading-relaxed text-slate-300">The second discount is its fatal financial structure. Currently, Solana trades at a Price-to-Fees (P/F) ratio of about 20x, based on an annualized fee revenue of ~$2.5B. (On the surface, this is severely undervalued compared to Ethereum’s 67x and Arbitrum’s 105x.) However, the $88 price tag has the ‘Negative Real Yield’ risk thoroughly priced in. Solana earns $2.5B annually, but to maintain ultra-high-speed network security, it pays out approximately $3.5B annually in token inflation (subsidies) to validators. In other words, it is maintaining cheap fees at the cost of $1B in shareholder value dilution.</p>
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 4. Cold Diagnosis: The Competitive Edge of “3 Strengths, 2 Weaknesses”
               </h2>
               <p className="mb-6 text-lg leading-relaxed text-slate-300">Despite these two massive risks, the answer the data points to for the next cycle is clear. Solana’s next-generation positioning is clearly divided: while it is weak in RWAs (9x smaller than Ethereum) and Prediction Markets (dominated by Polymarket), it has established an unapproachable ‘structural edge’ in AI Agent Payments, DePIN, and Stablecoins.</p>
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 5. The Data-Driven Reasons Machines and Institutions Choose Solana
               </h2>
               <ul className="list-disc list-outside ml-6 space-y-4 text-slate-300 mb-8">
@@ -85,14 +85,14 @@ export function SolanaGlobalInfrastructure() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 6. The Qualitative Shift in On-Chain Transactions and the Expansion Limit
               </h2>
               <p className="mb-6 text-lg leading-relaxed text-slate-300">Moving forward, the void left by memecoin gamblers will begin to be filled by hundreds of thousands of A2A (Agent-to-Agent) micropayments per second, DePIN sensor data, and macro stablecoin transfers. Add to this the Alpenglow update securing 150ms (0.15s) block finality, and when Firedancer breaches 1M TPS, the High-Frequency Trading (HFT) liquidity based on traditional finance’s Central Limit Order Books (CLOB) will be sucked straight on-chain. The absolute volume and quality of transactions will fundamentally expand.</p>
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 7. Valuation: The True Condition for Re-rating, Breaking Even (BEP)
               </h2>
               <p className="mb-6 text-lg leading-relaxed text-slate-300">A genuine valuation re-rating will occur when Solana breaks the trap of this massive ‘structural deficit’. What happens if Solana lowers its memecoin dependency and proves an ‘annual fee revenue of $5B’ level through institutional-grade traffic like AI/DePIN/Payments? Fee revenue will overwhelm inflation expenditures ($3.5B), finally breaking through the historic breakeven point (BEP) to turn into a ‘Positive Real Yield’.</p>

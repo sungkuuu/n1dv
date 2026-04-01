@@ -20,7 +20,7 @@ export function WeeklyBriefFeb10() {
               WEEKLY BRIEF
             </div>
 
-            <h1 className="text-5xl font-bold tracking-tight leading-tight mb-4 text-white">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
               Weekly Report: The Trust Test & Macro Headwinds
             </h1>
 
@@ -39,7 +39,7 @@ export function WeeklyBriefFeb10() {
 
           <div className="prose prose-lg max-w-none">
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 1. Executive Summary: The Trust Test, Macro Headwinds, and Institutional Selectivity
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -60,7 +60,7 @@ export function WeeklyBriefFeb10() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 2. Deep Dive: Macro & Financial Market Indicators
               </h2>
               <p className="text-gray-300 leading-relaxed mb-6">
@@ -101,7 +101,7 @@ export function WeeklyBriefFeb10() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 3. Deep Dive: Bitcoin & Ethereum Market Analysis
               </h2>
 
@@ -172,7 +172,7 @@ export function WeeklyBriefFeb10() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 4. Global ETF Fund Flows (US & Canada)
               </h2>
               <p className="text-gray-300 leading-relaxed mb-6">
@@ -314,7 +314,7 @@ export function WeeklyBriefFeb10() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 5. Weekly Insights
               </h2>
 
@@ -364,7 +364,7 @@ export function WeeklyBriefFeb10() {
             </section>
 
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 6. Conclusion & Outlook
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">

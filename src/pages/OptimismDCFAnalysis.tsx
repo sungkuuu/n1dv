@@ -20,11 +20,11 @@ export function OptimismDCFAnalysis() {
               DEEP RESEARCH
             </div>
 
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-white font-sans mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
               90% Margins &amp; The $270M Wipeout: Why Base Really Left Optimism
             </h1>
 
-            <h2 className="text-xl text-gray-400 font-medium mt-2 font-sans mb-8">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
               [Financial Analysis] Estimating the Permanent Free Cash Flow (DCF) Evaporation in the Optimism (OP) Treasury Due to Base's Departure from the OP Stack
             </h2>
 
@@ -40,7 +40,7 @@ export function OptimismDCFAnalysis() {
           <div className="prose prose-lg prose-invert max-w-none font-sans">
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 1. The Core of the Event and the Shift in Financial Frameworks
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -58,7 +58,7 @@ export function OptimismDCFAnalysis() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 2. The Structural Contradictions of the Superchain Revenue-Sharing Agreement and the History of Value Extraction
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -92,7 +92,7 @@ export function OptimismDCFAnalysis() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 3. Estimating the Permanent Loss to the Optimism Treasury via Discounted Cash Flow (DCF)
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -236,7 +236,7 @@ export function OptimismDCFAnalysis() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 4. The Opportunity Cost Treatment of the 118M OP Token Grant: Coinbase's Calculated Rationality
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -257,7 +257,7 @@ export function OptimismDCFAnalysis() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 5. The Evaporation of Real Cash Flow (ETH) and the Hollowed-out OP Buyback Program
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -310,7 +310,7 @@ export function OptimismDCFAnalysis() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 6. The Paradox of the Open-Source Public Good: Exposing the Ecosystem's Structural Vulnerability
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -344,7 +344,7 @@ export function OptimismDCFAnalysis() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 7. Reviewing Alternative Valuations and Implications of the Macro Market Environment
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -375,7 +375,7 @@ export function OptimismDCFAnalysis() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 8. Conclusion: "The Era of Narratives and Storytelling is Over"
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">

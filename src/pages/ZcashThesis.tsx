@@ -20,11 +20,11 @@ export function ZcashThesis() {
               DEEP RESEARCH
             </div>
 
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-white font-sans mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
               Digital Privacy's Asymmetric Bet: A Deep Dive Verification of Barry Silbert's "Zcash 500x" Thesis
             </h1>
 
-            <h2 className="text-xl text-gray-400 font-medium mt-4 font-sans mb-8">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
               A critical verification of the $2 Trillion market cap thesis. Is privacy the next HTTPS of money, or a regulatory trap?
             </h2>
 
@@ -39,7 +39,7 @@ export function ZcashThesis() {
 
           <div className="prose prose-lg prose-invert max-w-none font-sans">
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 1. Introduction: The Context Behind the "500x" Claim
               </h2>
 
@@ -66,7 +66,7 @@ export function ZcashThesis() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 2. Fundamental Analysis: The "HTTPS of Money"
               </h2>
 
@@ -95,7 +95,7 @@ export function ZcashThesis() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 3. Regulatory Environment: The Paul Atkins Pivot
               </h2>
 
@@ -111,7 +111,7 @@ export function ZcashThesis() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 4. Risk Analysis: The "Grayscale Trap" & DCG Motives ⚠️
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -138,7 +138,7 @@ export function ZcashThesis() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 5. Governance: The "cashZ" Spin-off & Decentralization
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -147,7 +147,7 @@ export function ZcashThesis() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 6. Tech Roadmap: NU7 & ZSA
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -164,7 +164,7 @@ export function ZcashThesis() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 7. Comparative Analysis: Zcash vs. Monero
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -181,7 +181,7 @@ export function ZcashThesis() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 8. The Math of "500x" ($2T Market Cap)
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -214,7 +214,7 @@ export function ZcashThesis() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white font-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 9. Conclusion: The Verdict
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">

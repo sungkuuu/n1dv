@@ -20,7 +20,7 @@ export function PeaqM2MDeepValueAnalysis() {
               DEEP RESEARCH
             </div>
 
-            <h1 className="text-3xl md:text-5xl font-sans font-bold text-white tracking-tighter leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
               In-Depth Analysis of the Peaq Network: Its Role in the M2M Transaction Ecosystem and Deep Value Investment Valuation
             </h1>
 
@@ -31,7 +31,7 @@ export function PeaqM2MDeepValueAnalysis() {
 
           <div className="max-w-5xl mx-auto text-lg leading-relaxed text-slate-300 font-sans">
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 1. Introduction: The Advent of the DePIN Era and the Structural Shift of the Machine Economy
               </h2>
               <p className="mb-6 text-lg leading-relaxed text-slate-300">
@@ -46,7 +46,7 @@ export function PeaqM2MDeepValueAnalysis() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 2. Core Technical Architecture of the Peaq Network: Infrastructure Engineering for the Machine Economy
               </h2>
               <p className="mb-6 text-lg leading-relaxed text-slate-300">
@@ -75,7 +75,7 @@ export function PeaqM2MDeepValueAnalysis() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 3. Modular Machine Functions for the Machine Economy
               </h2>
               <p className="mb-6 text-lg leading-relaxed text-slate-300">
@@ -111,7 +111,7 @@ export function PeaqM2MDeepValueAnalysis() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 4. Competitive Advantage (Moat) in the DePIN Market and Key Blockchain Technology Comparative Analysis
               </h2>
               <p className="mb-6 text-lg leading-relaxed text-slate-300">
@@ -208,7 +208,7 @@ export function PeaqM2MDeepValueAnalysis() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 5. Ecosystem and Commercialization Status: Evolution from Speculative Yields to &apos;Real Yield&apos;
               </h2>
               <p className="mb-6 text-lg leading-relaxed text-slate-300">
@@ -246,7 +246,7 @@ export function PeaqM2MDeepValueAnalysis() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 6. Establishing Strategic Partnerships with Global Enterprises and Traditional Finance (TradFi)
               </h2>
               <p className="mb-6 text-lg leading-relaxed text-slate-300">
@@ -281,7 +281,7 @@ export function PeaqM2MDeepValueAnalysis() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 7. PEAQ Tokenomics and Deep Value Capture Mechanisms
               </h2>
               <p className="mb-6 text-lg leading-relaxed text-slate-300">
@@ -360,7 +360,7 @@ export function PeaqM2MDeepValueAnalysis() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 8. Short-Term and Mid-to-Long-Term Investment Risks: Lock-up Release Shock and Infrastructure Stability Verification
               </h2>
               <p className="mb-6 text-lg leading-relaxed text-slate-300">
@@ -395,7 +395,7 @@ export function PeaqM2MDeepValueAnalysis() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 9. 2026 Macro Regulatory Environment: CLARITY Act and the Institutionalization of RWA Tokenization
               </h2>
               <p className="mb-6 text-lg leading-relaxed text-slate-300">
@@ -416,7 +416,7 @@ export function PeaqM2MDeepValueAnalysis() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-white tracking-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 10. Conclusion: Final Strategic Evaluation for Deep Value Investors
               </h2>
               <p className="mb-6 text-lg leading-relaxed text-slate-300">

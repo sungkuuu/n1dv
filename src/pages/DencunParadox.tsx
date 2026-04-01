@@ -20,7 +20,7 @@ export function DencunParadox() {
               DEEP RESEARCH
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
               The Dencun Paradox: Ethereum's Structural Divergence (2024–2026)
             </h1>
 
@@ -38,7 +38,7 @@ export function DencunParadox() {
           </div>
 
           <div className="bg-neutral-900 border border-neutral-700 border-l-4 border-l-emerald-500 rounded-lg p-8 mb-16">
-            <h2 className="text-2xl font-bold mb-6 text-white flex items-center gap-3">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6 flex items-center gap-3">
               <AlertCircle className="text-gray-400" size={24} />
               Key Takeaways
             </h2>
@@ -66,7 +66,7 @@ export function DencunParadox() {
 
           <div className="prose prose-lg max-w-none">
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 1. Introduction: The Dencun Hard Fork and the Great Pivot of Ethereum's Economic Model
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -78,7 +78,7 @@ export function DencunParadox() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 2. The Economic Shock: L1 Revenue Cliff and Valuation Divergence
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -176,7 +176,7 @@ export function DencunParadox() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 3. The Rise of L2 and the Paradox of L1 Profitability: Specific Case Analysis
               </h2>
               <p className="text-gray-300 leading-relaxed mb-6">
@@ -206,7 +206,7 @@ export function DencunParadox() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 4. The Reward: What Did the Ethereum Ecosystem Gain?
               </h2>
               <p className="text-gray-300 leading-relaxed mb-6">
@@ -284,7 +284,7 @@ export function DencunParadox() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 5. Valuation Paradigm Shift: From P/E to Monetary Premium
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -321,7 +321,7 @@ export function DencunParadox() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 6. Competitive Landscape: Total War with Solana (2025-2026)
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -350,7 +350,7 @@ export function DencunParadox() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 7. Future Outlook: Revenue Recovery Scenarios Post-2026
               </h2>
               <p className="text-gray-300 leading-relaxed mb-6">
@@ -384,7 +384,7 @@ export function DencunParadox() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
                 8. Conclusion: The Report Card of the Great Trade-off
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
