@@ -499,6 +499,10 @@ export function Home() {
                       <span className="inline-block w-fit bg-transparent border border-blue-500 text-blue-400 rounded-md px-3 py-1 text-xs font-bold uppercase tracking-wider">
                         {report.category}
                       </span>
+                    ) : report.category === 'QUARTERLY REPORT' ? (
+                      <span className="inline-block w-fit bg-transparent border border-indigo-500 text-indigo-400 rounded-md px-3 py-1 text-xs font-bold uppercase tracking-wider">
+                        {report.category}
+                      </span>
                     ) : (
                       <>
                         <FileText className={`w-4 h-4 ${report.categoryColor}`} />

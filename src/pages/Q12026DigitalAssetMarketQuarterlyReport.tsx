@@ -16,11 +16,11 @@ export function Q12026DigitalAssetMarketQuarterlyReport() {
             <ChevronRight size={14} />
             <Link to="/insights" className="hover:text-white transition-colors">Insights</Link>
             <ChevronRight size={14} />
-            <span className="text-gray-400">Q1 2026 Digital Asset Market Report</span>
+            <span className="text-gray-400">Q1 2026 Market Report</span>
           </nav>
 
           <div className="mb-16">
-            <div className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider bg-transparent border border-indigo-500 text-indigo-400 rounded-md mb-6">
+            <div className="inline-block bg-transparent border border-indigo-500 text-indigo-400 rounded-md px-2 py-1 text-xs font-bold tracking-widest uppercase mb-6">
               QUARTERLY REPORT
             </div>
 

@@ -45,7 +45,7 @@ export function Insights() {
       case 'DEEP RESEARCH':
         return 'bg-transparent border border-emerald-500 text-emerald-500 rounded-md px-3 py-1 text-xs font-bold uppercase tracking-wider';
       case 'QUARTERLY REPORT':
-        return 'bg-transparent border border-indigo-500 text-indigo-400 rounded-md px-3 py-1 text-xs font-bold uppercase tracking-wider';
+        return 'bg-transparent border border-indigo-500 text-indigo-400 rounded-md !px-2 !py-1 text-xs font-bold !tracking-widest uppercase';
       default:
         return 'bg-[#333333] text-gray-300';
     }
