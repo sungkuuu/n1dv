@@ -11,6 +11,17 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'q1-2026-digital-asset-market-quarterly-report',
+    title: 'Q1 2026 Market Report: Macro Realignment & On-chain Evolution',
+    date: 'Apr 5, 2026',
+    category: 'QUARTERLY REPORT',
+    summary:
+      'Q1 2026 macro shock and crypto correction, ETF flows and L1/L2 divergence, RWA and stablecoin infrastructure, prediction markets and agentic commerce, Korea exchange dynamics, and global regulatory catalysts.',
+    author: 'Nexus One Research Desk',
+    content: '',
+    link: '/insights/q1-2026-digital-asset-market-quarterly-report'
+  },
+  {
     id: 'raoul-pal-macro-liquidity-peak-2026',
     title: "An In-Depth Verification Report on Raoul Pal's 2026 Bitcoin Macro Liquidity Peak Theory and the 5.4-Year Debt Cycle",
     date: 'Apr 1, 2026',

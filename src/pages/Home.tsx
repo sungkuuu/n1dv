@@ -40,6 +40,7 @@ const VAULT_ADDRESS = ENZYME_VAULT_ADDRESS;
 const getCategoryColor = (category: string) => {
   if (category === 'WEEKLY BRIEF') return 'text-blue-500';
   if (category === 'DEEP RESEARCH') return 'text-emerald-500';
+  if (category === 'QUARTERLY REPORT') return 'text-indigo-400';
   if (category === 'MARKET STRATEGY') return 'text-blue-500';
   return 'text-gray-400';
 };
