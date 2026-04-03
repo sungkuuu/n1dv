@@ -42,7 +42,7 @@ export function WeeklyBriefMar10() {
           </nav>
 
           <div className="mb-16">
-            <div className="inline-block px-4 py-1.5 bg-transparent text-blue-500 border border-blue-500 text-xs font-bold mb-6 uppercase tracking-wider">
+            <div className="inline-block w-fit bg-transparent border border-blue-500 text-blue-400 rounded-md px-3 py-1 text-xs font-bold uppercase tracking-wider mb-6">
               WEEKLY BRIEF
             </div>
 
@@ -176,8 +176,8 @@ export function WeeklyBriefMar10() {
                 Institutional capital capitalized on the market&apos;s short-term price weakness and the downward breach of major technical support lines as excellent Entry Points to build positions. Notably, this surge in demand coincides with the Coinbase Premium Index—which signifies the buying intensity of U.S. institutional investors—flipping positive (+) for the first time in 40 days. This perfectly corroborates that amid geopolitical crises, actual U.S.-based institutional demand is driving the price recovery.
               </p>
 
-              <div className="overflow-x-auto mb-6">
-                <table className="w-full text-left border-collapse border border-slate-800">
+              <div className="overflow-x-auto mb-6 rounded-lg border border-slate-800">
+                <table className="w-full text-left border-collapse">
                   <thead>
                     <tr className="border-b border-slate-800 bg-slate-900/50">
                       <th className="py-3 px-4 text-slate-400 font-semibold">Rank</th>

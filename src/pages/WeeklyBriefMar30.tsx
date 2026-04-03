@@ -42,7 +42,7 @@ export function WeeklyBriefMar30() {
           </nav>
 
           <div className="mb-16">
-            <div className="inline-block px-4 py-1.5 bg-transparent text-blue-500 border border-blue-500 text-xs font-bold mb-6 uppercase tracking-wider">
+            <div className="inline-block w-fit bg-transparent border border-blue-500 text-blue-400 rounded-md px-3 py-1 text-xs font-bold uppercase tracking-wider mb-6">
               WEEKLY BRIEF
             </div>
 
@@ -265,8 +265,8 @@ export function WeeklyBriefMar30() {
               <p className="text-slate-300 leading-relaxed mb-8">
                 Token unlock schedules, which act as the largest risk factor in cryptocurrency fundamental analysis, are concentrated in April, raising concerns about downward pressure within the market.
               </p>
-              <div className="overflow-x-auto mb-6">
-                <table className="w-full text-left border-collapse border border-slate-800">
+              <div className="overflow-x-auto mb-6 rounded-lg border border-slate-800">
+                <table className="w-full text-left border-collapse">
                   <thead>
                     <tr className="border-b border-slate-800 bg-slate-900/50">
                       <th className="py-3 px-4 text-slate-400 font-semibold">Date (2026)</th>

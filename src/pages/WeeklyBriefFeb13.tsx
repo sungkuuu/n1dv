@@ -16,7 +16,7 @@ export function WeeklyBriefFeb13() {
           </nav>
 
           <div className="mb-16">
-            <div className="inline-block px-4 py-1.5 bg-transparent text-blue-500 border border-blue-500 text-xs font-bold mb-6 uppercase tracking-wider">
+            <div className="inline-block w-fit bg-transparent border border-blue-500 text-blue-400 rounded-md px-3 py-1 text-xs font-bold uppercase tracking-wider mb-6">
               WEEKLY BRIEF
             </div>
 
@@ -58,7 +58,7 @@ export function WeeklyBriefFeb13() {
                 The following table summarizes the conflicting signals in the market this week. Even amidst extreme fear and macroeconomic pressure, the flow of 'Smart Money' is noticeably differentiating itself.
               </p>
 
-              <div className="overflow-x-auto mb-6">
+              <div className="overflow-x-auto mb-6 rounded-lg border border-slate-800">
                 <table className="w-full text-left border-collapse">
                   <thead>
                     <tr className="border-b border-gray-700">

@@ -42,7 +42,7 @@ export function WeeklyBriefMar20() {
           </nav>
 
           <div className="mb-16">
-            <div className="inline-block px-4 py-1.5 bg-transparent text-blue-500 border border-blue-500 text-xs font-bold mb-6 uppercase tracking-wider">
+            <div className="inline-block w-fit bg-transparent border border-blue-500 text-blue-400 rounded-md px-3 py-1 text-xs font-bold uppercase tracking-wider mb-6">
               WEEKLY BRIEF
             </div>
 
@@ -158,8 +158,8 @@ export function WeeklyBriefMar20() {
                 Despite external bad news such as geopolitical crises and surging oil prices, the US spot Bitcoin ETF market proved astonishing resilience. According to data analysis firm SoSoValue and major on-chain analyses, US spot Bitcoin ETFs recorded cumulative net inflows of approximately $1.17 billion from the 2nd to the 3rd week of March, achieving their longest 7-day consecutive net inflow streak in five months. This clearly shows that despite short-term macroeconomic shocks, Institutional conviction has not wavered at all.
               </p>
 
-              <div className="overflow-x-auto mb-6">
-                <table className="w-full text-left border-collapse border border-slate-800">
+              <div className="overflow-x-auto mb-6 rounded-lg border border-slate-800">
+                <table className="w-full text-left border-collapse">
                   <thead>
                     <tr className="border-b border-slate-800 bg-slate-900/50">
                       <th className="py-3 px-4 text-slate-400 font-semibold">Rank</th>
@@ -197,8 +197,8 @@ export function WeeklyBriefMar20() {
                 Canada, as the pioneer nation that approved the world's first spot Bitcoin ETF, has seen its infrastructure fully reach maturity as of 2026. In early 2026, the entire Canadian ETF market recorded a massive, all-time high monthly inflow of 22.3 billion CAD, a significant portion of which flowed into alternative investment products like virtual assets.
               </p>
 
-              <div className="overflow-x-auto mb-6">
-                <table className="w-full text-left border-collapse border border-slate-800">
+              <div className="overflow-x-auto mb-6 rounded-lg border border-slate-800">
+                <table className="w-full text-left border-collapse">
                   <thead>
                     <tr className="border-b border-slate-800 bg-slate-900/50">
                       <th className="py-3 px-4 text-slate-400 font-semibold">Rank</th>
@@ -279,8 +279,8 @@ export function WeeklyBriefMar20() {
                 Analyzing on-chain data platform metrics reveals a clear sorting of the wheat from the chaff in the financial health of major smart contract platforms as of March 2026.
               </p>
 
-              <div className="overflow-x-auto mb-6">
-                <table className="w-full text-left border-collapse border border-slate-800">
+              <div className="overflow-x-auto mb-6 rounded-lg border border-slate-800">
+                <table className="w-full text-left border-collapse">
                   <thead>
                     <tr className="border-b border-slate-800 bg-slate-900/50">
                       <th className="py-3 px-4 text-slate-400 font-semibold">Network (Chain)</th>
@@ -371,8 +371,8 @@ export function WeeklyBriefMar20() {
                 The direction of the market next week after March 20, 2026, will be dictated by massive Token Unlocks events and new project listings. Token unlocks are the point when locked-up volume for early venture investors or teams becomes tradable on the market, causing a supply shock and exerting strong downward pressure in the short term. Conversely, new events for excellent projects serve as positive catalysts absorbing liquidity.
               </p>
 
-              <div className="overflow-x-auto mb-6">
-                <table className="w-full text-left border-collapse border border-slate-800">
+              <div className="overflow-x-auto mb-6 rounded-lg border border-slate-800">
+                <table className="w-full text-left border-collapse">
                   <thead>
                     <tr className="border-b border-slate-800 bg-slate-900/50">
                       <th className="py-3 px-4 text-slate-400 font-semibold">Date</th>

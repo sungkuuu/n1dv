@@ -42,7 +42,7 @@ export function WeeklyBriefFeb27() {
           </nav>
 
           <div className="mb-16">
-            <div className="inline-block px-4 py-1.5 bg-transparent text-blue-500 border border-blue-500 text-xs font-bold mb-6 uppercase tracking-wider">
+            <div className="inline-block w-fit bg-transparent border border-blue-500 text-blue-400 rounded-md px-3 py-1 text-xs font-bold uppercase tracking-wider mb-6">
               WEEKLY BRIEF
             </div>
 
@@ -82,8 +82,8 @@ export function WeeklyBriefFeb27() {
                 This intensification of trade wars strongly stimulates concerns over a recurrence of "Cost-push Inflation" via rising import prices, emerging as the greatest macroeconomic risk that could structurally delay the Federal Reserve's monetary policy normalization (rate cut) cycle. The bond market immediately reflected these fears of entrenched inflation.
               </blockquote>
 
-              <div className="overflow-x-auto mb-6">
-                <table className="w-full text-left border-collapse border border-slate-800">
+              <div className="overflow-x-auto mb-6 rounded-lg border border-slate-800">
+                <table className="w-full text-left border-collapse">
                   <thead>
                     <tr className="border-b border-slate-800 bg-slate-900/50">
                       <th className="py-3 px-4 text-slate-400 font-semibold">Date (Feb 2026)</th>
@@ -114,8 +114,8 @@ export function WeeklyBriefFeb27() {
                 The trajectory of the CBOE Volatility Index (VIX), which proxies the embedded fear sentiment of market participants, clearly illustrates the extreme stress in the February market.
               </p>
 
-              <div className="overflow-x-auto mb-6">
-                <table className="w-full text-left border-collapse border border-slate-800">
+              <div className="overflow-x-auto mb-6 rounded-lg border border-slate-800">
+                <table className="w-full text-left border-collapse">
                   <thead>
                     <tr className="border-b border-slate-800 bg-slate-900/50">
                       <th className="py-3 px-4 text-slate-400 font-semibold">Date (Feb 2026)</th>
@@ -160,8 +160,8 @@ export function WeeklyBriefFeb27() {
                 In the fourth week of February 2026, the digital asset market staged its most extreme rollercoaster yet, as macroeconomic headwinds collided head-on with an extreme supply-demand imbalance in the derivatives market. Immediately after news of the Trump administration's 15% global temporary tariff hike broke during Asian trading hours, <span className="font-semibold text-white">Bitcoin (BTC)</span> took a direct hit from panic selling. In just two short hours, the price of Bitcoin plummeted 4.6%, sinking from the <span className="font-semibold text-white">$67,600</span> line straight down to the <span className="font-semibold text-white">$64,400</span> line. During this brief capitulation, over <span className="font-semibold text-white">$500 million</span> in long leverage positions were forcibly liquidated across global crypto derivatives markets, maximizing market fear.
               </p>
 
-              <div className="overflow-x-auto mb-6">
-                <table className="w-full text-left border-collapse border border-slate-800">
+              <div className="overflow-x-auto mb-6 rounded-lg border border-slate-800">
+                <table className="w-full text-left border-collapse">
                   <thead>
                     <tr className="border-b border-slate-800 bg-slate-900/50">
                       <th className="py-3 px-4 text-slate-400 font-semibold">Major Crypto Asset</th>
@@ -257,8 +257,8 @@ export function WeeklyBriefFeb27() {
                 However, starting Tuesday (Feb 24) and Wednesday (Feb 25)—right after the Bitcoin price successfully defended the $64,000 support line—a massive reversal occurred in the ETF market. On Tuesday alone, a powerful net inflow of $258 million broke the long chain of outflows. This was followed on Wednesday by an avalanche of institutional capital amounting to a staggering $506.5 million ($506.5M), renewing the largest daily inflow in three weeks.
               </p>
 
-              <div className="overflow-x-auto mb-6">
-                <table className="w-full text-left border-collapse border border-slate-800">
+              <div className="overflow-x-auto mb-6 rounded-lg border border-slate-800">
+                <table className="w-full text-left border-collapse">
                   <thead>
                     <tr className="border-b border-slate-800 bg-slate-900/50">
                       <th className="py-3 px-4 text-slate-400 font-semibold">Asset Manager / ETF Ticker</th>
@@ -371,8 +371,8 @@ export function WeeklyBriefFeb27() {
                 The DeFi sector is flaunting remarkable cash-generation capabilities, centered around Perpetual DEXs and Yield protocols. According to The Block's data dashboard, as the liquidity attraction competition among major platforms like Hyperliquid, Aster, and Lighter peaked, the monthly trading volume of perpetual futures protocols crossed the monumental <span className="font-semibold text-white">$1 Trillion</span> mark for the first time in history. This signifies that the DeFi derivatives market is tangibly eroding the market share of Centralized Exchanges (CEX).
               </p>
 
-              <div className="overflow-x-auto mb-6">
-                <table className="w-full text-left border-collapse border border-slate-800">
+              <div className="overflow-x-auto mb-6 rounded-lg border border-slate-800">
+                <table className="w-full text-left border-collapse">
                   <thead>
                     <tr className="border-b border-slate-800 bg-slate-900/50">
                       <th className="py-3 px-4 text-slate-400 font-semibold">Protocol Name</th>
@@ -451,8 +451,8 @@ export function WeeklyBriefFeb27() {
               <h3 className="text-2xl font-bold text-white mb-4 tracking-tight">
                 8.2. Detailed Analysis of Key Watchlist Projects
               </h3>
-              <div className="overflow-x-auto mb-6">
-                <table className="w-full text-left border-collapse border border-slate-800">
+              <div className="overflow-x-auto mb-6 rounded-lg border border-slate-800">
+                <table className="w-full text-left border-collapse">
                   <thead>
                     <tr className="border-b border-slate-800 bg-slate-900/50">
                       <th className="py-3 px-4 text-slate-400 font-semibold">Project Name (Ticker)</th>

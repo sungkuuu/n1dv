@@ -487,7 +487,7 @@ export function Home() {
               <div
                 key={report.id}
                 onClick={() => { if (report.link) navigate(report.link); }}
-                className="group p-10 bg-[#0a0a0a] border border-slate-800 hover:border-slate-700 hover:-translate-y-1 transition-all duration-300 flex flex-col h-full min-h-[320px] cursor-pointer"
+                className="group p-10 bg-[#0a0a0a] border border-slate-800 hover:border-slate-700 hover:-translate-y-1 transition-all duration-300 flex flex-col h-full min-h-[320px] cursor-pointer rounded-xl"
               >
                 <div className="flex-1 flex flex-col">
                   <div className="mb-4 flex items-center gap-2 w-fit">
