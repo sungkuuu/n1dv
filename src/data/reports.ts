@@ -11,6 +11,17 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'weekly-brief-apr-05-2026',
+    title: 'April 5, 2026 Global Macroeconomic and Digital Asset Market In-Depth Analysis Report',
+    date: 'Apr 5, 2026',
+    category: 'WEEKLY BRIEF',
+    summary:
+      'Iran/Hormuz shock, tariff regime reset, Fed freeze probability, BTC/ETH technical setup, ETF outflows, L1/L2 and DeFi diagnostics, and key event/unlock risks for next week.',
+    author: 'Nexus One Research Desk',
+    content: '',
+    link: '/insight/weekly-brief-apr-05-2026'
+  },
+  {
     id: 'q1-2026-digital-asset-market-quarterly-report',
     title: 'Q1 2026 Market Report: Macro Realignment & On-chain Evolution',
     date: 'Apr 5, 2026',

@@ -22,6 +22,7 @@ import { WeeklyBriefFeb27 } from './pages/WeeklyBriefFeb27';
 import { WeeklyBriefMar10 } from './pages/WeeklyBriefMar10';
 import { WeeklyBriefMar20 } from './pages/WeeklyBriefMar20';
 import { WeeklyBriefMar30 } from './pages/WeeklyBriefMar30';
+import { WeeklyBriefApr05 } from './pages/WeeklyBriefApr05';
 import { UniswapFeeSwitchDilemma } from './pages/UniswapFeeSwitchDilemma';
 import { OptimismDCFAnalysis } from './pages/OptimismDCFAnalysis';
 import { ScrollToTop } from './components/ScrollToTop';
@@ -72,6 +73,7 @@ function App() {
         <Route path="/insight/weekly-brief-mar-10-2026" element={<WeeklyBriefMar10 />} />
         <Route path="/insight/weekly-brief-mar-20-2026" element={<WeeklyBriefMar20 />} />
         <Route path="/insight/weekly-brief-mar-30-2026" element={<WeeklyBriefMar30 />} />
+        <Route path="/insight/weekly-brief-apr-05-2026" element={<WeeklyBriefApr05 />} />
         <Route path="/insight/weekly-brief-feb-13-2026" element={<WeeklyBriefFeb13 />} />
         <Route path="/insights/uniswap-fee-switch-dilemma" element={<UniswapFeeSwitchDilemma />} />
         <Route path="/insights/optimism-op-dcf-analysis" element={<OptimismDCFAnalysis />} />
