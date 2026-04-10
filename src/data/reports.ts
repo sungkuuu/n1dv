@@ -11,6 +11,17 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'aptos-structural-reset-2026',
+    title: 'APT Just Lost 70% of its TVL: A Structural Reset, Not a Crisis',
+    date: 'Apr 10, 2026',
+    category: 'DEEP RESEARCH',
+    summary:
+      "An in-depth fundamental analysis of the Aptos ecosystem's evolution, and why October 2026 marks the real inflection point.",
+    author: 'Nexus One Research Desk',
+    content: '',
+    link: '/insights/aptos-structural-reset-2026'
+  },
+  {
     id: 'weekly-brief-apr-05-2026',
     title: 'April 5, 2026 Global Macroeconomic and Digital Asset Market In-Depth Analysis Report',
     date: 'Apr 5, 2026',
