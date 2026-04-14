@@ -7,16 +7,47 @@ export interface Report {
   content: string;
   author: string;
   link?: string;
+  badge?: {
+    text: string;
+    variant: string;
+  };
+  description?: string;
+  readTime?: string;
 }
 
 export const reports: Report[] = [
   {
+    id: 'aave-vs-morpho-governance-2026',
+    badge: {
+      text: 'DEEP RESEARCH',
+      variant: 'outline-purple'
+    },
+    title: 'Paradigm Shift in DeFi Lending: Morpho vs. AAVE Valuation & Governance Crisis',
+    description:
+      "An in-depth comparison of AAVE and Morpho's architectures, capital efficiency, and the ripple effects of AAVE's recent governance civil war.",
+    date: '2026-04-13',
+    category: 'DEEP RESEARCH',
+    summary:
+      "An in-depth comparison of AAVE and Morpho's architectures, capital efficiency, and the ripple effects of AAVE's recent governance civil war.",
+    readTime: '35 min read',
+    author: 'Nexus One Research Desk',
+    content: '',
+    link: '/insights/aave-vs-morpho-governance-2026'
+  },
+  {
     id: 'aptos-structural-reset-2026',
+    badge: {
+      text: 'DEEP RESEARCH',
+      variant: 'outline-purple'
+    },
     title: 'APT Just Lost 70% of its TVL: A Structural Reset, Not a Crisis',
-    date: 'Apr 10, 2026',
+    description:
+      "An in-depth fundamental analysis of the Aptos ecosystem's evolution, and why October 2026 marks the real inflection point.",
+    date: '2026-04-10',
     category: 'DEEP RESEARCH',
     summary:
       "An in-depth fundamental analysis of the Aptos ecosystem's evolution, and why October 2026 marks the real inflection point.",
+    readTime: '35 min read',
     author: 'Nexus One Research Desk',
     content: '',
     link: '/insights/aptos-structural-reset-2026'
