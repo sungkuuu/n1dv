@@ -40,6 +40,7 @@ import { RaoulPalMacroLiquidityPeak2026 } from './pages/RaoulPalMacroLiquidityPe
 import { Q12026DigitalAssetMarketQuarterlyReport } from './pages/Q12026DigitalAssetMarketQuarterlyReport';
 import { AptosStructuralReset2026 } from './pages/AptosStructuralReset2026';
 import { AaveVsMorphoGovernance2026 } from './pages/AaveVsMorphoGovernance2026';
+import { WeeklyBriefApr13 } from './pages/WeeklyBriefApr13';
 
 function App() {
   return (
@@ -57,6 +58,7 @@ function App() {
         <Route path="/insights/solana-global-infrastructure" element={<SolanaGlobalInfrastructure />} />
         <Route path="/insights/peaq-m2m-deep-value-analysis" element={<PeaqM2MDeepValueAnalysis />} />
         <Route path="/insights/q1-2026-digital-asset-market-quarterly-report" element={<Q12026DigitalAssetMarketQuarterlyReport />} />
+        <Route path="/insights/weekly-brief-apr-13-2026" element={<WeeklyBriefApr13 />} />
         <Route path="/insights/aave-vs-morpho-governance-2026" element={<AaveVsMorphoGovernance2026 />} />
         <Route path="/insights/aptos-structural-reset-2026" element={<AptosStructuralReset2026 />} />
         <Route path="/insights/raoul-pal-macro-liquidity-peak-2026" element={<RaoulPalMacroLiquidityPeak2026 />} />

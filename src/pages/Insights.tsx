@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { X } from 'lucide-react';
 import { Layout } from '../components/Layout';
 import { reports, Report } from '../data/reports';
+import { reportBadgeClassName, reportBadgeLabel } from '../lib/reportBadge';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 export function Insights() {
@@ -38,19 +39,6 @@ export function Insights() {
     }
   }, [selectedReport]);
 
-  const getCategoryStyle = (category: string) => {
-    switch (category) {
-      case 'WEEKLY BRIEF':
-        return 'bg-transparent border border-blue-500 text-blue-400 rounded-md px-3 py-1 text-xs font-bold uppercase tracking-wider';
-      case 'DEEP RESEARCH':
-        return 'bg-transparent border border-emerald-500 text-emerald-500 rounded-md px-3 py-1 text-xs font-bold uppercase tracking-wider';
-      case 'QUARTERLY REPORT':
-        return 'bg-transparent border border-indigo-500 text-indigo-400 rounded-md !px-2 !py-1 text-xs font-bold !tracking-widest uppercase';
-      default:
-        return 'bg-[#333333] text-gray-300';
-    }
-  };
-
   return (
     <Layout>
       <section className="px-4 py-20 bg-gradient-to-b from-[#0A0A0A] via-[#050505] to-[#0A0A0A] min-h-[60vh] relative">
@@ -69,8 +57,8 @@ export function Insights() {
                 onClick={() => handleReportClick(report)}
                 className="border border-white/10 bg-gradient-to-br from-gray-900/50 to-black p-10 hover:border-white/30 transition-all cursor-pointer group rounded-xl h-full flex flex-col"
               >
-                <div className={`inline-block w-fit px-3 py-1 text-xs font-bold mb-3 uppercase tracking-wider ${getCategoryStyle(report.category)}`}>
-                  {report.category}
+                <div className={`inline-block w-fit px-3 py-1 text-xs font-bold mb-3 uppercase tracking-wider ${reportBadgeClassName(report)}`}>
+                  {reportBadgeLabel(report)}
                 </div>
                 <div className="text-xs text-gray-500 mb-4">{report.date}</div>
                 <h3 className="text-xl font-bold mb-4 group-hover:text-gray-300 leading-tight text-white">{report.title}</h3>
@@ -96,8 +84,8 @@ export function Insights() {
               <X size={28} />
             </button>
 
-            <div className={`inline-block w-fit px-3 py-1 text-xs font-bold mb-4 uppercase tracking-wider ${getCategoryStyle(selectedReport.category)}`}>
-              {selectedReport.category}
+            <div className={`inline-block w-fit px-3 py-1 text-xs font-bold mb-4 uppercase tracking-wider ${reportBadgeClassName(selectedReport)}`}>
+              {reportBadgeLabel(selectedReport)}
             </div>
 
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-white">{selectedReport.title}</h2>

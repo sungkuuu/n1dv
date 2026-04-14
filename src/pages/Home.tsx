@@ -3,6 +3,7 @@ import { Layout } from '../components/Layout';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { reports } from '../data/reports';
+import { reportBadgeClassName, reportBadgeLabel, type ReportBadgeInput } from '../lib/reportBadge';
 import { N1DVModal } from '../components/N1DVModal';
 import {
   LineChart,
@@ -33,6 +34,10 @@ interface FeaturedReport {
   summary: string;
   fullContent: string;
   link?: string;
+  badge?: {
+    text: string;
+    variant: string;
+  };
 }
 
 const VAULT_ADDRESS = ENZYME_VAULT_ADDRESS;
@@ -53,7 +58,7 @@ const parseDate = (dateStr: string) => {
 const FEATURED_REPORTS: FeaturedReport[] = reports
   .sort((a, b) => parseDate(b.date).getTime() - parseDate(a.date).getTime())
   .slice(0, 3)
-  .map(report => ({
+  .map((report) => ({
     id: report.id,
     category: report.category,
     categoryColor: getCategoryColor(report.category),
@@ -61,7 +66,8 @@ const FEATURED_REPORTS: FeaturedReport[] = reports
     date: report.date,
     summary: report.summary,
     fullContent: report.content,
-    link: report.link || `/insights/${report.id}`
+    link: report.link || `/insights/${report.id}`,
+    badge: report.badge
   }));
 
 /** Fallback when on-chain data is unavailable — matches VaultDetail */
@@ -491,7 +497,11 @@ export function Home() {
               >
                 <div className="flex-1 flex flex-col">
                   <div className="mb-4 flex items-center gap-2 w-fit">
-                    {report.category === 'DEEP RESEARCH' ? (
+                    {report.badge ? (
+                      <span className={`inline-block w-fit ${reportBadgeClassName(report as ReportBadgeInput)}`}>
+                        {reportBadgeLabel(report as ReportBadgeInput)}
+                      </span>
+                    ) : report.category === 'DEEP RESEARCH' ? (
                       <span className="inline-block w-fit bg-transparent border border-emerald-500 text-emerald-500 rounded-md px-3 py-1 text-xs font-bold uppercase tracking-wider">
                         {report.category}
                       </span>

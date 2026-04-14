@@ -17,6 +17,24 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'weekly-brief-apr-13-2026',
+    badge: {
+      text: 'WEEKLY BRIEF',
+      variant: 'outline-blue'
+    },
+    title: 'April 13, 2026 Global Macroeconomic and Digital Asset Market In-Depth Analysis Report',
+    description:
+      'Analysis of the market impact following the collapse of US-Iran peace negotiations, March CPI inflation data, and institutional accumulation trends.',
+    date: '2026-04-13',
+    category: 'WEEKLY BRIEF',
+    summary:
+      'Analysis of the market impact following the collapse of US-Iran peace negotiations, March CPI inflation data, and institutional accumulation trends.',
+    readTime: '25 min read',
+    author: 'Nexus One Research Desk',
+    content: '',
+    link: '/insights/weekly-brief-apr-13-2026'
+  },
+  {
     id: 'aave-vs-morpho-governance-2026',
     badge: {
       text: 'DEEP RESEARCH',
