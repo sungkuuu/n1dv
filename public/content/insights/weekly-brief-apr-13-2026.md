@@ -71,7 +71,7 @@ BTC is forming a box range between $68,000~$72,750. The short-term support line 
     * **BTC:** Approx. +0.40~0.50 – Beginning of Optimism ^25
     * **ETH:** Approx. +0.20~0.30 – Boundary of Neutral~Optimism ^25
     * **SOL:** Approx. +0.00~0.10 – Fear~Neutral (SOL weak at $81.85) ^25
-<small>Note: NUPL figures are estimates based on Glassnode/CryptoQuant real-time data. Checking actual real-time figures requires a paid subscription.</small>
+> *Note: NUPL figures are estimates based on Glassnode/CryptoQuant real-time data. Checking actual real-time figures requires a paid subscription.*
 
 **ETF Fund Flows:**
 U.S. spot Bitcoin ETFs recorded their strongest weekly inflows since January. Last week, total crypto ETFs saw $1.1B in net inflows, with BTC ETFs alone capturing $1.9B in net inflows. YTD cumulative flows turned positive at +$2.3B ^26:
@@ -128,7 +128,7 @@ Solana continues its weakness with a price level of $81.85. The aftermath of the
 | Arbitrum | $15.94B | 40.88% | #1 in L2 TVL |
 | Optimism | $9.36B | 24.03% | - |
 | Base | 46.58% of DeFi TVL | - | 11.57M daily tx (24h) |
-<small>Note: Combined Ethereum L2 DeFi TVL is approx. $9.05B, similar in scale to Solana ($9.2B). Base leads in transaction and user metrics, while Arbitrum leads in TVL metrics.</small>
+> *Note: Combined Ethereum L2 DeFi TVL is approx. $9.05B, similar in scale to Solana ($9.2B). Base leads in transaction and user metrics, while Arbitrum leads in TVL metrics.*
 
 ## 5. DeFi Trends (TVL, DEX·Derivatives Volume, Revenue and Valuation)
 **Overall Metrics:**
@@ -183,7 +183,7 @@ Major DeFi Protocol Weekly Revenue and Metrics (Estimates):
 | Bitcoin | Approx. $14M | -5% | Approx. 20K |
 | Others | Approx. $8M | – | – |
 | **Total** | **Approx. $155M** | **+37%** | **Approx. 790K** |
-<small>Note: Estimates based on CryptoSlam. Actual weekly data for 4/7~13 requires direct access. Gaming NFTs account for 38% of total volume. The annual NFT market in 2025 fell by -37%, adjusting average prices from $124 → $96.</small>
+> *Note: Estimates based on CryptoSlam. Actual weekly data for 4/7~13 requires direct access. Gaming NFTs account for 38% of total volume. The annual NFT market in 2025 fell by -37%, adjusting average prices from $124 → $96.*
 
 * **Trends by Chain:** Ethereum holds 62% of NFT contracts and ranks #1 in volume. Polygon holds a 24% share based on weekly transactions, showing strength in mass transactions driven by low gas fees ^42.
 * **Market Participation and Bluechips:** Buyers approx. 790K / Sellers approx. 380K, demand-dominant. Bluechip floor prices:
@@ -323,7 +323,7 @@ However, institutional behavior points in the opposite direction of extreme fear
 
 From a structural perspective, the transition from CeFi → on-chain is accelerating. Indicators of digital asset ecosystem maturation include Hyperliquid achieving 44% Perps DEX share and a 6% share relative to CEXs, the RWA market growing to $27.6B, stablecoins hitting an all-time high of $318.6B, and Tron ranking #1 in blockchain revenue ($1.09M/day). However, friction in this structural shift is also observed, such as Ethereum L1 gas revenue plummeting by 95% ($500K~$1M/day) prompting a fundamental revaluation of ETH, and exposure to subnet/protocol dependency risks as seen in Covenant AI's departure from TAO ^30 ^27 ^48.
 
-Future Outlook: Short-term variables include the resumption of peace negotiations (Pakistan mediation), the intensity of Trump's blockade, RenderCon on 4/16~17, and the STRK unlock on 4/15 (1.27%, $3.8~19M). If geopolitical tensions ease, a return to BTC $75~80K is possible; conversely, if the naval blockade persists or escalates, there is a risk of retesting $65K or below. Whether institutional buying pressure is maintained is key, and whether IBIT's weekly inflows of +$871M continue will determine the mid-term direction ^26 ^57.
+Future Outlook: Short-term variables include the resumption of peace negotiations (Pakistan mediation), the intensity of Trump's blockade, ~~RenderCon on 4/16–17, and the STRK unlock on 4/15 (1.27%, $3.8–19M)~~. If geopolitical tensions ease, a return to BTC $75~80K is possible; conversely, if the naval blockade persists or escalates, there is a risk of retesting $65K or below. Whether institutional buying pressure is maintained is key, and whether IBIT's weekly inflows of +$871M continue will determine the mid-term direction ^26 ^57.
 
 ## 13. Major Event Schedule for Next Week
 * **April 14:** Paris Blockchain Week Summit 2026 (Paris) – European institutional crypto adoption and regulation discussions ^58.
@@ -348,7 +348,7 @@ Future Outlook: Short-term variables include the resumption of peace negotiation
 **Overall April:**
 * **Total Tokens Unlocking:** 150 assets
 * **Total Estimated Value:** $400M+ entering new circulation ^53
-* **Supply Pressure Analysis:** April is a concentrated period for unlocks during the year. Massive one-time unlocks like Celestia (17.2%) and Wormhole (6.0%) stand out. Historically, 60~70% of unlocked volume is sold within 1 month, and 90% of vesting events generate negative price pressure. Strategically, it is recommended to sell 1~2 weeks before the unlock (sell the unlock) or buy in the oversold territory post-unlock (for projects with strong fundamentals) ^53 ^57.
+* **Supply Pressure Analysis:** April is a concentrated period for unlocks during the year. Massive one-time unlocks like Celestia (17.2%) and Wormhole (6.0%) stand out. Historically, 60~70% of unlocked volume is sold within 1 month, and 90% of vesting events generate negative price pressure. ^53 ^57.
 
 **Attachment: Original Reports and News Sources**
 (Data: Reuters, CoinDesk, Bloomberg, CNN, Al Jazeera, NPR, Time, CryptoQuant, Glassnode, DefiLlama, CryptoSlam, Federal Reserve, FRED, BLS, Trading Economics, etc.)

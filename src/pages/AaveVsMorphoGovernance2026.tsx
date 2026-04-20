@@ -1,67 +1,39 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { Layout } from '../components/Layout';
+import { ReportErrorBoundary } from '../components/ReportErrorBoundary';
 
-function parseMarkdownTable(block: string) {
-  const lines = block
-    .split('\n')
-    .map((line) => line.trim())
-    .filter(Boolean);
-  if (lines.length < 3) return null;
+function stripDuplicateHeader(md: string): string {
+  return md
+    .replace(
+      /^#\s+Paradigm Shift in the Decentralized Finance Lending Market: A Protocol and Valuation Comparison of Morpho and AAVE, and an Analysis of the Governance Crisis\s*\n+/m,
+      ''
+    )
+    .replace(/^\*\*By Nexus One Research Desk • Apr 13, 2026 • 35 min read\*\*\s*\n+/m, '');
+}
 
-  const header = lines[0]
-    .split('|')
-    .map((c) => c.trim())
-    .filter(Boolean);
-  const body = lines.slice(2).map((row) =>
-    row
-      .split('|')
-      .map((c) => c.trim())
-      .filter(Boolean)
-  );
-
-  return { header, body };
+function AaveMarkdownBody({ markdown }: { markdown: string }) {
+  return <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown}</ReactMarkdown>;
 }
 
 export function AaveVsMorphoGovernance2026() {
-  const [content, setContent] = useState('');
-  const [loadError, setLoadError] = useState('');
+  const [md, setMd] = useState('');
+  const [err, setErr] = useState('');
 
   useEffect(() => {
     fetch('/content/insights/aave-vs-morpho-governance-2026.md', { cache: 'no-store' })
-      .then((res) => res.text())
-      .then((text) => {
-        if (!text.trim()) {
-          setLoadError('Report content is empty.');
-          return;
-        }
-        setContent(text);
+      .then((r) => r.text())
+      .then((t) => {
+        if (!t.trim()) setErr('Report content is empty.');
+        else setMd(t);
       })
-      .catch((err) => setLoadError(`Failed to load report content: ${String(err)}`));
+      .catch((e) => setErr(String(e)));
   }, []);
 
-  const blocks = useMemo(() => {
-    if (!content) return [];
-    const raw = content.split('\n\n').map((b) => b.trim()).filter(Boolean);
-    const result: string[] = [];
-    let skipTldr = false;
-    for (const block of raw) {
-      if (block.startsWith('## TL;DR:')) {
-        skipTldr = true;
-        continue;
-      }
-      if (skipTldr) {
-        if (/^##\s+\d+\./.test(block)) {
-          skipTldr = false;
-          result.push(block);
-        }
-        continue;
-      }
-      result.push(block);
-    }
-    return result;
-  }, [content]);
+  const body = stripDuplicateHeader(md);
 
   return (
     <Layout>
@@ -76,130 +48,41 @@ export function AaveVsMorphoGovernance2026() {
           </nav>
 
           <div className="mb-16">
-            <div className="inline-block px-4 py-1.5 bg-transparent text-emerald-500 border border-emerald-500 text-xs font-bold mb-6 uppercase tracking-wider">
+            <div className="inline-block w-fit bg-transparent border border-emerald-500 text-emerald-400 rounded-md px-3 py-1 text-xs font-bold uppercase tracking-wider mb-6">
               DEEP RESEARCH
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
               Paradigm Shift in DeFi Lending: Morpho vs. AAVE Valuation &amp; Governance Crisis
             </h1>
-            <p className="text-slate-400 text-lg mt-4 mb-8">
+            <p className="text-xl text-slate-400 mb-6 leading-relaxed">
               By Nexus One Research Desk • Apr 13, 2026 • 35 min read
             </p>
-
-            <section className="mb-12 rounded-lg border border-slate-800/80 bg-slate-900/30 px-5 py-6 sm:px-6">
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mb-6">
-                TL;DR: The Lending Market Paradigm Shift
-              </h2>
-              <ul className="space-y-4 text-lg leading-relaxed text-slate-300 list-disc pl-6">
-                <li>
-                  <strong className="text-white">Architectural Clash:</strong>{' '}
-                  AAVE dominates with its battle-tested, shared liquidity pool model ($24B+ TVL), while Morpho is rapidly capturing institutional demand with its capital-efficient, permissionless P2P matching and modular Isolated Markets ($10B TVL).
-                </li>
-                <li>
-                  <strong className="text-white">Valuation Disconnect:</strong>{' '}
-                  AAVE generates massive cash flow ($560M+ annualized) but suffers from an extreme &quot;Governance Discount.&quot; Conversely, Morpho generates zero revenue for token holders, relying entirely on a $1.9B FDV bubble fueled by narratives and massive impending insider unlocks, sparking &quot;pump and dump&quot; criticisms.
-                </li>
-                <li>
-                  <strong className="text-white">The AAVE Governance Civil War:</strong>{' '}
-                  Aave Labs&apos; push for centralization and opaque budget demands (the &quot;Aave Will Win&quot; proposal) triggered a domino exodus of core contributors (BGD Labs, ACI, Chaos Labs), severely damaging the protocol&apos;s valuation.
-                </li>
-                <li>
-                  <strong className="text-white">Resolution &amp; Outlook:</strong>{' '}
-                  AAVE narrowly averted disaster on April 12 with a compromise that attributes 100% of front-end revenue to the DAO, sparking a price rebound. The battle now shifts to execution: AAVE must rebuild its risk management, while Morpho must prove a sustainable value capture model before insider dumping overwhelms the market.
-                </li>
-              </ul>
-            </section>
           </div>
 
-          <div className="max-w-5xl mx-auto text-lg leading-relaxed text-slate-300 font-sans">
-            {loadError && (
-              <p className="mb-6 text-red-400">{loadError}</p>
-            )}
-            {!loadError && !content && (
-              <p className="mb-6 text-slate-400">Loading report content...</p>
-            )}
-            {blocks.map((block, idx) => {
-              if (block.startsWith('# ')) {
-                return null;
-              }
+          {err && <p className="mb-6 text-red-400">{err}</p>}
+          {!err && !md && <p className="mb-6 text-slate-400">Loading report content...</p>}
 
-              if (block.startsWith('**By ')) {
-                return null;
-              }
+          <ReportErrorBoundary>
+            <div className="prose prose-invert prose-lg max-w-none text-slate-300 prose-headings:text-white prose-strong:text-white prose-a:text-blue-400 prose-a:break-all prose-li:marker:text-slate-400 prose-ul:list-disc prose-ol:list-decimal [&_del]:line-through [&_del]:text-slate-500 [&_s]:line-through [&_s]:text-slate-500 [&_table]:block [&_table]:w-full [&_table]:overflow-x-auto [&_table]:border-collapse [&_table]:border [&_table]:border-slate-800 [&_th]:border [&_th]:border-slate-800 [&_th]:px-4 [&_th]:py-3 [&_td]:border [&_td]:border-slate-800 [&_td]:px-4 [&_td]:py-3 [&_thead]:bg-slate-900/50 [&_tbody_tr:nth-child(even)]:bg-slate-900/30 [&_blockquote]:border-slate-600 [&_blockquote]:text-slate-400">
+              <AaveMarkdownBody markdown={body} />
+            </div>
+          </ReportErrorBoundary>
 
-              if (block.startsWith('## ')) {
-                return (
-                  <h2 key={idx} className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
-                    {block.replace(/^##\s+/, '')}
-                  </h2>
-                );
-              }
-
-              if (block.startsWith('### ')) {
-                return (
-                  <h3 key={idx} className="text-2xl font-bold text-white mt-12 mb-6 tracking-tight">
-                    {block.replace(/^###\s+/, '')}
-                  </h3>
-                );
-              }
-
-              if (block.split('\n').every((line) => line.trim().startsWith('* '))) {
-                const items = block
-                  .split('\n')
-                  .map((line) => line.replace(/^\*\s+/, '').trim())
-                  .filter(Boolean);
-                return (
-                  <ul key={idx} className="space-y-4 mb-6 text-lg leading-relaxed text-slate-300 list-disc pl-6">
-                    {items.map((item) => (
-                      <li key={item} dangerouslySetInnerHTML={{ __html: item.replace(/\*\*(.*?)\*\*/g, '<strong class="text-white">$1</strong>') }} />
-                    ))}
-                  </ul>
-                );
-              }
-
-              if (block.includes('\n|') || block.startsWith('|')) {
-                const parsed = parseMarkdownTable(block);
-                if (parsed) {
-                  return (
-                    <div key={idx} className="overflow-x-auto my-8">
-                      <table className="w-full text-left border-collapse border border-slate-800">
-                        <thead>
-                          <tr className="border-b border-slate-800 bg-slate-900/50">
-                            {parsed.header.map((h) => (
-                              <th key={h} className="py-3 px-4 text-slate-300 font-semibold border-b border-slate-800">
-                                {h.replace(/\*\*/g, '')}
-                              </th>
-                            ))}
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {parsed.body.map((row, rowIdx) => (
-                            <tr key={`${rowIdx}-${row[0]}`} className={`border-b border-slate-800 ${rowIdx % 2 === 0 ? 'bg-slate-900/50' : ''}`}>
-                              {row.map((cell, cellIdx) => (
-                                <td
-                                  key={`${rowIdx}-${cellIdx}`}
-                                  className={`py-3 px-4 border-b border-slate-800 ${cellIdx === 0 ? 'text-white font-medium' : 'text-slate-300'}`}
-                                >
-                                  {cell.replace(/\*\*/g, '')}
-                                </td>
-                              ))}
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
-                  );
-                }
-              }
-
-              return (
-                <p
-                  key={idx}
-                  className="mb-6 text-lg leading-relaxed text-slate-300 whitespace-pre-line"
-                  dangerouslySetInnerHTML={{ __html: block.replace(/\*\*(.*?)\*\*/g, '<strong class="text-white">$1</strong>') }}
-                />
-              );
-            })}
+          <div className="mt-16 pt-8 border-t border-slate-800/50">
+            <div className="mb-8">
+              <h4 className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-3">Disclaimer</h4>
+              <p className="text-xs text-slate-500 leading-relaxed text-justify">
+                This report is for informational purposes only and does not constitute financial, investment, legal, or tax advice. The views expressed herein are those of the Nexus One Research Desk as of the date of publication and are subject to change without notice.
+                <br /><br />
+                Nexus One and its affiliates may hold long or short positions in the assets discussed and may adjust these positions at any time. Digital asset investments are highly volatile and involve a significant risk of loss. Investors should conduct their own due diligence.
+              </p>
+            </div>
+            <div className="border-t border-slate-800/50 pt-6">
+              <Link to="/insights" className="group inline-flex items-center gap-2 text-emerald-500 hover:text-emerald-400 transition-colors font-medium text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:-translate-x-1"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+                Back to All Insights
+              </Link>
+            </div>
           </div>
         </div>
       </article>

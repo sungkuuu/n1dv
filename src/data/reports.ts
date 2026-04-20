@@ -17,6 +17,25 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'cross-chain-vulnerability-kelp-aave-2026',
+    badge: {
+      text: 'DEEP RESEARCH',
+      variant: 'outline-green'
+    },
+    title:
+      '2026 Cross-Chain Infrastructure Vulnerability and Contagion Risk Analysis: Focusing on Kelp DAO, LayerZero, and AAVE',
+    description:
+      'An in-depth forensic analysis of the $292M Kelp DAO exploit, the structural contagion to AAVE, and the looming threat of AI-driven autonomous exploits.',
+    date: '2026-04-20',
+    category: 'DEEP RESEARCH',
+    summary:
+      'An in-depth forensic analysis of the $292M Kelp DAO exploit, the structural contagion to AAVE, and the looming threat of AI-driven autonomous exploits.',
+    readTime: '45 min read',
+    author: 'Nexus One Research Desk',
+    content: '',
+    link: '/insights/cross-chain-vulnerability-kelp-aave-2026'
+  },
+  {
     id: 'weekly-brief-apr-13-2026',
     badge: {
       text: 'WEEKLY BRIEF',
@@ -38,7 +57,7 @@ export const reports: Report[] = [
     id: 'aave-vs-morpho-governance-2026',
     badge: {
       text: 'DEEP RESEARCH',
-      variant: 'outline-purple'
+      variant: 'outline-green'
     },
     title: 'Paradigm Shift in DeFi Lending: Morpho vs. AAVE Valuation & Governance Crisis',
     description:
@@ -56,7 +75,7 @@ export const reports: Report[] = [
     id: 'aptos-structural-reset-2026',
     badge: {
       text: 'DEEP RESEARCH',
-      variant: 'outline-purple'
+      variant: 'outline-green'
     },
     title: 'APT Just Lost 70% of its TVL: A Structural Reset, Not a Crisis',
     description:

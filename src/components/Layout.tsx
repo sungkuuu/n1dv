@@ -136,8 +136,8 @@ export function Layout({ children }: LayoutProps) {
 
       {/* Mobile Menu — same order: Letter, Vaults, Insights, Dashboard | Referral, Connect Wallet */}
       <div
-        className={`fixed inset-0 bg-black/95 backdrop-blur-lg z-50 md:hidden transition-all duration-300 ${
-          isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+        className={`fixed inset-0 z-50 bg-black/95 backdrop-blur-lg transition-opacity duration-300 md:hidden ${
+          isMobileMenuOpen ? 'flex flex-col opacity-100' : 'hidden'
         }`}
       >
         <div className="flex flex-col h-full">

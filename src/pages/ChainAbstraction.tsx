@@ -19,7 +19,7 @@ export function ChainAbstraction() {
           {/* Hero Section */}
           <div className="mb-16">
             {/* Category Badge */}
-            <div className="inline-block px-4 py-1.5 bg-transparent text-green-500 border border-green-500 text-xs font-bold mb-6 uppercase tracking-wider">
+            <div className="inline-block w-fit bg-transparent border border-emerald-500 text-emerald-400 rounded-md px-3 py-1 text-xs font-bold uppercase tracking-wider mb-6">
               DEEP RESEARCH
             </div>
 

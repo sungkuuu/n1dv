@@ -16,7 +16,7 @@ export function BitcoinMarketCycle2026Analysis() {
           </nav>
 
           <div className="mb-16">
-            <div className="bg-transparent border border-emerald-500 text-emerald-500 rounded-md px-3 py-1 text-xs font-bold uppercase tracking-wider inline-block mb-6">
+            <div className="inline-block w-fit bg-transparent border border-emerald-500 text-emerald-400 rounded-md px-3 py-1 text-xs font-bold uppercase tracking-wider mb-6">
               DEEP RESEARCH
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
