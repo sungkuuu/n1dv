@@ -17,6 +17,25 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'canton-network-bme-crossover-2026',
+    badge: {
+      text: 'DEEP RESEARCH',
+      variant: 'outline-green'
+    },
+    title:
+      'Canton Network (CC) Valuation: Beyond the P/E Illusion to the BME Crossover',
+    description:
+      'A deep-dive into Canton Network valuation optics, hidden inflation costs, and the projected Burn-Mint Equilibrium crossover that may trigger structural repricing.',
+    date: '2026-04-20',
+    category: 'DEEP RESEARCH',
+    summary:
+      'A deep-dive into Canton Network valuation optics, hidden inflation costs, and the projected Burn-Mint Equilibrium crossover that may trigger structural repricing.',
+    readTime: '40 min read',
+    author: 'Nexus One Research Desk',
+    content: '',
+    link: '/insights/canton-network-bme-crossover-2026'
+  },
+  {
     id: 'cross-chain-vulnerability-kelp-aave-2026',
     badge: {
       text: 'DEEP RESEARCH',
