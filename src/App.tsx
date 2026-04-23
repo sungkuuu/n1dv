@@ -41,6 +41,7 @@ import { Q12026DigitalAssetMarketQuarterlyReport } from './pages/Q12026DigitalAs
 import { AptosStructuralReset2026 } from './pages/AptosStructuralReset2026';
 import { AaveVsMorphoGovernance2026 } from './pages/AaveVsMorphoGovernance2026';
 import { WeeklyBriefApr13 } from './pages/WeeklyBriefApr13';
+import { WeeklyBriefApr20 } from './pages/WeeklyBriefApr20';
 import { CrossChainVulnerabilityKelpAave2026 } from './pages/CrossChainVulnerabilityKelpAave2026';
 import { CantonNetworkBMECrossover2026 } from './pages/CantonNetworkBMECrossover2026';
 
@@ -60,6 +61,7 @@ function App() {
         <Route path="/insights/solana-global-infrastructure" element={<SolanaGlobalInfrastructure />} />
         <Route path="/insights/peaq-m2m-deep-value-analysis" element={<PeaqM2MDeepValueAnalysis />} />
         <Route path="/insights/q1-2026-digital-asset-market-quarterly-report" element={<Q12026DigitalAssetMarketQuarterlyReport />} />
+        <Route path="/insights/weekly-brief-apr-20-2026" element={<WeeklyBriefApr20 />} />
         <Route path="/insights/weekly-brief-apr-13-2026" element={<WeeklyBriefApr13 />} />
         <Route path="/insights/cross-chain-vulnerability-kelp-aave-2026" element={<CrossChainVulnerabilityKelpAave2026 />} />
         <Route path="/insights/canton-network-bme-crossover-2026" element={<CantonNetworkBMECrossover2026 />} />

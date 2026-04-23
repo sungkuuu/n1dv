@@ -17,6 +17,24 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'weekly-brief-apr-20-2026',
+    badge: {
+      text: 'WEEKLY BRIEF',
+      variant: 'outline-blue'
+    },
+    title: 'NexusOne Weekly Digital Asset Market Report: April 14–20, 2026',
+    description:
+      'Weekly macro-to-on-chain synthesis covering Hormuz risk shocks, ETF flows, DeFi contagion, L1/L2 metrics, and the coming week\'s key catalysts.',
+    date: '2026-04-20',
+    category: 'WEEKLY BRIEF',
+    summary:
+      'Weekly macro-to-on-chain synthesis covering Hormuz risk shocks, ETF flows, DeFi contagion, L1/L2 metrics, and the coming week\'s key catalysts.',
+    readTime: '35 min read',
+    author: 'NexusOne Research Team',
+    content: '',
+    link: '/insights/weekly-brief-apr-20-2026'
+  },
+  {
     id: 'canton-network-bme-crossover-2026',
     badge: {
       text: 'DEEP RESEARCH',
