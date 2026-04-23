@@ -17,6 +17,24 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'venice-uncapped-mint-risk-2026',
+    badge: {
+      text: 'DEEP RESEARCH',
+      variant: 'outline-green'
+    },
+    title: 'A single key, a $700M token: inside Venice\'s uncapped mint',
+    description:
+      'On-chain deep dive into Venice token mint authority design, governance surface, and structural valuation risk relative to decentralized AI peers.',
+    date: '2026-04-23',
+    category: 'DEEP RESEARCH',
+    summary:
+      'On-chain deep dive into Venice token mint authority design, governance surface, and structural valuation risk relative to decentralized AI peers.',
+    readTime: '35 min read',
+    author: 'Nexus One Research Desk',
+    content: '',
+    link: '/insights/venice-uncapped-mint-risk-2026'
+  },
+  {
     id: 'weekly-brief-apr-20-2026',
     badge: {
       text: 'WEEKLY BRIEF',

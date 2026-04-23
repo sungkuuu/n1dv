@@ -44,6 +44,7 @@ import { WeeklyBriefApr13 } from './pages/WeeklyBriefApr13';
 import { WeeklyBriefApr20 } from './pages/WeeklyBriefApr20';
 import { CrossChainVulnerabilityKelpAave2026 } from './pages/CrossChainVulnerabilityKelpAave2026';
 import { CantonNetworkBMECrossover2026 } from './pages/CantonNetworkBMECrossover2026';
+import { VeniceUncappedMintRisk2026 } from './pages/VeniceUncappedMintRisk2026';
 
 function App() {
   return (
@@ -63,6 +64,7 @@ function App() {
         <Route path="/insights/q1-2026-digital-asset-market-quarterly-report" element={<Q12026DigitalAssetMarketQuarterlyReport />} />
         <Route path="/insights/weekly-brief-apr-20-2026" element={<WeeklyBriefApr20 />} />
         <Route path="/insights/weekly-brief-apr-13-2026" element={<WeeklyBriefApr13 />} />
+        <Route path="/insights/venice-uncapped-mint-risk-2026" element={<VeniceUncappedMintRisk2026 />} />
         <Route path="/insights/cross-chain-vulnerability-kelp-aave-2026" element={<CrossChainVulnerabilityKelpAave2026 />} />
         <Route path="/insights/canton-network-bme-crossover-2026" element={<CantonNetworkBMECrossover2026 />} />
         <Route path="/insights/aave-vs-morpho-governance-2026" element={<AaveVsMorphoGovernance2026 />} />
