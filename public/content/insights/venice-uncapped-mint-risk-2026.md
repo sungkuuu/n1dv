@@ -12,8 +12,6 @@ While VVV has grown to a $700M FDV based on strong fundamentals—50,000 DAU and
 
 In conclusion, the current valuation is pure momentum driven by liquidity and the blind faith of a market that isn't reading the code. Until the contract architecture is refactored toward decentralization, VVV holds no value as an institutional-grade asset.
 
-**Venice Token (VVV) is a 20-line Solmate ERC-20 whose entire supply authority resolves to one line of code: `function mint(address to, uint256 amount) external onlyOwner`.** No hard cap. No timelock. No multisig visible on-chain. No public audit. This is the architecture currently supporting a ~$400M market cap and ~$700M fully diluted valuation. The finding matters because institutional capital cannot diligence what a single key can redefine overnight — not because Erik Voorhees, Teana Baker-Taylor, or the Venice team have shown any indication of malicious intent, but because the structural risk is indistinguishable, to an allocator's risk model, from one where they might. Venice launched on Base in January 2025, merged an AI-infrastructure thesis with genuine privacy product-market fit, and rode a 320% year-on-year rally. The contract architecture that underpins the rally, however, sits in a risk category of one among the nine decentralized-AI tokens surveyed for this report. What follows is the on-chain record, the peer comparison, and the historical precedents that explain why that outlier status should be priced.
-
 ---
 
 ## 1. The contract, verbatim
