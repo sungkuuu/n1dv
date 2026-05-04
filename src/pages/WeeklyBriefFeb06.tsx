@@ -33,7 +33,7 @@ export function WeeklyBriefFeb06() {
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
-              The Great Decoupling & Institutional Capitulation
+              Nexus One Weekly Digital Asset Market Report - February 6, 2026
             </h1>
 
             <p className="text-xl text-gray-400 mb-8 leading-relaxed">

@@ -52,7 +52,7 @@ export function WeeklyBriefApr13() {
               WEEKLY BRIEF
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
-              April 13, 2026 Global Macroeconomic and Digital Asset Market In-Depth Analysis Report
+              Nexus One Weekly Digital Asset Market Report - April 13, 2026
             </h1>
             <p className="text-xl text-slate-400 mb-6 leading-relaxed">
               By Nexus One Research Desk • Apr 13, 2026 • 25 min read

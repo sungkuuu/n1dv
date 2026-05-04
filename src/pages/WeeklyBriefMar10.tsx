@@ -3,7 +3,7 @@ import { ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
-const PAGE_TITLE = 'March 2026 Global Digital Asset and Macroeconomic In-Depth Research Report';
+const PAGE_TITLE = 'Nexus One Weekly Digital Asset Market Report - March 10, 2026';
 const PAGE_DESCRIPTION = 'The intersection of institutional capital, RWA, and macro volatility. TL;DR on ETF flows, on-chain vs derivatives divergence, L2 parasitic dilemma, and key sector trends.';
 
 export function WeeklyBriefMar10() {
@@ -47,7 +47,7 @@ export function WeeklyBriefMar10() {
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
-              March 2026 Global Digital Asset and Macroeconomic In-Depth Research Report: The Intersection of Institutional Capital, RWA, and Macro Volatility
+              Nexus One Weekly Digital Asset Market Report - March 10, 2026
             </h1>
 
             <p className="text-xl text-slate-400 mb-6 leading-relaxed">

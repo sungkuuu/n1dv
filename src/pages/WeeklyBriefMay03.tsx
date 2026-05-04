@@ -8,21 +8,20 @@ import { ReportErrorBoundary } from '../components/ReportErrorBoundary';
 
 function stripDuplicateHeader(md: string): string {
   return md
-    .replace(/^#\s+NexusOne Weekly Digital Asset Market Report: April 14–20, 2026\s*\n+/m, '')
-    .replace(/^\*\*Published:\*\* April 20, 2026 \(Monday\)\s*\n+/m, '')
-    .replace(/^\*\*By:\*\* NexusOne Research Team\s*\n+/m, '');
+    .replace(/^#\s+Nexus One Weekly Digital Asset Market Report - April 27 to May 3, 2026\s*\n+/m, '')
+    .replace(/^\*\*Publication Date:\*\*.*\n+/m, '');
 }
 
-function WeeklyBriefApr20Body({ markdown }: { markdown: string }) {
+function WeeklyBriefMay03Body({ markdown }: { markdown: string }) {
   return <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown}</ReactMarkdown>;
 }
 
-export function WeeklyBriefApr20() {
+export function WeeklyBriefMay03() {
   const [md, setMd] = useState('');
   const [err, setErr] = useState('');
 
   useEffect(() => {
-    fetch('/content/insights/weekly-brief-apr-20-2026.md', { cache: 'no-store' })
+    fetch('/content/insights/weekly-brief-may-03-2026.md', { cache: 'no-store' })
       .then((r) => r.text())
       .then((t) => {
         if (!t.trim()) setErr('Report content is empty.');
@@ -42,7 +41,7 @@ export function WeeklyBriefApr20() {
             <ChevronRight size={14} />
             <Link to="/insights" className="hover:text-white transition-colors">Insights</Link>
             <ChevronRight size={14} />
-            <span className="text-gray-400">Weekly Brief Apr 20</span>
+            <span className="text-gray-400">Weekly Brief May 3</span>
           </nav>
 
           <div className="mb-16">
@@ -50,10 +49,10 @@ export function WeeklyBriefApr20() {
               WEEKLY BRIEF
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
-              Nexus One Weekly Digital Asset Market Report - April 20, 2026
+              Nexus One Weekly Digital Asset Market Report - May 3, 2026
             </h1>
             <p className="text-xl text-slate-400 mb-6 leading-relaxed">
-              Published: April 20, 2026 (Monday) • By NexusOne Research Team
+              Published: May 4, 2026 (Monday) • By Nexus One Research
             </p>
           </div>
 
@@ -62,7 +61,7 @@ export function WeeklyBriefApr20() {
 
           <ReportErrorBoundary>
             <div className="prose prose-invert prose-lg max-w-none text-slate-300 prose-headings:text-white prose-strong:text-white prose-a:text-blue-400 prose-a:break-all prose-li:marker:text-slate-400 prose-ul:list-disc prose-ol:list-decimal [&_del]:line-through [&_del]:text-slate-500 [&_s]:line-through [&_s]:text-slate-500 [&_table]:w-full [&_table]:table-fixed [&_table]:border-collapse [&_table]:border [&_table]:border-slate-800 [&_th]:border [&_th]:border-slate-800 [&_th]:px-4 [&_th]:py-3 [&_td]:border [&_td]:border-slate-800 [&_td]:px-4 [&_td]:py-3 [&_thead]:bg-slate-900/50 [&_tbody_tr:nth-child(even)]:bg-slate-900/30 [&_blockquote]:border-slate-600 [&_blockquote]:text-slate-400">
-              <WeeklyBriefApr20Body markdown={body} />
+              <WeeklyBriefMay03Body markdown={body} />
             </div>
           </ReportErrorBoundary>
 

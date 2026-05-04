@@ -42,6 +42,7 @@ import { AptosStructuralReset2026 } from './pages/AptosStructuralReset2026';
 import { AaveVsMorphoGovernance2026 } from './pages/AaveVsMorphoGovernance2026';
 import { WeeklyBriefApr13 } from './pages/WeeklyBriefApr13';
 import { WeeklyBriefApr20 } from './pages/WeeklyBriefApr20';
+import { WeeklyBriefMay03 } from './pages/WeeklyBriefMay03';
 import { CrossChainVulnerabilityKelpAave2026 } from './pages/CrossChainVulnerabilityKelpAave2026';
 import { CantonNetworkBMECrossover2026 } from './pages/CantonNetworkBMECrossover2026';
 import { VeniceUncappedMintRisk2026 } from './pages/VeniceUncappedMintRisk2026';
@@ -63,6 +64,7 @@ function App() {
         <Route path="/insights/solana-global-infrastructure" element={<SolanaGlobalInfrastructure />} />
         <Route path="/insights/peaq-m2m-deep-value-analysis" element={<PeaqM2MDeepValueAnalysis />} />
         <Route path="/insights/q1-2026-digital-asset-market-quarterly-report" element={<Q12026DigitalAssetMarketQuarterlyReport />} />
+        <Route path="/insights/weekly-brief-may-03-2026" element={<WeeklyBriefMay03 />} />
         <Route path="/insights/weekly-brief-apr-20-2026" element={<WeeklyBriefApr20 />} />
         <Route path="/insights/weekly-brief-apr-13-2026" element={<WeeklyBriefApr13 />} />
         <Route path="/insights/centrifuge-rwa-structural-valuation-2026" element={<CentrifugeRWAStructuralValuation2026 />} />

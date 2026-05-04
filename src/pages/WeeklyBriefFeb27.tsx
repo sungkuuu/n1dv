@@ -3,7 +3,7 @@ import { ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
-const PAGE_TITLE = 'Nexus One Weekly Report: Macro Shocks, ETF Reversals, and the $6B March Mega Unlock';
+const PAGE_TITLE = 'Nexus One Weekly Digital Asset Market Report - February 27, 2026';
 const PAGE_DESCRIPTION = 'Macro tariff shocks, VIX spike, Bitcoin short squeeze, ETF flow reversal, and the $6B March token unlock risk. Full analysis of on-chain indicators, NUPL/MVRV, and strategic suggestions.';
 
 export function WeeklyBriefFeb27() {
@@ -47,7 +47,7 @@ export function WeeklyBriefFeb27() {
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
-              Nexus One Weekly Report: Macro Shocks, ETF Reversals, and the $6B March Mega Unlock
+              Nexus One Weekly Digital Asset Market Report - February 27, 2026
             </h1>
 
             <p className="text-xl text-slate-400 mb-6 leading-relaxed">

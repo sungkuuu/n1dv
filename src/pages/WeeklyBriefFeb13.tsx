@@ -21,7 +21,7 @@ export function WeeklyBriefFeb13() {
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
-              Nexus One Weekly Report: The Great Decoupling and Liquidity Test
+              Nexus One Weekly Digital Asset Market Report - February 13, 2026
             </h1>
 
             <p className="text-xl text-gray-400 mb-6 leading-relaxed">

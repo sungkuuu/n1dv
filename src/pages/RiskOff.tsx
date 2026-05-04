@@ -25,7 +25,7 @@ export function RiskOff() {
 
             {/* Title */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
-              Risk-Off Contagion & The Flight to Quality
+              Nexus One Weekly Digital Asset Market Report - February 3, 2026
             </h1>
 
             <p className="text-xl text-gray-400 mb-8 leading-relaxed">

@@ -17,6 +17,24 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'weekly-brief-may-03-2026',
+    badge: {
+      text: 'WEEKLY BRIEF',
+      variant: 'outline-blue'
+    },
+    title: 'Nexus One Weekly Digital Asset Market Report - May 3, 2026',
+    description:
+      'BTC reclaim, ETF inflow divergence, final Powell FOMC split, KelpDAO shock spillover, RWA share shifts, and May macro/unlock risk map.',
+    date: '2026-05-04',
+    category: 'WEEKLY BRIEF',
+    summary:
+      'BTC reclaim, ETF inflow divergence, final Powell FOMC split, KelpDAO shock spillover, RWA share shifts, and May macro/unlock risk map.',
+    readTime: '25 min read',
+    author: 'Nexus One Research',
+    content: '',
+    link: '/insights/weekly-brief-may-03-2026'
+  },
+  {
     id: 'centrifuge-rwa-structural-valuation-2026',
     badge: {
       text: 'DEEP RESEARCH',
@@ -59,7 +77,7 @@ export const reports: Report[] = [
       text: 'WEEKLY BRIEF',
       variant: 'outline-blue'
     },
-    title: 'NexusOne Weekly Digital Asset Market Report: April 14–20, 2026',
+    title: 'Nexus One Weekly Digital Asset Market Report - April 20, 2026',
     description:
       'Weekly macro-to-on-chain synthesis covering Hormuz risk shocks, ETF flows, DeFi contagion, L1/L2 metrics, and the coming week\'s key catalysts.',
     date: '2026-04-20',
@@ -115,7 +133,7 @@ export const reports: Report[] = [
       text: 'WEEKLY BRIEF',
       variant: 'outline-blue'
     },
-    title: 'April 13, 2026 Global Macroeconomic and Digital Asset Market In-Depth Analysis Report',
+    title: 'Nexus One Weekly Digital Asset Market Report - April 13, 2026',
     description:
       'Analysis of the market impact following the collapse of US-Iran peace negotiations, March CPI inflation data, and institutional accumulation trends.',
     date: '2026-04-13',
@@ -165,7 +183,7 @@ export const reports: Report[] = [
   },
   {
     id: 'weekly-brief-apr-05-2026',
-    title: 'April 5, 2026 Global Macroeconomic and Digital Asset Market In-Depth Analysis Report',
+    title: 'Nexus One Weekly Digital Asset Market Report - April 5, 2026',
     date: 'Apr 5, 2026',
     category: 'WEEKLY BRIEF',
     summary:
@@ -197,7 +215,7 @@ export const reports: Report[] = [
   },
   {
     id: 'weekly-brief-mar-30-2026',
-    title: 'March 30, 2026 Global Macroeconomic and Digital Asset Market In-Depth Analysis',
+    title: 'Nexus One Weekly Digital Asset Market Report - March 30, 2026',
     date: 'Mar 30, 2026',
     category: 'WEEKLY BRIEF',
     summary: 'Comprehensive macro and crypto market deep-dive covering core indicators, ETF flows, on-chain sector dynamics, April events, and token unlock implications.',
@@ -217,7 +235,7 @@ export const reports: Report[] = [
   },
   {
     id: 'weekly-brief-mar-20-2026',
-    title: 'March 2026 Global Digital Asset Market & Macroeconomic In-Depth Analysis',
+    title: 'Nexus One Weekly Digital Asset Market Report - March 20, 2026',
     date: 'Mar 20, 2026',
     category: 'WEEKLY BRIEF',
     summary: 'In-depth macro and digital asset analysis: on-chain decoupling, ETF flow dynamics, protocol metrics, anomalies, and strategic outlook for the next week.',
@@ -237,7 +255,7 @@ export const reports: Report[] = [
   },
   {
     id: 'weekly-brief-mar-10-2026',
-    title: 'March 2026 Global Digital Asset and Macroeconomic In-Depth Research Report',
+    title: 'Nexus One Weekly Digital Asset Market Report - March 10, 2026',
     date: 'Mar 10, 2026',
     category: 'WEEKLY BRIEF',
     summary: 'The intersection of institutional capital, RWA, and macro volatility. TL;DR on ETF flows, on-chain vs derivatives divergence, L2 parasitic dilemma, and key sector trends.',
@@ -277,7 +295,7 @@ export const reports: Report[] = [
   },
   {
     id: 'weekly-brief-feb-27-2026',
-    title: 'Nexus One Weekly Report: Macro Shocks, ETF Reversals, and the $6B March Mega Unlock',
+    title: 'Nexus One Weekly Digital Asset Market Report - February 27, 2026',
     date: 'Feb 27, 2026',
     category: 'WEEKLY BRIEF',
     summary: 'Macro tariff shocks, VIX spike, Bitcoin short squeeze, ETF flow reversal, and the $6B March token unlock risk. Full analysis of on-chain indicators, NUPL/MVRV, and strategic suggestions.',
@@ -317,7 +335,7 @@ export const reports: Report[] = [
   },
   {
     id: 'weekly-brief-feb-13-2026',
-    title: 'Nexus One Weekly Report: The Great Decoupling and Liquidity Test',
+    title: 'Nexus One Weekly Digital Asset Market Report - February 13, 2026',
     date: 'Feb 13, 2026',
     category: 'WEEKLY BRIEF',
     summary: 'Analyzing the multidimensional decoupling in macro policies and crypto market structure, alongside the resilience of institutional accumulation.',
@@ -367,7 +385,7 @@ export const reports: Report[] = [
   },
   {
     id: 'weekly-brief-feb-10-2026',
-    title: 'Weekly Report: The Trust Test & Macro Headwinds',
+    title: 'Nexus One Weekly Digital Asset Market Report - February 10, 2026',
     date: 'Feb 10, 2026',
     category: 'WEEKLY BRIEF',
     summary: 'BTC volatility threatens $60k amid macro pressure. BlackRock IBIT dominates with concentrated inflows as Kimchi Premium collapses to 1%. Institutional flows, macro indicators & market sentiment analysis.',
@@ -397,7 +415,7 @@ export const reports: Report[] = [
   },
   {
     id: 'weekly-brief-feb-06-2026',
-    title: 'Weekly Report: The Great Decoupling & Institutional Capitulation',
+    title: 'Nexus One Weekly Digital Asset Market Report - February 6, 2026',
     date: 'Feb 6, 2026',
     category: 'WEEKLY BRIEF',
     summary: 'BTC falls to $60k as \'Warsh Shock\' hits liquidity. Korea lifts ban on corporate crypto accounts. Analysis of the 50% drawdown and ETF outflows.',
@@ -437,7 +455,7 @@ export const reports: Report[] = [
   },
   {
     id: 'risk-off-contagion',
-    title: 'Weekly Insight: Risk-Off Contagion & The Flight to Quality',
+    title: 'Nexus One Weekly Digital Asset Market Report - February 3, 2026',
     date: 'Feb 03, 2026',
     category: 'WEEKLY BRIEF',
     summary: 'The Fed\'s hawkish hold and Kevin Warsh nomination trigger commodity flash crash. N1DV Vault\'s 40% stablecoin allocation proves defensive strength.',
