@@ -17,6 +17,25 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'centrifuge-rwa-structural-valuation-2026',
+    badge: {
+      text: 'DEEP RESEARCH',
+      variant: 'outline-green'
+    },
+    title:
+      'Structural Valuation and the Real-World Asset Divergence: A Deep-Dive Analysis of Centrifuge Protocol',
+    description:
+      'CFG valuation vs Ondo: infrastructure take-rate, TVL stickiness after Resolv, V3 indexing gaps, April 29 fee switch, and an observe-and-verify playbook.',
+    date: '2026-05-04',
+    category: 'DEEP RESEARCH',
+    summary:
+      'CFG valuation vs Ondo: infrastructure take-rate, TVL stickiness after Resolv, V3 indexing gaps, April 29 fee switch, and an observe-and-verify playbook.',
+    readTime: '25 min read',
+    author: 'Nexus One Research Desk',
+    content: '',
+    link: '/insights/centrifuge-rwa-structural-valuation-2026'
+  },
+  {
     id: 'venice-uncapped-mint-risk-2026',
     badge: {
       text: 'DEEP RESEARCH',
