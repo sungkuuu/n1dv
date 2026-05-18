@@ -17,6 +17,25 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'circle-arc-economic-os-2026',
+    badge: {
+      text: 'DEEP RESEARCH',
+      variant: 'outline-green'
+    },
+    title:
+      'Circle Arc Blockchain and the ARC Token: Economic OS Architecture and Capital Markets',
+    description:
+      'GENIUS Act commoditization defense, $3B Arc presale, Malachite/Reth architecture, USDC gas burn economics, Agent Stack M2M, and permissioned-chain centralization risks.',
+    date: '2026-05-18',
+    category: 'DEEP RESEARCH',
+    summary:
+      'GENIUS Act commoditization defense, $3B Arc presale, Malachite/Reth architecture, USDC gas burn economics, Agent Stack M2M, and permissioned-chain centralization risks.',
+    readTime: '45 min read',
+    author: 'Nexus One Research Desk',
+    content: '',
+    link: '/insights/circle-arc-economic-os-2026'
+  },
+  {
     id: 'weekly-brief-may-03-2026',
     badge: {
       text: 'WEEKLY BRIEF',
