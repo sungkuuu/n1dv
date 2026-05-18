@@ -48,6 +48,7 @@ import { CantonNetworkBMECrossover2026 } from './pages/CantonNetworkBMECrossover
 import { VeniceUncappedMintRisk2026 } from './pages/VeniceUncappedMintRisk2026';
 import { CentrifugeRWAStructuralValuation2026 } from './pages/CentrifugeRWAStructuralValuation2026';
 import { CircleArcEconomicOS2026 } from './pages/CircleArcEconomicOS2026';
+import { ClarityActProjectClassification2026 } from './pages/ClarityActProjectClassification2026';
 
 function App() {
   return (
@@ -65,6 +66,7 @@ function App() {
         <Route path="/insights/solana-global-infrastructure" element={<SolanaGlobalInfrastructure />} />
         <Route path="/insights/peaq-m2m-deep-value-analysis" element={<PeaqM2MDeepValueAnalysis />} />
         <Route path="/insights/q1-2026-digital-asset-market-quarterly-report" element={<Q12026DigitalAssetMarketQuarterlyReport />} />
+        <Route path="/insights/clarity-act-project-classification-2026" element={<ClarityActProjectClassification2026 />} />
         <Route path="/insights/circle-arc-economic-os-2026" element={<CircleArcEconomicOS2026 />} />
         <Route path="/insights/weekly-brief-may-03-2026" element={<WeeklyBriefMay03 />} />
         <Route path="/insights/weekly-brief-apr-20-2026" element={<WeeklyBriefApr20 />} />

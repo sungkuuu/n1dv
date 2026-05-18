@@ -17,6 +17,25 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'clarity-act-project-classification-2026',
+    badge: {
+      text: 'DEEP RESEARCH',
+      variant: 'outline-green'
+    },
+    title:
+      'Clarity Act Project Classification: SEC/CFTC Jurisdictional Integration',
+    description:
+      'Senate Banking draft analysis: digital commodity certification, Regulation Crypto caps, Section 404 stablecoin yield, Section 105 XRP, and DeFi safe harbor winners vs losers.',
+    date: '2026-05-18',
+    category: 'DEEP RESEARCH',
+    summary:
+      'Senate Banking draft analysis: digital commodity certification, Regulation Crypto caps, Section 404 stablecoin yield, Section 105 XRP, and DeFi safe harbor winners vs losers.',
+    readTime: '40 min read',
+    author: 'Nexus One Research Desk',
+    content: '',
+    link: '/insights/clarity-act-project-classification-2026'
+  },
+  {
     id: 'circle-arc-economic-os-2026',
     badge: {
       text: 'DEEP RESEARCH',
