@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Layout } from '../components/Layout';
 import { ReportErrorBoundary } from '../components/ReportErrorBoundary';
+import { fetchInsightMarkdown } from '../lib/fetchInsightMarkdown';
 
 function stripDuplicateHeader(md: string): string {
   return md
@@ -24,13 +25,9 @@ export function CircleArcEconomicOS2026() {
   const [err, setErr] = useState('');
 
   useEffect(() => {
-    fetch('/content/insights/circle-arc-economic-os-2026.md', { cache: 'no-store' })
-      .then((r) => r.text())
-      .then((t) => {
-        if (!t.trim()) setErr('Report content is empty.');
-        else setMd(t);
-      })
-      .catch((e) => setErr(String(e)));
+    fetchInsightMarkdown('/content/insights/circle-arc-economic-os-2026.md')
+      .then(setMd)
+      .catch((e) => setErr(e instanceof Error ? e.message : String(e)));
   }, []);
 
   const body = stripDuplicateHeader(md);

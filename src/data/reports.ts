@@ -17,6 +17,24 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'weekly-brief-may-18-2026',
+    badge: {
+      text: 'WEEKLY BRIEF',
+      variant: 'outline-blue'
+    },
+    title: 'Nexus One Weekly Digital Asset Market Report - May 18–24, 2026',
+    description:
+      'BTC range $74K–$78K, 6-day BTC ETF outflows ($1.55B), Verus $20M exploit, Hyperliquid SEC exemption narrative, RWA $31.4B, and May 29 PCE risk.',
+    date: '2026-05-25',
+    category: 'WEEKLY BRIEF',
+    summary:
+      'BTC range $74K–$78K, 6-day BTC ETF outflows ($1.55B), Verus $20M exploit, Hyperliquid SEC exemption narrative, RWA $31.4B, and May 29 PCE risk.',
+    readTime: '35 min read',
+    author: 'Nexus One Digital Asset Research Desk',
+    content: '',
+    link: '/insights/weekly-brief-may-18-2026'
+  },
+  {
     id: 'clarity-act-project-classification-2026',
     badge: {
       text: 'DEEP RESEARCH',

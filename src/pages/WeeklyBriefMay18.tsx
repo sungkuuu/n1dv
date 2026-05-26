@@ -9,23 +9,20 @@ import { fetchInsightMarkdown } from '../lib/fetchInsightMarkdown';
 
 function stripDuplicateHeader(md: string): string {
   return md
-    .replace(
-      /^#\s+A Structural Shift in the Crypto Regulatory Landscape: Project Classification Analysis Based on the Clarity Act's Legislative Structure and Jurisdictional Integration\s*\n+/m,
-      ''
-    )
-    .replace(/^\*\*By Nexus One Research Desk • May 18, 2026 • 40 min read\*\*\s*\n+/m, '');
+    .replace(/^#\s+Nexus One Weekly Digital Asset Market Report - May 18 to May 24, 2026\s*\n+/m, '')
+    .replace(/^\*\*Publication Date:\*\*.*\n+/m, '');
 }
 
-function ClarityActMarkdownBody({ markdown }: { markdown: string }) {
+function WeeklyBriefMay18Body({ markdown }: { markdown: string }) {
   return <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown}</ReactMarkdown>;
 }
 
-export function ClarityActProjectClassification2026() {
+export function WeeklyBriefMay18() {
   const [md, setMd] = useState('');
   const [err, setErr] = useState('');
 
   useEffect(() => {
-    fetchInsightMarkdown('/content/insights/clarity-act-project-classification-2026.md')
+    fetchInsightMarkdown('/content/insights/weekly-brief-may-18-2026.md')
       .then(setMd)
       .catch((e) => setErr(e instanceof Error ? e.message : String(e)));
   }, []);
@@ -41,18 +38,18 @@ export function ClarityActProjectClassification2026() {
             <ChevronRight size={14} />
             <Link to="/insights" className="hover:text-white transition-colors">Insights</Link>
             <ChevronRight size={14} />
-            <span className="text-gray-400">Clarity Act Classification 2026</span>
+            <span className="text-gray-400">Weekly Brief May 18–24</span>
           </nav>
 
           <div className="mb-16">
-            <div className="inline-block w-fit bg-transparent border border-emerald-500 text-emerald-400 rounded-md px-3 py-1 text-xs font-bold uppercase tracking-wider mb-6">
-              DEEP RESEARCH
+            <div className="inline-block w-fit bg-transparent border border-blue-500 text-blue-400 rounded-md px-3 py-1 text-xs font-bold uppercase tracking-wider mb-6">
+              WEEKLY BRIEF
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
-              Clarity Act Project Classification: SEC/CFTC Jurisdictional Integration
+              Nexus One Weekly Digital Asset Market Report — May 18–24, 2026
             </h1>
             <p className="text-xl text-slate-400 mb-6 leading-relaxed">
-              By Nexus One Research Desk • May 18, 2026 • 40 min read
+              Published: May 25, 2026 (Monday) • By Nexus One Digital Asset Research Desk
             </p>
           </div>
 
@@ -60,8 +57,8 @@ export function ClarityActProjectClassification2026() {
           {!err && !md && <p className="mb-6 text-slate-400">Loading report content...</p>}
 
           <ReportErrorBoundary>
-            <div className="prose prose-invert prose-lg max-w-none text-slate-300 prose-headings:text-white prose-strong:text-white prose-a:text-blue-400 prose-a:break-all prose-li:marker:text-slate-400 prose-ul:list-disc prose-ol:list-decimal [&_del]:line-through [&_del]:text-slate-500 [&_s]:line-through [&_s]:text-slate-500 [&_table]:block [&_table]:w-full [&_table]:overflow-x-auto [&_table]:border-collapse [&_table]:border [&_table]:border-slate-800 [&_th]:border [&_th]:border-slate-800 [&_th]:px-4 [&_th]:py-3 [&_td]:border [&_td]:border-slate-800 [&_td]:px-4 [&_td]:py-3 [&_thead]:bg-slate-900/50 [&_tbody_tr:nth-child(even)]:bg-slate-900/30 [&_blockquote]:border-slate-600 [&_blockquote]:text-slate-400">
-              <ClarityActMarkdownBody markdown={body} />
+            <div className="prose prose-invert prose-lg max-w-none text-slate-300 prose-headings:text-white prose-strong:text-white prose-a:text-blue-400 prose-a:break-all prose-li:marker:text-slate-400 prose-ul:list-disc prose-ol:list-decimal [&_del]:line-through [&_del]:text-slate-500 [&_s]:line-through [&_s]:text-slate-500 [&_h3]:mt-12 [&_h3]:mb-4 [&_h4]:mt-8 [&_h4]:mb-3 [&_p]:mb-4 [&_p]:leading-relaxed [&_hr]:my-10 [&_table]:my-8 [&_table]:w-full [&_table]:table-auto [&_table]:border-collapse [&_table]:border [&_table]:border-slate-800 [&_th]:border [&_th]:border-slate-800 [&_th]:px-4 [&_th]:py-3 [&_td]:border [&_td]:border-slate-800 [&_td]:px-4 [&_td]:py-3 [&_thead]:bg-slate-900/50 [&_tbody_tr:nth-child(even)]:bg-slate-900/30 [&_blockquote]:my-6 [&_blockquote]:border-slate-600 [&_blockquote]:text-slate-400">
+              <WeeklyBriefMay18Body markdown={body} />
             </div>
           </ReportErrorBoundary>
 
@@ -75,7 +72,7 @@ export function ClarityActProjectClassification2026() {
               </p>
             </div>
             <div className="border-t border-slate-800/50 pt-6">
-              <Link to="/insights" className="group inline-flex items-center gap-2 text-emerald-500 hover:text-emerald-400 transition-colors font-medium text-sm">
+              <Link to="/insights" className="group inline-flex items-center gap-2 text-blue-500 hover:text-blue-400 transition-colors font-medium text-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:-translate-x-1"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
                 Back to All Insights
               </Link>
