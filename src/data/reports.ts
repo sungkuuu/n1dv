@@ -17,6 +17,25 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'morpho-aave-hegemony-valuation-2026',
+    badge: {
+      text: 'DEEP RESEARCH',
+      variant: 'outline-green'
+    },
+    title:
+      'DeFi Lending Hegemony War: Morpho vs. Aave Valuation & Tokenomics (2026)',
+    description:
+      'Morpho FDV ($2.28B) flips Aave ($1.45B) on narrative, but Aave is the only DeFi cash cow: Hub-and-Spoke vs. Morpho Blue, the April 2026 Kelp DAO stress test, Coinbase/Apollo B2B, P/E gap, and the 22.6% unlock overhang.',
+    date: '2026-05-29',
+    category: 'DEEP RESEARCH',
+    summary:
+      'Morpho FDV ($2.28B) flips Aave ($1.45B) on narrative, but Aave is the only DeFi cash cow: Hub-and-Spoke vs. Morpho Blue, the April 2026 Kelp DAO stress test, Coinbase/Apollo B2B, P/E gap, and the 22.6% unlock overhang.',
+    readTime: '35 min read',
+    author: 'Nexus One Research Desk',
+    content: '',
+    link: '/insights/morpho-aave-hegemony-valuation-2026'
+  },
+  {
     id: 'weekly-brief-may-18-2026',
     badge: {
       text: 'WEEKLY BRIEF',
