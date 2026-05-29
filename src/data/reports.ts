@@ -17,6 +17,25 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'chainlink-ccip-link-fundamentals-2026',
+    badge: {
+      text: 'DEEP RESEARCH',
+      variant: 'outline-green'
+    },
+    title:
+      'Chainlink (LINK): CCIP Migration & Tokenomics After the Kelp DAO Incident',
+    description:
+      'Kelp DAO ($292M) triggers a flight-to-quality to Chainlink CCIP: ~$4B migrated (Lombard, Solv, Kraken), record ~$1.3B weekly volume, LINK decoupling, 72.7% circulating + Staking v0.2 lock-up, and a rich PSR (29x-97x) with crowded longs.',
+    date: '2026-05-29',
+    category: 'DEEP RESEARCH',
+    summary:
+      'Kelp DAO ($292M) triggers a flight-to-quality to Chainlink CCIP: ~$4B migrated (Lombard, Solv, Kraken), record ~$1.3B weekly volume, LINK decoupling, 72.7% circulating + Staking v0.2 lock-up, and a rich PSR (29x-97x) with crowded longs.',
+    readTime: '35 min read',
+    author: 'Nexus One Research Desk',
+    content: '',
+    link: '/insights/chainlink-ccip-link-fundamentals-2026'
+  },
+  {
     id: 'morpho-aave-hegemony-valuation-2026',
     badge: {
       text: 'DEEP RESEARCH',
