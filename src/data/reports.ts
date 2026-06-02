@@ -17,6 +17,24 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'weekly-brief-may-25-2026',
+    badge: {
+      text: 'WEEKLY BRIEF',
+      variant: 'outline-blue'
+    },
+    title: 'Nexus One Weekly Digital Asset Market Report - May 25 to June 1, 2026',
+    description:
+      'BTC -5.1% to $73.3K on 9 days of ETF outflows, hawkish Fed, WTI -16% on US-Iran easing; AI (WLD/VVV) and DePIN (Aethir/Filecoin) counter-trend strength, RWA credit fee growth, Sui CME futures, and the 6/10 CPI pivot.',
+    date: '2026-06-01',
+    category: 'WEEKLY BRIEF',
+    summary:
+      'BTC -5.1% to $73.3K on 9 days of ETF outflows, hawkish Fed, WTI -16% on US-Iran easing; AI (WLD/VVV) and DePIN (Aethir/Filecoin) counter-trend strength, RWA credit fee growth, Sui CME futures, and the 6/10 CPI pivot.',
+    readTime: '30 min read',
+    author: 'Nexus One Digital Asset Research',
+    content: '',
+    link: '/insights/weekly-brief-may-25-2026'
+  },
+  {
     id: 'chainlink-ccip-link-fundamentals-2026',
     badge: {
       text: 'DEEP RESEARCH',
