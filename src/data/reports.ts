@@ -17,6 +17,25 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'quantum-computing-bitcoin-threat-2026',
+    badge: {
+      text: 'DEEP RESEARCH',
+      variant: 'outline-green'
+    },
+    title:
+      'Quantum Computing Threats to the Bitcoin Network: Q-Day Timeline, Attack Vectors & Protocol Defense',
+    description:
+      'Google Quantum AI delivers a 20x qubit reduction, AI-driven reverse engineering, and a revised 2029-2032 Q-Day. Covers Bitcoin public-key exposure tiers, Shor/Grover attack reality, PQC state bloat (59x), and the BIP-360/BIP-361 Burn vs. Steal governance dilemma.',
+    date: '2026-06-05',
+    category: 'DEEP RESEARCH',
+    summary:
+      'Google Quantum AI delivers a 20x qubit reduction, AI-driven reverse engineering, and a revised 2029-2032 Q-Day. Covers Bitcoin public-key exposure tiers, Shor/Grover attack reality, PQC state bloat (59x), and the BIP-360/BIP-361 Burn vs. Steal governance dilemma.',
+    readTime: '40 min read',
+    author: 'Nexus One Research Desk',
+    content: '',
+    link: '/insights/quantum-computing-bitcoin-threat-2026'
+  },
+  {
     id: 'weekly-brief-may-25-2026',
     badge: {
       text: 'WEEKLY BRIEF',
