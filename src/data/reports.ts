@@ -17,6 +17,25 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'bitcoin-halving-cycle-decline-2026',
+    badge: {
+      text: 'DEEP RESEARCH',
+      variant: 'outline-green'
+    },
+    title:
+      'Bitcoin 4-Year Halving Cycle Analysis: How Far Could This Decline Go?',
+    description:
+      'Bitcoin is down ~51% from its $126,198 top, shallower than past -77%+ bears but matching the 2021 mid-cycle dip. Cycle-ending bear vs. mid-cycle correction, the 200-week MA $61K line, downside targets, and the 4-year-cycle-is-dead debate.',
+    date: '2026-06-05',
+    category: 'DEEP RESEARCH',
+    summary:
+      'Bitcoin is down ~51% from its $126,198 top, shallower than past -77%+ bears but matching the 2021 mid-cycle dip. Cycle-ending bear vs. mid-cycle correction, the 200-week MA $61K line, downside targets, and the 4-year-cycle-is-dead debate.',
+    readTime: '25 min read',
+    author: 'Nexus One Research Desk',
+    content: '',
+    link: '/insights/bitcoin-halving-cycle-decline-2026'
+  },
+  {
     id: 'quantum-computing-bitcoin-threat-2026',
     badge: {
       text: 'DEEP RESEARCH',

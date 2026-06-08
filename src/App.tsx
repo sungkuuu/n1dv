@@ -52,6 +52,7 @@ import { ClarityActProjectClassification2026 } from './pages/ClarityActProjectCl
 import { WeeklyBriefMay18 } from './pages/WeeklyBriefMay18';
 import { WeeklyBriefMay25 } from './pages/WeeklyBriefMay25';
 import { QuantumBitcoinThreat2026 } from './pages/QuantumBitcoinThreat2026';
+import { BitcoinHalvingCycleDecline2026 } from './pages/BitcoinHalvingCycleDecline2026';
 import { MorphoAaveHegemony2026 } from './pages/MorphoAaveHegemony2026';
 import { ChainlinkCCIPFundamentals2026 } from './pages/ChainlinkCCIPFundamentals2026';
 
@@ -71,6 +72,7 @@ function App() {
         <Route path="/insights/solana-global-infrastructure" element={<SolanaGlobalInfrastructure />} />
         <Route path="/insights/peaq-m2m-deep-value-analysis" element={<PeaqM2MDeepValueAnalysis />} />
         <Route path="/insights/q1-2026-digital-asset-market-quarterly-report" element={<Q12026DigitalAssetMarketQuarterlyReport />} />
+        <Route path="/insights/bitcoin-halving-cycle-decline-2026" element={<BitcoinHalvingCycleDecline2026 />} />
         <Route path="/insights/quantum-computing-bitcoin-threat-2026" element={<QuantumBitcoinThreat2026 />} />
         <Route path="/insights/weekly-brief-may-25-2026" element={<WeeklyBriefMay25 />} />
         <Route path="/insights/chainlink-ccip-link-fundamentals-2026" element={<ChainlinkCCIPFundamentals2026 />} />
