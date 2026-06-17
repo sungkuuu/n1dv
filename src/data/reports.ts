@@ -17,6 +17,24 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'weekly-brief-june-15-2026',
+    badge: {
+      text: 'WEEKLY BRIEF',
+      variant: 'outline-blue'
+    },
+    title: 'Nexus One Weekly Digital Asset Market Report - June 8 to June 15, 2026',
+    description:
+      'BTC +3.9% to $65.6K after $60K defense, record -$3.4B ETF outflow digesting; FOMC 6/16-17 hold consensus, Aptos/Sei/HyperEVM on-chain strength, RWA tops $32B, CLARITY Act floor calendar.',
+    date: '2026-06-15',
+    category: 'WEEKLY BRIEF',
+    summary:
+      'BTC +3.9% to $65.6K after $60K defense, record -$3.4B ETF outflow digesting; FOMC 6/16-17 hold consensus, Aptos/Sei/HyperEVM on-chain strength, RWA tops $32B, CLARITY Act floor calendar.',
+    readTime: '35 min read',
+    author: 'Nexus One Digital Asset Research',
+    content: '',
+    link: '/insights/weekly-brief-june-15-2026'
+  },
+  {
     id: 'bitcoin-halving-cycle-decline-2026',
     badge: {
       text: 'DEEP RESEARCH',
