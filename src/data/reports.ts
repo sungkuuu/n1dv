@@ -17,6 +17,24 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'q2-2026-digital-asset-market-quarterly-report',
+    badge: {
+      text: 'QUARTERLY REPORT',
+      variant: 'outline-indigo'
+    },
+    title: 'Q2 2026 Market Report: The Great Divergence & Liquidity\'s Verdict',
+    description:
+      'Record-high equities vs capitulating crypto: the Warsh Fed hawkish turn, record ETF outflows (-$7.7B), BTC breaking $60K, the most-hacked quarter on record, and resilient RWA/stablecoin growth.',
+    date: '2026-07-03',
+    category: 'QUARTERLY REPORT',
+    summary:
+      'Record-high equities vs capitulating crypto: the Warsh Fed hawkish turn, record ETF outflows (-$7.7B), BTC breaking $60K, the most-hacked quarter on record, and resilient RWA/stablecoin growth.',
+    readTime: '45 min read',
+    author: 'Nexus One Digital Asset Research',
+    content: '',
+    link: '/insights/q2-2026-digital-asset-market-quarterly-report'
+  },
+  {
     id: 'weekly-brief-june-15-2026',
     badge: {
       text: 'WEEKLY BRIEF',
