@@ -17,6 +17,24 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'dat-unwind-forced-seller-2026',
+    badge: {
+      text: 'DEEP RESEARCH',
+      variant: 'outline-green'
+    },
+    title: 'The DAT Unwind: When the Marginal Buyer Becomes a Forced Seller',
+    description:
+      'Strategy sold 3,588 BTC at a ~20% loss to cost basis to fund preferred dividends — just 1/20th of June\'s record $4.5B ETF outflows. Why "$40K margin call" is a myth, the three gears of the unwind (dividend ratchet, burn-rate acceleration, maturity wall), management\'s own 1.22x mNAV breakeven, and the two-layer contagion map across 190+ treasury imitators.',
+    date: '2026-07-08',
+    category: 'DEEP RESEARCH',
+    summary:
+      'Strategy sold 3,588 BTC at a ~20% loss to cost basis to fund preferred dividends — just 1/20th of June\'s record $4.5B ETF outflows. Why "$40K margin call" is a myth, the three gears of the unwind (dividend ratchet, burn-rate acceleration, maturity wall), management\'s own 1.22x mNAV breakeven, and the two-layer contagion map across 190+ treasury imitators.',
+    readTime: '20 min read',
+    author: 'Nexus One Research Desk',
+    content: '',
+    link: '/insights/dat-unwind-forced-seller-2026'
+  },
+  {
     id: 'q2-2026-digital-asset-market-quarterly-report',
     badge: {
       text: 'QUARTERLY REPORT',

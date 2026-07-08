@@ -57,6 +57,7 @@ import { QuantumBitcoinThreat2026 } from './pages/QuantumBitcoinThreat2026';
 import { BitcoinHalvingCycleDecline2026 } from './pages/BitcoinHalvingCycleDecline2026';
 import { MorphoAaveHegemony2026 } from './pages/MorphoAaveHegemony2026';
 import { ChainlinkCCIPFundamentals2026 } from './pages/ChainlinkCCIPFundamentals2026';
+import { DATUnwindForcedSeller2026 } from './pages/DATUnwindForcedSeller2026';
 
 function App() {
   return (
@@ -68,6 +69,7 @@ function App() {
         <Route path="/letter" element={<Letter />} />
         <Route path="/insights" element={<Insights />} />
         <Route path="/research/bitcoin-market-cycle-2026-analysis" element={<BitcoinMarketCycle2026Analysis />} />
+        <Route path="/insights/dat-unwind-forced-seller-2026" element={<DATUnwindForcedSeller2026 />} />
         <Route path="/insights/l1-infrastructure-machine-economy-2026" element={<L1InfrastructureMachineEconomy2026 />} />
         <Route path="/insights/pump-fun-value-capture-2026" element={<PumpFunValueCapture2026 />} />
         <Route path="/insights/tron-m2m-ecosystem-analysis" element={<TronM2MEcosystemAnalysis />} />
