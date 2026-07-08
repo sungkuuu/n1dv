@@ -1,34 +1,80 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useParams } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Layout } from '../components/Layout';
 import { ReportErrorBoundary } from '../components/ReportErrorBoundary';
 import { fetchInsightMarkdown } from '../lib/fetchInsightMarkdown';
+import { reportBadgeClassName, reportBadgeLabel } from '../lib/reportBadge';
+import { reports } from '../data/reports';
 
+/**
+ * Generic insight page: renders any report from reports.ts by slug,
+ * fetching its markdown from /content/insights/{slug}.md.
+ * New reports only need (1) the .md file and (2) a reports.ts entry.
+ */
+
+const MONTHS = [
+  'January', 'February', 'March', 'April', 'May', 'June',
+  'July', 'August', 'September', 'October', 'November', 'December',
+];
+
+function formatDate(isoDate: string): string {
+  const [y, m, d] = isoDate.split('-').map(Number);
+  if (!y || !m || !d) return isoDate;
+  return `${MONTHS[m - 1]} ${d}, ${y}`;
+}
+
+/** Category accent for back-link (badge colors come from reportBadge.ts). */
+function backLinkClassName(category: string): string {
+  switch (category) {
+    case 'WEEKLY BRIEF':
+      return 'text-blue-500 hover:text-blue-400';
+    case 'QUARTERLY REPORT':
+      return 'text-indigo-400 hover:text-indigo-300';
+    default:
+      return 'text-emerald-500 hover:text-emerald-400';
+  }
+}
+
+/**
+ * Removes the leading H1 and byline/date meta lines from the markdown so the
+ * page header (rendered from reports.ts metadata) is not duplicated.
+ */
 function stripDuplicateHeader(md: string): string {
   return md
-    .replace(/^#\s+The DAT Unwind[^\n]*\n+/m, '')
-    .replace(/^\*\*Nexus One Research\*\*\s*\n+/m, '')
-    .replace(/^July 8, 2026[^\n]*\n+/m, '');
+    .replace(/^\s*#\s+[^\n]+\n+/, '')
+    .replace(/^\*\*(By |Published:|Nexus One)[^\n]*\n+/, '')
+    .replace(
+      /^(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s+\d{4}[^\n]*\n+/,
+      ''
+    )
+    .replace(/^\*\*(By |Published:)[^\n]*\n+/, '');
 }
 
-function DATUnwindMarkdownBody({ markdown }: { markdown: string }) {
-  return <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown}</ReactMarkdown>;
-}
+export function InsightPage() {
+  const { slug } = useParams<{ slug: string }>();
+  const report = reports.find((r) => r.id === slug);
 
-export function DATUnwindForcedSeller2026() {
   const [md, setMd] = useState('');
   const [err, setErr] = useState('');
 
   useEffect(() => {
-    fetchInsightMarkdown('/content/insights/dat-unwind-forced-seller-2026.md')
+    if (!slug || !report) return;
+    setMd('');
+    setErr('');
+    fetchInsightMarkdown(`/content/insights/${slug}.md`)
       .then(setMd)
       .catch((e) => setErr(e instanceof Error ? e.message : String(e)));
-  }, []);
+  }, [slug, report]);
+
+  if (!report) {
+    return <Navigate to="/insights" replace />;
+  }
 
   const body = stripDuplicateHeader(md);
+  const breadcrumbLabel = report.title.split(':')[0];
 
   return (
     <Layout>
@@ -39,18 +85,19 @@ export function DATUnwindForcedSeller2026() {
             <ChevronRight size={14} />
             <Link to="/insights" className="hover:text-white transition-colors">Insights</Link>
             <ChevronRight size={14} />
-            <span className="text-gray-400">The DAT Unwind</span>
+            <span className="text-gray-400">{breadcrumbLabel}</span>
           </nav>
 
           <div className="mb-16">
-            <div className="inline-block w-fit bg-transparent border border-emerald-500 text-emerald-400 rounded-md px-3 py-1 text-xs font-bold uppercase tracking-wider mb-6">
-              DEEP RESEARCH
+            <div className={`inline-block w-fit mb-6 ${reportBadgeClassName(report)}`}>
+              {reportBadgeLabel(report)}
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
-              The DAT Unwind: When the Marginal Buyer Becomes a Forced Seller
+              {report.title}
             </h1>
             <p className="text-xl text-slate-400 mb-6 leading-relaxed">
-              By Nexus One Research Desk • July 8, 2026 • 20 min read
+              By {report.author} • {formatDate(report.date)}
+              {report.readTime ? ` • ${report.readTime}` : ''}
             </p>
           </div>
 
@@ -59,7 +106,7 @@ export function DATUnwindForcedSeller2026() {
 
           <ReportErrorBoundary>
             <div className="prose prose-invert prose-lg max-w-none text-slate-300 prose-headings:text-white prose-strong:text-white prose-a:text-blue-400 prose-a:break-all prose-li:marker:text-slate-400 prose-ul:list-disc prose-ol:list-decimal [&_del]:line-through [&_del]:text-slate-500 [&_s]:line-through [&_s]:text-slate-500 [&_h3]:mt-12 [&_h3]:mb-4 [&_h4]:mt-8 [&_h4]:mb-3 [&_p]:mb-4 [&_p]:leading-relaxed [&_hr]:my-10 [&_table]:my-8 [&_table]:w-full [&_table]:table-auto [&_table]:border-collapse [&_table]:border [&_table]:border-slate-800 [&_th]:border [&_th]:border-slate-800 [&_th]:px-4 [&_th]:py-3 [&_td]:border [&_td]:border-slate-800 [&_td]:px-4 [&_td]:py-3 [&_thead]:bg-slate-900/50 [&_tbody_tr:nth-child(even)]:bg-slate-900/30 [&_blockquote]:my-6 [&_blockquote]:border-slate-600 [&_blockquote]:text-slate-400">
-              <DATUnwindMarkdownBody markdown={body} />
+              <ReactMarkdown remarkPlugins={[remarkGfm]}>{body}</ReactMarkdown>
             </div>
           </ReportErrorBoundary>
 
@@ -73,7 +120,7 @@ export function DATUnwindForcedSeller2026() {
               </p>
             </div>
             <div className="border-t border-slate-800/50 pt-6">
-              <Link to="/insights" className="group inline-flex items-center gap-2 text-emerald-500 hover:text-emerald-400 transition-colors font-medium text-sm">
+              <Link to="/insights" className={`group inline-flex items-center gap-2 transition-colors font-medium text-sm ${backLinkClassName(report.category)}`}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:-translate-x-1"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
                 Back to All Insights
               </Link>
