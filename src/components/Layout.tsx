@@ -4,6 +4,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { CustomConnectButton } from './CustomConnectButton';
 import { VaultAccessDrawer } from './VaultAccessDrawer';
 import { ReferralDrawer } from './ReferralDrawer';
+import { NewsletterSignup } from './NewsletterSignup';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -57,6 +58,8 @@ export function Layout({ children }: LayoutProps) {
   };
 
   const isDashboard = location.pathname === '/dashboard';
+  // Report detail pages: /insights/{slug}, /insight/{slug} (legacy), /research/{slug}
+  const isReportPage = /^\/(insights|insight|research)\/./.test(location.pathname);
 
   return (
     <div className={`min-h-screen bg-[#0a0a0a] text-gray-300 font-sans selection:bg-white/20 selection:text-white ${isDashboard ? 'flex flex-col' : ''}`}>
@@ -205,6 +208,8 @@ export function Layout({ children }: LayoutProps) {
       <main className={isDashboard ? 'flex-1 flex flex-col' : ''}>
         {children}
       </main>
+
+      {isReportPage && <NewsletterSignup />}
 
       <VaultAccessDrawer isOpen={isVaultDrawerOpen} onClose={() => setIsVaultDrawerOpen(false)} />
       <ReferralDrawer isOpen={isReferralDrawerOpen} onClose={() => setIsReferralDrawerOpen(false)} />
