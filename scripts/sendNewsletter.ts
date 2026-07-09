@@ -85,10 +85,14 @@ export function emailHtml(
   description: string,
   url: string,
   category: string,
-  highlights: string[] = []
+  highlights: string[] = [],
+  imageUrl = ''
 ): string {
   const badge = BADGE[category] ?? BADGE['DEEP RESEARCH'];
   const accent = badge.color;
+  const bannerHtml = imageUrl
+    ? `<a href="${url}" style="display:block;margin:0 0 28px;text-decoration:none;"><img src="${imageUrl}" alt="${escapeHtml(title)}" width="496" style="width:100%;max-width:100%;height:auto;display:block;border-radius:12px;" /></a>`
+    : '';
   const highlightHtml = highlights.length
     ? `<ul style="margin:0 0 28px;padding:0;list-style:none;">${highlights
         .map(
@@ -108,8 +112,8 @@ export function emailHtml(
   </head>
   <body style="margin:0;padding:0;background:#f4f4f5;color-scheme:light;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
     <div style="max-width:560px;margin:0 auto;background:#ffffff;padding:40px 32px;">
-      <p style="color:#6b7280;font-size:12px;font-weight:bold;letter-spacing:3px;text-transform:uppercase;margin:0 0 20px;">Nexus One Research</p>
-      <p style="display:inline-block;background:${badge.bg};border:1px solid ${accent};color:${accent};border-radius:6px;padding:4px 12px;font-size:11px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;margin:0 0 20px;">${category}</p>
+      ${bannerHtml}
+      ${imageUrl ? '' : `<p style="display:inline-block;background:${badge.bg};border:1px solid ${accent};color:${accent};border-radius:6px;padding:4px 12px;font-size:11px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;margin:0 0 20px;">${category}</p>`}
       <h1 style="color:#111827;font-size:26px;line-height:1.3;margin:0 0 16px;">${title}</h1>
       <p style="color:#4b5563;font-size:15px;line-height:1.6;margin:0 0 24px;">${description}</p>
       ${highlightHtml}
@@ -163,6 +167,7 @@ async function main(): Promise<void> {
   const description = (latest.description || latest.summary || '').slice(0, 400);
   const category = latest.badge?.text ?? latest.category;
   const highlights = extractHighlights(latest.id);
+  const imageUrl = `${SITE}/og/${latest.id}.png`;
   let delivered = 0;
 
   // Resend allows 2 requests/sec and up to 100 messages per batch call.
@@ -172,7 +177,7 @@ async function main(): Promise<void> {
       from: FROM,
       to: [to],
       subject: `${category}: ${latest.title}`,
-      html: emailHtml(latest.title, description, url, category, highlights),
+      html: emailHtml(latest.title, description, url, category, highlights, imageUrl),
     }));
     let attempt = 0;
     for (;;) {
