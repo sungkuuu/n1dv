@@ -131,10 +131,7 @@ async function main(): Promise<void> {
   console.log(`[newsletter] "${latest.title}" → ${delivered} recipient(s) (logged).`);
 }
 
-// Only run when invoked directly (so emailHtml can be imported for previews/tests).
-if (process.argv[1] && import.meta.url === `file://${process.argv[1]}`) {
-  main().catch((e) => {
-    console.error('[newsletter] FAILED:', e instanceof Error ? e.message : e);
-    process.exit(1);
-  });
-}
+main().catch((e) => {
+  console.error('[newsletter] FAILED:', e instanceof Error ? e.message : e);
+  process.exit(1);
+});
