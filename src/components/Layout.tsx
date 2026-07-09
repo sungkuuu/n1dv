@@ -61,7 +61,7 @@ export function Layout({ children }: LayoutProps) {
             <img
               src="/nexus-one-wordmark.png"
               alt="NEXUS ONE"
-              className="h-5 md:h-6 w-auto object-contain"
+              className="h-4 md:h-5 w-auto object-contain"
             />
           </div>
 
