@@ -21,18 +21,33 @@ const FROM = process.env.NEWSLETTER_FROM || 'Nexus One Research <research@n1dv.i
 const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const resendKey = process.env.RESEND_API_KEY;
 
-function emailHtml(title: string, description: string, url: string, category: string): string {
+// Category accent (dark enough to read on a white email background).
+const BADGE_COLOR: Record<string, string> = {
+  'DEEP RESEARCH': '#059669',
+  'WEEKLY BRIEF': '#2563eb',
+  'QUARTERLY REPORT': '#4f46e5',
+};
+
+export function emailHtml(title: string, description: string, url: string, category: string): string {
+  const accent = BADGE_COLOR[category] ?? '#059669';
+  // Light theme: email clients (Gmail etc.) can't be trusted to honor a dark
+  // background, and would leave light text unreadable. color-scheme:light also
+  // stops dark-mode clients from auto-inverting the palette.
   return `<!DOCTYPE html>
 <html>
-  <body style="margin:0;padding:0;background:#0a0a0a;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
-    <div style="max-width:560px;margin:0 auto;padding:40px 24px;">
-      <p style="color:#9ca3af;font-size:12px;font-weight:bold;letter-spacing:3px;text-transform:uppercase;margin:0 0 24px;">Nexus One Research</p>
-      <p style="display:inline-block;border:1px solid #34d399;color:#34d399;border-radius:6px;padding:4px 12px;font-size:11px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;margin:0 0 16px;">${category}</p>
-      <h1 style="color:#ffffff;font-size:26px;line-height:1.3;margin:0 0 16px;">${title}</h1>
-      <p style="color:#94a3b8;font-size:15px;line-height:1.6;margin:0 0 28px;">${description}</p>
-      <a href="${url}" style="display:inline-block;background:#f3f4f6;color:#111827;font-weight:bold;font-size:14px;padding:12px 28px;border-radius:8px;text-decoration:none;">Read the report →</a>
-      <hr style="border:none;border-top:1px solid #1f2937;margin:40px 0 20px;" />
-      <p style="color:#4b5563;font-size:12px;line-height:1.6;margin:0;">
+  <head>
+    <meta name="color-scheme" content="light" />
+    <meta name="supported-color-schemes" content="light" />
+  </head>
+  <body style="margin:0;padding:0;background:#f4f4f5;color-scheme:light;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+    <div style="max-width:560px;margin:0 auto;background:#ffffff;padding:40px 32px;">
+      <p style="color:#6b7280;font-size:12px;font-weight:bold;letter-spacing:3px;text-transform:uppercase;margin:0 0 20px;">Nexus One Research</p>
+      <p style="display:inline-block;border:1px solid ${accent};color:${accent};border-radius:6px;padding:4px 12px;font-size:11px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;margin:0 0 20px;">${category}</p>
+      <h1 style="color:#111827;font-size:26px;line-height:1.3;margin:0 0 16px;">${title}</h1>
+      <p style="color:#4b5563;font-size:15px;line-height:1.6;margin:0 0 28px;">${description}</p>
+      <a href="${url}" style="display:inline-block;background:#111827;color:#ffffff;font-weight:bold;font-size:14px;padding:13px 30px;border-radius:8px;text-decoration:none;">Read the report &rarr;</a>
+      <hr style="border:none;border-top:1px solid #e5e7eb;margin:40px 0 20px;" />
+      <p style="color:#9ca3af;font-size:12px;line-height:1.6;margin:0;">
         You are receiving this because you subscribed on n1dv.io.
         To unsubscribe, reply with "unsubscribe" or email
         <a href="mailto:partner@nexusonecap.com?subject=Unsubscribe" style="color:#6b7280;">partner@nexusonecap.com</a>.
@@ -116,7 +131,10 @@ async function main(): Promise<void> {
   console.log(`[newsletter] "${latest.title}" → ${delivered} recipient(s) (logged).`);
 }
 
-main().catch((e) => {
-  console.error('[newsletter] FAILED:', e instanceof Error ? e.message : e);
-  process.exit(1);
-});
+// Only run when invoked directly (so emailHtml can be imported for previews/tests).
+if (process.argv[1] && import.meta.url === `file://${process.argv[1]}`) {
+  main().catch((e) => {
+    console.error('[newsletter] FAILED:', e instanceof Error ? e.message : e);
+    process.exit(1);
+  });
+}
