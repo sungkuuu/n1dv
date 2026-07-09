@@ -94,7 +94,7 @@ export function emailHtml(
     ? highlights
         .map(
           (h) =>
-            `<p style="color:#374151;font-size:14px;line-height:1.6;margin:0 0 16px;"><span style="color:${accent};font-weight:bold;">&bull;</span>&nbsp; ${h}</p>`
+            `<p style="color:#374151;font-size:14px;line-height:1.6;margin:0 0 16px;"><span style="color:#9ca3af;font-weight:bold;">&bull;</span>&nbsp; ${h}</p>`
         )
         .join('')
     : '';
@@ -113,7 +113,7 @@ export function emailHtml(
       <h1 style="color:#111827;font-size:26px;line-height:1.3;margin:0 0 16px;">${title}</h1>
       <p style="color:#4b5563;font-size:15px;line-height:1.6;margin:0 0 24px;">${description}</p>
       ${highlightHtml}
-      <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="margin-top:14px;">
+      <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="margin-top:32px;">
         <tr>
           <td align="left" style="vertical-align:middle;">
             <a href="${url}" style="display:inline-block;background:#111827;color:#ffffff;font-weight:bold;font-size:14px;padding:13px 30px;border-radius:8px;text-decoration:none;">Read the full report &rarr;</a>
@@ -123,7 +123,7 @@ export function emailHtml(
           </td>
         </tr>
       </table>
-      <hr style="border:none;border-top:1px solid #e5e7eb;margin:36px 0 20px;" />
+      <hr style="border:none;border-top:1px solid #e5e7eb;margin:16px 0 20px;" />
       <p style="color:#9ca3af;font-size:12px;line-height:1.6;margin:0;">
         You are receiving this because you subscribed on n1dv.io.
         To unsubscribe, reply with "unsubscribe" or email
