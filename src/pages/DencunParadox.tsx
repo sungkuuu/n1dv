@@ -1,5 +1,5 @@
 import { Layout } from '../components/Layout';
-import { ArrowLeft, AlertCircle, ChevronRight } from 'lucide-react';
+import { AlertCircle, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export function DencunParadox() {

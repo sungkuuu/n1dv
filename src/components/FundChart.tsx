@@ -189,7 +189,7 @@ export function FundChart() {
                         </div>
                       );
                     }}
-                    formatter={(value: number) => [`${value.toFixed(1)}%`, '']}
+                    formatter={(value) => [`${Number(value ?? 0).toFixed(1)}%`, '']}
                   />
                   <Line
                     type="monotone"

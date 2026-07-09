@@ -1,5 +1,5 @@
 import { Layout } from '../components/Layout';
-import { ArrowLeft, ChevronRight, Download } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 

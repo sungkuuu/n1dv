@@ -32,25 +32,6 @@ export function Layout({ children }: LayoutProps) {
     };
   }, [isMobileMenuOpen]);
 
-  const scrollToSection = (id: string) => {
-    setIsMobileMenuOpen(false);
-    if (location.pathname !== '/') {
-      navigate('/');
-      setTimeout(() => {
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }, 100);
-    } else {
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      } else {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-    }
-  };
 
   const handleNavigate = (path: string) => {
     setIsMobileMenuOpen(false);

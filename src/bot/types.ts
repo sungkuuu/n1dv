@@ -6,7 +6,7 @@ export type RadarRow = {
   Protocol: string;
   'Target Asset': string;
   'Current APY (%)': string;
-  'Source Type': 'On-chain' | 'Off-chain';
+  'Source Type': 'On-chain' | 'Off-chain' | 'DefiLlama';
 };
 
 export type AdapterResult = RadarRow;

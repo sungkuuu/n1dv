@@ -86,7 +86,7 @@ export function VaultDetail() {
                             dataKey="pct"
                             stroke="transparent"
                           >
-                            {DUMMY_ALLOCATION.map((entry, index) => (
+                            {DUMMY_ALLOCATION.map((entry) => (
                               <Cell key={entry.symbol} fill={entry.color} />
                             ))}
                           </Pie>

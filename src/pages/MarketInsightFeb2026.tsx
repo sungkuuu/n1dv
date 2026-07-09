@@ -1,5 +1,5 @@
 import { Layout } from '../components/Layout';
-import { ArrowLeft, Download, TrendingUp, TrendingDown, AlertCircle, ChevronRight } from 'lucide-react';
+import { TrendingUp, TrendingDown, AlertCircle, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 

@@ -1,4 +1,3 @@
-import React from 'react';
 
 /** Reusable monochrome badge for omnichain / multi-chain strategy. Replaces "LIVE ON BASE". */
 export function MultiChainBadge() {
