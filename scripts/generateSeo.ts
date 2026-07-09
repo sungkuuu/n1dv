@@ -10,6 +10,7 @@ import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { reports } from '../src/data/reports';
+import { generateOgImages } from './generateOgImages';
 
 const SITE = 'https://n1dv.io';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -20,7 +21,7 @@ const esc = (s: string) =>
 
 const template = readFileSync(join(dist, 'index.html'), 'utf8');
 
-function pageHtml(title: string, description: string, url: string): string {
+function pageHtml(title: string, description: string, url: string, image: string): string {
   const t = esc(title);
   const d = esc(description);
   return template
@@ -30,10 +31,15 @@ function pageHtml(title: string, description: string, url: string): string {
     .replace(/(<meta property="og:title" content=")[^"]*(")/, `$1${t}$2`)
     .replace(/(<meta property="og:description" content=")[^"]*(")/, `$1${d}$2`)
     .replace(/(<meta property="og:url" content=")[^"]*(")/, `$1${url}$2`)
+    .replace(/(<meta property="og:image" content=")[^"]*(")/, `$1${image}$2`)
+    .replace(/(<meta property="og:image:alt" content=")[^"]*(")/, `$1${t}$2`)
     .replace(/(<meta name="twitter:title" content=")[^"]*(")/, `$1${t}$2`)
     .replace(/(<meta name="twitter:description" content=")[^"]*(")/, `$1${d}$2`)
+    .replace(/(<meta name="twitter:image" content=")[^"]*(")/, `$1${image}$2`)
     .replace('</head>', `  <link rel="canonical" href="${url}" />\n  </head>`);
 }
+
+const ogCount = await generateOgImages(dist);
 
 let pages = 0;
 for (const r of reports) {
@@ -42,7 +48,7 @@ for (const r of reports) {
   const outDir = join(dist, ...r.link.split('/').filter(Boolean));
   mkdirSync(outDir, { recursive: true });
   const description = (r.description || r.summary || '').slice(0, 300);
-  writeFileSync(join(outDir, 'index.html'), pageHtml(r.title, description, url));
+  writeFileSync(join(outDir, 'index.html'), pageHtml(r.title, description, url, `${SITE}/og/${r.id}.png`));
   pages++;
 }
 
@@ -95,4 +101,4 @@ ${items}
 // --- robots.txt ----------------------------------------------------------
 writeFileSync(join(dist, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
 
-console.log(`[seo] ${pages} report pages, sitemap.xml (${staticPaths.length + pages} urls), rss.xml, robots.txt`);
+console.log(`[seo] ${pages} report pages, ${ogCount} og images, sitemap.xml (${staticPaths.length + pages} urls), rss.xml, robots.txt`);
