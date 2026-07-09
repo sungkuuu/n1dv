@@ -93,8 +93,8 @@ export function emailHtml(
   const highlightHtml = highlights.length
     ? highlights
         .map(
-          (h, i) =>
-            `<p style="color:#374151;font-size:14px;line-height:1.6;margin:0 0 16px;"><span style="color:${accent};font-weight:bold;">${i + 1}.</span>&nbsp; ${h}</p>`
+          (h) =>
+            `<p style="color:#374151;font-size:14px;line-height:1.6;margin:0 0 16px;"><span style="color:${accent};font-weight:bold;">&bull;</span>&nbsp; ${h}</p>`
         )
         .join('')
     : '';
@@ -118,8 +118,8 @@ export function emailHtml(
           <td align="left" style="vertical-align:middle;">
             <a href="${url}" style="display:inline-block;background:#111827;color:#ffffff;font-weight:bold;font-size:14px;padding:13px 30px;border-radius:8px;text-decoration:none;">Read the full report &rarr;</a>
           </td>
-          <td align="right" style="vertical-align:bottom;padding-bottom:6px;">
-            <img src="${SITE}/nexus-one-wordmark-dark.png" alt="NEXUS ONE" height="15" style="height:15px;width:auto;opacity:0.4;vertical-align:bottom;display:inline-block;" />
+          <td align="right" style="vertical-align:bottom;font-size:0;line-height:0;">
+            <img src="${SITE}/nexus-one-wordmark-dark.png" alt="NEXUS ONE" height="15" style="height:15px;width:auto;opacity:0.4;display:inline-block;" />
           </td>
         </tr>
       </table>
