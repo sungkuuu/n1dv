@@ -174,13 +174,13 @@ export function Home() {
   const displayTVL = useFallback ? FALLBACK_TVL : totalTVL;
   return (
     <Layout>
-      <section className="px-4 py-32 relative overflow-hidden">
+      <section className="px-4 py-20 sm:py-32 relative overflow-hidden">
         <div className="max-w-6xl mx-auto text-center relative z-10">
-          <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold mb-6 tracking-tight leading-tight bg-gradient-to-br from-white via-gray-300 to-gray-600 bg-clip-text text-transparent pb-3">
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 tracking-tight leading-tight bg-gradient-to-br from-white via-gray-300 to-gray-600 bg-clip-text text-transparent pb-3">
             The Onchain <br className="hidden sm:block" /> Deep Value Active Vault
           </h1>
-          <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed">
-            The Anchor of Your Crypto Portfolio. We engineer defensive alpha <br /> through Deep Value execution.
+          <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+            The Anchor of Your Crypto Portfolio. We engineer defensive alpha through Deep Value execution.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <Link
@@ -199,19 +199,19 @@ export function Home() {
             </Link>
           </div>
 
-          {/* Trust signals */}
-          <div className="mt-14 flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm">
+          {/* Trust signals — stacked on mobile, single row on desktop */}
+          <div className="mt-12 flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-8 sm:gap-y-3 text-sm">
             <span className="inline-flex items-center gap-2 text-gray-400">
-              <Layers size={16} className="text-emerald-400" /> Enzyme Onyx Infrastructure
+              <Layers size={16} className="text-emerald-400 flex-shrink-0" /> Enzyme Onyx Infrastructure
             </span>
             <span className="inline-flex items-center gap-2 text-gray-400">
-              <ShieldCheck size={16} className="text-emerald-400" /> On-chain Verifiable
+              <ShieldCheck size={16} className="text-emerald-400 flex-shrink-0" /> On-chain Verifiable
             </span>
             <span className="inline-flex items-center gap-2 text-gray-400">
-              <Percent size={16} className="text-emerald-400" /> 0 / 20 Fee Structure
+              <Percent size={16} className="text-emerald-400 flex-shrink-0" /> 0 / 20 Fee Structure
             </span>
             <span className="inline-flex items-center gap-2 text-gray-400">
-              <TrendingUp size={16} className="text-emerald-400" /> Defensive Alpha
+              <TrendingUp size={16} className="text-emerald-400 flex-shrink-0" /> Defensive Alpha
             </span>
           </div>
         </div>
