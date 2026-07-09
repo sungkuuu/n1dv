@@ -101,6 +101,12 @@ export function Layout({ children }: LayoutProps) {
                 Vaults
               </button>
               <button
+                onClick={() => handleNavigate('/performance')}
+                className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+              >
+                Performance
+              </button>
+              <button
                 onClick={() => handleNavigate('/insights')}
                 className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
               >
@@ -180,6 +186,12 @@ export function Layout({ children }: LayoutProps) {
                 className="text-left text-white text-lg font-medium py-4 px-4 hover:bg-white/5 transition-colors rounded-lg"
               >
                 Vaults
+              </button>
+              <button
+                onClick={() => handleNavigate('/performance')}
+                className="text-left text-white text-lg font-medium py-4 px-4 hover:bg-white/5 transition-colors rounded-lg"
+              >
+                Performance
               </button>
               <button
                 onClick={() => handleNavigate('/insights')}

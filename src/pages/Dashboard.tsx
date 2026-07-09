@@ -141,6 +141,9 @@ export function Dashboard() {
                   <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
                     <PieChartIcon size={22} className="text-gray-400" />
                     Asset Allocation
+                    <span className="inline-flex items-center px-2.5 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-400 text-xs font-semibold tracking-wider uppercase">
+                      Target
+                    </span>
                   </h3>
                   <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
                     <div className="w-full max-w-[260px] h-[260px] flex-shrink-0">

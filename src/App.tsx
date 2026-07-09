@@ -59,6 +59,7 @@ import { MorphoAaveHegemony2026 } from './pages/MorphoAaveHegemony2026';
 import { ChainlinkCCIPFundamentals2026 } from './pages/ChainlinkCCIPFundamentals2026';
 import { InsightPage } from './pages/InsightPage';
 import { YieldRadar } from './pages/YieldRadar';
+import { TrackRecord } from './pages/TrackRecord';
 
 function App() {
   return (
@@ -124,6 +125,7 @@ function App() {
         <Route path="/vault" element={<Navigate to="/dashboard" replace />} />
         <Route path="/referral" element={<ReferralRegister />} />
         <Route path="/radar" element={<YieldRadar />} />
+        <Route path="/performance" element={<TrackRecord />} />
         {/* Generic insight route: any report in reports.ts with a matching
             /content/insights/{slug}.md file renders here without a dedicated
             page component. Explicit routes above always win over this one. */}

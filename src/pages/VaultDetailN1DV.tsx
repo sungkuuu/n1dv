@@ -74,6 +74,13 @@ export function VaultDetailN1DV() {
             <p className="text-gray-400 text-lg max-w-2xl">
               Deep Value / Defensive Alpha — Barbell strategy on Base
             </p>
+            <div className="mt-4 inline-flex items-start gap-2.5 rounded-lg border border-amber-500/30 bg-amber-500/5 px-4 py-3 max-w-2xl">
+              <span className="text-amber-400 text-xs font-bold uppercase tracking-wider flex-shrink-0 mt-0.5">Seed Stage</span>
+              <span className="text-sm text-slate-400 leading-relaxed">
+                Vault deployed; live deployment imminent. Performance shown is a simulated
+                portfolio and allocation is the strategy target. On-chain NAV goes live at launch.
+              </span>
+            </div>
           </header>
 
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-10 lg:gap-12 items-start">
@@ -84,10 +91,15 @@ export function VaultDetailN1DV() {
                 <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-3">
                   <TrendingUp size={20} className="text-gray-400" />
                   Fund Performance
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30">
-                    <span className="animate-live-pulse h-2 w-2 rounded-full bg-emerald-400 flex-shrink-0" />
-                    <span className="text-emerald-400 text-xs font-semibold tracking-wider uppercase">Live</span>
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-500/15 border border-amber-500/30">
+                    <span className="text-amber-400 text-xs font-semibold tracking-wider uppercase">Simulated</span>
                   </span>
+                  <button
+                    onClick={() => navigate('/performance')}
+                    className="ml-auto text-xs text-slate-400 hover:text-white transition-colors underline underline-offset-2"
+                  >
+                    Full track record →
+                  </button>
                 </h2>
                 <FundChart />
               </section>
@@ -338,6 +350,11 @@ export function VaultDetailN1DV() {
             style={{ boxShadow: '0 0 0 1px rgba(255,255,255,0.06), 0 25px 50px -12px rgba(0,0,0,0.5)' }}
           >
             <div className="p-6 sm:p-8">
+              <div className="mb-5 rounded-lg border border-amber-500/30 bg-amber-500/10 px-3.5 py-2.5 text-xs text-amber-300 leading-relaxed">
+                <span className="font-bold uppercase tracking-wider">Demo flow.</span>{' '}
+                No real funds move. Live deposits open when the vault launches — leave your email
+                on any report page to be notified.
+              </div>
               {depositStep === 'success' ? (
                 <div className="py-4 text-center">
                   <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-emerald-500/20 border border-emerald-500/40">
@@ -345,8 +362,8 @@ export function VaultDetailN1DV() {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <h2 className="text-xl font-bold text-white mb-2">Deposit Successful!</h2>
-                  <p className="text-sm text-gray-400 mb-8">Your funds have been deposited to N1DV.</p>
+                  <h2 className="text-xl font-bold text-white mb-2">Demo Deposit Complete</h2>
+                  <p className="text-sm text-gray-400 mb-8">This was a demo — no funds moved. Live deposits open at vault launch.</p>
                   <button
                     type="button"
                     onClick={handleViewDashboard}
