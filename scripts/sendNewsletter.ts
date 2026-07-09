@@ -2,8 +2,9 @@
  * Newsletter sender — runs in CI after a push that touches reports.ts.
  *
  * Rules:
- *  - Only reports dated within the last RECENT_DAYS are candidates, so the
- *    48-report backlog is never mass-mailed on first run.
+ *  - Only the single newest report (top of reports.ts) is ever a candidate, so
+ *    the backlog is never mass-mailed. Order-based, not date-based, because the
+ *    CI runner's wall clock is unreliable against the reports' publish dates.
  *  - newsletter_sends (service-role only) dedupes: each report is emailed once.
  *  - Exits 0 quietly when secrets are missing or there is nothing to send,
  *    so the publish workflow never turns red for a non-error.
@@ -15,7 +16,6 @@ import { reports } from '../src/data/reports';
 
 const SITE = 'https://n1dv.io';
 const SUPABASE_URL = 'https://mevrwtzquadthtbzqmdu.supabase.co';
-const RECENT_DAYS = 3;
 const FROM = process.env.NEWSLETTER_FROM || 'Nexus One Research <research@n1dv.io>';
 
 const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -50,22 +50,23 @@ async function main(): Promise<void> {
   }
   const supabase = createClient(SUPABASE_URL, serviceKey);
 
-  const cutoff = new Date(Date.now() - RECENT_DAYS * 86_400_000).toISOString().slice(0, 10);
-  const candidates = reports.filter((r) => r.link && r.date >= cutoff);
-  if (candidates.length === 0) {
-    console.log('[newsletter] no reports newer than', cutoff, '— nothing to send.');
+  // Only the single latest report (top of reports.ts) is ever a candidate.
+  // Order-based, not date-based: the CI runner's wall clock can't be trusted
+  // against the reports' dates, so "newest = array top" is the reliable signal
+  // and the backlog can never be mass-mailed.
+  const latest = reports.find((r) => r.link);
+  if (!latest) {
+    console.log('[newsletter] no linkable reports — nothing to send.');
     return;
   }
 
   const { data: sent, error: sentErr } = await supabase
     .from('newsletter_sends')
     .select('report_id')
-    .in('report_id', candidates.map((r) => r.id));
+    .eq('report_id', latest.id);
   if (sentErr) throw new Error(`send-log read failed: ${sentErr.message}`);
-  const sentIds = new Set((sent ?? []).map((s) => s.report_id));
-  const fresh = candidates.filter((r) => !sentIds.has(r.id));
-  if (fresh.length === 0) {
-    console.log('[newsletter] all recent reports already sent.');
+  if (sent && sent.length > 0) {
+    console.log(`[newsletter] latest report "${latest.id}" already sent — nothing to do.`);
     return;
   }
 
@@ -74,38 +75,45 @@ async function main(): Promise<void> {
     .select('email');
   if (subErr) throw new Error(`subscriber read failed: ${subErr.message}`);
   const emails = (subs ?? []).map((s) => s.email);
-  if (emails.length === 0) {
-    console.log('[newsletter] 0 subscribers — marking reports as sent without emailing.');
-  }
 
-  for (const r of fresh) {
-    const url = `${SITE}${r.link}`;
-    const description = (r.description || r.summary || '').slice(0, 400);
-    let delivered = 0;
+  const url = `${SITE}${latest.link}`;
+  const description = (latest.description || latest.summary || '').slice(0, 400);
+  const category = latest.badge?.text ?? latest.category;
+  let delivered = 0;
 
-    // Resend batch endpoint accepts up to 100 messages per call
-    for (let i = 0; i < emails.length; i += 100) {
-      const batch = emails.slice(i, i + 100).map((to) => ({
-        from: FROM,
-        to: [to],
-        subject: `${r.badge?.text ?? r.category}: ${r.title}`,
-        html: emailHtml(r.title, description, url, r.badge?.text ?? r.category),
-      }));
+  // Resend allows 2 requests/sec and up to 100 messages per batch call.
+  // Space batches out and retry once on 429.
+  for (let i = 0; i < emails.length; i += 100) {
+    const batch = emails.slice(i, i + 100).map((to) => ({
+      from: FROM,
+      to: [to],
+      subject: `${category}: ${latest.title}`,
+      html: emailHtml(latest.title, description, url, category),
+    }));
+    let attempt = 0;
+    for (;;) {
       const res = await fetch('https://api.resend.com/emails/batch', {
         method: 'POST',
         headers: { Authorization: `Bearer ${resendKey}`, 'Content-Type': 'application/json' },
         body: JSON.stringify(batch),
       });
-      if (!res.ok) throw new Error(`Resend HTTP ${res.status}: ${(await res.text()).slice(0, 300)}`);
-      delivered += batch.length;
+      if (res.ok) break;
+      if (res.status === 429 && attempt < 3) {
+        attempt++;
+        await new Promise((r) => setTimeout(r, 1000 * attempt));
+        continue;
+      }
+      throw new Error(`Resend HTTP ${res.status}: ${(await res.text()).slice(0, 300)}`);
     }
-
-    const { error: logErr } = await supabase
-      .from('newsletter_sends')
-      .insert({ report_id: r.id, recipient_count: delivered });
-    if (logErr) throw new Error(`send-log write failed: ${logErr.message}`);
-    console.log(`[newsletter] "${r.title}" → ${delivered} recipients (logged).`);
+    delivered += batch.length;
+    await new Promise((r) => setTimeout(r, 600)); // stay under 2 req/s
   }
+
+  const { error: logErr } = await supabase
+    .from('newsletter_sends')
+    .insert({ report_id: latest.id, recipient_count: delivered });
+  if (logErr) throw new Error(`send-log write failed: ${logErr.message}`);
+  console.log(`[newsletter] "${latest.title}" → ${delivered} recipient(s) (logged).`);
 }
 
 main().catch((e) => {
