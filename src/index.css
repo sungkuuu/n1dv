@@ -15,6 +15,14 @@
     font-variant-numeric: tabular-nums;
     letter-spacing: -0.02em;
   }
+
+  /* Brand voice — echoes the NEXUS ONE wordmark (thin, wide, geometric).
+     Use for brand labels/eyebrows like "NEXUS ONE RESEARCH", not body copy. */
+  .font-brand {
+    font-family: 'Oxanium', 'Michroma', sans-serif;
+    letter-spacing: 0.14em;
+    font-weight: 500;
+  }
 }
 
 @keyframes fadeIn {

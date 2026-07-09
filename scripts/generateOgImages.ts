@@ -86,7 +86,7 @@ function ogTree(title: string, category: string, date: string) {
           paddingTop: 28,
         },
         [
-          el('div', { display: 'flex', color: '#9ca3af', fontSize: 26, fontWeight: 700, letterSpacing: 5 }, 'NEXUS ONE RESEARCH'),
+          el('div', { display: 'flex', color: '#e5e7eb', fontSize: 30, fontFamily: 'Oxanium', letterSpacing: 6 }, 'NEXUS ONE'),
           el('div', { display: 'flex', color: '#6b7280', fontSize: 26 }, `${date}   ·   n1dv.io`),
         ]
       ),
@@ -98,6 +98,7 @@ export async function generateOgImages(distDir: string): Promise<number> {
   const fonts = [
     { name: 'Inter', weight: 400 as const, style: 'normal' as const, data: readFileSync(join(root, 'scripts/assets/inter-400.woff')) },
     { name: 'Inter', weight: 700 as const, style: 'normal' as const, data: readFileSync(join(root, 'scripts/assets/inter-700.woff')) },
+    { name: 'Oxanium', weight: 500 as const, style: 'normal' as const, data: readFileSync(join(root, 'scripts/assets/oxanium-500.woff')) },
   ];
   const outDir = join(distDir, 'og');
   mkdirSync(outDir, { recursive: true });

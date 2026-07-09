@@ -59,9 +59,9 @@ export function Layout({ children }: LayoutProps) {
             className="flex items-center cursor-pointer bg-[#0a0a0a]"
           >
             <img
-              src="/nexus_one_logo.jpg"
+              src="/nexus-one-wordmark.png"
               alt="NEXUS ONE"
-              className="h-14 md:h-24 w-auto invert mix-blend-screen object-contain"
+              className="h-7 md:h-9 w-auto object-contain"
             />
           </div>
 
@@ -140,9 +140,9 @@ export function Layout({ children }: LayoutProps) {
           <div className="flex items-center justify-between px-6 py-6 border-b border-white/10">
             <div className="flex items-center bg-[#0a0a0a]">
               <img
-                src="/nexus_one_logo.jpg"
+                src="/nexus-one-wordmark.png"
                 alt="NEXUS ONE"
-                className="h-14 w-auto invert mix-blend-screen object-contain"
+                className="h-7 w-auto object-contain"
               />
             </div>
             <button
@@ -222,7 +222,7 @@ export function Layout({ children }: LayoutProps) {
       {!isDashboard && (
       <footer className="py-16 bg-gradient-to-b from-[#0a0a0a] to-[#111111] border-t border-white/10">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <p className="text-xs font-bold tracking-[0.2em] text-gray-500 mb-6 uppercase">
+          <p className="font-brand text-xs text-gray-500 mb-6 uppercase">
             Institutional Partners
           </p>
 
@@ -248,9 +248,14 @@ export function Layout({ children }: LayoutProps) {
             Nexus One strategies involve high risk. Past performance is not indicative of future results.
           </p>
 
-          <p className="text-xs text-gray-700 font-medium">
-            © 2026 Nexus One
-          </p>
+          <div className="flex flex-col items-center gap-3">
+            <img
+              src="/nexus-one-wordmark.png"
+              alt="NEXUS ONE"
+              className="h-5 w-auto object-contain opacity-40"
+            />
+            <p className="text-xs text-gray-700 font-medium">© 2026 Nexus One</p>
+          </div>
         </div>
       </footer>
       )}
