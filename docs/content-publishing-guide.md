@@ -22,7 +22,13 @@ reports.ts 값을 그대로 쓴다. **따라서 md 파일명 = reports.ts의 id 
 
 - md 안의 첫 H1과 byline(`**By ...**`, `**Published:** ...`)은 자동 제거되므로 그대로 둬도 됨
 - 존재하지 않는 주소는 `/insights` 목록으로 자동 이동
-- 개별 `.tsx` 페이지와 App.tsx 라우트 추가는 **더 이상 필요 없음** (기존 리포트 55개는 옛 방식대로 유지 중이며 그대로 동작)
+- 개별 `.tsx` 페이지와 App.tsx 라우트 추가는 **더 이상 필요 없음**
+
+### 게시하면 자동으로 따라오는 것들 (빌드/CI가 처리)
+
+- 리포트별 SEO 페이지 (제목/설명 OG 태그) + **전용 OG 이미지** (`/og/{id}.png`, 카테고리 색 뱃지+제목)
+- `sitemap.xml` · `rss.xml` 갱신
+- **뉴스레터 자동 발송**: main 푸시 시 GitHub Actions가 발행 3일 이내의 새 리포트를 감지해 구독자에게 이메일 발송 (Resend). 리포트당 1회만 발송되며(`newsletter_sends` 테이블로 중복 방지), 시크릿(`SUPABASE_SERVICE_ROLE_KEY`, `RESEND_API_KEY`) 미설정 시 조용히 건너뜀
 
 ### (참고) 구방식 — 파일 4개, 2026-07-08 이전 리포트들
 

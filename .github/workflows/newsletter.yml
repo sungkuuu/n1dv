@@ -1,0 +1,27 @@
+name: Newsletter
+
+# When a new report card lands in reports.ts on main, email subscribers.
+# Safe to run repeatedly: sendNewsletter.ts dedupes via the newsletter_sends
+# table and skips quietly when secrets are missing or nothing is new.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/data/reports.ts'
+  workflow_dispatch: {}
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npx tsx scripts/sendNewsletter.ts
+        env:
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          NEWSLETTER_FROM: ${{ vars.NEWSLETTER_FROM }}
