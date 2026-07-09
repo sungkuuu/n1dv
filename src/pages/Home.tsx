@@ -1,4 +1,4 @@
-import { FileText, ArrowRight, ShieldCheck, Layers, Percent, TrendingUp } from 'lucide-react';
+import { FileText, ArrowRight } from 'lucide-react';
 import { Layout } from '../components/Layout';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -197,24 +197,6 @@ export function Home() {
               View Track Record
               <ArrowRight className="ml-3" size={22} />
             </Link>
-          </div>
-
-          {/* Trust signals — a credential strip under a divider */}
-          <div className="mt-16 pt-8 border-t border-white/10 max-w-3xl mx-auto">
-            <div className="grid grid-cols-2 gap-x-6 gap-y-4 sm:flex sm:flex-wrap sm:justify-center sm:gap-x-8 text-sm text-gray-500">
-              <span className="inline-flex items-center gap-2">
-                <Layers size={15} className="flex-shrink-0 opacity-70" /> Enzyme Onyx Infrastructure
-              </span>
-              <span className="inline-flex items-center gap-2">
-                <ShieldCheck size={15} className="flex-shrink-0 opacity-70" /> On-chain Verifiable
-              </span>
-              <span className="inline-flex items-center gap-2">
-                <Percent size={15} className="flex-shrink-0 opacity-70" /> 0 / 20 Fee Structure
-              </span>
-              <span className="inline-flex items-center gap-2">
-                <TrendingUp size={15} className="flex-shrink-0 opacity-70" /> Defensive Alpha
-              </span>
-            </div>
           </div>
         </div>
       </section>
