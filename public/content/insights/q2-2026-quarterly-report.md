@@ -541,5 +541,3 @@ Q3 ultimately hinges on two axes: **the June CPI (7/14) and whether the Fed hike
 ---
 
 *This report was prepared by NEXUS ONE Digital Asset Research from public data for informational purposes only. It does not constitute a solicitation to trade any asset or investment advice. Digital asset investments carry risk of principal loss, and final investment decisions are the sole responsibility of the investor. Some figures may vary by data vendor and snapshot timing; where so, ranges are shown in the text. Figures that could not be verified by search are marked "data unverified."*
-
-이​거 쿼털리 리포트로 하나 업로드 하자
