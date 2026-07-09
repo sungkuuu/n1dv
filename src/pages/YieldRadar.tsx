@@ -42,7 +42,7 @@ export function YieldRadar() {
             <div className="flex items-center gap-3 mb-4">
               <RadioTower className="text-emerald-400" size={26} />
               <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
-                Quadrix Yield Radar
+                Yield Radar
               </h1>
             </div>
             <p className="text-lg text-slate-400 leading-relaxed max-w-3xl">
