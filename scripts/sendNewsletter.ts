@@ -85,21 +85,17 @@ export function emailHtml(
   description: string,
   url: string,
   category: string,
-  highlights: string[] = [],
-  imageUrl = ''
+  highlights: string[] = []
 ): string {
   const badge = BADGE[category] ?? BADGE['DEEP RESEARCH'];
   const accent = badge.color;
-  const bannerHtml = imageUrl
-    ? `<a href="${url}" style="display:block;margin:0 0 28px;text-decoration:none;"><img src="${imageUrl}" alt="${escapeHtml(title)}" width="496" style="width:100%;max-width:100%;height:auto;display:block;border-radius:12px;" /></a>`
-    : '';
   const highlightHtml = highlights.length
-    ? `<ul style="margin:0 0 28px;padding:0;list-style:none;">${highlights
+    ? highlights
         .map(
           (h) =>
-            `<li style="color:#374151;font-size:14px;line-height:1.6;margin:0 0 14px;padding-left:16px;border-left:3px solid ${accent};">${h}</li>`
+            `<p style="color:#374151;font-size:14px;line-height:1.6;margin:0 0 14px;">${h}</p>`
         )
-        .join('')}</ul>`
+        .join('')
     : '';
   // Light theme: email clients (Gmail etc.) can't be trusted to honor a dark
   // background, and would leave light text unreadable. color-scheme:light also
@@ -112,13 +108,21 @@ export function emailHtml(
   </head>
   <body style="margin:0;padding:0;background:#f4f4f5;color-scheme:light;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
     <div style="max-width:560px;margin:0 auto;background:#ffffff;padding:40px 32px;">
-      ${bannerHtml}
-      ${imageUrl ? '' : `<p style="display:inline-block;background:${badge.bg};border:1px solid ${accent};color:${accent};border-radius:6px;padding:4px 12px;font-size:11px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;margin:0 0 20px;">${category}</p>`}
+      <p style="display:inline-block;background:${badge.bg};border:1px solid ${accent};color:${accent};border-radius:6px;padding:4px 12px;font-size:11px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;margin:0 0 20px;">${category}</p>
       <h1 style="color:#111827;font-size:26px;line-height:1.3;margin:0 0 16px;">${title}</h1>
       <p style="color:#4b5563;font-size:15px;line-height:1.6;margin:0 0 24px;">${description}</p>
       ${highlightHtml}
-      <a href="${url}" style="display:inline-block;background:#111827;color:#ffffff;font-weight:bold;font-size:14px;padding:13px 30px;border-radius:8px;text-decoration:none;">Read the full report &rarr;</a>
-      <hr style="border:none;border-top:1px solid #e5e7eb;margin:40px 0 20px;" />
+      <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="margin-top:14px;">
+        <tr>
+          <td align="left" style="vertical-align:middle;">
+            <a href="${url}" style="display:inline-block;background:#111827;color:#ffffff;font-weight:bold;font-size:14px;padding:13px 30px;border-radius:8px;text-decoration:none;">Read the full report &rarr;</a>
+          </td>
+          <td align="right" style="vertical-align:bottom;">
+            <img src="${SITE}/nexus-one-wordmark-dark.png" alt="NEXUS ONE" height="16" style="height:16px;width:auto;opacity:0.45;" />
+          </td>
+        </tr>
+      </table>
+      <hr style="border:none;border-top:1px solid #e5e7eb;margin:36px 0 20px;" />
       <p style="color:#9ca3af;font-size:12px;line-height:1.6;margin:0;">
         You are receiving this because you subscribed on n1dv.io.
         To unsubscribe, reply with "unsubscribe" or email
@@ -167,7 +171,6 @@ async function main(): Promise<void> {
   const description = (latest.description || latest.summary || '').slice(0, 400);
   const category = latest.badge?.text ?? latest.category;
   const highlights = extractHighlights(latest.id);
-  const imageUrl = `${SITE}/og/${latest.id}.png`;
   let delivered = 0;
 
   // Resend allows 2 requests/sec and up to 100 messages per batch call.
@@ -177,7 +180,7 @@ async function main(): Promise<void> {
       from: FROM,
       to: [to],
       subject: `${category}: ${latest.title}`,
-      html: emailHtml(latest.title, description, url, category, highlights, imageUrl),
+      html: emailHtml(latest.title, description, url, category, highlights),
     }));
     let attempt = 0;
     for (;;) {
