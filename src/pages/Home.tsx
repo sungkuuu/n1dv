@@ -1,4 +1,4 @@
-import { FileText, ArrowRight } from 'lucide-react';
+import { FileText, ArrowRight, ShieldCheck, Layers, Percent, TrendingUp } from 'lucide-react';
 import { Layout } from '../components/Layout';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -182,7 +182,7 @@ export function Home() {
           <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed">
             The Anchor of Your Crypto Portfolio. We engineer defensive alpha <br /> through Deep Value execution.
           </p>
-          <div className="flex justify-center items-center">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <Link
               to="/dashboard"
               className="inline-flex items-center px-6 py-3 bg-gray-100 text-gray-900 text-lg font-bold rounded-lg hover:bg-gray-200 transition-all"
@@ -190,6 +190,29 @@ export function Home() {
               Enter Vault
               <ArrowRight className="ml-3" size={22} />
             </Link>
+            <Link
+              to="/performance"
+              className="inline-flex items-center px-6 py-3 border border-white/20 text-gray-200 text-lg font-bold rounded-lg hover:bg-white/5 hover:border-white/30 transition-all"
+            >
+              View Track Record
+              <ArrowRight className="ml-3" size={22} />
+            </Link>
+          </div>
+
+          {/* Trust signals */}
+          <div className="mt-14 flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm">
+            <span className="inline-flex items-center gap-2 text-gray-400">
+              <Layers size={16} className="text-emerald-400" /> Enzyme Onyx Infrastructure
+            </span>
+            <span className="inline-flex items-center gap-2 text-gray-400">
+              <ShieldCheck size={16} className="text-emerald-400" /> On-chain Verifiable
+            </span>
+            <span className="inline-flex items-center gap-2 text-gray-400">
+              <Percent size={16} className="text-emerald-400" /> 0 / 20 Fee Structure
+            </span>
+            <span className="inline-flex items-center gap-2 text-gray-400">
+              <TrendingUp size={16} className="text-emerald-400" /> Defensive Alpha
+            </span>
           </div>
         </div>
       </section>
