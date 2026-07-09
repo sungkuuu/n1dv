@@ -107,6 +107,12 @@ export function Layout({ children }: LayoutProps) {
                 Insights
               </button>
               <button
+                onClick={() => handleNavigate('/radar')}
+                className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+              >
+                Radar
+              </button>
+              <button
                 onClick={() => handleNavigate('/dashboard')}
                 className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
               >
@@ -180,6 +186,12 @@ export function Layout({ children }: LayoutProps) {
                 className="text-left text-white text-lg font-medium py-4 px-4 hover:bg-white/5 transition-colors rounded-lg"
               >
                 Insights
+              </button>
+              <button
+                onClick={() => handleNavigate('/radar')}
+                className="text-left text-white text-lg font-medium py-4 px-4 hover:bg-white/5 transition-colors rounded-lg"
+              >
+                Radar
               </button>
               <button
                 onClick={() => handleNavigate('/dashboard')}

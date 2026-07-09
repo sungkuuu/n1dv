@@ -47,7 +47,7 @@ for (const r of reports) {
 }
 
 // --- sitemap.xml ---------------------------------------------------------
-const staticPaths = ['/', '/insights', '/thesis', '/letter', '/vaults', '/partners'];
+const staticPaths = ['/', '/insights', '/radar', '/thesis', '/letter', '/vaults', '/partners'];
 const urls = [
   ...staticPaths.map((p) => `  <url><loc>${SITE}${p}</loc></url>`),
   ...reports

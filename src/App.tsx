@@ -58,6 +58,7 @@ import { BitcoinHalvingCycleDecline2026 } from './pages/BitcoinHalvingCycleDecli
 import { MorphoAaveHegemony2026 } from './pages/MorphoAaveHegemony2026';
 import { ChainlinkCCIPFundamentals2026 } from './pages/ChainlinkCCIPFundamentals2026';
 import { InsightPage } from './pages/InsightPage';
+import { YieldRadar } from './pages/YieldRadar';
 
 function App() {
   return (
@@ -122,6 +123,7 @@ function App() {
         <Route path="/vaults/n1dv" element={<VaultDetailN1DV />} />
         <Route path="/vault" element={<Navigate to="/dashboard" replace />} />
         <Route path="/referral" element={<ReferralRegister />} />
+        <Route path="/radar" element={<YieldRadar />} />
         {/* Generic insight route: any report in reports.ts with a matching
             /content/insights/{slug}.md file renders here without a dedicated
             page component. Explicit routes above always win over this one. */}
