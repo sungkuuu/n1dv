@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Menu, X } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { CustomConnectButton } from './CustomConnectButton';
 import { VaultAccessDrawer } from './VaultAccessDrawer';
 import { ReferralDrawer } from './ReferralDrawer';
 import { NewsletterSignup } from './NewsletterSignup';
+import { resolveBrand } from '../lib/brand';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -17,9 +18,18 @@ export function Layout({ children }: LayoutProps) {
   const [isVaultDrawerOpen, setIsVaultDrawerOpen] = useState(false);
   const [isReferralDrawerOpen, setIsReferralDrawerOpen] = useState(false);
 
+  // Same deployment, three domains: header wordmark + home <title> follow the
+  // hostname (n1dv.io / quadrix.finance / nexusonecap.com). Footer stays Nexus One.
+  const brand = useMemo(() => resolveBrand(), []);
+
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [location.pathname]);
+
+  // Only override the home tab title; report pages keep their pre-rendered SEO titles.
+  useEffect(() => {
+    if (location.pathname === '/') document.title = brand.homeTitle;
+  }, [brand, location.pathname]);
 
   useEffect(() => {
     if (isMobileMenuOpen) {
@@ -58,7 +68,12 @@ export function Layout({ children }: LayoutProps) {
             }}
             className="flex items-center cursor-pointer bg-[#0a0a0a]"
           >
-            <span className="font-brand text-white text-lg md:text-xl font-semibold tracking-[0.22em] leading-none">QUADRIX</span>
+            <span
+              className="font-brand text-white text-lg md:text-xl font-semibold leading-none"
+              style={{ letterSpacing: brand.tracking }}
+            >
+              {brand.wordmark}
+            </span>
           </div>
 
           {/* Right: Group 1 (info) | Divider | Group 2 (user action) — unified across landing & dashboard */}
@@ -135,7 +150,12 @@ export function Layout({ children }: LayoutProps) {
         <div className="flex flex-col h-full">
           <div className="flex items-center justify-between px-6 py-6 border-b border-white/10">
             <div className="flex items-center bg-[#0a0a0a]">
-              <span className="font-brand text-white text-xl font-semibold tracking-[0.22em] leading-none">QUADRIX</span>
+              <span
+                className="font-brand text-white text-xl font-semibold leading-none"
+                style={{ letterSpacing: brand.tracking }}
+              >
+                {brand.wordmark}
+              </span>
             </div>
             <button
               onClick={() => setIsMobileMenuOpen(false)}
@@ -241,7 +261,7 @@ export function Layout({ children }: LayoutProps) {
           </p>
 
           <div className="flex flex-col items-center gap-3">
-            <span className="font-brand text-gray-600 text-sm font-semibold tracking-[0.28em] leading-none">QUADRIX</span>
+            <img src="/nexus-one-wordmark.png" alt="Nexus One" className="h-4 w-auto opacity-40" />
             <p className="text-xs text-gray-700 font-medium">© 2026 Nexus One Capital</p>
           </div>
         </div>
