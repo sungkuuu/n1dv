@@ -20,6 +20,8 @@ import {
   monthTicks as computeMonthTicks,
   SIM_COLORS,
 } from '../utils/backtest';
+import { resolveBrand } from '../lib/brand';
+import { HOME_COPY } from '../lib/homeContent';
 
 interface FeaturedReport {
   id: string;
@@ -70,6 +72,9 @@ export function Home() {
   const navigate = useNavigate();
   const [isN1DVModalOpen, setIsN1DVModalOpen] = useState(false);
 
+  // n1dv.io = the fund, quadrix.finance = the platform: same sections, different framing.
+  const copy = useMemo(() => HOME_COPY[resolveBrand().id], []);
+
   const [backtestData, setBacktestData] = useState<Awaited<ReturnType<typeof fetchBacktestData>> | null>(null);
   const [chartDataLoading, setChartDataLoading] = useState(true);
   const [chartDataError, setChartDataError] = useState<string | null>(null);
@@ -106,24 +111,24 @@ export function Home() {
       <section className="px-4 py-20 sm:py-32 relative overflow-hidden">
         <div className="max-w-6xl mx-auto text-center relative z-10">
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 tracking-tight leading-tight bg-gradient-to-br from-white via-gray-300 to-gray-600 bg-clip-text text-transparent pb-3">
-            The Onchain <br className="hidden sm:block" /> Deep Value Active Vault
+            {copy.heroTitle[0]} <br className="hidden sm:block" /> {copy.heroTitle[1]}
           </h1>
           <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-            The Anchor of Your Crypto Portfolio. We engineer defensive alpha through Deep Value execution.
+            {copy.heroSubtitle}
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <Link
-              to="/dashboard"
+              to={copy.primaryCta.to}
               className="inline-flex items-center px-6 py-3 bg-gray-100 text-gray-900 text-lg font-bold rounded-lg hover:bg-gray-200 transition-all"
             >
-              Enter Vault
+              {copy.primaryCta.label}
               <ArrowRight className="ml-3" size={22} />
             </Link>
             <Link
-              to="/performance"
+              to={copy.secondaryCta.to}
               className="inline-flex items-center px-6 py-3 border border-white/20 text-gray-200 text-lg font-bold rounded-lg hover:bg-white/5 hover:border-white/30 transition-all"
             >
-              View Track Record
+              {copy.secondaryCta.label}
               <ArrowRight className="ml-3" size={22} />
             </Link>
           </div>
@@ -247,8 +252,8 @@ export function Home() {
       <section id="strategy-section" className="scroll-mt-36 px-4 py-20 border-t border-gray-800 bg-gradient-to-b from-[#0a0a0a] to-[#111111]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-5xl font-bold mb-4">Our Vaults</h2>
-            <p className="text-gray-400 text-lg">Institutional-grade onchain capital deployment vehicles tailored for every market cycle.</p>
+            <h2 className="text-3xl sm:text-5xl font-bold mb-4">{copy.fundsHeading}</h2>
+            <p className="text-gray-400 text-lg">{copy.fundsIntro}</p>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
@@ -392,7 +397,7 @@ export function Home() {
 
       <section className="px-4 py-20 border-t border-white/10">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl sm:text-5xl font-bold mb-16 text-center">Strategic Pillars</h2>
+          <h2 className="text-3xl sm:text-5xl font-bold mb-16 text-center">{copy.pillarsHeading}</h2>
           <div className="grid md:grid-cols-3 gap-10">
             <div className="relative overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300 group">
               <div className="relative h-full p-10 bg-neutral-900/40 backdrop-blur-sm">
