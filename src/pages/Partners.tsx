@@ -44,7 +44,7 @@ export function Partners() {
               </div>
               <h3 className="text-2xl font-bold mb-4 text-center text-white">Institutional Grade</h3>
               <p className="text-gray-400 text-center leading-relaxed">
-                Sell safety. Our 40% Cash / Deep Value strategy is engineered for high-net-worth capital preservation.
+                Lead with resilience. Our 40% Cash / Deep Value strategy is built to prioritize downside protection for high-net-worth capital.
               </p>
             </div>
 

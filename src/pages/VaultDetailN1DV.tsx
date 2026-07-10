@@ -250,7 +250,7 @@ export function VaultDetailN1DV() {
                     <div>
                       <h3 className="text-white font-semibold mb-1">Resilience First</h3>
                       <p className="text-gray-400 text-sm leading-relaxed">
-                        We secure the downside with 40% cash-flow assets, ensuring capital preservation through market volatility.
+                        We cushion the downside with 40% cash-flow assets, with the aim of prioritizing capital preservation through market volatility.
                       </p>
                     </div>
                   </li>
