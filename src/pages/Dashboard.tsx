@@ -95,6 +95,14 @@ export function Dashboard() {
         {isConnected && (
           <div className="animate-fade-in">
             <div className="max-w-6xl mx-auto px-4 pb-16">
+              {/* Seed-stage disclosure — the vault is not live yet */}
+              <div className="mb-8 rounded-lg border border-amber-500/30 bg-amber-500/5 px-4 py-3 flex items-start gap-2.5">
+                <span className="text-amber-400 text-xs font-bold uppercase tracking-wider flex-shrink-0 mt-0.5">Seed Stage</span>
+                <span className="text-sm text-gray-400 leading-relaxed">
+                  N1DV is not live yet. Balances and allocation shown here are a preview — live deposits, PnL, and on-chain NAV begin at vault launch.
+                </span>
+              </div>
+
               {/* 1) Key metric cards */}
               <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
                 <div className="p-6 rounded-xl border border-white/10 bg-white/[0.02] backdrop-blur-sm">
@@ -125,13 +133,13 @@ export function Dashboard() {
                   <div className="flex items-center gap-2 mb-2">
                     <PieChartIcon className="w-4 h-4 text-gray-400" />
                     <span className="text-xs font-semibold text-gray-400 tracking-wider uppercase">
-                      Vault TVL
+                      Vault Status
                     </span>
                   </div>
-                  <div className="text-2xl sm:text-3xl font-light tracking-tight text-white font-mono">
-                    $1,024,500
+                  <div className="text-2xl sm:text-3xl font-light tracking-tight text-amber-400">
+                    Pre-launch
                   </div>
-                  <p className="text-xs text-gray-500 mt-1">Total value locked</p>
+                  <p className="text-xs text-gray-500 mt-1">Live TVL begins at vault launch</p>
                 </div>
               </section>
 

@@ -1,11 +1,13 @@
 /**
  * N1DV virtual backtest: fetch real price data from CoinGecko and compute
  * cumulative returns for the fund (40% USDT, 20% WBTC, 20% ETH, 10% HYPE, 5% PENDLE, 5% AERO).
- * USDT is treated as 0% daily return.
+ * The 40% stablecoin sleeve earns a conservative DeFi yield (STABLE_APY), matching
+ * the strategy's "yield-bearing defense" — the working capital is never idle.
  */
 
 const COINGECKO_BASE = 'https://api.coingecko.com/api/v3';
-const CACHE_KEY = 'n1dv_backtest_365';
+// Bumped the cache key so the yield-bearing recompute isn't masked by a stale 0%-yield cache.
+const CACHE_KEY = 'n1dv_backtest_365_v2';
 const CACHE_TTL_MS = 24 * 60 * 60 * 1000; // 24h
 
 const WEIGHTS = {
@@ -16,6 +18,11 @@ const WEIGHTS = {
   pendle: 0.05,
   aero: 0.05,
 } as const;
+
+/** Assumed annual yield on the stablecoin sleeve (conservative lower bound of the
+ *  strategy's 5–10% APY working-capital claim). Applied daily to the USDT weight. */
+const STABLE_APY = 0.05;
+const STABLE_DAILY_RETURN = Math.pow(1 + STABLE_APY, 1 / 365) - 1;
 
 export type BacktestDataPoint = {
   date: string;
@@ -104,7 +111,7 @@ function alignAndCompute(
     const aeroRet = aeroReturns.get(dayKey) ?? 0;
 
     const n1dvDaily =
-      WEIGHTS.usdt * 0 +
+      WEIGHTS.usdt * STABLE_DAILY_RETURN +
       WEIGHTS.btc * btcRet +
       WEIGHTS.eth * ethRet +
       WEIGHTS.hype * hypeRet +

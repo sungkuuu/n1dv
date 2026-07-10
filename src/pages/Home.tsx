@@ -254,9 +254,8 @@ export function Home() {
           <div className="grid lg:grid-cols-3 gap-8">
             <div className="border border-white/10 bg-gradient-to-br from-gray-900/50 to-black p-10 hover:border-white/20 transition-all">
               <div className="flex items-center gap-3 mb-6">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30">
-                  <span className="animate-live-pulse h-2 w-2 rounded-full bg-emerald-400 flex-shrink-0" />
-                  <span className="text-emerald-400 text-xs font-semibold tracking-wider uppercase">LIVE</span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-500/15 border border-amber-500/30">
+                  <span className="text-amber-400 text-xs font-semibold tracking-wider uppercase">Seed Stage</span>
                 </span>
               </div>
               <h3 className="text-2xl font-bold mb-3 text-white">Nexus One Deep Value (N1DV)</h3>

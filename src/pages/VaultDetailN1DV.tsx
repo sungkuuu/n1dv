@@ -109,6 +109,9 @@ export function VaultDetailN1DV() {
                 <h2 className="text-lg font-bold text-white mb-6 flex items-center gap-2">
                   <PieChartIcon size={20} className="text-gray-400" />
                   Asset Allocation
+                  <span className="inline-flex items-center px-2.5 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-400 text-xs font-semibold tracking-wider uppercase">
+                    Target
+                  </span>
                 </h2>
                 <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
                   <div className="w-full max-w-[240px] h-[240px] flex-shrink-0">

@@ -192,7 +192,7 @@ export function TrackRecord() {
                     Computed from real historical daily prices (CoinGecko). Simulation window starts February 1, 2026.
                   </li>
                   <li>
-                    Conservative assumptions: the stablecoin sleeve is counted at <span className="text-slate-300">0% yield</span> (live strategy deploys it to DeFi yield venues), and no leverage is used.
+                    The stablecoin sleeve earns a conservative <span className="text-slate-300">5% APY</span> (the lower bound of the strategy's 5–10% working-capital target, deployed to DeFi yield venues), and no leverage is used.
                   </li>
                   <li>
                     Gas and slippage are not deducted; at the fund's target size their impact on daily-rebalanced spot positions is estimated below 0.5% annually.
