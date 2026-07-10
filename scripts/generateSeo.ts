@@ -41,10 +41,16 @@ function pageHtml(title: string, description: string, url: string, image: string
 
 const ogCount = await generateOgImages(dist);
 
+// Report pages are served from dist/insights/{slug}/index.html, so the host
+// canonicalizes them to a trailing slash (a bare /insights/{slug} 308-redirects).
+// Use the trailing-slash form for canonical/og:url/sitemap/rss so every URL we
+// advertise returns 200 and Google sees one consistent canonical.
+const reportUrl = (link: string) => `${SITE}${link}/`;
+
 let pages = 0;
 for (const r of reports) {
   if (!r.link) continue;
-  const url = `${SITE}${r.link}`;
+  const url = reportUrl(r.link);
   const outDir = join(dist, ...r.link.split('/').filter(Boolean));
   mkdirSync(outDir, { recursive: true });
   const description = (r.description || r.summary || '').slice(0, 300);
@@ -58,7 +64,7 @@ const urls = [
   ...staticPaths.map((p) => `  <url><loc>${SITE}${p}</loc></url>`),
   ...reports
     .filter((r) => r.link)
-    .map((r) => `  <url><loc>${SITE}${r.link}</loc><lastmod>${r.date}</lastmod></url>`),
+    .map((r) => `  <url><loc>${reportUrl(r.link!)}</loc><lastmod>${r.date}</lastmod></url>`),
 ].join('\n');
 writeFileSync(
   join(dist, 'sitemap.xml'),
@@ -69,7 +75,7 @@ writeFileSync(
 const items = reports
   .filter((r) => r.link)
   .map((r) => {
-    const url = `${SITE}${r.link}`;
+    const url = reportUrl(r.link!);
     return [
       '    <item>',
       `      <title>${esc(r.title)}</title>`,
