@@ -213,3 +213,83 @@ export function toChartPoints(data: BacktestDataPoint[]): { month: string; n1dv:
       eth: Math.round(p.eth * 10) / 10,
     }));
 }
+
+// ---------------------------------------------------------------------------
+// Simulation track-record model — shared by /performance and the home preview
+// so both pages show identical numbers.
+// ---------------------------------------------------------------------------
+
+/** Simulation portfolio inception per the strategy definition (Feb 2026). */
+export const SIM_START = '2026-02-01';
+
+/** Line colors for the simulation vs benchmark chart. */
+export const SIM_COLORS = { n1dv: '#34D399', btc: '#F59E0B', eth: '#818CF8' } as const;
+
+export interface SimStats {
+  days: number;
+  cumReturn: number;
+  annReturn: number;
+  maxDrawdown: number;
+  btcCumReturn: number;
+  btcMaxDrawdown: number;
+}
+
+/** Rebase the cumulative-return series to SIM_START and compute headline stats. */
+export function rebaseAndCompute(data: BacktestDataPoint[]): {
+  series: BacktestDataPoint[];
+  stats: SimStats | null;
+} {
+  const sliced = data.filter((p) => p.date >= SIM_START);
+  if (sliced.length < 2) return { series: [], stats: null };
+
+  const base = sliced[0];
+  const rebase = (v: number, b: number) => ((1 + v / 100) / (1 + b / 100) - 1) * 100;
+  const series = sliced.map((p) => ({
+    ...p,
+    n1dv: rebase(p.n1dv, base.n1dv),
+    btc: rebase(p.btc, base.btc),
+    eth: rebase(p.eth, base.eth),
+  }));
+
+  const drawdown = (values: number[]) => {
+    let peak = -Infinity;
+    let maxDd = 0;
+    for (const v of values) {
+      const equity = 1 + v / 100;
+      peak = Math.max(peak, equity);
+      maxDd = Math.min(maxDd, equity / peak - 1);
+    }
+    return maxDd * 100;
+  };
+
+  const last = series[series.length - 1];
+  const days = Math.max(
+    1,
+    Math.round((Date.parse(last.date) - Date.parse(series[0].date)) / 86_400_000)
+  );
+  const cum = last.n1dv / 100;
+  return {
+    series,
+    stats: {
+      days,
+      cumReturn: last.n1dv,
+      annReturn: (Math.pow(1 + cum, 365 / days) - 1) * 100,
+      maxDrawdown: drawdown(series.map((p) => p.n1dv)),
+      btcCumReturn: last.btc,
+      btcMaxDrawdown: drawdown(series.map((p) => p.btc)),
+    },
+  };
+}
+
+/** First date of each month in the series — for clean monthly x-axis ticks. */
+export function monthTicks(series: BacktestDataPoint[]): string[] {
+  const seen = new Set<string>();
+  return series
+    .filter((p) => {
+      const m = p.date.slice(0, 7);
+      if (seen.has(m)) return false;
+      seen.add(m);
+      return true;
+    })
+    .map((p) => p.date);
+}

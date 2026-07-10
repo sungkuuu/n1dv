@@ -11,65 +11,13 @@ import {
   YAxis,
 } from 'recharts';
 import { Layout } from '../components/Layout';
-import { fetchBacktestData, type BacktestDataPoint } from '../utils/backtest';
-
-/** Simulation portfolio inception per the strategy definition (Feb 2026). */
-const SIM_START = '2026-02-01';
-
-const COLORS = { n1dv: '#34D399', btc: '#F59E0B', eth: '#818CF8' };
-
-interface Stats {
-  days: number;
-  cumReturn: number;
-  annReturn: number;
-  maxDrawdown: number;
-  btcCumReturn: number;
-  btcMaxDrawdown: number;
-}
-
-/** Rebase cumulative-return series to the simulation start date and compute stats. */
-function rebaseAndCompute(data: BacktestDataPoint[]): { series: BacktestDataPoint[]; stats: Stats | null } {
-  const sliced = data.filter((p) => p.date >= SIM_START);
-  if (sliced.length < 2) return { series: [], stats: null };
-
-  const base = sliced[0];
-  const rebase = (v: number, b: number) => ((1 + v / 100) / (1 + b / 100) - 1) * 100;
-  const series = sliced.map((p) => ({
-    ...p,
-    n1dv: rebase(p.n1dv, base.n1dv),
-    btc: rebase(p.btc, base.btc),
-    eth: rebase(p.eth, base.eth),
-  }));
-
-  const drawdown = (values: number[]) => {
-    let peak = -Infinity;
-    let maxDd = 0;
-    for (const v of values) {
-      const equity = 1 + v / 100;
-      peak = Math.max(peak, equity);
-      maxDd = Math.min(maxDd, equity / peak - 1);
-    }
-    return maxDd * 100;
-  };
-
-  const last = series[series.length - 1];
-  const days = Math.max(
-    1,
-    Math.round((Date.parse(last.date) - Date.parse(series[0].date)) / 86_400_000)
-  );
-  const cum = last.n1dv / 100;
-  return {
-    series,
-    stats: {
-      days,
-      cumReturn: last.n1dv,
-      annReturn: (Math.pow(1 + cum, 365 / days) - 1) * 100,
-      maxDrawdown: drawdown(series.map((p) => p.n1dv)),
-      btcCumReturn: last.btc,
-      btcMaxDrawdown: drawdown(series.map((p) => p.btc)),
-    },
-  };
-}
+import {
+  fetchBacktestData,
+  rebaseAndCompute,
+  monthTicks as computeMonthTicks,
+  SIM_COLORS as COLORS,
+  type BacktestDataPoint,
+} from '../utils/backtest';
 
 function StatCard({ label, value, accent }: { label: string; value: string; accent?: boolean }) {
   return (
@@ -101,17 +49,7 @@ export function TrackRecord() {
   }, []);
 
   const { series, stats } = useMemo(() => rebaseAndCompute(data), [data]);
-  const monthTicks = useMemo(() => {
-    const seen = new Set<string>();
-    return series
-      .filter((p) => {
-        const m = p.date.slice(0, 7);
-        if (seen.has(m)) return false;
-        seen.add(m);
-        return true;
-      })
-      .map((p) => p.date);
-  }, [series]);
+  const monthTicks = useMemo(() => computeMonthTicks(series), [series]);
 
   return (
     <Layout>
