@@ -178,90 +178,6 @@ export function Home() {
         </div>
       </section>
 
-      <section id="strategy-section" className="scroll-mt-36 px-4 py-20 border-t border-gray-800 bg-gradient-to-b from-[#0a0a0a] to-[#111111]">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-5xl font-bold mb-4">Our Vaults</h2>
-            <p className="text-gray-400 text-lg">Institutional-grade onchain capital deployment vehicles tailored for every market cycle.</p>
-          </div>
-
-          <div className="grid lg:grid-cols-3 gap-8">
-            <div className="border border-white/10 bg-gradient-to-br from-gray-900/50 to-black p-10 hover:border-white/20 transition-all">
-              <div className="flex items-center gap-3 mb-6">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30">
-                  <span className="animate-live-pulse h-2 w-2 rounded-full bg-emerald-400 flex-shrink-0" />
-                  <span className="text-emerald-400 text-xs font-semibold tracking-wider uppercase">LIVE</span>
-                </span>
-              </div>
-              <h3 className="text-2xl font-bold mb-3 text-white">Nexus One Deep Value (N1DV)</h3>
-              <div className="text-sm text-gray-400 mb-6 font-semibold">Deep Value / Defensive Alpha</div>
-              <p className="text-gray-300 text-base leading-relaxed mb-6">
-                A dynamic barbell vault balancing 40% yield-bearing working capital with 60% high-conviction growth assets (BTC, ETH).
-              </p>
-              <div className="border-t border-gray-700 pt-6 mb-6">
-                <h4 className="text-sm font-bold text-white mb-4">KEY FEATURES</h4>
-                <ul className="space-y-3 text-sm text-gray-300">
-                  <li className="flex items-start gap-2">
-                    <span className="text-white mt-1">•</span>
-                    <span><strong className="text-white">Resilience First:</strong> We secure the downside with 40% cash-flow assets, ensuring capital preservation through market volatility.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-white mt-1">•</span>
-                    <span><strong className="text-white">Deep Value Discovery:</strong> Active allocation in undervalued on-chain assets like AERO, identifying asymmetric risk-reward opportunities.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-white mt-1">•</span>
-                    <span><strong className="text-white">Aligned Incentives:</strong> Zero management fees. We only win when you win. Performance-based compensation ensures true alignment.</span>
-                  </li>
-                </ul>
-              </div>
-              <Link
-                to="/vaults/n1dv"
-                className="block w-full text-center px-6 py-3 bg-gray-100 text-black text-sm font-bold hover:bg-gray-200 transition-all"
-              >
-                View Details
-              </Link>
-            </div>
-
-            <div className="border border-white/10 bg-gradient-to-br from-gray-900/30 to-black p-10 hover:border-white/15 transition-all opacity-50">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="inline-block px-4 py-1.5 bg-gray-800 text-gray-500 text-xs font-black tracking-wider">
-                  COMING Q3 2026
-                </div>
-              </div>
-              <h3 className="text-2xl font-bold mb-3 text-gray-400">Nexus One Alpha (N1A)</h3>
-              <div className="text-sm text-gray-600 mb-6 font-semibold">Event-Driven / Asymmetric Upside</div>
-              <p className="text-gray-500 text-base leading-relaxed">
-                Capturing alpha through catalyst-based execution. We target mispriced assets and liquidity inefficiencies in early-stage markets.
-              </p>
-            </div>
-
-            <div className="border border-white/10 bg-gradient-to-br from-gray-900/30 to-black p-10 hover:border-white/15 transition-all opacity-50">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="inline-block px-4 py-1.5 bg-gray-800 text-gray-500 text-xs font-black tracking-wider">
-                  RESEARCH PHASE
-                </div>
-              </div>
-              <h3 className="text-2xl font-bold mb-3 text-gray-400">Nexus One Innovative (N1I)</h3>
-              <div className="text-sm text-gray-600 mb-6 font-semibold">Frontier Thesis / Structural Shift</div>
-              <p className="text-gray-500 text-base leading-relaxed">
-                Early exposure to high-conviction narratives. Focused on the convergence of AI, DePIN, and Next-Gen RWA infrastructure.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex justify-end mt-10">
-            <Link
-              to="/vaults"
-              className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-white/15 bg-white/[0.03] backdrop-blur-sm text-gray-300 hover:text-white hover:border-white/25 transition-all text-sm font-medium"
-            >
-              Explore All Vaults
-              <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
       <section id="portfolio" className="scroll-mt-36 px-4 pt-12 pb-20 border-t border-white/10 bg-gradient-to-b from-[#111111] to-[#0a0a0a]">
         <div className="max-w-6xl mx-auto">
           <div className="text-left mb-8">
@@ -462,6 +378,90 @@ export function Home() {
                 </>
               )}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="strategy-section" className="scroll-mt-36 px-4 py-20 border-t border-gray-800 bg-gradient-to-b from-[#0a0a0a] to-[#111111]">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-5xl font-bold mb-4">Our Vaults</h2>
+            <p className="text-gray-400 text-lg">Institutional-grade onchain capital deployment vehicles tailored for every market cycle.</p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8">
+            <div className="border border-white/10 bg-gradient-to-br from-gray-900/50 to-black p-10 hover:border-white/20 transition-all">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30">
+                  <span className="animate-live-pulse h-2 w-2 rounded-full bg-emerald-400 flex-shrink-0" />
+                  <span className="text-emerald-400 text-xs font-semibold tracking-wider uppercase">LIVE</span>
+                </span>
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-white">Nexus One Deep Value (N1DV)</h3>
+              <div className="text-sm text-gray-400 mb-6 font-semibold">Deep Value / Defensive Alpha</div>
+              <p className="text-gray-300 text-base leading-relaxed mb-6">
+                A dynamic barbell vault balancing 40% yield-bearing working capital with 60% high-conviction growth assets (BTC, ETH).
+              </p>
+              <div className="border-t border-gray-700 pt-6 mb-6">
+                <h4 className="text-sm font-bold text-white mb-4">KEY FEATURES</h4>
+                <ul className="space-y-3 text-sm text-gray-300">
+                  <li className="flex items-start gap-2">
+                    <span className="text-white mt-1">•</span>
+                    <span><strong className="text-white">Resilience First:</strong> We secure the downside with 40% cash-flow assets, ensuring capital preservation through market volatility.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-white mt-1">•</span>
+                    <span><strong className="text-white">Deep Value Discovery:</strong> Active allocation in undervalued on-chain assets like AERO, identifying asymmetric risk-reward opportunities.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-white mt-1">•</span>
+                    <span><strong className="text-white">Aligned Incentives:</strong> Zero management fees. We only win when you win. Performance-based compensation ensures true alignment.</span>
+                  </li>
+                </ul>
+              </div>
+              <Link
+                to="/vaults/n1dv"
+                className="block w-full text-center px-6 py-3 bg-gray-100 text-black text-sm font-bold hover:bg-gray-200 transition-all"
+              >
+                View Details
+              </Link>
+            </div>
+
+            <div className="border border-white/10 bg-gradient-to-br from-gray-900/30 to-black p-10 hover:border-white/15 transition-all opacity-50">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="inline-block px-4 py-1.5 bg-gray-800 text-gray-500 text-xs font-black tracking-wider">
+                  COMING Q3 2026
+                </div>
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-gray-400">Nexus One Alpha (N1A)</h3>
+              <div className="text-sm text-gray-600 mb-6 font-semibold">Event-Driven / Asymmetric Upside</div>
+              <p className="text-gray-500 text-base leading-relaxed">
+                Capturing alpha through catalyst-based execution. We target mispriced assets and liquidity inefficiencies in early-stage markets.
+              </p>
+            </div>
+
+            <div className="border border-white/10 bg-gradient-to-br from-gray-900/30 to-black p-10 hover:border-white/15 transition-all opacity-50">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="inline-block px-4 py-1.5 bg-gray-800 text-gray-500 text-xs font-black tracking-wider">
+                  RESEARCH PHASE
+                </div>
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-gray-400">Nexus One Innovative (N1I)</h3>
+              <div className="text-sm text-gray-600 mb-6 font-semibold">Frontier Thesis / Structural Shift</div>
+              <p className="text-gray-500 text-base leading-relaxed">
+                Early exposure to high-conviction narratives. Focused on the convergence of AI, DePIN, and Next-Gen RWA infrastructure.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex justify-end mt-10">
+            <Link
+              to="/vaults"
+              className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-white/15 bg-white/[0.03] backdrop-blur-sm text-gray-300 hover:text-white hover:border-white/25 transition-all text-sm font-medium"
+            >
+              Explore All Vaults
+              <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
+            </Link>
           </div>
         </div>
       </section>
