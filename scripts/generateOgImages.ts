@@ -12,13 +12,6 @@ import { reports } from '../src/data/reports';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 
-// The actual logo wordmark, embedded so OG images use the real mark (not a font).
-const WORDMARK_DATA_URI =
-  'data:image/png;base64,' + readFileSync(join(root, 'public/nexus-one-wordmark.png')).toString('base64');
-// Intrinsic size 987×112 → keep aspect ratio at a footer-friendly height.
-const WORDMARK_H = 30;
-const WORDMARK_W = Math.round((987 / 112) * WORDMARK_H);
-
 const ACCENT: Record<string, string> = {
   'DEEP RESEARCH': '#34D399',
   'WEEKLY BRIEF': '#60A5FA',
@@ -93,8 +86,8 @@ function ogTree(title: string, category: string, date: string) {
           paddingTop: 28,
         },
         [
-          { type: 'img', props: { src: WORDMARK_DATA_URI, width: WORDMARK_W, height: WORDMARK_H, style: { opacity: 0.9 } } },
-          el('div', { display: 'flex', color: '#6b7280', fontSize: 26 }, `${date}   ·   n1dv.io`),
+          el('div', { display: 'flex', color: '#e5e7eb', fontSize: 34, fontFamily: 'Oxanium', letterSpacing: 7 }, 'QUADRIX'),
+          el('div', { display: 'flex', color: '#6b7280', fontSize: 26 }, `${date}   ·   quadrix.finance`),
         ]
       ),
     ]

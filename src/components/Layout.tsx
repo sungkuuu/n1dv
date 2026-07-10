@@ -58,11 +58,7 @@ export function Layout({ children }: LayoutProps) {
             }}
             className="flex items-center cursor-pointer bg-[#0a0a0a]"
           >
-            <img
-              src="/nexus-one-wordmark.png"
-              alt="NEXUS ONE"
-              className="h-4 md:h-5 w-auto object-contain"
-            />
+            <span className="font-brand text-white text-lg md:text-xl font-semibold tracking-[0.22em] leading-none">QUADRIX</span>
           </div>
 
           {/* Right: Group 1 (info) | Divider | Group 2 (user action) — unified across landing & dashboard */}
@@ -139,11 +135,7 @@ export function Layout({ children }: LayoutProps) {
         <div className="flex flex-col h-full">
           <div className="flex items-center justify-between px-6 py-6 border-b border-white/10">
             <div className="flex items-center bg-[#0a0a0a]">
-              <img
-                src="/nexus-one-wordmark.png"
-                alt="NEXUS ONE"
-                className="h-7 w-auto object-contain"
-              />
+              <span className="font-brand text-white text-xl font-semibold tracking-[0.22em] leading-none">QUADRIX</span>
             </div>
             <button
               onClick={() => setIsMobileMenuOpen(false)}
@@ -249,12 +241,8 @@ export function Layout({ children }: LayoutProps) {
           </p>
 
           <div className="flex flex-col items-center gap-3">
-            <img
-              src="/nexus-one-wordmark.png"
-              alt="NEXUS ONE"
-              className="h-5 w-auto object-contain opacity-40"
-            />
-            <p className="text-xs text-gray-700 font-medium">© 2026 Nexus One</p>
+            <span className="font-brand text-gray-600 text-sm font-semibold tracking-[0.28em] leading-none">QUADRIX</span>
+            <p className="text-xs text-gray-700 font-medium">© 2026 Nexus One Capital</p>
           </div>
         </div>
       </footer>

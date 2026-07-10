@@ -16,7 +16,7 @@ const connectors = connectorsForWallets(
       wallets: [injectedWallet, walletConnectWallet],
     },
   ],
-  { appName: 'n1dv', projectId }
+  { appName: 'Quadrix', projectId }
 );
 
 export const config = createConfig({

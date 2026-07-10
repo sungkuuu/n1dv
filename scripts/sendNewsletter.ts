@@ -17,7 +17,7 @@ import { fileURLToPath } from 'node:url';
 import { createClient } from '@supabase/supabase-js';
 import { reports } from '../src/data/reports';
 
-const SITE = 'https://n1dv.io';
+const SITE = 'https://quadrix.finance';
 const SUPABASE_URL = 'https://mevrwtzquadthtbzqmdu.supabase.co';
 const FROM = process.env.NEWSLETTER_FROM || 'Nexus One Research <research@n1dv.io>';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -118,14 +118,14 @@ export function emailHtml(
           <td align="left" style="vertical-align:middle;">
             <a href="${url}" style="display:inline-block;background:#111827;color:#ffffff;font-weight:bold;font-size:14px;padding:13px 30px;border-radius:8px;text-decoration:none;">Read the full report &rarr;</a>
           </td>
-          <td align="right" style="vertical-align:bottom;font-size:0;line-height:0;">
-            <img src="${SITE}/nexus-one-wordmark-dark.png" alt="NEXUS ONE" height="15" style="height:15px;width:auto;opacity:0.4;display:inline-block;" />
+          <td align="right" style="vertical-align:bottom;">
+            <span style="font-family:'Oxanium',Arial,sans-serif;font-size:14px;font-weight:600;letter-spacing:4px;color:#9ca3af;">QUADRIX</span>
           </td>
         </tr>
       </table>
       <hr style="border:none;border-top:1px solid #e5e7eb;margin:16px 0 20px;" />
       <p style="color:#9ca3af;font-size:12px;line-height:1.6;margin:0;">
-        You are receiving this because you subscribed on n1dv.io.
+        You are receiving this because you subscribed on quadrix.finance.
         To unsubscribe, reply with "unsubscribe" or email
         <a href="mailto:partner@nexusonecap.com?subject=Unsubscribe" style="color:#6b7280;">partner@nexusonecap.com</a>.
         This email is for informational purposes only and is not investment advice.
