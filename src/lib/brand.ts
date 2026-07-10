@@ -14,6 +14,9 @@
  */
 export type BrandId = 'quadrix' | 'n1dv' | 'nexus';
 
+/** Nav destinations, keyed; each surface picks which ones it shows. */
+export type NavKey = 'letter' | 'vaults' | 'performance' | 'insights' | 'radar' | 'dashboard';
+
 export interface Brand {
   id: BrandId;
   /** Header wordmark, rendered in the Oxanium brand font. */
@@ -24,7 +27,15 @@ export interface Brand {
   domain: string;
   /** document.title on the home route. */
   homeTitle: string;
+  /** Nav items shown for this surface, in order. */
+  nav: NavKey[];
+  /** Referral + Connect Wallet actions (platform/fund only). */
+  showUserActions: boolean;
+  /** Where '/' redirects for this surface (undefined = show Home). */
+  landing?: string;
 }
+
+const FULL_NAV: NavKey[] = ['letter', 'vaults', 'performance', 'insights', 'radar', 'dashboard'];
 
 const BRANDS: Record<BrandId, Brand> = {
   quadrix: {
@@ -33,6 +44,8 @@ const BRANDS: Record<BrandId, Brand> = {
     tracking: '0.22em',
     domain: 'quadrix.finance',
     homeTitle: 'Quadrix | Onchain Asset Management',
+    nav: FULL_NAV,
+    showUserActions: true,
   },
   n1dv: {
     id: 'n1dv',
@@ -40,6 +53,8 @@ const BRANDS: Record<BrandId, Brand> = {
     tracking: '0.26em',
     domain: 'n1dv.io',
     homeTitle: 'N1DV | Deep Value Digital Asset Fund',
+    nav: FULL_NAV,
+    showUserActions: true,
   },
   nexus: {
     id: 'nexus',
@@ -47,6 +62,10 @@ const BRANDS: Record<BrandId, Brand> = {
     tracking: '0.18em',
     domain: 'nexusonecap.com',
     homeTitle: 'Nexus One Research',
+    // Company / Insight surface: research only — no platform or wallet.
+    nav: ['insights', 'letter'],
+    showUserActions: false,
+    landing: '/insights',
   },
 };
 

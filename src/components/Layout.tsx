@@ -5,11 +5,20 @@ import { CustomConnectButton } from './CustomConnectButton';
 import { VaultAccessDrawer } from './VaultAccessDrawer';
 import { ReferralDrawer } from './ReferralDrawer';
 import { NewsletterSignup } from './NewsletterSignup';
-import { resolveBrand } from '../lib/brand';
+import { resolveBrand, type NavKey } from '../lib/brand';
 
 interface LayoutProps {
   children: React.ReactNode;
 }
+
+const NAV_ITEMS: Record<NavKey, { label: string; path: string }> = {
+  letter: { label: 'Letter', path: '/letter' },
+  vaults: { label: 'Vaults', path: '/vaults' },
+  performance: { label: 'Performance', path: '/performance' },
+  insights: { label: 'Insights', path: '/insights' },
+  radar: { label: 'Radar', path: '/radar' },
+  dashboard: { label: 'Dashboard', path: '/dashboard' },
+};
 
 export function Layout({ children }: LayoutProps) {
   const navigate = useNavigate();
@@ -30,6 +39,15 @@ export function Layout({ children }: LayoutProps) {
   useEffect(() => {
     if (location.pathname === '/') document.title = brand.homeTitle;
   }, [brand, location.pathname]);
+
+  // Research-only surfaces (nexusonecap Insight) land on /insights, not the vault
+  // home. Preserve search so the ?brand= dev override survives the redirect (prod
+  // keeps the brand via hostname regardless).
+  useEffect(() => {
+    if (brand.landing && location.pathname === '/') {
+      navigate(brand.landing + location.search, { replace: true });
+    }
+  }, [brand, location.pathname, location.search, navigate]);
 
   useEffect(() => {
     if (isMobileMenuOpen) {
@@ -78,57 +96,33 @@ export function Layout({ children }: LayoutProps) {
 
           {/* Right: Group 1 (info) | Divider | Group 2 (user action) — unified across landing & dashboard */}
           <div className="hidden md:flex items-center gap-8">
-            {/* Group 1: Main info & service */}
+            {/* Group 1: Main info & service (per-surface) */}
             <div className="flex items-center gap-6">
-              <button
-                onClick={() => handleNavigate('/letter')}
-                className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
-              >
-                Letter
-              </button>
-              <button
-                onClick={() => handleNavigate('/vaults')}
-                className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
-              >
-                Vaults
-              </button>
-              <button
-                onClick={() => handleNavigate('/performance')}
-                className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
-              >
-                Performance
-              </button>
-              <button
-                onClick={() => handleNavigate('/insights')}
-                className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
-              >
-                Insights
-              </button>
-              <button
-                onClick={() => handleNavigate('/radar')}
-                className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
-              >
-                Radar
-              </button>
-              <button
-                onClick={() => handleNavigate('/dashboard')}
-                className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
-              >
-                Dashboard
-              </button>
+              {brand.nav.map((key) => (
+                <button
+                  key={key}
+                  onClick={() => handleNavigate(NAV_ITEMS[key].path)}
+                  className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+                >
+                  {NAV_ITEMS[key].label}
+                </button>
+              ))}
             </div>
-            {/* Divider */}
-            <div className="w-[1px] h-6 bg-gray-600 flex-shrink-0" aria-hidden />
-            {/* Group 2: User action */}
-            <div className="flex items-center gap-6">
-              <button
-                onClick={() => setIsReferralDrawerOpen(true)}
-                className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
-              >
-                Referral
-              </button>
-              <CustomConnectButton />
-            </div>
+            {/* Group 2: User action — platform/fund only */}
+            {brand.showUserActions && (
+              <>
+                <div className="w-[1px] h-6 bg-gray-600 flex-shrink-0" aria-hidden />
+                <div className="flex items-center gap-6">
+                  <button
+                    onClick={() => setIsReferralDrawerOpen(true)}
+                    className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+                  >
+                    Referral
+                  </button>
+                  <CustomConnectButton />
+                </div>
+              </>
+            )}
           </div>
 
           <button
@@ -168,55 +162,32 @@ export function Layout({ children }: LayoutProps) {
 
           <div className="flex-1 overflow-y-auto p-6">
             <nav className="flex flex-col gap-1">
-              <button
-                onClick={() => handleNavigate('/letter')}
-                className="text-left text-white text-lg font-medium py-4 px-4 hover:bg-white/5 transition-colors rounded-lg"
-              >
-                Letter
-              </button>
-              <button
-                onClick={() => handleNavigate('/vaults')}
-                className="text-left text-white text-lg font-medium py-4 px-4 hover:bg-white/5 transition-colors rounded-lg"
-              >
-                Vaults
-              </button>
-              <button
-                onClick={() => handleNavigate('/performance')}
-                className="text-left text-white text-lg font-medium py-4 px-4 hover:bg-white/5 transition-colors rounded-lg"
-              >
-                Performance
-              </button>
-              <button
-                onClick={() => handleNavigate('/insights')}
-                className="text-left text-white text-lg font-medium py-4 px-4 hover:bg-white/5 transition-colors rounded-lg"
-              >
-                Insights
-              </button>
-              <button
-                onClick={() => handleNavigate('/radar')}
-                className="text-left text-white text-lg font-medium py-4 px-4 hover:bg-white/5 transition-colors rounded-lg"
-              >
-                Radar
-              </button>
-              <button
-                onClick={() => handleNavigate('/dashboard')}
-                className="text-left text-white text-lg font-medium py-4 px-4 hover:bg-white/5 transition-colors rounded-lg"
-              >
-                Dashboard
-              </button>
-              <div className="my-2 border-t border-white/10" />
-              <button
-                onClick={() => {
-                  setIsMobileMenuOpen(false);
-                  setIsReferralDrawerOpen(true);
-                }}
-                className="text-left text-white text-lg font-medium py-4 px-4 hover:bg-white/5 transition-colors rounded-lg"
-              >
-                Referral
-              </button>
-              <div className="mt-4 pt-4 border-t border-white/10 flex justify-center">
-                <CustomConnectButton variant="fullWidth" className="w-full max-w-xs" />
-              </div>
+              {brand.nav.map((key) => (
+                <button
+                  key={key}
+                  onClick={() => handleNavigate(NAV_ITEMS[key].path)}
+                  className="text-left text-white text-lg font-medium py-4 px-4 hover:bg-white/5 transition-colors rounded-lg"
+                >
+                  {NAV_ITEMS[key].label}
+                </button>
+              ))}
+              {brand.showUserActions && (
+                <>
+                  <div className="my-2 border-t border-white/10" />
+                  <button
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setIsReferralDrawerOpen(true);
+                    }}
+                    className="text-left text-white text-lg font-medium py-4 px-4 hover:bg-white/5 transition-colors rounded-lg"
+                  >
+                    Referral
+                  </button>
+                  <div className="mt-4 pt-4 border-t border-white/10 flex justify-center">
+                    <CustomConnectButton variant="fullWidth" className="w-full max-w-xs" />
+                  </div>
+                </>
+              )}
             </nav>
           </div>
         </div>
