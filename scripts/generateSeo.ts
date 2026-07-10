@@ -25,7 +25,7 @@ function pageHtml(title: string, description: string, url: string, image: string
   const t = esc(title);
   const d = esc(description);
   return template
-    .replace(/<title>[^<]*<\/title>/, `<title>${t} | N1DV</title>`)
+    .replace(/<title>[^<]*<\/title>/, `<title>${t} | Quadrix</title>`)
     .replace(/(<meta name="description" content=")[^"]*(")/, `$1${d}$2`)
     .replace(/(<meta property="og:type" content=")[^"]*(")/, '$1article$2')
     .replace(/(<meta property="og:title" content=")[^"]*(")/, `$1${t}$2`)
@@ -93,7 +93,7 @@ writeFileSync(
   `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>N1DV — Nexus One Research</title>
+    <title>Quadrix — Nexus One Research</title>
     <link>${SITE}/insights</link>
     <atom:link href="${SITE}/rss.xml" rel="self" type="application/rss+xml"/>
     <description>Digital asset deep research, weekly briefs, and quarterly reports from the Nexus One Research Desk.</description>
