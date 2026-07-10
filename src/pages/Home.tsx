@@ -15,11 +15,6 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 import {
-  fetchEnzymeVaultData,
-  ENZYME_VAULT_ADDRESS,
-  type PortfolioToken,
-} from '../api/enzymeSubgraph';
-import {
   fetchBacktestData,
   sliceBacktestByRange,
   toChartPoints,
@@ -40,7 +35,6 @@ interface FeaturedReport {
   };
 }
 
-const VAULT_ADDRESS = ENZYME_VAULT_ADDRESS;
 
 const getCategoryColor = (category: string) => {
   if (category === 'WEEKLY BRIEF') return 'text-blue-500';
@@ -69,9 +63,6 @@ const FEATURED_REPORTS: FeaturedReport[] = reports
     link: report.link || `/insights/${report.id}`,
     badge: report.badge
   }));
-
-/** Fallback when on-chain data is unavailable — matches VaultDetail */
-const FALLBACK_TVL = 1_024_500;
 
 /** Full 12 months dummy cumulative return (%) — N1DV leads, BTC/ETH with volatility */
 const BENCHMARK_CHART_DATA_FULL = [
@@ -103,9 +94,6 @@ const TIME_RANGE_OPTIONS: { value: TimeRangeKey; label: string }[] = [
 
 export function Home() {
   const navigate = useNavigate();
-  const [balances, setBalances] = useState<PortfolioToken[]>([]);
-  const [totalTVL, setTotalTVL] = useState(0);
-  const [loading, setLoading] = useState(true);
   const [isN1DVModalOpen, setIsN1DVModalOpen] = useState(false);
 
   const [chartVisibility, setChartVisibility] = useState({
@@ -153,25 +141,14 @@ export function Home() {
     return fallback;
   })();
 
-  useEffect(() => {
-    const load = async () => {
-      try {
-        const data = await fetchEnzymeVaultData(VAULT_ADDRESS);
-        setBalances(data.portfolio);
-        setTotalTVL(data.gav);
-      } catch (err) {
-        console.error('Error fetching Enzyme vault data:', err);
-        setBalances([]);
-        setTotalTVL(0);
-      } finally {
-        setLoading(false);
-      }
-    };
-    load();
-  }, []);
+  // Real simulated stats from the backtest — headline numbers match the chart.
+  const simStats = (() => {
+    const src = backtestData && backtestData.length > 0 ? backtestData : null;
+    if (!src) return null;
+    const last = src[src.length - 1];
+    return { n1dv: last.n1dv, btc: last.btc, outperf: last.n1dv - last.btc };
+  })();
 
-  const useFallback = !loading && (totalTVL === 0 || balances.length === 0);
-  const displayTVL = useFallback ? FALLBACK_TVL : totalTVL;
   return (
     <Layout>
       <section className="px-4 py-20 sm:py-32 relative overflow-hidden">
@@ -288,13 +265,20 @@ export function Home() {
       <section id="portfolio" className="scroll-mt-36 px-4 pt-12 pb-20 border-t border-white/10 bg-gradient-to-b from-[#111111] to-[#0a0a0a]">
         <div className="max-w-6xl mx-auto">
           <div className="text-left mb-8">
-            <h2 className="text-3xl sm:text-5xl font-bold mb-4">Live Portfolio</h2>
-            <p className="text-gray-400 text-lg max-w-2xl">Alpha vs. benchmarks. Last 6 months cumulative return.</p>
+            <div className="flex items-center gap-3 mb-4">
+              <h2 className="text-3xl sm:text-5xl font-bold">Performance</h2>
+              <span className="inline-flex items-center px-2.5 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-400 text-xs font-bold tracking-wider uppercase">
+                Simulated
+              </span>
+            </div>
+            <p className="text-gray-400 text-lg max-w-2xl">
+              Barbell strategy vs BTC &amp; ETH since Feb 2026 — a virtual portfolio from real market prices, not live trading.
+            </p>
           </div>
 
           <div className="relative">
             <div className="relative border border-white/10 bg-white/[0.02] backdrop-blur-md shadow-2xl overflow-hidden">
-              {loading ? (
+              {chartDataLoading ? (
                 <div className="flex items-center justify-center py-16 px-8">
                   <div className="flex flex-col items-center gap-4">
                     <div className="w-8 h-8 border-4 border-white/20 border-t-white rounded-full animate-spin" />
@@ -306,15 +290,17 @@ export function Home() {
                   <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-4 py-6 px-8 border-b border-white/10">
                     <div className="flex items-center gap-8 sm:gap-12">
                       <div className="text-center sm:text-left">
-                        <div className="text-xs text-gray-500 mb-0.5 font-semibold tracking-wider uppercase">TVL</div>
-                        <div className="text-3xl sm:text-4xl font-light tracking-tight text-white font-mono-num">
-                          ${displayTVL.toLocaleString('en-US', { maximumFractionDigits: 0 })}
+                        <div className="text-xs text-gray-500 mb-0.5 font-semibold tracking-wider uppercase">Cumulative Return (sim)</div>
+                        <div className={`text-3xl sm:text-4xl font-light tracking-tight font-mono-num ${(simStats?.n1dv ?? 0) >= 0 ? 'text-emerald-400' : 'text-red-400'}`}>
+                          {simStats ? `${simStats.n1dv >= 0 ? '+' : ''}${simStats.n1dv.toFixed(1)}%` : '—'}
                         </div>
                       </div>
                       <div className="h-8 w-px bg-white/10 hidden sm:block" />
                       <div className="text-center sm:text-left">
-                        <div className="text-xs text-gray-500 mb-0.5 font-semibold tracking-wider uppercase">APY</div>
-                        <div className="text-3xl sm:text-4xl font-light tracking-tight text-emerald-400 font-mono-num">12.4%</div>
+                        <div className="text-xs text-gray-500 mb-0.5 font-semibold tracking-wider uppercase">vs BTC</div>
+                        <div className={`text-3xl sm:text-4xl font-light tracking-tight font-mono-num ${(simStats?.outperf ?? 0) >= 0 ? 'text-emerald-400' : 'text-red-400'}`}>
+                          {simStats ? `${simStats.outperf >= 0 ? '+' : ''}${simStats.outperf.toFixed(1)}%` : '—'}
+                        </div>
                       </div>
                     </div>
                   </div>
