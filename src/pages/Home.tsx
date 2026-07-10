@@ -273,7 +273,7 @@ export function Home() {
                 <ul className="space-y-3 text-sm text-gray-300">
                   <li className="flex items-start gap-2">
                     <span className="text-white mt-1">•</span>
-                    <span><strong className="text-white">Resilience First:</strong> We secure the downside with 40% cash-flow assets, ensuring capital preservation through market volatility.</span>
+                    <span><strong className="text-white">Resilience First:</strong> We cushion the downside with 40% cash-flow assets, with the aim of prioritizing capital preservation through market volatility.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-white mt-1">•</span>
