@@ -6,8 +6,16 @@ import { WagmiProvider } from 'wagmi';
 import { RainbowKitProvider, darkTheme } from '@rainbow-me/rainbowkit';
 import { config } from './wagmi';
 import App from './App.tsx';
+import { resolveBrand } from './lib/brand';
 import '@rainbow-me/rainbowkit/styles.css';
 import './index.css';
+
+// Light corporate theme (nexus surface): set once at bootstrap so it also
+// covers lazy-route fallbacks and portaled modals — the brand never changes
+// within a session (it's derived from the hostname).
+if (resolveBrand().theme === 'light') {
+  document.documentElement.classList.add('theme-light');
+}
 
 const queryClient = new QueryClient();
 

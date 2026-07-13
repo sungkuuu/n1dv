@@ -57,3 +57,156 @@
   height: auto !important;
   border-radius: 0.5rem !important; /* rounded-lg */
 }
+
+/* ==========================================================================
+   Light corporate theme — nexus surface (insights.nexusonecap.com)
+   --------------------------------------------------------------------------
+   Layout toggles `theme-light` on <html> when brand.theme === 'light'
+   (src/lib/brand.ts). Instead of re-styling every page, this layer remaps the
+   dark utility vocabulary the app is written in (bg-[#0a0a0a], text-white,
+   border-white/10, …) to the corporate nexusonecap.com palette: white bg,
+   Poppins, #222/#333 text, #999 muted, #fafafa sections, black CTAs.
+   Scoped under html.theme-light so quadrix.finance / n1dv.io stay dark.
+   ========================================================================== */
+
+@layer components {
+  html.theme-light body {
+    font-family: 'Poppins', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+  }
+
+  /* --- page + section backgrounds ------------------------------------- */
+  html.theme-light .bg-\[\#0a0a0a\],
+  html.theme-light .bg-\[\#0A0A0A\] { background-color: #ffffff; }
+  html.theme-light .bg-\[\#0a0a0a\]\/90 { background-color: rgba(255, 255, 255, 0.92); }
+  html.theme-light .bg-\[\#111111\],
+  html.theme-light .bg-\[\#050505\] { background-color: #fafafa; }
+  html.theme-light .bg-black { background-color: #ffffff; }
+  /* modal/drawer scrims stay dark, just softer */
+  html.theme-light .bg-black\/90 { background-color: rgba(17, 17, 17, 0.45); }
+  html.theme-light .bg-black\/95 { background-color: rgba(255, 255, 255, 0.97); }
+
+  /* card fills */
+  html.theme-light .bg-slate-900\/50,
+  html.theme-light .bg-gray-900\/60,
+  html.theme-light .bg-neutral-900\/40,
+  html.theme-light .bg-gray-800\/30,
+  html.theme-light .bg-neutral-900,
+  html.theme-light .bg-slate-800,
+  html.theme-light .bg-gray-800 { background-color: #fafafa; }
+  html.theme-light .bg-white\/\[0\.02\],
+  html.theme-light .bg-white\/\[0\.03\] { background-color: rgba(0, 0, 0, 0.02); }
+  html.theme-light .bg-white\/5 { background-color: rgba(0, 0, 0, 0.04); }
+  html.theme-light .bg-white\/10 { background-color: rgba(0, 0, 0, 0.06); }
+  html.theme-light .hover\:bg-white\/5:hover { background-color: rgba(0, 0, 0, 0.04); }
+  html.theme-light .hover\:bg-white\/10:hover { background-color: rgba(0, 0, 0, 0.06); }
+
+  /* --- gradients ------------------------------------------------------- */
+  html.theme-light .from-\[\#0a0a0a\],
+  html.theme-light .from-\[\#0A0A0A\],
+  html.theme-light .from-gray-900\/50,
+  html.theme-light .from-gray-900\/30 {
+    --tw-gradient-from: #ffffff;
+    --tw-gradient-to: rgba(255, 255, 255, 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  }
+  html.theme-light .from-\[\#111111\] {
+    --tw-gradient-from: #fafafa;
+    --tw-gradient-to: rgba(255, 255, 255, 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  }
+  html.theme-light .via-\[\#050505\] {
+    --tw-gradient-to: rgba(255, 255, 255, 0);
+    --tw-gradient-stops: var(--tw-gradient-from), #fcfcfc, var(--tw-gradient-to);
+  }
+  html.theme-light .to-\[\#0a0a0a\],
+  html.theme-light .to-\[\#0A0A0A\],
+  html.theme-light .to-black { --tw-gradient-to: #ffffff; }
+  html.theme-light .to-\[\#111111\],
+  html.theme-light .to-gray-900\/60 { --tw-gradient-to: #fafafa; }
+
+  /* gradient headline text (from-white via-gray-300 to-gray-600 + bg-clip-text) */
+  html.theme-light .from-white {
+    --tw-gradient-from: #111111;
+    --tw-gradient-to: rgba(17, 17, 17, 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  }
+  html.theme-light .via-gray-300 {
+    --tw-gradient-to: rgba(17, 17, 17, 0);
+    --tw-gradient-stops: var(--tw-gradient-from), #333333, var(--tw-gradient-to);
+  }
+  html.theme-light .to-gray-600 { --tw-gradient-to: #666666; }
+
+  /* --- text ------------------------------------------------------------ */
+  html.theme-light .text-white { color: #111111; }
+  html.theme-light .text-slate-100,
+  html.theme-light .text-slate-200,
+  html.theme-light .text-gray-200 { color: #222222; }
+  html.theme-light .text-slate-300,
+  html.theme-light .text-gray-300 { color: #333333; }
+  html.theme-light .text-slate-400,
+  html.theme-light .text-gray-400 { color: #555555; }
+  html.theme-light .text-slate-500,
+  html.theme-light .text-gray-500 { color: #777777; }
+  html.theme-light .text-gray-600 { color: #999999; }
+  html.theme-light .text-gray-700 { color: #999999; }
+  html.theme-light .hover\:text-white:hover { color: #000000; }
+  html.theme-light .group:hover .group-hover\:text-gray-300 { color: #555555; }
+  html.theme-light .group:hover .group-hover\:text-gray-200 { color: #333333; }
+  html.theme-light .hover\:text-gray-400:hover { color: #666666; }
+
+  /* --- borders ---------------------------------------------------------- */
+  html.theme-light .border-white\/10 { border-color: rgba(0, 0, 0, 0.08); }
+  html.theme-light .border-white\/20 { border-color: rgba(0, 0, 0, 0.15); }
+  html.theme-light .hover\:border-white\/20:hover { border-color: rgba(0, 0, 0, 0.15); }
+  html.theme-light .hover\:border-white\/30:hover,
+  html.theme-light .hover\:border-white\/40:hover { border-color: rgba(0, 0, 0, 0.28); }
+  html.theme-light .border-slate-800,
+  html.theme-light .border-slate-800\/50,
+  html.theme-light .border-slate-800\/60,
+  html.theme-light .border-gray-800,
+  html.theme-light .border-gray-700,
+  html.theme-light .border-gray-700\/50,
+  html.theme-light .border-neutral-700 { border-color: #e6e6e6; }
+  html.theme-light .hover\:border-slate-700:hover,
+  html.theme-light .hover\:border-gray-700:hover { border-color: #cccccc; }
+  html.theme-light .bg-gray-600 { background-color: #cccccc; } /* nav divider */
+
+  /* --- CTAs: light-on-dark buttons become corporate black --------------- */
+  html.theme-light .bg-gray-100,
+  html.theme-light .bg-gray-200 { background-color: #111111; color: #ffffff; }
+  html.theme-light .hover\:bg-gray-200:hover,
+  html.theme-light .hover\:bg-gray-100:hover { background-color: #333333; color: #ffffff; }
+  /* solid-white chips/dots/buttons — must not vanish on white */
+  html.theme-light .bg-white { background-color: #111111; color: #ffffff; }
+  html.theme-light .hover\:bg-white:hover { background-color: #333333; }
+
+  /* --- markdown reports (tailwind typography, prose-invert) -------------- */
+  html.theme-light .prose-invert {
+    --tw-prose-invert-body: #374151;
+    --tw-prose-invert-headings: #111111;
+    --tw-prose-invert-lead: #4b5563;
+    --tw-prose-invert-links: #111111;
+    --tw-prose-invert-bold: #111111;
+    --tw-prose-invert-counters: #999999;
+    --tw-prose-invert-bullets: #bbbbbb;
+    --tw-prose-invert-hr: #e6e6e6;
+    --tw-prose-invert-quotes: #333333;
+    --tw-prose-invert-quote-borders: #e6e6e6;
+    --tw-prose-invert-captions: #777777;
+    --tw-prose-invert-code: #111111;
+    --tw-prose-invert-pre-code: #333333;
+    --tw-prose-invert-pre-bg: #f6f6f6;
+    --tw-prose-invert-th-borders: #d4d4d4;
+    --tw-prose-invert-td-borders: #e6e6e6;
+  }
+
+  /* --- misc -------------------------------------------------------------- */
+  html.theme-light .bg-grid-unified {
+    background-image: linear-gradient(#000000 1px, transparent 1px),
+      linear-gradient(90deg, #000000 1px, transparent 1px);
+    opacity: 0.03;
+  }
+  html.theme-light ::selection { background: rgba(0, 0, 0, 0.12); color: #000; }
+}

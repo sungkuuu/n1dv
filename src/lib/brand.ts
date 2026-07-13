@@ -33,6 +33,12 @@ export interface Brand {
   showUserActions: boolean;
   /** Where '/' redirects for this surface (undefined = show Home). */
   landing?: string;
+  /**
+   * 'light' themes the surface to match the corporate nexusonecap.com look
+   * (white bg, Poppins, dark text) via the html.theme-light override layer in
+   * index.css. Everything else stays the default dark.
+   */
+  theme: 'dark' | 'light';
 }
 
 const FULL_NAV: NavKey[] = ['letter', 'vaults', 'performance', 'insights', 'radar', 'dashboard'];
@@ -46,6 +52,7 @@ const BRANDS: Record<BrandId, Brand> = {
     homeTitle: 'Quadrix | Onchain Asset Management',
     nav: FULL_NAV,
     showUserActions: true,
+    theme: 'dark',
   },
   n1dv: {
     id: 'n1dv',
@@ -55,6 +62,7 @@ const BRANDS: Record<BrandId, Brand> = {
     homeTitle: 'N1DV | Deep Value Digital Asset Fund',
     nav: FULL_NAV,
     showUserActions: true,
+    theme: 'dark',
   },
   nexus: {
     id: 'nexus',
@@ -66,6 +74,8 @@ const BRANDS: Record<BrandId, Brand> = {
     nav: ['insights', 'letter'],
     showUserActions: false,
     landing: '/insights',
+    // Match the corporate site's light/minimal look (Poppins, white, #333).
+    theme: 'light',
   },
 };
 

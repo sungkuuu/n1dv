@@ -232,7 +232,11 @@ export function Layout({ children }: LayoutProps) {
           </p>
 
           <div className="flex flex-col items-center gap-3">
-            <img src="/nexus-one-wordmark.png" alt="Nexus One" className="h-4 w-auto opacity-40" />
+            <img
+              src={brand.theme === 'light' ? '/nexus-one-wordmark-dark.png' : '/nexus-one-wordmark.png'}
+              alt="Nexus One"
+              className="h-4 w-auto opacity-40"
+            />
             <p className="text-xs text-gray-700 font-medium">© 2026 Nexus One Capital</p>
           </div>
         </div>
