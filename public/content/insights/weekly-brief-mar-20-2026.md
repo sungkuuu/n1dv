@@ -103,7 +103,7 @@ The most significant feature of the Canadian market is that, moving simply beyon
 
 ---
 
-## 5. Global Core Research Institution Insights Summary (Institutional Research Insights)
+## 4. Global Core Research Institution Insights Summary (Institutional Research Insights)
 
 As market complexity increases, the insights of top-tier research institutions that combine on-chain data cash flows and macro narratives beyond simply analyzing chart patterns have become more important than ever. The insights published by 6 core research institutions as of March 2026 are as follows:
 
@@ -127,7 +127,7 @@ Kaiko's analysis shows the two-sided nature of the infrastructure. On one hand, 
 
 ---
 
-## 6. L1/L2 Protocol Ecosystem, DeFi, NFT, and Key Sector Trends
+## 5. L1/L2 Protocol Ecosystem, DeFi, NFT, and Key Sector Trends
 
 The valuation of blockchain networks has shifted from speculative potential to the actual ability for Cash Flow Generation. Only platforms where users are willing to pay fees survive in the long term.
 
@@ -170,7 +170,7 @@ NFT and Bluechip Trends: The trading volume of simple PFP (Profile Picture) NFTs
 
 ---
 
-## 7. On-chain Anomalies Detection in Top 200 Market Cap Coins
+## 6. On-chain Anomalies Detection in Top 200 Market Cap Coins
 
 The permanent transparency of blockchain ledgers accurately detects irrational market activities or covert manipulations by whales at the on-chain level. The three major Anomalies detected recently are as follows:
 
@@ -182,7 +182,7 @@ Third, the massive movement of XRP whale capital to Binance. Since the beginning
 
 ---
 
-## 8. Next Week's Key Events and Tokenomics Schedules (Upcoming Events)
+## 7. Next Week's Key Events and Tokenomics Schedules (Upcoming Events)
 
 The direction of the market next week after March 20, 2026, will be dictated by massive Token Unlocks events and new project listings. Token unlocks are the point when locked-up volume for early venture investors or teams becomes tradable on the market, causing a supply shock and exerting strong downward pressure in the short term. Conversely, new events for excellent projects serve as positive catalysts absorbing liquidity.
 
@@ -201,7 +201,7 @@ Conversely, emerging projects with positive momentum are also waiting. The new t
 
 ---
 
-## 9. Comprehensive Conclusion and Strategic Outlook (Conclusion & Strategic Outlook)
+## 8. Comprehensive Conclusion and Strategic Outlook (Conclusion & Strategic Outlook)
 
 In the 3rd week of March 2026, the global digital asset market is passing through an unprecedented inflection point where the "macro stress of traditional finance perfectly intersects with the structural maturation of on-chain fundamentals."
 

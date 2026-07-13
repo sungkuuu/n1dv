@@ -77,19 +77,19 @@ The table below outlines the virtual cash flows and their Present Values (PV) th
 
 The summary of the core financial metrics derived through the modeling is as follows:
 
-**Cumulative PV — Explicit Period (2026–2035):** $156.9M
+**Cumulative PV — Explicit Period (2026–2035):** $144.16M
 
 **Terminal Value (post-2035):** $522.5M — $60.88M × 1.03 / (0.15 – 0.03)
 
 **PV of Terminal Value:** $129.1M — $522.5M × 0.2472 discount factor
 
-**Total Enterprise Value Lost:** $286.0M — $156.9M + $129.1M
+**Total Enterprise Value Lost:** $273.3M — $144.16M + $129.1M
 
 ### 3.3. Macro Interpretation of the DCF Results and Pricing Accuracy
 
-The implications of these calculations are clear and brutal. Following Coinbase's strategic decision to separate Base from the Optimism ecosystem, the Optimism treasury lost a massive long-term Free Cash Flow (FCF) equivalent to $286 million in present value permanently, overnight. This figure is not merely a rough estimate, but a rational opportunity cost derived by cross-verifying the growth trajectory of the Ethereum L2 industry and the literal text of the revenue-sharing contract.
+The implications of these calculations are clear and brutal. Following Coinbase's strategic decision to separate Base from the Optimism ecosystem, the Optimism treasury lost a massive long-term Free Cash Flow (FCF) equivalent to $273 million in present value permanently, overnight. This figure is not merely a rough estimate, but a rational opportunity cost derived by cross-verifying the growth trajectory of the Ethereum L2 industry and the literal text of the revenue-sharing contract.
 
-Even more striking was the speed and accuracy with which crypto market participants priced in this financial shock. When a wave of dumping hit the OP token immediately after the news of Base's exit broke on February 20, sending the price crashing to $0.12, Optimism's Circulating Market Cap shrank to exactly the $269M to $270M range. Coincidentally, this perfectly mirrors the $286 million evaporated cash flow estimate derived by this research report. In other words, the market coldbloodedly priced Base's departure not just as the end of a partnership, but as the total annihilation of the sole cash cow supporting 100% of the entire Optimism project's Intrinsic Value. Having lost its cash-flow generation capability, leaving behind only the hollow shell of governance voting rights, market participants finalized their valuation by dumping ruthless sell orders onto the protocol.
+Even more striking was the speed and accuracy with which crypto market participants priced in this financial shock. When a wave of dumping hit the OP token immediately after the news of Base's exit broke on February 20, sending the price crashing to $0.12, Optimism's Circulating Market Cap shrank to exactly the $269M to $270M range. Coincidentally, this perfectly mirrors the $273 million evaporated cash flow estimate derived by this research report. In other words, the market coldbloodedly priced Base's departure not just as the end of a partnership, but as the total annihilation of the sole cash cow supporting 100% of the entire Optimism project's Intrinsic Value. Having lost its cash-flow generation capability, leaving behind only the hollow shell of governance voting rights, market participants finalized their valuation by dumping ruthless sell orders onto the protocol.
 
 ## 4. The Opportunity Cost Treatment of the 118M OP Token Grant: Coinbase's Calculated Rationality
 
@@ -101,7 +101,7 @@ The most fatal factor was the extreme collapse of token value driven by the slow
 
 An equally important second element was the critical limitation of the governance rights attached to the granted tokens. To prevent massive capital from arbitrarily dictating the network's direction, Optimism intentionally established a Voting Cap, ensuring that the 118 million OP tokens granted to Coinbase could absolutely never exceed 9% of the total Optimism Votable supply. This 9% figure meant that while they could have a symbolic voice, they could not completely control the protocol's core economic decisions or technological roadmap according to Coinbase's intentions. Ultimately, from Coinbase's perspective, this grant was not a tool for genuine alignment of mutual interests, but merely a meaningless minority stake attached with an "Exit option" that could be discarded at any time.
 
-Ultimately, these phenomena culminate in a financial conclusion: absolute superiority in the exchange of NPV (Net Present Value). As explicitly proven in the previous DCF analysis, the present value of the Free Cash Flow Coinbase would have to pay to the Optimism Collective over the next 10 years under the 15% rule in a 90%+ margin environment amounts to a staggering $286 million. In contrast, the real value of the OP grant they hold in return has nosedived into the tens of millions. For the shareholders and management of Coinbase—a publicly traded company subject to strict balance sheet management—writing off the minority stake token (OP) with its murky future value and restricted control, in exchange for permanently defending 15% of the massive net profits generated by their proprietary L2 business platform to maximize shareholder returns, was the only mathematically sound decision. Moreover, because Optimism's OP Stack utilizes the MIT open-source license, whose philosophical foundation lies in absolute openness, there was zero technological resistance or intellectual property-related legal sanction preventing Coinbase from independently forking the existing source code and severing the infrastructure. The "economic handcuffs" Optimism installed to protect its ecosystem were, in reality, made of easily torn paper.
+Ultimately, these phenomena culminate in a financial conclusion: absolute superiority in the exchange of NPV (Net Present Value). As explicitly proven in the previous DCF analysis, the present value of the Free Cash Flow Coinbase would have to pay to the Optimism Collective over the next 10 years under the 15% rule in a 90%+ margin environment amounts to a staggering $273 million. In contrast, the real value of the OP grant they hold in return has nosedived into the tens of millions. For the shareholders and management of Coinbase—a publicly traded company subject to strict balance sheet management—writing off the minority stake token (OP) with its murky future value and restricted control, in exchange for permanently defending 15% of the massive net profits generated by their proprietary L2 business platform to maximize shareholder returns, was the only mathematically sound decision. Moreover, because Optimism's OP Stack utilizes the MIT open-source license, whose philosophical foundation lies in absolute openness, there was zero technological resistance or intellectual property-related legal sanction preventing Coinbase from independently forking the existing source code and severing the infrastructure. The "economic handcuffs" Optimism installed to protect its ecosystem were, in reality, made of easily torn paper.
 
 ## 5. The Evaporation of Real Cash Flow (ETH) and the Hollowed-out OP Buyback Program
 
@@ -179,7 +179,7 @@ Coinbase's Base exit event will be recorded in history as a perfect and painful 
 
 **Materialization of Economic Loss and Pricing of Opportunity Cost**
 
-Precise Discounted Cash Flow (DCF) modeling reveals that Optimism permanently lost massive future Free Cash Flows of at least $286 million (approx. 380 billion KRW) in present value due to Base's shrewd exit. The market immediately reflected this, crashing the OP token price by 97% and adjusting its valuation.
+Precise Discounted Cash Flow (DCF) modeling reveals that Optimism permanently lost massive future Free Cash Flows of at least $273 million (approx. 360 billion KRW) in present value due to Base's shrewd exit. The market immediately reflected this, crashing the OP token price by 97% and adjusting its valuation.
 
 **Destruction of Business Model and Token Economics**
 
@@ -189,7 +189,7 @@ The OP-0017 buyback proposal, which aimed to inject 50% of Superchain revenue an
 
 The OP token failed to evolve into an attractive "Yield-bearing asset" generating permanent cash flow through distributed sequencer fees, and painfully reverted to a "pure governance token" with extremely restricted authority and no binding power. This is the result of being thoroughly outplayed by the limitations of the MIT license and the "commoditize your complement" strategy.
 
-Investors and ecosystem participants must now face the reality of the cold numbers stamped onto Excel sheets. Unless Optimism successfully lands a new, overwhelmingly scaled revenue source (such as Unichain) to replace Base, and legally and economically restructures its licensing and revenue-sharing framework with strong binding force to prevent them from leaving again, bridging the massive $286 million valuation void that evaporated into thin air with a single decision is nearly impossible in the short term. The cold signal flare of exit launched by Coinbase demands an agonizing, fundamental re-examination of the sustainability and Value Capture business models of the entire Ethereum L2 ecosystem.
+Investors and ecosystem participants must now face the reality of the cold numbers stamped onto Excel sheets. Unless Optimism successfully lands a new, overwhelmingly scaled revenue source (such as Unichain) to replace Base, and legally and economically restructures its licensing and revenue-sharing framework with strong binding force to prevent them from leaving again, bridging the massive $273 million valuation void that evaporated into thin air with a single decision is nearly impossible in the short term. The cold signal flare of exit launched by Coinbase demands an agonizing, fundamental re-examination of the sustainability and Value Capture business models of the entire Ethereum L2 ecosystem.
 
 ---
 

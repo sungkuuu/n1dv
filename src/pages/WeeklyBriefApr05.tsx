@@ -353,7 +353,7 @@ export function WeeklyBriefApr05() {
                 <li className="text-slate-300 leading-relaxed">April 9: U.S. March PPI - key for inflation path judgment ¹¹.</li>
                 <li className="text-slate-300 leading-relaxed">April 10: U.S. March CPI - key indicator for Fed. High numbers could pressure BTC ³.</li>
                 <li className="text-slate-300 leading-relaxed">April 14-15: CLARITY Act markup - possible committee passage of U.S. crypto framework ³¹.</li>
-                <li className="text-slate-300 leading-relaxed">April 14: SEC Altcoin ETF decision deadlines - possible 심사 results ¹².</li>
+                <li className="text-slate-300 leading-relaxed">April 14: SEC Altcoin ETF decision deadlines - possible review results ¹².</li>
                 <li className="text-slate-300 leading-relaxed">April 16: SEC CLARITY Act roundtable - token securities/commodity classification discussion ¹³.</li>
                 <li className="text-slate-300 leading-relaxed">April 27-29: Bitcoin Conference 2026, Las Vegas ³¹.</li>
                 <li className="text-slate-300 leading-relaxed">April 28-29: FOMC Meeting - Powell&apos;s last meeting before term end. 94% freeze probability ³.</li>

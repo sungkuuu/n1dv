@@ -232,7 +232,7 @@ export function WeeklyBriefMar20() {
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
               <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
-                5. Global Core Research Institution Insights Summary (Institutional Research Insights)
+                4. Global Core Research Institution Insights Summary (Institutional Research Insights)
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">
                 As market complexity increases, the insights of top-tier research institutions that combine on-chain data cash flows and macro narratives beyond simply analyzing chart patterns have become more important than ever. The insights published by 6 core research institutions as of March 2026 are as follows:
@@ -266,7 +266,7 @@ export function WeeklyBriefMar20() {
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
               <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
-                6. L1/L2 Protocol Ecosystem, DeFi, NFT, and Key Sector Trends
+                5. L1/L2 Protocol Ecosystem, DeFi, NFT, and Key Sector Trends
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">
                 The valuation of blockchain networks has shifted from speculative potential to the actual ability for Cash Flow Generation. Only platforms where users are willing to pay fees survive in the long term.
@@ -346,7 +346,7 @@ export function WeeklyBriefMar20() {
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
               <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
-                7. On-chain Anomalies Detection in Top 200 Market Cap Coins
+                6. On-chain Anomalies Detection in Top 200 Market Cap Coins
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">
                 The permanent transparency of blockchain ledgers accurately detects irrational market activities or covert manipulations by whales at the on-chain level. The three major Anomalies detected recently are as follows:
@@ -365,7 +365,7 @@ export function WeeklyBriefMar20() {
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
               <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
-                8. Next Week's Key Events and Tokenomics Schedules (Upcoming Events)
+                7. Next Week's Key Events and Tokenomics Schedules (Upcoming Events)
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">
                 The direction of the market next week after March 20, 2026, will be dictated by massive Token Unlocks events and new project listings. Token unlocks are the point when locked-up volume for early venture investors or teams becomes tradable on the market, causing a supply shock and exerting strong downward pressure in the short term. Conversely, new events for excellent projects serve as positive catalysts absorbing liquidity.
@@ -404,7 +404,7 @@ export function WeeklyBriefMar20() {
             <section className="mb-16">
               <hr className="my-14 border-slate-800/60" />
               <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug tracking-tight text-white mt-12 mb-6">
-                9. Comprehensive Conclusion and Strategic Outlook (Conclusion & Strategic Outlook)
+                8. Comprehensive Conclusion and Strategic Outlook (Conclusion & Strategic Outlook)
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">
                 In the 3rd week of March 2026, the global digital asset market is passing through an unprecedented inflection point where the "macro stress of traditional finance perfectly intersects with the structural maturation of on-chain fundamentals."

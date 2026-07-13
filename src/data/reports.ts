@@ -522,7 +522,7 @@ export const reports: Report[] = [
     title: '90% Margins & The $270M Wipeout: Why Base Really Left Optimism',
     date: 'Feb 23, 2026',
     category: 'DEEP RESEARCH',
-    summary: 'DCF modeling reveals $286M in permanent cash flows evaporated from the Optimism treasury after Coinbase\'s Base exit. A forensic analysis of the 15% royalty trigger, the hollowed-out OP-0017 buyback, and the open-source ecosystem dilemma.',
+    summary: 'DCF modeling reveals $273M in permanent cash flows evaporated from the Optimism treasury after Coinbase\'s Base exit. A forensic analysis of the 15% royalty trigger, the hollowed-out OP-0017 buyback, and the open-source ecosystem dilemma.',
     author: 'Nexus One Research Desk',
     content: '',
     link: '/insights/optimism-op-dcf-analysis'
