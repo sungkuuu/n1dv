@@ -1,0 +1,187 @@
+# Nexus One Weekly Digital Asset Market Report - February 13, 2026
+
+**Nexus One Research**
+Friday, February 13, 2026
+
+Analysis Period: Feb 7, 2026 – Feb 13, 2026
+
+---
+
+## 1. Overview: Capitulation or Accumulation?
+
+The second week of February 2026 vividly exposed the complex interaction between the global macroeconomic environment and the structure of the digital asset market. The current market is witnessing a multidimensional 'Decoupling' phenomenon. This is manifesting as a divergence in monetary policy expectations between the US and the UK, a stark contrast between strategic accumulation by institutions and panic selling by retail investors in the crypto market, and the dichotomy between Bitcoin's defensive price action and the sharp price readjustment of altcoins due to supply overhang.
+
+As of February 13, 2026, global financial markets have entered a phase of heightened sensitivity to Treasury yields. The US 10-year Treasury yield has risen to 4.12%, exerting downward pressure across all risk assets. While WTI crude oil prices declined, partially easing headline inflation fears, the VIX index surged to the 21 level, suggesting a spreading risk-off sentiment among traditional equity investors.
+
+In the digital asset sector, Bitcoin (BTC) is exhibiting a defensive sideways trend within a tight box range of $60,000 to $69,000, representing a drawdown of nearly half (-45% to -52%) from its late-2025 all-time high of approximately $126,000. Although the Fear & Greed Index sits at 11, reflecting extreme fear, on-chain indicators such as the Rolling MVRV Z-Score indicate that the market has entered a 'Deep Value Zone' corresponding to historical cyclical bottoms. However, massive token unlocks totaling $194 million scheduled for February are acting as a liquidity constraint, severely limiting the recovery of the altcoin market.
+
+The most notable structural shift this week is the resilience of the US spot Bitcoin ETF market. Despite a broader trend of capital outflows, leading products like BlackRock's IBIT recorded net inflows, moving inversely to the overall market trend. This strongly suggests that institutional capital with a long-term horizon is utilizing the current price correction as a strategic asset accumulation opportunity.
+
+The following table summarizes the conflicting signals in the market this week. Even amidst extreme fear and macroeconomic pressure, the flow of 'Smart Money' is noticeably differentiating itself.
+
+| Metric | Value/Status | Implication |
+|---|---|---|
+| **Fear & Greed Index** | 11 (Extreme Fear) | Indicates psychological capitulation among retail investors. |
+| **US 10-Year Treasury Yield** | 4.12% (Uptrend) | Continued macro downward pressure on risk assets. |
+| **IBIT (BlackRock ETF) Flows** | Consistent Net Inflow | Robust institutional demand utilizing price drops as buying opportunities. |
+| **Bitcoin Price** | $60k - $69k | Attempting to build a defensive support line at a -45% to -52% drawdown from ATH. |
+
+This report aims to conduct a deep-dive analysis of these dynamics, separating market noise from structural signals, to provide actionable insights for professional investors.
+
+## 2. Macroeconomic Landscape: The Widening Atlantic Moat
+
+The macroeconomic environment of February 2026 can be defined as a period where the policy synchronization among major central banks, maintained over the past decade, is fracturing. Specifically, the policy paths of the US Federal Reserve (Fed), the Bank of England (BoE), and the European Central Bank (ECB) have begun to diverge distinctly. This stems not merely from simple interest rate differentials, but from the varying structural inflation pressures and growth engines facing each economic bloc.
+
+### 2.1 US Treasury Yields and the Reality of 'Higher for Longer'
+
+As of February 13, 2026, the benchmark US 10-year Treasury yield closed higher at 4.12%. This yield increase is not a temporary technical rebound; it reflects the bond market's concern that inflationary pressures are becoming entrenched, fueled by the expanding US fiscal deficit and robust labor market data.
+
+Despite WTI crude oil prices sending a deflationary signal by trading at $62.69 per barrel (down 11.34% YoY), the fact that Treasury yields are not falling is highly anomalous. This implies that market participants are reacting more sensitively to fiscal policy risks and the burden of Treasury issuance volumes than to the decline in energy prices.
+
+This rise in the 'Risk-free Rate' triggers a crowding-out effect on risk assets. A Treasury yield exceeding 4% raises the hurdle rate required when allocating capital to long-duration assets such as digital assets or high-growth tech stocks. Furthermore, while the rise in mortgage rates linked to the 10-year yield is pressuring the housing market, the Housing Affordability Index showed slight improvement as wage growth outpaced housing price appreciation.
+
+### 2.2 'The Great Decoupling' and Corporate Treasury Strategies
+
+The most significant structural shift confirmed this week is the 'Great Decoupling' in treasury strategies between the US and the UK. Economists analyze that the Fed and the BoE are no longer moving with fiscal symmetry. For Chief Financial Officers (CFOs) and institutional investors, the Atlantic Ocean is no longer just a geographical boundary, but a 'Financial Moat' separating divergent liquidity environments.
+
+This policy divergence is forcing multinational corporations to discard uniform hedging strategies and establish layered treasury strategies tailored to the interest rate gaps and credit market conditions of each currency zone.
+
+For the crypto market, this is a double-edged sword. If the US maintains its high-interest-rate stance and the strong dollar persists, the price of Bitcoin priced in dollars will inevitably be suppressed. Conversely, if policy easing in the UK or the Eurozone causes instability in their respective currencies, Bitcoin could regain its appeal as a 'Non-sovereign Hedge' protecting against fiat currency devaluation. This harbors potential akin to the independent price action Bitcoin displayed during the US regional banking crisis in 2023.
+
+### 2.3 Commodities Divergence: Gold vs. Oil
+
+The commodities market is currently sending conflicting signals regarding the health of the global economy. The price divergence between these two assets epitomizes the confusion currently experienced by market participants.
+
+- **WTI Crude Oil:** Trading at $62.69 per barrel, down 11.34% YoY. This pre-prices a slowdown in global demand, particularly the delayed economic recovery in China and the potential for oversupply from non-OPEC producers. While falling oil prices typically lower inflation expectations and provide a rationale for liquidity provision, the current decline is heavily interpreted as a precursor to a 'Recession'.
+- **Gold:** In stark contrast, gold prices surged to $3,153.18 per ounce, staging a massive bull run with an approximate 21.94% YoY increase. This is the result of continuous gold purchases by central banks, fears of fiat currency debasement, and demand for hedging against geopolitical risks all converging.
+
+This divergence presents crucial implications for Bitcoin. Bitcoin simultaneously possesses the characteristics of a 'Risk-on' asset (correlated with oil/growth rates) similar to tech stocks, and a 'Digital Gold' (correlated with gold/hedging). Currently, Bitcoin is suffering the blow of liquidity contraction implied by falling oil prices, while remaining in a transitional state where it has not yet fully absorbed the safe-haven premium flowing into gold. This reaffirms that Bitcoin is the asset most sensitive to changes in the macro liquidity environment.
+
+## 3. Digital Asset Market Trends & Analysis
+
+### 3.1 Bitcoin: The Battle for the $60k Support
+
+Bitcoin is currently hovering in the 'Capitulation Zone', having experienced a drawdown of approximately -45% to -52% from its late-2025 all-time high of ~$126,000. Price action for the week of February 13 has been confined to a tight box range between $60,000 and $69,000, reflecting extreme hesitancy and a wait-and-see approach among market participants.
+
+- **Signs of Capitulation:** The 'Fear and Greed Index', which gauges market sentiment, plummeted to an all-time low of 5/100 early in the week before slightly rebounding to 11. Typically, such extreme fear readings are interpreted as strong buy signals from a contrarian investing perspective. In past cycles, single-digit index readings often marked long-term bottoms.
+- **Search Trends and Public Interest:** According to Google Trends data, search volume for 'Bitcoin' hit a 12-month high as the price threatened the $60,000 level. This demonstrates that public attention is concentrated during price crashes (Panic) rather than rallies (FOMO), suggesting market participants are currently reacting purely out of fear. Retail investors are exhibiting 'Meta-analyzing' tendencies—looking to confirm the exit signals of others rather than seeking entry points.
+
+Standard Chartered analyst Geoff Kendrick warned of a potential further decline to $50,000, citing macroeconomic headwinds and the absence of immediate upside catalysts. He analyzed that since current ETF holders purchased at an average price near $90,000, they are in a state of severe unrealized loss, which could act as additional selling pressure. However, this pessimistic outlook contrasts sharply with the accumulation activities of on-chain whales (discussed in Section 5), fueling the debate over the market's direction.
+
+### 3.2 The 'Kimchi Premium' Anomaly and the Korean Market
+
+One of the most prominent features in market structure this week is the price discrepancy phenomenon in the Korean market. The 'Kimchi Premium'—where Bitcoin trades at a higher price on Korean exchanges (like Upbit) compared to global rates—surged to 9.7% in early February, hitting a 10-month high.
+
+- **Mechanism Analysis:** The spike in the Kimchi Premium indicates an isolated overheating of buying pressure among Korean retail investors in an environment where arbitrage is restricted due to strict capital controls. This phenomenon occurred because selling pressure within the Korean market remained relatively weak despite the global downtrend, highlighting a strong 'Panic Buying' characteristic in a bear market.
+- **Current Status and Implications:** As of February 13, the Kimchi Premium is cooling down, differentiating significantly across assets: hovering in the 1.9% range for major assets like Bitcoin, while reaching up to the 8% range for highly volatile altcoins. The normalization of the premium indicates that the overheated sentiment of Korean retail investors is cooling, suggesting that a pillar supporting global prices in the short term may be weakening. Meanwhile, news of a stablecoin consortium formed by four major Korean financial institutions (Shinhan Bank, IBK, NH Nonghyup, and K-Bank) indicates the acceleration of traditional finance entering the crypto market.
+
+### 3.3 Ethereum and the Altcoin 'Supply Shock'
+
+Ethereum (ETH) continues to underperform Bitcoin, threatening the $2,000 mark and trading near $1,950. The decline in the ETH/BTC ratio proves that institutional capital flows are skewing towards Bitcoin. Outflows were also observed in spot Ethereum ETFs, and inflows into select products like BlackRock's ETHA were insufficient to offset this.
+
+A more severe issue is the 'Supply Shock' spanning the entire altcoin market. The current sluggishness in the altcoin sector is not simply due to a lack of demand, but stems from a structural oversupply. February 2026 is a period of concentrated, massive token unlocks, flooding the market with over $194 million worth of supply.
+
+- **Hyperliquid (HYPE):** An unlock of approximately $307 million proceeded. While its fundamentals as a leader in the perpetual DEX market are solid, the release of early investor allocations is pressuring the price.
+- **Berachain (BERA):** An unlock of approximately $29 million is scheduled. This represents a massive proportion that exceeds its average Daily Volume, raising concerns of severe liquidity absorption. The higher the unlock ratio compared to circulating supply and trading volume, the more fatal the price dilution effect.
+- **Starknet (STRK):** Approximately 127 million tokens are being unlocked, creating sustained selling pressure.
+
+This flood of supply is too burdensome for the market to digest in the current high-interest-rate (Risk-off) environment. The structure of high Fully Diluted Valuations (FDV) and Low Float among altcoin projects is acting as a primary factor hindering healthy market appreciation.
+
+## 4. Institutional Capital Flows: The ETF Divergence
+
+The narrative that "institutions are leaving the market" is a misconception not backed by data. A granular analysis of ETF flows for the week ending February 13 clearly reveals a 'Selective Rotation' of capital and a 'Flight to Quality'.
+
+### 4.1 US Spot Bitcoin ETFs: Concentration Toward the Strong
+
+Surface-level data may appear negative, recording net outflows of $272 million early in the week. However, unpacking the flows of individual products reveals that **BlackRock's iShares Bitcoin Trust (IBIT)** is charting a trajectory distinct from the broader market.
+
+- **The Decoupling Phenomenon:** Even as Fidelity (FBTC) and ARK (ARKB) recorded outflows of $148.7 million and $62.5 million respectively, indicating an overall market sell-off, IBIT recorded a net inflow of $60.03 million. Furthermore, a massive inflow of $232 million occurred on February 6 alone.
+- **Interpretation:** This signifies that a 'Winner-Takes-All' structure is strengthening within the crypto ETF market. Institutional investors are not abandoning Bitcoin; they are consolidating their portfolios into the product with the deepest liquidity and largest Assets Under Management (IBIT). Capital flight from other funds indicates the capitulation of short-term traders or relatively 'Weak Hands', whereas inflows via BlackRock are interpreted as buy-the-dip actions by long-term capital through model portfolios.
+
+### 4.2 Canadian ETF Market: Tectonic Shifts Among Issuers
+
+In the Canadian market, shifts in preference among ETF issuers are pronounced.
+
+- **Fidelity Canada (FBTC.CN):** Recorded robust net inflows of $301 million, expanding its market share.
+- **Purpose Bitcoin ETF (BTCC):** Despite the symbolism of being the world's first spot Bitcoin ETF, it suffered a massive outflow of $386 million.
+
+These flows suggest that investors are migrating from the incumbent products (Purpose) that enjoyed first-mover advantage, to issuers offering lower fees or possessing the stronger brand power of Traditional Finance (Fidelity). This foreshadows that 2026 will be a year of 'Portfolio Rebalancing and Consolidation' for institutional investors.
+
+## 5. On-Chain Forensics: Signals Hunting for the Bottom
+
+While price charts reflect the psychology of market participants, blockchain data (On-chain Data) transparently reveals the actual behavior of holders. The current on-chain structure strongly suggests the market is in a 'Deep Value Accumulation' phase, typically observed only near cyclical bottoms.
+
+### 5.1 Rolling MVRV Z-Score: Undervaluation Signal
+
+Bitcoin's **Rolling MVRV Z-Score** (Market Value to Realized Value ratio) currently stands at 0.42.
+
+- **Metric Explanation:** This indicator measures how overvalued or undervalued Bitcoin's current market cap is relative to the average price at which network participants last moved their coins (Realized Cap), expressed in standard deviations.
+- **Analysis:** Historically, zones where the Z-Score drops below 1.0 are termed 'Green Zones' and have been considered generational buying opportunities. The current reading of 0.42 means the market value is only marginally above the realized value. This indicates that most speculative froth has been eliminated, and investors selling at current price levels are locking in deep losses. Data proves we are at the tail end of a classic 'Capitulation' phase.
+
+### 5.2 NUPL (Net Unrealized Profit/Loss): The Supply Shock Paradox
+
+The NUPL indicator is currently hovering near the break-even point, oscillating between the 'Fear' and 'Hope' phases. Specifically, the percentage of the circulating supply held in profit has dropped to approximately 50%.
+
+- **Insights:** A profitable supply of only 50% means the incentive to sell has significantly diminished. Long-Term Holders (LTHs) tend to transition into a dormant state to weather the storm rather than crystallize losses. This sharply contracts Supply-side Liquidity. Such a 'downward supply shock' creates a spring-like condition where even a slight increase in demand can trigger a rapid price rebound.
+
+### 5.3 Whale Activity: The Giants Awaken
+
+In stark contrast to the panic among retail investors, massive capital is actively moving.
+
+- **Movement of Dormant Whales:** Bitcoin wallets from the 'Satoshi Era' (2012) that had been inactive for 13 years moved approximately $50 million worth of BTC this week. While the movement of such 'Old Coins' is often interpreted as a sell signal, it simultaneously suggests an ownership rotation from 'ancient' holders to modern institutions or new custody solutions.
+- **Accumulation at the Bottom:** According to reports from on-chain data analytics firms, whale wallets holding over 1,000 BTC actively increased their holdings when Bitcoin fell to the $60,000 level, effectively establishing a price 'Floor'.
+
+## 6. Deep Sector Analysis: DePIN, AI, and the Next Narrative
+
+Even as the price correction unfolds, the fundamental infrastructure of the crypto ecosystem is maturing. Messari's 'Crypto Theses for 2026' points to **DePIN (Decentralized Physical Infrastructure Networks)** and **DeAI (Decentralized AI)** as the core drivers of the next bull cycle.
+
+### 6.1 DePIN: From Hype to Revenue
+
+The DePIN sector has moved beyond a mere buzzword and entered a phase of generating substantial economic scale.
+
+- **Revenue-Centric Valuation:** Wireless connectivity networks like **Uplink** and distributed computing networks are now evaluated based on Revenue per Node and actual Utilization Rates, rather than rewards driven by token inflation.
+- **Market Size:** The market capitalization of the DePIN sector stands at approximately $11.1 billion. Despite the token price declines of 2025, fundamental metrics such as the number of registered devices and data consumption have grown consistently.
+- **Outlook:** 2026 is projected to be the inaugural year of 'Systemic Integration'. DePIN networks will begin absorbing enterprise demand from non-crypto companies, leveraging cheap computing power and connectivity as their weapons. This will activate a 'Flywheel' effect, narrowing the gap between token prices and actual utility.
+
+### 6.2 Token Unlock Risks and Investment Strategy
+
+The biggest risk in the altcoin sector is the aforementioned token unlocks. The release of allocations from large projects like Starknet and Hyperliquid forms structural 'Sell Walls'.
+
+- **Strategic Implications:** When investing in altcoins in Q1 2026, investors must meticulously examine the ratio of Fully Diluted Valuation (FDV) to Float. Tokens with low float and high FDV are exceptionally vulnerable to supply shocks. Therefore, a strategy of timing entries to avoid unlock schedules is necessary, regardless of how excellent the fundamentals may be.
+
+## 7. Regulatory & Security Issues: Growing Pains of Institutionalization
+
+### 7.1 Fed Chair Nomination and Policy Direction
+
+Speculation is intensifying that **Kevin Warsh** will be nominated as the next Chairman of the Federal Reserve.
+
+- **Market Impact:** Warsh is recognized as a 'Hard Money' advocate highly critical of the expansion of the Fed's balance sheet. The likelihood of his nomination foreshadows a more hawkish monetary policy in the long run, which is currently driving the rise in bond yields and the strength of the dollar. While this may act as a short-term headwind for asset classes reliant on liquidity expansion, in the long term, it could highlight Bitcoin's value proposition as 'Sound Money'.
+
+### 7.2 Stablecoin Legislation Negotiations
+
+The White House is engaged in discussions with banking and crypto industry leaders regarding stablecoin regulations. The core contentious issue is 'Yield'. The crux of the matter is whether non-bank stablecoin issuers can distribute returns generated from reserve management to token holders.
+
+- **Significance:** The **US Treasury** has set a negotiation deadline, emphasizing the need for legislation "before spring arrives." The establishment of a clear regulatory framework is a prerequisite for the massive influx of institutional capital; whether the Market Structure Bill passes will be a key variable for the market in the first half of the year.
+
+### 7.3 Security Threats and Anomaly Detection
+
+Cybersecurity firm Unit 42 detected a phishing campaign utilizing a file timestamped February 13, 2026. This demonstrates that state-sponsored cyber espionage targeting government agencies remains ongoing. Meanwhile, within the DeFi ecosystem, anomaly detection systems leveraging AI (such as XGBoost models) have become highly sophisticated, strengthening security infrastructure by achieving a 96% accuracy rate in identifying illicit wallets.
+
+## 8. Conclusion: Strategic Outlook
+
+The data from the second week of February 2026 indicates that the market is in a process of 'Transition' rather than 'Termination'.
+
+1. **Macro Headwinds are Real:** The 10-year Treasury yield at 4.12% is exerting a gravity-like downward pressure on all risk assets. Until yields stabilize or a Fed pivot signal emerges, explosive upside for Bitcoin may be constrained.
+2. **Bitcoin is the Safe House:** The concentration of capital into BlackRock's IBIT alongside outflows from other ETFs proves that Bitcoin is the most definitive 'Risk-off' asset within the crypto economy. The decoupling from altcoins will intensify.
+3. **Altcoin Pain is Structural:** Compounded by regulatory uncertainty and massive token unlocks (HYPE, STRK, BERA), the altcoin market will remain in a 'Sell the news' environment for the time being.
+4. **Buy Signals are Lit:** A Rolling MVRV Z-Score below 0.5 combined with extreme fear have historically been leading indicators preceding massive rallies. For investors with a multi-year horizon, the current $60k-$66k zone represents a mathematically highly advantageous entry point.
+
+**Recommendation:** Market participants should monitor the US 10-year Treasury yield and IBIT inflows as the two core dashboards for assessing market health. If Treasury yields fall below 4.0% and capital inflows into IBIT persist, it will serve as a definitive signal of the conclusion of this corrective phase.
+
+---
+
+### Disclaimer
+
+This report is for informational purposes only and does not constitute financial, investment, legal, or tax advice. The views expressed herein are those of the Nexus One Research Desk as of the date of publication and are subject to change without notice.
+
+Nexus One and its affiliates may hold long or short positions in the assets discussed (including but not limited to Bitcoin (BTC), Ethereum (ETH), and other digital assets) and may adjust these positions at any time. Digital asset investments are highly volatile and involve a significant risk of loss. Investors should conduct their own due diligence.
