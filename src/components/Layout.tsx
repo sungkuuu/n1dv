@@ -78,7 +78,9 @@ export function Layout({ children }: LayoutProps) {
 
           <div
             onClick={() => {
-              if (location.pathname === '/') {
+              if (brand.homeHref) {
+                window.location.href = brand.homeHref;
+              } else if (location.pathname === '/') {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               } else {
                 navigate('/');
@@ -86,12 +88,16 @@ export function Layout({ children }: LayoutProps) {
             }}
             className="flex items-center cursor-pointer bg-[#0a0a0a]"
           >
-            <span
-              className="font-brand text-white text-lg md:text-xl font-semibold leading-none"
-              style={{ letterSpacing: brand.tracking }}
-            >
-              {brand.wordmark}
-            </span>
+            {brand.logoSrc ? (
+              <img src={brand.logoSrc} alt={brand.wordmark} className="h-[18px] md:h-5 w-auto" />
+            ) : (
+              <span
+                className="font-brand text-white text-lg md:text-xl font-semibold leading-none"
+                style={{ letterSpacing: brand.tracking }}
+              >
+                {brand.wordmark}
+              </span>
+            )}
           </div>
 
           {/* Right: Group 1 (info) | Divider | Group 2 (user action) — unified across landing & dashboard */}
@@ -144,12 +150,16 @@ export function Layout({ children }: LayoutProps) {
         <div className="flex flex-col h-full">
           <div className="flex items-center justify-between px-6 py-6 border-b border-white/10">
             <div className="flex items-center bg-[#0a0a0a]">
-              <span
-                className="font-brand text-white text-xl font-semibold leading-none"
-                style={{ letterSpacing: brand.tracking }}
-              >
-                {brand.wordmark}
-              </span>
+              {brand.logoSrc ? (
+                <img src={brand.logoSrc} alt={brand.wordmark} className="h-[18px] w-auto" />
+              ) : (
+                <span
+                  className="font-brand text-white text-xl font-semibold leading-none"
+                  style={{ letterSpacing: brand.tracking }}
+                >
+                  {brand.wordmark}
+                </span>
+              )}
             </div>
             <button
               onClick={() => setIsMobileMenuOpen(false)}

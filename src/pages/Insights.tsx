@@ -1,15 +1,21 @@
-import { useState, useEffect, useRef } from 'react';
-import { X } from 'lucide-react';
+import { useState, useEffect, useRef, useMemo } from 'react';
+import { X, ChevronRight } from 'lucide-react';
 import { Layout } from '../components/Layout';
 import { reports, Report } from '../data/reports';
 import { reportBadgeClassName, reportBadgeLabel } from '../lib/reportBadge';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { resolveBrand } from '../lib/brand';
 
 export function Insights() {
   const [selectedReport, setSelectedReport] = useState<Report | null>(null);
   const location = useLocation();
   const navigate = useNavigate();
   const modalContentRef = useRef<HTMLDivElement>(null);
+
+  // The corporate surface lists reports as stacked rows (date · title · chevron,
+  // hairline dividers) to match nexusonecap.com's list style; fund/platform
+  // surfaces keep the card grid.
+  const isCorporateList = useMemo(() => resolveBrand().id === 'nexus', []);
 
   const handleReportClick = (report: Report) => {
     if (report.link) {
@@ -49,6 +55,32 @@ export function Insights() {
             <p className="text-gray-400 text-xl">Research & Analysis from Nexus One Research Desk</p>
           </div>
 
+          {isCorporateList ? (
+            <div className="max-w-5xl mx-auto border-t border-gray-800">
+              {reports.map((report) => (
+                <div
+                  key={report.id}
+                  id={report.id}
+                  onClick={() => handleReportClick(report)}
+                  className="group flex items-center gap-4 sm:gap-8 py-6 sm:py-7 border-b border-gray-800 cursor-pointer"
+                >
+                  <span className="text-sm text-gray-500 w-24 shrink-0 tabular-nums">{report.date}</span>
+                  <div className="flex-1 min-w-0">
+                    <div className="text-[11px] font-bold uppercase tracking-wider text-gray-500 mb-1.5">
+                      {reportBadgeLabel(report)}
+                    </div>
+                    <h3 className="text-lg sm:text-2xl font-semibold text-white group-hover:text-gray-300 leading-snug transition-colors">
+                      {report.title}
+                    </h3>
+                  </div>
+                  <ChevronRight
+                    size={22}
+                    className="text-gray-500 shrink-0 transition-transform group-hover:translate-x-1"
+                  />
+                </div>
+              ))}
+            </div>
+          ) : (
           <div className="grid lg:grid-cols-3 gap-8">
             {reports.map((report) => (
               <div
@@ -70,6 +102,7 @@ export function Insights() {
               </div>
             ))}
           </div>
+          )}
         </div>
       </section>
 

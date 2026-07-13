@@ -39,6 +39,10 @@ export interface Brand {
    * index.css. Everything else stays the default dark.
    */
   theme: 'dark' | 'light';
+  /** Header logo image; rendered instead of the text wordmark when set. */
+  logoSrc?: string;
+  /** External URL the header logo links to (e.g. the corporate home). */
+  homeHref?: string;
 }
 
 const FULL_NAV: NavKey[] = ['letter', 'vaults', 'performance', 'insights', 'radar', 'dashboard'];
@@ -76,6 +80,10 @@ const BRANDS: Record<BrandId, Brand> = {
     landing: '/insights',
     // Match the corporate site's light/minimal look (Poppins, white, #333).
     theme: 'light',
+    // Use the real corporate wordmark; the logo links back to the company home
+    // so this surface reads as a section of nexusonecap.com, not a separate app.
+    logoSrc: '/nexus-one-wordmark-dark.png',
+    homeHref: 'https://www.nexusonecap.com',
   },
 };
 
