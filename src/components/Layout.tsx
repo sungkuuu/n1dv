@@ -78,7 +78,7 @@ export function Layout({ children }: LayoutProps) {
     <div className={`min-h-screen bg-[#0a0a0a] text-gray-300 font-sans selection:bg-white/20 selection:text-white ${isDashboard ? 'flex flex-col' : ''}`}>
       {/* Navbar */}
       <nav className="border-b border-white/10 sticky top-0 bg-[#0a0a0a]/90 backdrop-blur-md z-50">
-        <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+        <div className={`${brand.id === 'nexus' ? 'max-w-[1760px]' : 'max-w-7xl'} mx-auto px-6 py-6 flex items-center justify-between`}>
 
           <div
             onClick={() => {
@@ -216,35 +216,32 @@ export function Layout({ children }: LayoutProps) {
       <VaultAccessDrawer isOpen={isVaultDrawerOpen} onClose={() => setIsVaultDrawerOpen(false)} />
       <ReferralDrawer isOpen={isReferralDrawerOpen} onClose={() => setIsReferralDrawerOpen(false)} />
 
-      {/* Corporate surface: match the nexusonecap.com footer (black bar, white
-          wordmark, address, copyright) — no partner pitch. Inline colors so the
-          theme-light utility overrides don't remap this deliberately-dark block. */}
+      {/* Corporate surface: match the nexusonecap.com footer exactly — pure
+          black, wide container, logo/nav row + address/copyright row, no
+          divider. Inline colors so the theme-light overrides don't remap it. */}
       {!isDashboard && brand.id === 'nexus' && (
-        <footer style={{ backgroundColor: '#0d0d0d' }} className="py-12">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="flex flex-wrap items-center justify-between gap-6">
+        <footer style={{ backgroundColor: '#000000' }} className="py-8">
+          <div className="max-w-[1760px] mx-auto px-6">
+            <div className="flex flex-wrap items-center justify-between gap-4">
               <img src="/nexus-one-wordmark.png" alt="NEXUS ONE" className="h-4 w-auto" />
               <div className="flex items-center gap-6">
                 <button
                   onClick={() => handleNavigate('/insights')}
-                  className="text-sm transition-colors"
+                  className="text-sm transition-colors hover:brightness-150"
                   style={{ color: '#9ca3af' }}
                 >
                   Insights
                 </button>
                 <button
                   onClick={() => handleNavigate('/letter')}
-                  className="text-sm transition-colors"
+                  className="text-sm transition-colors hover:brightness-150"
                   style={{ color: '#9ca3af' }}
                 >
                   Letter
                 </button>
               </div>
             </div>
-            <div
-              className="mt-8 pt-6 flex flex-wrap items-center justify-between gap-4"
-              style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}
-            >
+            <div className="mt-5 flex flex-wrap items-center justify-between gap-2">
               <p className="text-xs" style={{ color: '#6b7280' }}>
                 11F, Horim artcenter, 317 dosandae-ro, Gangnam-gu, Seoul, Korea(06021)
               </p>

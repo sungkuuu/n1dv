@@ -60,13 +60,15 @@ const BRANDS: Record<BrandId, Brand> = {
   },
   n1dv: {
     id: 'n1dv',
-    wordmark: 'N1DV',
+    wordmark: 'NEXUS ONE',
     tracking: '0.26em',
     domain: 'n1dv.io',
     homeTitle: 'N1DV | Deep Value Digital Asset Fund',
     nav: FULL_NAV,
     showUserActions: true,
     theme: 'dark',
+    // Fund site carries the parent-company mark (white, for the dark theme).
+    logoSrc: '/nexus-one-wordmark.png',
   },
   nexus: {
     id: 'nexus',
