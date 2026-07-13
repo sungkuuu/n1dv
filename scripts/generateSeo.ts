@@ -25,7 +25,7 @@ function pageHtml(title: string, description: string, url: string, image: string
   const t = esc(title);
   const d = esc(description);
   return template
-    .replace(/<title>[^<]*<\/title>/, `<title>${t} | N1DV</title>`)
+    .replace(/<title>[^<]*<\/title>/, `<title>${t} | Nexus One Research</title>`)
     .replace(/(<meta name="description" content=")[^"]*(")/, `$1${d}$2`)
     .replace(/(<meta property="og:type" content=")[^"]*(")/, '$1article$2')
     .replace(/(<meta property="og:title" content=")[^"]*(")/, `$1${t}$2`)
