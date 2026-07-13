@@ -12,7 +12,7 @@ import { fileURLToPath } from 'node:url';
 import { reports } from '../src/data/reports';
 import { generateOgImages } from './generateOgImages';
 
-const SITE = 'https://quadrix.finance';
+const SITE = 'https://n1dv.io';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const dist = join(root, 'dist');
 
