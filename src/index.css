@@ -202,6 +202,40 @@
     --tw-prose-invert-td-borders: #e6e6e6;
   }
 
+  /* --- achromatic: the corporate surface uses no accent hues -------------- */
+  html.theme-light .text-emerald-400,
+  html.theme-light .text-emerald-500,
+  html.theme-light .text-blue-400,
+  html.theme-light .text-blue-500,
+  html.theme-light .text-indigo-300,
+  html.theme-light .text-indigo-400,
+  html.theme-light .text-sky-400,
+  html.theme-light .text-violet-400 { color: #555555; }
+  html.theme-light .hover\:text-emerald-400:hover,
+  html.theme-light .hover\:text-blue-400:hover,
+  html.theme-light .hover\:text-indigo-300:hover { color: #111111; }
+  html.theme-light .border-emerald-500,
+  html.theme-light .border-blue-500,
+  html.theme-light .border-indigo-500 { border-color: #bbbbbb; }
+  html.theme-light .border-emerald-500\/30 { border-color: #d9d9d9; }
+  html.theme-light .bg-emerald-500\/5,
+  html.theme-light .bg-emerald-500\/15 { background-color: rgba(0, 0, 0, 0.02); }
+  html.theme-light .focus\:border-emerald-500:focus { border-color: #666666; }
+  html.theme-light .prose a { color: #111111; }
+
+  /* newsletter card + report tables on the light surface */
+  html.theme-light .from-slate-900\/60 {
+    --tw-gradient-from: #f6f6f6;
+    --tw-gradient-to: rgba(246, 246, 246, 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  }
+  html.theme-light .to-slate-900\/20 { --tw-gradient-to: #fcfcfc; }
+  html.theme-light .bg-black\/40 { background-color: rgba(0, 0, 0, 0.03); }
+  html.theme-light .bg-slate-900\/30 { background-color: #fcfcfc; }
+  html.theme-light .border-slate-700,
+  html.theme-light .border-slate-600 { border-color: #d9d9d9; }
+  html.theme-light .placeholder\:text-slate-600::placeholder { color: #9ca3af; }
+
   /* --- misc -------------------------------------------------------------- */
   html.theme-light .bg-grid-unified {
     background-image: linear-gradient(#000000 1px, transparent 1px),

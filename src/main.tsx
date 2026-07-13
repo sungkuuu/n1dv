@@ -13,9 +13,15 @@ import './index.css';
 // Light corporate theme (nexus surface): set once at bootstrap so it also
 // covers lazy-route fallbacks and portaled modals — the brand never changes
 // within a session (it's derived from the hostname).
-if (resolveBrand().theme === 'light') {
+const brand = resolveBrand();
+if (brand.theme === 'light') {
   document.documentElement.classList.add('theme-light');
 }
+// Per-brand favicon URL: busts the favicon cache (browsers cling to stale
+// icons across deploys) and lets each domain get its own icon later.
+document
+  .querySelector('link[rel="icon"]')
+  ?.setAttribute('href', `/favicon.svg?b=${brand.id}`);
 
 const queryClient = new QueryClient();
 

@@ -31,14 +31,22 @@ export function Layout({ children }: LayoutProps) {
   // hostname (n1dv.io / quadrix.finance / nexusonecap.com). Footer stays Nexus One.
   const brand = useMemo(() => resolveBrand(), []);
 
+  const isDashboard = location.pathname === '/dashboard';
+  // Report detail pages: /insights/{slug}, /insight/{slug} (legacy), /research/{slug}
+  const isReportPage = /^\/(insights|insight|research)\/./.test(location.pathname);
+
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [location.pathname]);
 
-  // Only override the home tab title; report pages keep their pre-rendered SEO titles.
+  // Home always gets the brand title. On the corporate surface every non-report
+  // route does too (it lands on /insights, so the base N1DV title would leak
+  // through). Report pages keep their pre-rendered SEO titles.
   useEffect(() => {
-    if (location.pathname === '/') document.title = brand.homeTitle;
-  }, [brand, location.pathname]);
+    if (location.pathname === '/' || (brand.id === 'nexus' && !isReportPage)) {
+      document.title = brand.homeTitle;
+    }
+  }, [brand, location.pathname, isReportPage]);
 
   // Research-only surfaces (nexusonecap Insight) land on /insights, not the vault
   // home. Preserve search so the ?brand= dev override survives the redirect (prod
@@ -65,10 +73,6 @@ export function Layout({ children }: LayoutProps) {
     setIsMobileMenuOpen(false);
     navigate(path);
   };
-
-  const isDashboard = location.pathname === '/dashboard';
-  // Report detail pages: /insights/{slug}, /insight/{slug} (legacy), /research/{slug}
-  const isReportPage = /^\/(insights|insight|research)\/./.test(location.pathname);
 
   return (
     <div className={`min-h-screen bg-[#0a0a0a] text-gray-300 font-sans selection:bg-white/20 selection:text-white ${isDashboard ? 'flex flex-col' : ''}`}>
@@ -212,7 +216,47 @@ export function Layout({ children }: LayoutProps) {
       <VaultAccessDrawer isOpen={isVaultDrawerOpen} onClose={() => setIsVaultDrawerOpen(false)} />
       <ReferralDrawer isOpen={isReferralDrawerOpen} onClose={() => setIsReferralDrawerOpen(false)} />
 
-      {!isDashboard && (
+      {/* Corporate surface: match the nexusonecap.com footer (black bar, white
+          wordmark, address, copyright) — no partner pitch. Inline colors so the
+          theme-light utility overrides don't remap this deliberately-dark block. */}
+      {!isDashboard && brand.id === 'nexus' && (
+        <footer style={{ backgroundColor: '#0d0d0d' }} className="py-12">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="flex flex-wrap items-center justify-between gap-6">
+              <img src="/nexus-one-wordmark.png" alt="NEXUS ONE" className="h-4 w-auto" />
+              <div className="flex items-center gap-6">
+                <button
+                  onClick={() => handleNavigate('/insights')}
+                  className="text-sm transition-colors"
+                  style={{ color: '#9ca3af' }}
+                >
+                  Insights
+                </button>
+                <button
+                  onClick={() => handleNavigate('/letter')}
+                  className="text-sm transition-colors"
+                  style={{ color: '#9ca3af' }}
+                >
+                  Letter
+                </button>
+              </div>
+            </div>
+            <div
+              className="mt-8 pt-6 flex flex-wrap items-center justify-between gap-4"
+              style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}
+            >
+              <p className="text-xs" style={{ color: '#6b7280' }}>
+                11F, Horim artcenter, 317 dosandae-ro, Gangnam-gu, Seoul, Korea(06021)
+              </p>
+              <p className="text-xs" style={{ color: '#6b7280' }}>
+                © 2026 Nexus One Capital. All rights reserved.
+              </p>
+            </div>
+          </div>
+        </footer>
+      )}
+
+      {!isDashboard && brand.id !== 'nexus' && (
       <footer className="py-16 bg-gradient-to-b from-[#0a0a0a] to-[#111111] border-t border-white/10">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <p className="font-brand text-xs text-gray-500 mb-6 uppercase">
@@ -242,11 +286,7 @@ export function Layout({ children }: LayoutProps) {
           </p>
 
           <div className="flex flex-col items-center gap-3">
-            <img
-              src={brand.theme === 'light' ? '/nexus-one-wordmark-dark.png' : '/nexus-one-wordmark.png'}
-              alt="Nexus One"
-              className="h-4 w-auto opacity-40"
-            />
+            <img src="/nexus-one-wordmark.png" alt="Nexus One" className="h-4 w-auto opacity-40" />
             <p className="text-xs text-gray-700 font-medium">© 2026 Nexus One Capital</p>
           </div>
         </div>
