@@ -51,6 +51,12 @@ means one of the two revised paths below, not importing source.
   cuts the agency-billing dependency.
 - Confirms the plan is a paid Site tier → **Export Code is available** (rebuild input #1 below).
 
+**Post-migration cost:** on our **Cloudflare Pages** deployment, a static/small site like
+this hosts on the **free tier (~$0/yr)**. So Path 2 doesn't just remove the agency-billing
+dependency — it takes hosting from **$276/yr → ~$0** (only domain renewal remains). Paying
+recurring hosting is normal; paying it *through the agency's account/card* is the part we're
+ending.
+
 **Timing options:** (a) sprint to migrate before **Jul 29** and cancel; or (b) let it renew
 once (or have ADALL not renew) and migrate at a calmer pace within the year. Decide once we
 have the Export ZIP and can gauge the rebuild size.
