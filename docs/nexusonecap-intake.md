@@ -71,11 +71,30 @@ The real choice is **keep Webflow** or **rebuild**.
   "fold into `nexusonecap.com/insight`" goal. Cons: upfront rebuild effort; need to capture
   the current copy/layout from the live Webflow site first.
 
-**Decision:** _TBD._ Recommendation — if the company site is genuinely small and rarely
-edited, **Path 2** (rebuild) gives the cleanest end state and drops a vendor. If the
-marketing team wants to keep editing visually in Webflow, **Path 1** (account transfer).
-Either way, **first secure control**: Webflow account access (Path 1) or a full capture of
-the live site's pages/copy/assets (Path 2).
+**Decision (working, 2026-07-14): Path 2 — rebuild, drop Webflow.** Reasoning: the site is
+small and static, we already run a Vite/React app on Cloudflare, and Path 1 (account
+transfer) would keep an ongoing Webflow bill + a second system and can't fold Insight into
+one domain. Also, we don't want the agency's whole Webflow **workspace** (it holds their
+other clients' sites); a single-site transfer is possible but buys us little vs. rebuilding.
+
+### We are NOT rebuilding blind — "no Git repo" ≠ "no exportable code"
+
+Webflow can hand us the finished site as real files. The rebuild inputs:
+
+1. **Webflow "Export Code" ZIP** (Designer → Export Code) — the built, static
+   **HTML + CSS + JS + all image assets**, exactly as published. This is the primary
+   source of truth; ask the agency (or do it ourselves with Designer access) to produce it.
+2. **CMS collections → CSV export** (Webflow CMS lets you export each collection). Covers
+   any dynamic content (e.g. blog/insight entries) that isn't in the static HTML.
+3. **Fonts** — OFL (per agency), so we self-host them by name; no license blocker.
+4. **Live site as reference** — `nexusonecap.com` is public; capture copy/layout/colors
+   directly (browser "Save Page As", or the Wayback Machine as backup). NOTE: this
+   sandbox's egress policy blocks `nexusonecap.com`, so live capture must be done from an
+   open network (a normal browser), not from here.
+
+With the Export ZIP in hand, Path 2 is mostly mechanical: port the exported static pages
+into our app as routes (or re-author as React components matching the exported markup/CSS),
+wire the nav/footer to our brand system, and serve Insight at `nexusonecap.com/insight`.
 
 ## DNS / cutover notes
 
@@ -97,13 +116,19 @@ the live site's pages/copy/assets (Path 2).
 - All returns presented as **Simulated / Seed Stage** wherever research is syndicated.
 - Confirm font & image licenses transfer to us (item 5) before republishing.
 
-## Next actions (updated — Webflow, no repo)
+## Next actions (Path 2 — rebuild)
 
-1. **Decide Path 1 vs Path 2** (account transfer vs rebuild) — note the decision + reason here.
-2. Ask the agency for what actually enables in-house maintenance:
-   - Path 1: **transfer the Webflow project/workspace** to us + move billing; hand over
-     Gabia DNS access.
-   - Path 2: a **full capture of the live site** — all page copy, section layout, and image
-     assets (or Webflow's static HTML/CSS/JS export) so we can re-author in our app.
-3. Verify the live DNS (`198.202.211.1`) and whether `www` resolves, before planning cutover.
-4. Confirm the OFL fonts in use (names) so we can self-host them if we rebuild (Path 2).
+1. **Ask the agency for two artifacts** (both are one-click in Webflow, no Git needed):
+   - **Export Code ZIP** — Webflow Designer → Export Code → the static HTML/CSS/JS + assets.
+   - **CMS CSV export** — one CSV per CMS collection, for any dynamic content.
+   (Do NOT ask for their Webflow account/workspace — only these exports.)
+2. Confirm the **OFL font names** in use so we can self-host them.
+3. From an open network (not this sandbox), capture the live `nexusonecap.com` as a visual
+   reference (pages, sections, colors) in case the export needs cleanup.
+4. Port the export into this app as routes/components; wire nav + footer to our brand system;
+   serve Insight at `nexusonecap.com/insight`.
+5. Verify current DNS (`198.202.211.1`, and whether `www` resolves), then plan the cutover:
+   point apex + `www` at Cloudflare Pages, keep **MX** untouched.
+
+> **Blocked from this sandbox:** egress policy denies `nexusonecap.com`, so the live-site
+> capture (step 3) and any DNS lookups must be done from an open network / normal browser.
