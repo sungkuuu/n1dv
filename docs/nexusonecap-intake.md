@@ -40,6 +40,21 @@ available*. There is no portable source, so that fold now means **rebuild**, not
 fully Webflow-hosted, Webflow-CMS site. Bringing maintenance "in-house" therefore
 means one of the two revised paths below, not importing source.
 
+### Vendor, cost & renewal deadline (from Webflow invoice, seen 2026-07-14)
+
+- **Agency = ADALL Inc.** (`adall.co.kr`, contact Kim Jiwan / 김지완). The Webflow
+  subscription is billed to **ADALL's own workspace + card** — so while the site stays on
+  Webflow, hosting *and* billing sit with the agency, not us.
+- **Plan:** Webflow **CMS Hosting, $276 / year**, Site ID `nexus-one`.
+- **Renewal: 2026-07-29** (term Jul 29 2025 → Jul 29 2026). That's a natural forcing
+  function — migrating off Webflow and cancelling before renewal saves the next $276/yr and
+  cuts the agency-billing dependency.
+- Confirms the plan is a paid Site tier → **Export Code is available** (rebuild input #1 below).
+
+**Timing options:** (a) sprint to migrate before **Jul 29** and cancel; or (b) let it renew
+once (or have ADALL not renew) and migrate at a calmer pace within the year. Decide once we
+have the Export ZIP and can gauge the rebuild size.
+
 > **DNS sanity check:** Webflow's own published hosting A records are typically
 > `75.2.70.75` and `99.83.190.102` (two records) plus a `www` CNAME to
 > `proxy-ssl.webflow.com`. A single custom A record at `198.202.211.1` doesn't match
@@ -117,6 +132,9 @@ wire the nav/footer to our brand system, and serve Insight at `nexusonecap.com/i
 - Confirm font & image licenses transfer to us (item 5) before republishing.
 
 ## Next actions (Path 2 — rebuild)
+
+> ⏰ **Webflow renews 2026-07-29 (~2 weeks out).** Get the Export ZIP now so we can decide
+> sprint-before-renewal vs. let-it-ride-one-year with real information.
 
 1. **Ask the agency for two artifacts** (both are one-click in Webflow, no Git needed):
    - **Export Code ZIP** — Webflow Designer → Export Code → the static HTML/CSS/JS + assets.
