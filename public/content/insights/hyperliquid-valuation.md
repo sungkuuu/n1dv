@@ -5,13 +5,17 @@ Feb 7, 2026
 
 ---
 
+## TL;DR
+
+• **The Efficiency Paradox:** While trading at ~100x PSR, Hyperliquid operates at a **99% Net Income Margin**, making revenue multiples misleading compared to Coinbase's 34% margin.
+
+• **Relative Valuation:** On a Price-to-Earnings (PER) basis, HYPE trades at **~30x**, effectively at parity with Coinbase (~36x) despite growing 7x faster.
+
+• **Capital Efficiency:** Hyperliquid holds the highest Earnings Efficiency Ratio (EER) in the sector, generating **$1.1B in pure profit** without the inflationary "security tax" that plagues competitors like Solana.
+
+---
+
 *Financial Layer 1 Infrastructure Analysis & Fair Value Assessment*
-
-## Key Takeaways
-
-- **The Efficiency Paradox:** While trading at ~100x PSR, Hyperliquid operates at a **99% Net Income Margin**, making revenue multiples misleading compared to Coinbase's 34% margin.
-- **Relative Valuation:** On a Price-to-Earnings (PER) basis, HYPE trades at **~30x**, effectively at parity with Coinbase (~36x) despite growing 7x faster.
-- **Capital Efficiency:** Hyperliquid holds the highest Earnings Efficiency Ratio (EER) in the sector, generating **$1.1B in pure profit** without the inflationary "security tax" that plagues competitors like Solana.
 
 ## 1. Executive Summary: The Efficiency Paradox
 

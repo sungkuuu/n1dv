@@ -1,14 +1,20 @@
 # A Structural Shift in the Crypto Regulatory Landscape: Project Classification Analysis Based on the Clarity Act's Legislative Structure and Jurisdictional Integration
 
-**TL;DR: The Clarity Act's Three Pillars and Market Restructuring**
+---
 
-* **Legislative status:** House passed July 2025; Senate Banking Committee approved May 14, 2026 (15–9, including two Democratic yes votes); full Senate vote pending.
-* **Not threshold-based:** Jurisdiction turns on **rebuttable presumption + certification**, **qualitative coordinated control**, and **Regulation Crypto compliance costs**—not simple 20%/49% ownership tests.
-* **CFTC path:** Issuers certify end of managerial efforts + absence of unilateral control; SEC has 60 days to object; otherwise token becomes a **digital commodity**.
-* **Early-stage SEC path:** **Regulation Crypto** — up to $50M/year ($200M lifetime), continuous disclosure, 12-month insider resale limits (Sec. 104).
-* **Stablecoins (Sec. 404):** Passive deposit-like yield prohibited; **activity-based rewards** (payments, DeFi LP, governance) allowed (Tillis–Alsobrooks compromise).
-* **Winners:** L1s passing certification (or ETF safe harbor if retained), Section 105 codification candidates (XRP), DeFi under Sec. 601 + activity rewards.
-* **Losers:** Centralized teams under Regulation Crypto caps; CeFi passive stablecoin yield models.
+## TL;DR
+
+• **Legislative status:** House passed July 2025; Senate Banking Committee approved May 14, 2026 (15–9, including two Democratic yes votes); full Senate vote pending.
+
+• **Not threshold-based:** Jurisdiction turns on **rebuttable presumption + certification**, **qualitative coordinated control**, and **Regulation Crypto compliance costs**—not simple 20%/49% ownership tests.
+
+• **CFTC path:** Issuers certify end of managerial efforts + absence of unilateral control; SEC has 60 days to object; otherwise token becomes a **digital commodity**.
+
+• **Early-stage SEC path:** **Regulation Crypto** — up to $50M/year ($200M lifetime), continuous disclosure, 12-month insider resale limits (Sec. 104).
+
+• **Stablecoins (Sec. 404):** Passive deposit-like yield prohibited; **activity-based rewards** (payments, DeFi LP, governance) allowed (Tillis–Alsobrooks compromise).
+
+• **Winners vs. losers:** Winners — L1s passing certification (or ETF safe harbor if retained), Section 105 codification candidates (XRP), DeFi under Sec. 601 + activity rewards. Losers — centralized teams under Regulation Crypto caps; CeFi passive stablecoin yield models.
 
 ---
 

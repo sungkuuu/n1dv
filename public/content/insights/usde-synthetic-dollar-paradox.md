@@ -5,13 +5,17 @@ Feb 9, 2026
 
 ---
 
+## TL;DR
+
+• **Venue-Specific Failure:** The depegging to $0.65 was a microstructure failure within Binance's "Unified Account" risk engine, not a protocol insolvency. Ethena processed over $2B in redemptions at par ($1.00) during the crisis.
+
+• **The "Oracle Island" Effect:** While Binance's internal book collapsed, DeFi protocols using Chainlink aggregators maintained the peg at ~$0.99, proving the failure was isolated to a single venue.
+
+• **Causality Reversal:** Forensic timeline analysis confirms that macro shocks (Trump Tariffs) and BTC liquidation cascades *preceded* the USDe depeg. USDe was the victim of liquidity voids, not the cause of the crash.
+
+---
+
 *Logical and Forensic Verification of the "Structural Failure" Discourse*
-
-## Key Takeaways
-
-- **Venue-Specific Failure:** The depegging to $0.65 was a microstructure failure within Binance's "Unified Account" risk engine, not a protocol insolvency. Ethena processed over $2B in redemptions at par ($1.00) during the crisis.
-- **The "Oracle Island" Effect:** While Binance's internal book collapsed, DeFi protocols using Chainlink aggregators maintained the peg at ~$0.99, proving the failure was isolated to a single venue.
-- **Causality Reversal:** Forensic timeline analysis confirms that macro shocks (Trump Tariffs) and BTC liquidation cascades *preceded* the USDe depeg. USDe was the victim of liquidity voids, not the cause of the crash.
 
 ## 1. Introduction: Deconstructing the "Structural Failure" Discourse
 

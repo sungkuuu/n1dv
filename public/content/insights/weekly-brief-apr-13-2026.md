@@ -1,6 +1,24 @@
 # April 13, 2026 Global Macroeconomic and Digital Asset Market In-Depth Analysis Report
 **By Nexus One Research Desk • Apr 13, 2026**
 
+---
+
+## TL;DR
+
+• **Two narratives in one week:** The April 8 two-week US-Iran ceasefire sparked a risk-on rally (BTC +6% to $72,350), then the April 12 collapse of the Islamabad talks and the April 13 US Navy blockade of Iranian ports reignited risk-off — Brent back above $100 (cumulative +40% since the war began) and the VIX signaling a return toward 30.
+
+• **Inflation re-accelerating:** March CPI rose +0.9% MoM (+3.3% YoY) with energy +10.9%, and the US effective tariff rate hit 11.0% — the highest since 1943 — shrinking the market's expected rate-cut path.
+
+• **Strongest ETF week since January:** Spot BTC ETFs took in $1.9B net (IBIT alone +$871M), flipping YTD flows positive at +$2.3B, while ETH ETFs bled -$130M — institutions bought the correction.
+
+• **Smart money vs. extreme fear:** Whales accumulated 270K BTC ($23B+) in 30 days — the largest since 2013 — exchange reserves hit a 7-year low of 2.21M BTC, and Fear & Greed at 8–9/100 marks a historical bottom zone; an accumulation phase akin to March 2020 / November 2022.
+
+• **Idiosyncratic risks bit hard:** The Drift Protocol hack ($285M, suspected DPRK link) hit Solana's ecosystem, and TAO fell -22% in a day on Covenant AI's $10.2M dump — exposing single-operator dependency risk.
+
+• **The fork ahead:** Easing tensions open a path back to BTC $75–80K; a persistent or escalating blockade risks a retest of $65K or below — IBIT's weekly inflow cadence is the swing factor.
+
+---
+
 ## 1. Global Macroeconomic Trends
 **Key Indicators (Weekly Change)**
 * **10-Year U.S. Treasury Yield:** 4.31% (Approx. +7bp)

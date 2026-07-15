@@ -5,13 +5,17 @@ Feb 9, 2026
 
 ---
 
+## TL;DR
+
+• **The Revenue Collapse:** Post-Dencun, L2 Rent Revenue collapsed by 99.7% ($544M → $1.8M), effectively ending the "Ultra Sound Money" narrative.
+
+• **Value Migration:** Value shifted from L1 Validators to L2 Sequencers. Base operates at a ~98.3% margin, capturing profits that formerly accrued to ETH.
+
+• **The Strategic Trade-off:** Ethereum sacrificed over $100M in guaranteed revenue to subsidize L2s, successfully retaining 85% dominance ($99B TVL) against monolithic competitors.
+
+---
+
 *Structural Decoupling of L1 Valuation and Ecosystem Expansion*
-
-## Key Takeaways
-
-- **The Revenue Collapse:** Post-Dencun, L2 Rent Revenue collapsed by 99.7% ($544M → $1.8M), effectively ending the "Ultra Sound Money" narrative.
-- **Value Migration:** Value shifted from L1 Validators to L2 Sequencers. Base operates at a ~98.3% margin, capturing profits that formerly accrued to ETH.
-- **The Strategic Trade-off:** Ethereum sacrificed over $100M in guaranteed revenue to subsidize L2s, successfully retaining 85% dominance ($99B TVL) against monolithic competitors.
 
 ## 1. Introduction: The Dencun Hard Fork and the Great Pivot of Ethereum's Economic Model
 

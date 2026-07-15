@@ -5,6 +5,22 @@ By Nexus One Research Desk • Mar 30, 2026 • 20 min read
 
 ---
 
+## TL;DR
+
+• **Risk-off maxed out:** The escalating Israel-Iran conflict drove WTI to $99.64 (threatening $100), gold above $4,500, and the VIX past 31 — extreme stagflation fear in traditional markets that is paradoxically pushing Wall Street capital toward spot Bitcoin ETFs.
+
+• **BTC in the accumulation zone:** BTC at $66,039 with dominance at a multi-year high of 58.43%; MVRV Z-score of 0.43 signals no overheating, while ETH and SOL face added pressure from negative funding rates.
+
+• **ETF flows mixed, floor intact:** Spot ETFs shifted from early-March net inflows to short-term profit-taking on the macro shock, but the structural pipeline through BlackRock and Fidelity still supports the market's bottom.
+
+• **Cash flow is the new valuation:** Uniswap's 17% fee burn (over $334M/yr of structural burn pressure) and Solana's $117.7B monthly DEX volume — with on-chain perps crossing $1T monthly volume — mark the shift to revenue- and capital-efficiency-based valuation.
+
+• **RWA integration completing:** Tokenized RWAs total $26.74B ($12.2B in US Treasuries); the profiled vault delivers 4.12% net APY with 100% instant liquidity — systemic integration with TradFi.
+
+• **April playbook:** Hedge the SUI (Apr 1) and Limitless (~65% cliff, Apr 22) unlock risks and compress portfolios into infrastructure and RWA assets with verifiable on-chain revenue.
+
+---
+
 ## Summary of Core Macroeconomic and Cryptocurrency Indicators
 
 ### US Treasury Yields (2Y, 10Y, 30Y)

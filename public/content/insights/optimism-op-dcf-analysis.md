@@ -7,6 +7,22 @@ Feb 23, 2026
 
 ---
 
+## TL;DR
+
+• **The event:** On February 18, 2026, Coinbase announced it would separate Base from the OP Stack. Framed as technological independence, it was in substance a calculated financial "Exit" — severing the future free cash flow the Optimism Collective was entitled to and internalizing 100% of it.
+
+• **The real trigger:** With post-Fusaka blob fees converging to near zero, Base's sequencer margin reached 90–95%, tipping the Rollup Charter's "Greater of" clause from 2.5% of gross revenue to 15% of net profit (≈13.5% of gross) — a 5.4x royalty spike Coinbase exited to avoid.
+
+• **The damage, quantified:** Our DCF model estimates Optimism permanently lost ~$273M in present value ($144.16M explicit period 2026–2035 + $129.1M terminal value). The market priced it almost exactly: OP crashed 28% to $0.12 (-97% from ATH), shrinking circulating market cap to $269–270M.
+
+• **Buyback neutered:** The OP-0017 program (50% of Superchain revenue to OP buybacks, passed with 84.4% approval) depended on Base for 94% of daily ETH fee contributions — with Base gone, it likely falls below its $200K monthly minimum threshold and stalls indefinitely.
+
+• **Cheap exit option:** The 118M OP grant (once ~$175M) had collapsed to ~$15–38M in value, was vesting-locked and capped at 9% of votable supply; the MIT license imposed zero legal or technical cost to fork. Writing it off against $273M of avoided royalties was mathematically trivial.
+
+• **Structural risk:** The precedent is now set. Unichain (Uniswap), Ink (Kraken), and other Superchain members can run the same playbook the moment the 15% share exceeds the cost of maintaining their own stack — Optimism has no binding economic moat to prevent it.
+
+---
+
 ## 1. The Core of the Event and the Shift in Financial Frameworks
 
 On February 18, 2026, Coinbase, the largest cryptocurrency exchange in the U.S., abruptly announced that it would separate Base, its Ethereum Layer 2 (L2) network, from the OP Stack, the core infrastructure of Optimism. Coinbase declared a transition to a proprietary "Unified Stack (base/base)," superficially framing it as a technological decision to accelerate development cycles, remove complex external dependencies, and execute six major upgrades annually. However, deconstructing the hidden facets of this event through the cold lens of corporate finance and valuation reveals that it is by no means a simple architectural shift or technological independence. It is the realization of a meticulously calculated financial "Exit" strategy, wherein Coinbase legally severed the massive future Free Cash Flow (FCF) that the Optimism Collective was entitled to receive, internalizing 100% of it into its own shareholder value.

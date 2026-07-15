@@ -7,6 +7,20 @@ Analysis Period: Feb 7, 2026 – Feb 13, 2026
 
 ---
 
+## TL;DR
+
+• **Capitulation meets accumulation:** Bitcoin is defending a tight $60K–$69K box, down -45% to -52% from its late-2025 ATH of ~$126,000, with the Fear & Greed Index at 11 (extreme fear) — while whale wallets holding 1,000+ BTC accumulated at the $60K level.
+
+• **Macro headwinds are real:** The US 10-year Treasury yield at 4.12% is exerting gravity-like pressure on all risk assets, and speculation around a hawkish Kevin Warsh Fed-chair nomination is driving yields and the dollar higher.
+
+• **ETF divergence:** Even as the complex recorded $272M in early-week net outflows, BlackRock's IBIT posted a $60.03M net inflow (plus $232M on Feb 6 alone) — a winner-takes-all flight to quality, not an institutional exit.
+
+• **Altcoin pain is structural:** February's massive token unlocks (HYPE, STRK, BERA) are flooding the market with supply while ETH underperforms near $1,950; low-float, high-FDV tokens remain exceptionally vulnerable.
+
+• **Buy signals are lit:** A Rolling MVRV Z-Score of 0.42 combined with extreme fear has historically preceded massive rallies. Watch the two core dashboards: the 10-year yield falling below 4.0% and sustained IBIT inflows would signal the end of this corrective phase.
+
+---
+
 ## 1. Overview: Capitulation or Accumulation?
 
 The second week of February 2026 vividly exposed the complex interaction between the global macroeconomic environment and the structure of the digital asset market. The current market is witnessing a multidimensional 'Decoupling' phenomenon. This is manifesting as a divergence in monetary policy expectations between the US and the UK, a stark contrast between strategic accumulation by institutions and panic selling by retail investors in the crypto market, and the dichotomy between Bitcoin's defensive price action and the sharp price readjustment of altcoins due to supply overhang.

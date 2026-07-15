@@ -11,12 +11,17 @@ By Nexus One Research Desk • Feb 11, 2026 • 35 min read
 
 ---
 
-## Key Takeaways
+## TL;DR
 
-- **The Age of the Great Divergence:** The market of 2026 has bifurcated into "Ghost Chains"—infrastructure with billions in FDV but zero users—and "Super Apps" that generate more revenue than the infrastructure itself.
-- **Collapse of the App-Chain Boundary:** The success of Hyperliquid and Unichain proves that the "App-Chain" model—where apps absorb infrastructure—is the completion of the Fat App Thesis.
-- **The Security Paradox & Winner-Takes-All:** As infrastructure costs converge to zero, the majority of L2s have become "zombies" due to a lack of security budget. Only a few giant chains (Base, Solana) that monopolize liquidity and users have survived through a high-volume, low-margin model.
-- **The Dopamine Economy & Regulatory Barbell Strategy:** The market has reorganized into a barbell strategy comprising compliant information utilities (Polymarket) on one end and regulatory-gray-area dopamine casinos (Pump.fun) on the other.
+• **The Age of the Great Divergence:** The market of 2026 has bifurcated into "Ghost Chains"—infrastructure with billions in FDV but zero users—and "Super Apps" that generate more revenue than the infrastructure itself.
+
+• **Collapse of the App-Chain Boundary:** The success of Hyperliquid and Unichain proves that the "App-Chain" model—where apps absorb infrastructure—is the completion of the Fat App Thesis.
+
+• **The Security Paradox & Winner-Takes-All:** As infrastructure costs converge to zero, the majority of L2s have become "zombies" due to a lack of security budget. Only a few giant chains (Base, Solana) that monopolize liquidity and users have survived through a high-volume, low-margin model.
+
+• **The Dopamine Economy & Regulatory Barbell Strategy:** The market has reorganized into a barbell strategy comprising compliant information utilities (Polymarket) on one end and regulatory-gray-area dopamine casinos (Pump.fun) on the other.
+
+---
 
 ## 1. Introduction: The Beginning of the 'Great Divergence'
 

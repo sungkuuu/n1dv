@@ -1,5 +1,23 @@
 # Structural Valuation and the Real-World Asset Divergence: A Deep-Dive Analysis of Centrifuge Protocol
 
+---
+
+## TL;DR
+
+• **The apparent divergence:** CFG trades at a ~0.072 FDV/TVL ratio versus Ondo Finance's 0.76 — a greater than 10x relative discount on ~$1.9B TVL that fuels the "extreme undervaluation" narrative (and drove a 60% rally on the March 16, 2026 Binance listing announcement).
+
+• **Why the discount is rational:** Centrifuge is an infrastructure rail, not a direct issuer — the flagship JAAA/JTRSY funds are issued by Anemoy with Janus Henderson as sub-advisor, capping the protocol's take-rate at a compressed 25–50 bps.
+
+• **Revenue reality:** Q1 2026 management fees of ~$1.27M annualize to ~$5.08M ARR; against a $137M FDV that is a 26.9x P/S — comparable to (or more efficient than) Ondo's 55.4x P/F in a $0-protocol-revenue scenario, so no mispricing exists.
+
+• **Capital is not sticky:** The March 22, 2026 Resolv exploit (80M USR minted uncollateralized, USR briefly to $0.025) helped trigger a 42% JAAA TVL contraction to ~$416.6M — proof that RWA TVL is highly susceptible to systemic contagion.
+
+• **The April 29 catalyst:** The quarterly call confirmed the CP162 fee switch (fees collected via the Centrifuge Network Foundation) and an ENA-style utility-driven demand model instead of buyback-and-burn — a mildly bullish but as-yet unverified framework.
+
+• **Action strategy — observe and verify:** Preemptive entry on the fee-switch announcement is ruled out; the true signal is on-chain evidence of institutional CFG acquisition, supply lock-ups, and staking. Until then, the structural discount remains logical and justified.
+
+---
+
 ## 1. Introduction: The Real-World Asset Landscape in Q2 2026
 
 The Real-World Asset (RWA) tokenization sector has definitively transitioned from a conceptual pilot phase into the foundational infrastructure of the modern Decentralized Finance (DeFi) ecosystem. As of late April 2026, the aggregate total value of tokenized real-world assets across public blockchain networks has surpassed the $25 billion threshold. This explosive growth is driven by a convergence of maturing technical infrastructure, enhanced regulatory clarity, and a voracious institutional appetite for on-chain yields that remain uncorrelated to the highly cyclical and idiosyncratic volatility of native cryptocurrency markets.

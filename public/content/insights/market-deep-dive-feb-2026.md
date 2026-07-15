@@ -7,11 +7,15 @@ Structural Transition, AI Capex Reality Check, and the Death of the 4-Year Cycle
 
 ---
 
-## Key Takeaways
+## TL;DR
 
-- **Macro Paradox:** The Federal Reserve's "Fake Tightening" narrative meets reality with Kevin Warsh's nomination as Fed Chair, triggering commodity flash crash (Gold -11%, Silver -36%).
-- **Equity Markets:** AI Capex ROI concerns emerge as Magnificent 7 spending outpaces revenue growth by 3.5x, driving Nasdaq-BTC correlation to 0.80—the highest since Q2 2022.
-- **Crypto Paradigm Shift:** The 4-Year Halving Cycle shows clear structural breakdown. We are entering a "Perpetual Beta" regime where crypto increasingly mirrors equity risk appetite rather than fixed cyclicality.
+• **Macro Paradox:** The Federal Reserve's "Fake Tightening" narrative meets reality with Kevin Warsh's nomination as Fed Chair, triggering commodity flash crash (Gold -11%, Silver -36%).
+
+• **Equity Markets:** AI Capex ROI concerns emerge as Magnificent 7 spending outpaces revenue growth by 3.5x, driving Nasdaq-BTC correlation to 0.80—the highest since Q2 2022.
+
+• **Crypto Paradigm Shift:** The 4-Year Halving Cycle shows clear structural breakdown. We are entering a "Perpetual Beta" regime where crypto increasingly mirrors equity risk appetite rather than fixed cyclicality.
+
+---
 
 ## 1. The Macro Backdrop: Kevin Warsh & The "Sound Money" Shock
 

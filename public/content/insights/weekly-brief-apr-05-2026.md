@@ -5,6 +5,22 @@ By Nexus One Research Desk • Apr 5, 2026 • 25 min read
 
 ---
 
+## TL;DR
+
+• **Energy shock front and center:** Six weeks into the Iran conflict, Hormuz blockade fears drove Brent/WTI up ~12% WoW past $112 per barrel, while the VIX eased to 24.54 from 31 — still a "Caution" zone.
+
+• **Fed firmly on hold:** Powell has withdrawn rate-cut signals on oil-driven inflation risk; markets price a 94% probability of a freeze at the April 28–29 FOMC, with just one 25bp cut projected by end-2026.
+
+• **First ETF outflows in five weeks:** US spot BTC ETFs shed ~$414M for the week (FBTC -$79M, IBIT -$87M) as institutions de-risked — though the Q1 base remains solid (IBIT +$8.4B, FBTC +$4.1B net inflows).
+
+• **BTC resilient near bottom-zone valuations:** BTC closed April 5 at $67,540 (roughly -1~2% WoW) after touching $68,807; MVRV Z-score at +1.2 sigma and NUPL at +0.28 (Fear) sit near historical bottom-buying zones, with LTH share high at 78%.
+
+• **AI is the counter-trend sector:** TAO gained ~+90% in 30 days, RNDR ~+40% WoW, and Grayscale filed the first Bittensor (TAO) ETF on April 3 — the AI-crypto convergence entering the institutional mainstream.
+
+• **Strategy:** Maintain BTC/ETH core positions, minimize leverage, and selectively expand into real-revenue sectors (AI, RWA) — while noting April's $398M unlock slate led by TIA's 17.2% cliff.
+
+---
+
 ## 1. Global Macroeconomic Trends
 
 ### Key Indicators (Weekly Change)

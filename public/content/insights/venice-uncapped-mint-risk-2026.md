@@ -1,16 +1,20 @@
 # A single key, a $700M token: inside Venice's uncapped mint
 
-**[TL;DR: The Structural Contradiction of VVV's Valuation]**
+**Nexus One Research**
 
-While VVV has grown to a $700M FDV based on strong fundamentals—50,000 DAU and a high-profile founder (Erik Voorhees)—its on-chain architecture harbors a fatal **Single Point of Failure (SPOF)** that completely contradicts its marketing narrative.
+---
 
-- **Unlimited Minting:** The smart contract has no hard cap, no timelock, and no multisig. A single admin private key (externally owned account) can mint an unlimited number of tokens at any time.
+## TL;DR
 
-- **The Illusion of Deflation:** There is no submitted smart contract security audit. Furthermore, lacking a public on-chain `burn()` function, the supposedly "burned" tokens still count toward the total supply. The marketing of a "deflationary asset" is mere theater that can be instantly overridden by the unrestricted mint authority.
+• **The Structural Contradiction:** While VVV has grown to a $700M FDV based on strong fundamentals—50,000 DAU and a high-profile founder (Erik Voorhees)—its on-chain architecture harbors a fatal **Single Point of Failure (SPOF)** that completely contradicts its marketing narrative.
 
-- **Uninvestable for Institutions:** The architecture directly violates crypto's first principle ("Don't Trust, Verify"). Because the entire protocol's value could collapse if a single private key is compromised or acts maliciously, it is impossible for institutional capital to quantify the risk and execute a Deep Value allocation.
+• **Unlimited Minting:** The smart contract has no hard cap, no timelock, and no multisig. A single admin private key (externally owned account) can mint an unlimited number of tokens at any time.
 
-In conclusion, the current valuation is pure momentum driven by liquidity and the blind faith of a market that isn't reading the code. Until the contract architecture is refactored toward decentralization, VVV holds no value as an institutional-grade asset.
+• **The Illusion of Deflation:** There is no submitted smart contract security audit. Furthermore, lacking a public on-chain `burn()` function, the supposedly "burned" tokens still count toward the total supply. The marketing of a "deflationary asset" is mere theater that can be instantly overridden by the unrestricted mint authority.
+
+• **Uninvestable for Institutions:** The architecture directly violates crypto's first principle ("Don't Trust, Verify"). Because the entire protocol's value could collapse if a single private key is compromised or acts maliciously, it is impossible for institutional capital to quantify the risk and execute a Deep Value allocation.
+
+• **Conclusion:** The current valuation is pure momentum driven by liquidity and the blind faith of a market that isn't reading the code. Until the contract architecture is refactored toward decentralization, VVV holds no value as an institutional-grade asset.
 
 ---
 

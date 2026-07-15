@@ -11,11 +11,15 @@ By Nexus One Research Desk • Feb 11, 2026 • 30 min read
 
 ---
 
-## Key Takeaways
+## TL;DR
 
-- **Strategic Pivot:** Ethereum is transitioning from a "World Computer" to a "Global Registry of Trust" for the AI agent economy, focusing on identity, reputation, and settlement rather than high-frequency execution.
-- **ERC-8004 Moat:** The Trustless Agents standard positions Ethereum as the passport, credit bureau, and identity registry for autonomous AI agents, creating network effects that compound with adoption.
-- **Functional Specialization:** The market is bifurcating: Solana/Hyperliquid win execution volume (80-90% of transactions), while Ethereum secures trust and value (70-80% of agent treasury TVL).
+• **Strategic Pivot:** Ethereum is transitioning from a "World Computer" to a "Global Registry of Trust" for the AI agent economy, focusing on identity, reputation, and settlement rather than high-frequency execution.
+
+• **ERC-8004 Moat:** The Trustless Agents standard positions Ethereum as the passport, credit bureau, and identity registry for autonomous AI agents, creating network effects that compound with adoption.
+
+• **Functional Specialization:** The market is bifurcating: Solana/Hyperliquid win execution volume (80-90% of transactions), while Ethereum secures trust and value (70-80% of agent treasury TVL).
+
+---
 
 ## Introduction: Dawn of Autonomous Infrastructure and the Rise of the Agentic Economy
 

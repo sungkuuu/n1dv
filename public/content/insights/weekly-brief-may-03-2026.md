@@ -4,17 +4,15 @@
 
 ---
 
-## Weekly Report Executive Summary (2026.4.27~5.3)
+## TL;DR
 
-**7 Key Takeaways:**
-
-1. **BTC contests $78,281 range - weekly +3.4%, reaffirming 75K support:** BTC recovered from $75,700 on April 27 to $78,281 by May 3 for a weekly +3.4%(1). U.S. Big Tech earnings beats and renewed ETF buying were decisive; the close above the 76,589 Bollinger middle band flipped the dashboard back to bullish.
-2. **Spot ETFs add +$630M in a single day on May 1, +$933M for the week - fourth consecutive week of net inflows:** CoinShares-tracked weekly digital-asset fund flows reached +$1.2B (vs. +$640M prior week, +88% WoW)(2)(3). BTC absorbed +$933M while ETH posted -$160M outflows (BlackRock and Fidelity-led redemptions). April cumulative +$2.44B is the strongest monthly inflow of 2026.
-3. **Powell's final FOMC splits 8-4 - rates held at 3.50-3.75%:** April 29 FOMC produced an 8-4 split, the largest dissent in three decades(4). Market-implied probability of a 25 bp cut at Warsh's first meeting on June 17 climbed to 65% (vs. 52% prior week, +13%p). 10Y at 4.39% (-3 bp WoW), 2Y at 3.78% (-5 bp).
-4. **DeFi TVL at $148B - -2.4% WoW (KelpDAO hack shockwave):** April 18 KelpDAO LayerZero bridge exploit drained approximately $290M(5); cumulative April hack losses hit $606M (worst month since February 2025). Two incidents attributed to North Korea's Lazarus Group account for 95% of April losses. Restaking and LST sectors contracted sharply at -8.2%.
-5. **Hyperliquid market share crosses 70% - monthly perp volume $180B, annualized fees $700M+:** HYPE at $41.09 (weekly -0.24%, monthly +14.0%, YTD +40%)(6). Now firmly #1 by chain revenue, ahead of Tron and Solana; April Perps DEX share +5%p MoM. Roughly 4x the annual fees of Aave or Uniswap.
-6. **RWA tokenized value surpasses $26.4B - YoY +300%, BUIDL/USYC duopoly:** Circle's USYC ($2.9B) overtakes BlackRock's BUIDL ($2.58B)(7). Ondo TVL > $3B. Government-bond tokenization holds 65% share; Korea's first STO listing is imminent in May.
-7. **Calendar - May 13 U.S. April CPI / May 15 Powell exit / $2.24B May token-unlock cluster:** APT (May 12, +$102M), STRK (May 15, +$145M); the May 4-10 window alone delivers $753M of cliff unlocks. Ahead of June FOMC, the May 13 CPI consensus (+2.7% YoY) is the pivotal variable.
+• **BTC contests $78,281 range - weekly +3.4%, reaffirming 75K support:** BTC recovered from $75,700 on April 27 to $78,281 by May 3 for a weekly +3.4%(1). U.S. Big Tech earnings beats and renewed ETF buying were decisive; the close above the 76,589 Bollinger middle band flipped the dashboard back to bullish.
+• **Spot ETFs add +$630M in a single day on May 1, +$933M for the week - fourth consecutive week of net inflows:** CoinShares-tracked weekly digital-asset fund flows reached +$1.2B (vs. +$640M prior week, +88% WoW)(2)(3). BTC absorbed +$933M while ETH posted -$160M outflows (BlackRock and Fidelity-led redemptions). April cumulative +$2.44B is the strongest monthly inflow of 2026.
+• **Powell's final FOMC splits 8-4 - rates held at 3.50-3.75%:** April 29 FOMC produced an 8-4 split, the largest dissent in three decades(4). Market-implied probability of a 25 bp cut at Warsh's first meeting on June 17 climbed to 65% (vs. 52% prior week, +13%p). 10Y at 4.39% (-3 bp WoW), 2Y at 3.78% (-5 bp).
+• **DeFi TVL at $148B - -2.4% WoW (KelpDAO hack shockwave):** April 18 KelpDAO LayerZero bridge exploit drained approximately $290M(5); cumulative April hack losses hit $606M (worst month since February 2025). Two incidents attributed to North Korea's Lazarus Group account for 95% of April losses. Restaking and LST sectors contracted sharply at -8.2%.
+• **Hyperliquid market share crosses 70% - monthly perp volume $180B, annualized fees $700M+:** HYPE at $41.09 (weekly -0.24%, monthly +14.0%, YTD +40%)(6). Now firmly #1 by chain revenue, ahead of Tron and Solana; April Perps DEX share +5%p MoM. Roughly 4x the annual fees of Aave or Uniswap.
+• **RWA tokenized value surpasses $26.4B - YoY +300%, BUIDL/USYC duopoly:** Circle's USYC ($2.9B) overtakes BlackRock's BUIDL ($2.58B)(7). Ondo TVL > $3B. Government-bond tokenization holds 65% share; Korea's first STO listing is imminent in May.
+• **Calendar - May 13 U.S. April CPI / May 15 Powell exit / $2.24B May token-unlock cluster:** APT (May 12, +$102M), STRK (May 15, +$145M); the May 4-10 window alone delivers $753M of cliff unlocks. Ahead of June FOMC, the May 13 CPI consensus (+2.7% YoY) is the pivotal variable.
 
 ---
 

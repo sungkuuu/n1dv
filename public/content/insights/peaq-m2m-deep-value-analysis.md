@@ -5,6 +5,22 @@ By Nexus One Research Desk • Mar 29, 2026 • 25 min read
 
 ---
 
+## TL;DR
+
+• **The thesis:** Peaq is a bespoke Layer-1 for the Machine Economy — a DePIN market projected to grow to $3.5 trillion — with a technical moat general-purpose chains lack: fully embedded machine functions (Peaq ID, Pay, Access, Verify) on Substrate, ~6-second deterministic finality, and $0.00025–$0.008 fees.
+
+• **Adoption is real:** As of March 2026, 60+ commercial DePIN apps across 22 industries, 3.35M+ machine addresses, 12,000+ daily active devices, 70,000–120,000 daily M2M transactions, and ~$180M TVL in machine wallets.
+
+• **Verified Real Yield:** Hong Kong's tokenized robotic vertical farm pays NFT holders ~18% APY from actual fiat vegetable sales — external real-economy value flowing into the token ecosystem, not inflation-funded rewards.
+
+• **Institutional pipeline:** Mastercard Start Path membership, Bosch sensor integration, the German SME tokenization alliance, and a Dubai VARA MoU position Peaq as a prime beneficiary if the US CLARITY Act passes and institutional RWA capital arrives.
+
+• **The risks:** Only 34.31% of supply circulates — cliff unlocks on April 12 (~88.58M tokens) and December 2026 (~84.84M) create persistent selling pressure despite the VEO soft-landing mechanism — and the March 2026 Bithumb deposit/withdrawal suspension exposed L1 stability risk.
+
+• **Strategy:** Prefer validator staking (5–12% APY) and machine RWA equity (Machine NFTs) over spot-price speculation; Peaq is a long-horizon infrastructure bet toward 2030, not a short-term trade.
+
+---
+
 ## 1. Introduction: The Advent of the DePIN Era and the Structural Shift of the Machine Economy
 
 As of March 2026, the global macroeconomic and technological infrastructure is situated in the midst of a crucial paradigm shift moving beyond the simple Internet of Things (IoT) era into the 'Machine Economy' (or Economy of Things). The advancement of Artificial Intelligence (AI) models and the rapid progress of autonomous driving and robotics are elevating machines from being mere passive data collection devices into independent economic agents that create value, pay for themselves, and own assets. In particular, as centralized infrastructure faces physical and environmental limits—with global data centers expected to consume 12% of all U.S. electricity by 2028—Decentralized Physical Infrastructure Networks (DePIN), which crowdsource idle resources, are projected to grow into a massive $3.5 trillion market.

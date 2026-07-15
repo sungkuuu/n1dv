@@ -5,6 +5,20 @@ By Nexus One Research Desk • Apr 1, 2026 • 20 min read
 
 ---
 
+## TL;DR
+
+• **The setup:** After an intraday ATH of $126,272 on October 6, 2025, Bitcoin corrected ~46% to the $67,789 level by late March 2026 — a trajectory the traditional 4-year halving cycle failed to predict, exposing its loss of explanatory power.
+
+• **Pal's thesis:** Raoul Pal (with Michael Howell's 65-month liquidity model) argues markets follow a 5.4-year macro debt cycle, artificially extended by policy engineering, with ~$8 trillion of liquidity needed to roll the 2026 "Debt Wall" ($9T of maturing US marketable debt) — pushing the true cycle peak to Q2 2026 or later.
+
+• **Supporting signals:** The ISM Manufacturing PMI turned to expansion in early 2026 (52.6 in January, 52.4 in February–March), and the structural debasement logic (demographics → slowing GDP → rising Debt-to-GDP → money printing) favors hard-supply assets like Bitcoin long term.
+
+• **The flaws:** Past BTC peaks (2013/2017/2021) were spaced exactly 4 years — the 5.4-year fit looks like curve-fitting; rollover is not net new liquidity (net new money is closer to the ~$1.9T fiscal deficit); a strong PMI paradoxically delays Fed cuts; and Howell himself warns of a 2026 "Liquidity Tug-of-War" as AI capex absorbs speculative capital.
+
+• **Our verdict:** The long-term debasement thesis is valid, but the probability of Pal's specific scenario — an $8T-driven massive peak in Q2/late 2026 — is downgraded to below 30–40%. Monitor Fed cut pacing, Treasury rollover mechanics, and the real-economy capital scramble rather than fixed cycle timelines.
+
+---
+
 ## Introduction: The Paradigm Shift in the Cryptocurrency Market and the Structural Limitations of the 4-Year Halving Cycle Theory
 
 As of April 2026, the global cryptocurrency market and macroeconomic environment are passing through a profound inflection point that completely overturns past conventional wisdom. The '4-Year Halving Cycle' theory, which was long considered the absolute law perfectly explaining Bitcoin's long-term price flow, has reached a stage where it is rapidly losing its explanatory power and market dominance. According to market data, after breaking its historical All-Time High (ATH) of $126,272 intraday on October 6, 2025, Bitcoin experienced an unexpected and severe correction, passing through the first quarter of 2026 and trading at the $67,789 level as of late March 2026.

@@ -5,6 +5,20 @@ By Nexus One Research Desk • Mar 11, 2026 • 35 min read
 
 ---
 
+## TL;DR
+
+• **The verdict:** The claim that TRON has deviated from the M2M Machine Economy trajectory is an indisputable fact — confirmed both architecturally and by 2024–2025 on-chain data.
+
+• **Architectural mismatch:** DPoS consensus monopolized by 27 high-spec Super Representative nodes, a heavy EVM-compatible TVM, and a Bandwidth/Energy resource model that burns roughly 13–27 TRX per USDT transfer are fundamentally incompatible with sub-cent machine microtransactions and MCU-class edge devices.
+
+• **The numbers:** TRON settled $7.9 Trillion in USDT during 2025 with 323 million monthly transactions and ~42% of global stablecoin supply ($81–82.2B) — yet no statistically significant IoT, M2M, or DePIN activity appears in any major analytics firm's ecosystem reports.
+
+• **Pivot, not failure:** Given IoT project failure rates of 60–75%, TRON's exit reads as a deliberate and successful Product-Market Fit transition into a high-frequency stablecoin settlement layer for CEX liquidity rails and emerging-market remittances.
+
+• **Who serves the machines:** Purpose-built infrastructures — peaq (1.75M+ onboarded devices, native L1 machine primitives) and IOTA (feeless Tangle DAG) — will lead the Machine Economy backbone that TRON abandoned; adopting TRON for IoT/DePIN backends would be a structurally and economically fatal error.
+
+---
+
 ## 1. Introduction: Evolution of Blockchain Infrastructure and the Advent of the Machine Economy
 
 > Technological innovation in the 21st century has transcended the boundaries of an internet that merely connects humans, entering the era of the Internet of Things (IoT) and the Machine Economy, where objects and machines autonomously exchange data and create value. The technological progress sparked by the digital revolution of the 1950s gave birth to the new paradigm of IoT through the convergence of Radio Frequency Identification (RFID) chips, micro-sensors, and the internet. Starting from the level where early MIT students monitored a Coke vending machine using cheap sensors, this concept evolved through Reza Raji's factory automation model via data packet movement in the 1990s, before officially announcing its industrial birth in 2008 when the number of internet-connected electronic devices surpassed the global human population.

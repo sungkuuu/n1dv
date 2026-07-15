@@ -5,6 +5,20 @@ By Nexus One Research Desk • Feb 27, 2026 • 35 min read
 
 ---
 
+## TL;DR
+
+• **Tariff shock and V-shaped reversal:** Trump's 15% global temporary tariff (invoked via Section 122 after the Supreme Court struck down the "Liberation Day" tariffs) sent BTC down 4.6% in two hours — from ~$67,600 to ~$64,400 with $500M+ in long liquidations — before a short squeeze drove a 9%+ rebound to ~$68,400.
+
+• **Smart money flipped at the bottom:** After ~$3.8B exited spot BTC ETFs over five straight weeks, flows reversed right at the $64K defense — +$258M Tuesday (Feb 24) and +$506.5M Wednesday (Feb 25), the largest daily inflow in three weeks, led by IBIT's +$297.4M.
+
+• **On-chain says accumulation, not collapse:** MVRV Z-Score compressed to 0.45 (bubble-free "Green Zone"), Binance ETH NUPL hit a 9-month low of -0.1689 (potential accumulation zone), and the Kimchi Premium turned positive — historically a bottom-building signal.
+
+• **Solana is the outlier:** The SOL ETF recorded net inflows every day except three since Feb 10 (+$30.33M for February) while BTC/ETH ETFs bled, and SOL showed the strongest relative price defense among majors — Project of the Week.
+
+• **March is the risk:** Over $6B in token unlocks — roughly 3x the 2026 monthly average — hit in March, led by WhiteBIT (~$4.18B) and Aptos (11.31M APT on March 12); trim exposure or hedge preemptively from early March.
+
+---
+
 ## 1. In-depth Analysis of Macroeconomic Indicators and Macro Environment
 
 In late February 2026, the global macroeconomic environment is experiencing extreme asset repricing and heightened volatility, driven by an intersection of escalating geopolitical tensions and the radical trade protectionism policies of the U.S. administration. In particular, uncertainties surrounding tariff policies are stimulating fears of a resurgence in inflation, acting as a core driver sharply elevating risk premiums across both traditional financial markets and the broader digital asset market.

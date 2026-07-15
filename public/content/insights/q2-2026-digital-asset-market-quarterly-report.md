@@ -2,6 +2,22 @@
 
 ---
 
+## TL;DR
+
+• **Great Divergence:** S&P 500 +14–18% at record highs vs BTC -13% (June -20%) — the equity–crypto correlation broke down¹¹ ²⁵
+
+• **The Warsh Fed & tightening reversal:** year-end dot raised to 3.8% (9 members see hikes), ECB and BOJ hiking — the easing cycle is officially over² ⁷ ⁸
+
+• **Record ETF outflows:** June -$4.06B, seven straight weeks of outflows (-$7.7B), AUM $107.8B → $72.8B⁴² ⁴³
+
+• **Cracks in the treasury narrative:** Strategy's first sale plus a $1.25B sale authorization; Mt. Gox coins on the move⁵¹ ⁵⁵
+
+• **Most-hacked quarter on record:** 83 incidents, $755M+; North Korea at 76% — bridges and key management the top attack surface⁹⁶ ⁹⁷
+
+• **Rotation into yield assets:** sustained XRP/SOL staking-ETF inflows; RWA at $31.7B and stablecoins at $314B stayed resilient⁴⁶ ⁸⁰
+
+---
+
 ## Table of Contents
 
 1. Executive Summary
@@ -31,15 +47,6 @@ The cause of the divergence was unambiguously macro. The Iran-war energy shock r
 Institutional flows reversed violently. US spot Bitcoin ETFs swung from **+$2.44B of net inflows in April** (the best month since October 2025) to **-$4.06B in June** — the largest monthly outflow since launch (vendor range -$4.06B to -$4.5B) — and closed the quarter on a **seven-week outflow streak totaling more than -$7.7B**.⁴¹ ⁴² ⁴³ Sentiment was further crushed by Strategy's (formerly MicroStrategy) **first BTC sale since 2022** (32 BTC in late May, followed by a June 29 authorization to sell up to $1.25B) and Mt. Gox's movement of 10,422 BTC.⁵¹ ⁵⁵ In contrast, the rotation into **yield-bearing (staking) altcoin ETFs** continued: XRP ETFs logged eight consecutive weeks of inflows, with cumulative inflows of roughly $1.47B.⁴⁶
 
 On-chain and structural indicators pointed to capitulation. The MVRV Z-Score reached **0.20** and NUPL **0.12**, historic bottom territory,³⁶ and the Fear & Greed Index closed above 50 on only a single day during the entire quarter.²⁹ Mining difficulty was cut **-10.09% on June 15** (the 11th-largest downward adjustment ever), with the network's average production cost (\~$87,000) far above market price — a textbook miner capitulation.³⁸ On the security front, the quarter set an all-time record with **83 incidents and roughly $755M–$775M in losses**; North Korea's Lazarus Group accounted for 76% of the year's stolen value with just two attacks — Drift ($285M) and KelpDAO ($292M).⁹⁶ ⁹⁸ In Korea, in stark contrast to the KOSPI boom, KRW exchange volumes collapsed to a 30-month low and the negative kimchi premium persisted, evidencing a retail exodus from crypto.³⁹ ⁴⁰
-
-**Key quarterly themes (6)**
-
-- **Great Divergence**: S&P 500 +14–18% at record highs vs BTC -13% (June -20%) — the equity–crypto correlation broke down¹¹ ²⁵
-- **The Warsh Fed & tightening reversal**: year-end dot raised to 3.8% (9 members see hikes), ECB and BOJ hiking — the easing cycle is officially over² ⁷ ⁸
-- **Record ETF outflows**: June -$4.06B, seven straight weeks of outflows (-$7.7B), AUM $107.8B → $72.8B⁴² ⁴³
-- **Cracks in the treasury narrative**: Strategy's first sale plus a $1.25B sale authorization; Mt. Gox coins on the move⁵¹ ⁵⁵
-- **Most-hacked quarter on record**: 83 incidents, $755M+; North Korea at 76% — bridges and key management the top attack surface⁹⁶ ⁹⁷
-- **Rotation into yield assets**: sustained XRP/SOL staking-ETF inflows; RWA at $31.7B and stablecoins at $314B stayed resilient⁴⁶ ⁸⁰
 
 ---
 

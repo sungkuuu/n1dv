@@ -6,29 +6,21 @@
 
 ---
 
-## Weekly Report Executive Summary (2026.6.8–6.15)
-### 7 Key Takeaways
+## TL;DR
 
-**1. BTC Price — Rebound after defending $60K, +3.9% on the week**
-BTC closed at **$65,574**, recovering **+3.9%** versus the prior week's close of **$63,091**. Selling pressure from the early-June plunge (mid-May \~$80K → \~$61K) eased and the $60K box-range floor held. Weekly volatility stayed elevated (7-day low $60,730, high $65,920).
+• **BTC Price — Rebound after defending $60K, +3.9% on the week:** BTC closed at **$65,574**, recovering **+3.9%** versus the prior week's close of **$63,091**. Selling pressure from the early-June plunge (mid-May \~$80K → \~$61K) eased and the $60K box-range floor held. Weekly volatility stayed elevated (7-day low $60,730, high $65,920).
 
-**2. ETF Flows — Digesting a record weekly net outflow**
-US spot BTC ETFs saw an **approximately −$3.4B single-week net outflow** in early June, the largest weekly exodus since the January 2024 launch. Over a 13-session cumulative window, roughly −$4.4B left the products, with IBIT accounting for about −$3.3B (\~75% of the 13-session total). The outflows coincided with BTC's \~−21% correction (5/15 $80K → $63K area).
+• **ETF Flows — Digesting a record weekly net outflow:** US spot BTC ETFs saw an **approximately −$3.4B single-week net outflow** in early June, the largest weekly exodus since the January 2024 launch. Over a 13-session cumulative window, roughly −$4.4B left the products, with IBIT accounting for about −$3.3B (\~75% of the 13-session total). The outflows coincided with BTC's \~−21% correction (5/15 $80K → $63K area).
 
-**3. Macro/Fed — FOMC 6/16–17, 99.5% hold consensus**
-The fed funds target stands at **3.50–3.75%**, with a 99.5% implied probability of a hold at this FOMC (6/16–17). It is the first meeting for new Chair Kevin Warsh (sworn in May 15), and with CPI around 4.2% YoY the easing bias is effectively removed.
+• **Macro/Fed — FOMC 6/16–17, 99.5% hold consensus:** The fed funds target stands at **3.50–3.75%**, with a 99.5% implied probability of a hold at this FOMC (6/16–17). It is the first meeting for new Chair Kevin Warsh (sworn in May 15), and with CPI around 4.2% YoY the easing bias is effectively removed.
 
-**4. DeFi/On-chain — Broad fee slowdown, Hyperliquid #1**
-Hyperliquid held the #1 protocol fee spot at **$14.64M weekly**, though down −41.7% versus the prior trend. Ethereum chain fees fell to $2.27M for the 7-day window (trend −46.4%), a clear sign of activity contraction.
+• **DeFi/On-chain — Broad fee slowdown, Hyperliquid #1:** Hyperliquid held the #1 protocol fee spot at **$14.64M weekly**, though down −41.7% versus the prior trend. Ethereum chain fees fell to $2.27M for the 7-day window (trend −46.4%), a clear sign of activity contraction.
 
-**5. L1/L2 — Aptos & Sei active-address surge, HyperEVM TVL +18.5%**
-Aptos daily active addresses hit **160,540 (+47.3% 7d)** and HyperEVM TVL reached **$5.68B (+18.5% 7d)**. SeiEVM active addresses spiked +172.2%, but an event-driven cause is likely and warrants separate scrutiny.
+• **L1/L2 — Aptos & Sei active-address surge, HyperEVM TVL +18.5%:** Aptos daily active addresses hit **160,540 (+47.3% 7d)** and HyperEVM TVL reached **$5.68B (+18.5% 7d)**. SeiEVM active addresses spiked +172.2%, but an event-driven cause is likely and warrants separate scrutiny.
 
-**6. RWA/Regulation — On-chain RWA tops $32B, CLARITY Act awaits floor vote**
-On-chain RWA value (ex-stablecoins) surpassed **$32B**; per RWA.xyz, distributed asset value was **$31.96B (2026-06-14)**. The CLARITY Act cleared the Senate Banking Committee (15-9) and was placed on the Senate Legislative Calendar under General Orders.
+• **RWA/Regulation — On-chain RWA tops $32B, CLARITY Act awaits floor vote:** On-chain RWA value (ex-stablecoins) surpassed **$32B**; per RWA.xyz, distributed asset value was **$31.96B (2026-06-14)**. The CLARITY Act cleared the Senate Banking Committee (15-9) and was placed on the Senate Legislative Calendar under General Orders.
 
-**7. Next-Week Calendar — FOMC (6/17) ★, May CPI/retail sales, Juneteenth holiday (6/19)**
-The 6/16–17 FOMC statement and press conference (6/17, 14:30 ET) is the marquee event. June 19 is Juneteenth (market holiday); some statistical releases shift to June 22.
+• **Next-Week Calendar — FOMC (6/17) ★, May CPI/retail sales, Juneteenth holiday (6/19):** The 6/16–17 FOMC statement and press conference (6/17, 14:30 ET) is the marquee event. June 19 is Juneteenth (market holiday); some statistical releases shift to June 22.
 
 ---
 

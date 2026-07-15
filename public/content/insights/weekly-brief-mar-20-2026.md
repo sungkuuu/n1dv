@@ -5,6 +5,22 @@ By Nexus One Research Desk • Mar 20, 2026 • 25 min read
 
 ---
 
+## TL;DR
+
+• **Decoupling on display:** Despite Middle East escalation pushing the US 10Y yield to 4.26% and WTI briefly to $120 intraday, Bitcoin staged an independent relief rally back to the $70,690–$71,278 range — behaving as a structural macro hedge rather than a risk asset.
+
+• **Institutions are the floor:** US spot BTC ETFs drew ~$1.17B in net inflows over the 2nd–3rd weeks of March (longest 7-day inflow streak in five months), while $2.9B left the GLD gold ETF in a single day — a rotation from gold into Bitcoin.
+
+• **Short-squeeze setup:** Funding rates near zero or negative with shorts excessively crowded; $186M of shorts were liquidated in 24 hours on the rebound, and Glassnode/CryptoQuant see a breach of $72,000 triggering a chain-reaction squeeze.
+
+• **Valuation is nowhere near overheated:** MVRV Z-Score at 0.66 and NUPL at 0.197 ("Hope" zone) — far below cycle-peak levels — while "Is Bitcoin dead?" searches hit their highest since Terra/FTX, a classic contrarian bottom signal.
+
+• **Korea trades at a discount:** The Kimchi Premium is inverted at -1.35% to -0.68% on won weakness, DABA regulatory risk, and US ETF-led price discovery.
+
+• **Next week's risk/reward:** $100M+ of cliff unlocks land March 20 (ZRO, BARD, RIVER) — evade the supply bombs — while the Backpack (BP) TGE and Linea's Yield Boost act as liquidity-absorbing catalysts.
+
+---
+
 ## 1. In-depth Analysis of Macroeconomic and Traditional Finance Indicators (Macro & TradFi Dynamics)
 
 As of March 20, 2026, global financial markets are experiencing extreme volatility driven by a complex interplay of supply chain shocks triggered by geopolitical conflicts, fears of reignited inflation, and the resulting uncertainty in central bank monetary policies. In particular, the escalation of military tensions in the Middle East, centered around the U.S. and Iran, has fundamentally altered the reaction functions of the energy and bond markets, which is directly impacting capital allocation strategies in the digital asset market. Closely analyzing the flow of Traditional Finance (TradFi) indicators is an essential prerequisite for understanding the current valuation of virtual assets, including Bitcoin.

@@ -5,6 +5,22 @@
 
 ---
 
+## TL;DR
+
+• **BTC broke out, ETH stayed trapped:** BTC rallied from ~$74,800 to a four-week high of $77,476 — the strongest weekly gain since October — on the Hormuz opening and institutional buying, while ETH spent a sixth consecutive week stuck in the $2,100–$2,400 band.
+
+• **Hormuz whipsaw set the macro tone:** Iran's April 17 opening declaration crashed Brent -9.07% to $90.38 before re-closure signals drove it back to ~$96; the VIX eased to 17.48 and a hold at the April 28–29 FOMC is fully priced.
+
+• **Institutions bought the fear:** BTC ETFs took in ~$921M for the week ($663M on April 17 alone), whales accumulated 270K BTC over 30 days (largest since 2013), and exchange reserves hit a seven-year low — all against a Fear & Greed reading of 23 (Extreme Fear).
+
+• **Kelp DAO was 2026's biggest exploit:** $293M (116,500 rsETH) drained via a LayerZero-powered bridge; the attacker looped stolen collateral through Aave V3/V4, driving Aave TVL down $6.6B and AAVE -16% — DeFi composability risk back in sharp focus.
+
+• **Regulatory tailwinds:** The OCC granted Coinbase a national bank trust charter (opening pension/insurance fiduciary access), and the Clarity Act advanced to Senate hearings.
+
+• **Key level:** BTC $77,500 is the technical inflection — sustained accumulation and supply reduction keep the $85,000–$90,000 path open, with the FOMC and Hormuz status as the near-term swing variables.
+
+---
+
 ## 1. Global Macroeconomic Trends
 
 **Key Indicators (Weekly Change)**

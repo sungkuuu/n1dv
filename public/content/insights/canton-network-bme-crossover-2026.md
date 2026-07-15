@@ -1,12 +1,18 @@
 # Canton Network (CC) Valuation: Beyond the P/E Illusion to the BME Crossover
 
-**TL;DR: The Canton Network Valuation Paradigm & BME Crossover**
+---
 
-* **The Illusion of P/E 7.1x:** Current data platforms calculate an incredibly low 7.1x P/E by treating network fee burns ($787M) purely as revenue. This is a "fake undervaluation signal" because it completely ignores the $1.6B annual inflation cost (10 billion CC newly minted yearly to run the network).
-* **The Reality (Real P/E is N/A):** When factoring in the hidden inflation cost, the network currently operates at a massive net loss. However, this deficit is an intentional, early-stage bootstrapping phase under the Burn-Mint Equilibrium (BME) model, much like early massive CapEx by Big Tech.
-* **Dynamic Price Elasticity:** Because Canton's fees are pegged to USD but paid and permanently burned in CC, lower token prices exponentially accelerate the burn rate. This creates a powerful self-cleansing, deflationary mechanism.
-* **Explosive Fundamental Growth:** Driven by real "production environment" traffic from mega-institutions (e.g., Broadridge's $6.9T settlement volume), the BME Ratio (burn vs. mint) has skyrocketed vertically from 15% to 65% in just six months, burning 15 million CC daily.
-* **The "Crossover" Inflection Point:** The network is rapidly approaching the moment where annual fee burns will surpass token issuance inflation (highly anticipated alongside the DTCC MVP in H1 2026). Breaching this 100% threshold will trigger a perfect "Supply Shock" and an explosive revaluation of Canton Network's intrinsic value.
+## TL;DR
+
+• **The Illusion of P/E 7.1x:** Current data platforms calculate an incredibly low 7.1x P/E by treating network fee burns ($787M) purely as revenue. This is a "fake undervaluation signal" because it completely ignores the $1.6B annual inflation cost (10 billion CC newly minted yearly to run the network).
+
+• **The Reality (Real P/E is N/A):** When factoring in the hidden inflation cost, the network currently operates at a massive net loss. However, this deficit is an intentional, early-stage bootstrapping phase under the Burn-Mint Equilibrium (BME) model, much like early massive CapEx by Big Tech.
+
+• **Dynamic Price Elasticity:** Because Canton's fees are pegged to USD but paid and permanently burned in CC, lower token prices exponentially accelerate the burn rate. This creates a powerful self-cleansing, deflationary mechanism.
+
+• **Explosive Fundamental Growth:** Driven by real "production environment" traffic from mega-institutions (e.g., Broadridge's $6.9T settlement volume), the BME Ratio (burn vs. mint) has skyrocketed vertically from 15% to 65% in just six months, burning 15 million CC daily.
+
+• **The "Crossover" Inflection Point:** The network is rapidly approaching the moment where annual fee burns will surpass token issuance inflation (highly anticipated alongside the DTCC MVP in H1 2026). Breaching this 100% threshold will trigger a perfect "Supply Shock" and an explosive revaluation of Canton Network's intrinsic value.
 
 ---
 

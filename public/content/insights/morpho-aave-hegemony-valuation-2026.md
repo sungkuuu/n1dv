@@ -2,15 +2,23 @@
 
 **By Nexus One Research Desk • May 29, 2026 • 35 min read**
 
-**TL;DR: The Flippening Narrative vs. Cash-Flow Reality**
+---
 
-* **Valuation already flipped (on FDV):** Morpho FDV \~$2.28B has surpassed Aave's \~$1.45B, despite Aave still leading on TVL and being the only true cash cow in DeFi lending.
-* **TVL near-parity:** Aave \~$14.5B vs. Morpho \~$11.8B — the gap has compressed from >3x to \~1.2x.
-* **Architectural clash:** Aave V4's "Unified Liquidity Hub & Spoke" (central-bank model) vs. Morpho Blue's immutable, permissionless, curator-driven "Agnostic Primitive."
-* **Stress test (April 2026 Kelp DAO):** Aave's unified pool suffered \~$196M bad debt and a bank run; Morpho's isolated markets contained losses to specific vaults.
-* **Value capture divergence:** Aave returns cash to holders (permanent buybacks + Anti-GHO dividends); Morpho returns **$0** (fee switch off).
-* **Overhang:** \~22.6% of Morpho circulating supply unlocks within 12 months; Apollo's 48-month staggered buys may become exit liquidity for early VCs.
-* **Bottom line:** Morpho wins on infrastructure/TVL momentum; Aave wins decisively on fundamentals and sustainability. A true *circulating* market-cap flip requires Morpho governance to redesign value capture.
+## TL;DR
+
+• **Valuation already flipped (on FDV):** Morpho FDV \~$2.28B has surpassed Aave's \~$1.45B, despite Aave still leading on TVL and being the only true cash cow in DeFi lending.
+
+• **TVL near-parity:** Aave \~$14.5B vs. Morpho \~$11.8B — the gap has compressed from >3x to \~1.2x.
+
+• **Architectural clash:** Aave V4's "Unified Liquidity Hub & Spoke" (central-bank model) vs. Morpho Blue's immutable, permissionless, curator-driven "Agnostic Primitive."
+
+• **Stress test (April 2026 Kelp DAO):** Aave's unified pool suffered \~$196M bad debt and a bank run; Morpho's isolated markets contained losses to specific vaults.
+
+• **Value capture divergence:** Aave returns cash to holders (permanent buybacks + Anti-GHO dividends); Morpho returns **$0** (fee switch off).
+
+• **Overhang:** \~22.6% of Morpho circulating supply unlocks within 12 months; Apollo's 48-month staggered buys may become exit liquidity for early VCs.
+
+• **Bottom line:** Morpho wins on infrastructure/TVL momentum; Aave wins decisively on fundamentals and sustainability. A true *circulating* market-cap flip requires Morpho governance to redesign value capture.
 
 ---
 

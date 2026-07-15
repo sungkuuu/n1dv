@@ -6,23 +6,21 @@
 
 ---
 
-## Weekly Report Executive Summary (2026.5.25–6.1)
+## TL;DR
 
-### 7 Key Takeaways
+• **(BTC Price) Continued weakness, down \~5% WoW:** BTC printed **$73,306**, **−5.1% vs the same point last week ($77,263)**. Price traded in a $73–74K range late in the week after sliding from the mid-$78K area in mid-May. ETF outflows and hawkish Fed commentary drove the downside.
 
-**1. (BTC Price) Continued weakness, down \~5% WoW.** BTC printed **$73,306**, **−5.1% vs the same point last week ($77,263)**. Price traded in a $73–74K range late in the week after sliding from the mid-$78K area in mid-May. ETF outflows and hawkish Fed commentary drove the downside.
+• **(ETF Flows) Nine straight days of outflows — largest weekly outflow of 2026:** US spot BTC ETFs saw **−$1.256B of net outflows** over 5/18–22, with **−$648.64M in a single day on 5/18**. Separately, Phemex tallies 2026's worst weekly outflow at \~**$1.47B** (different measurement window). The nine-day outflow run weakened the core spot bid.
 
-**2. (ETF Flows) Nine straight days of outflows — largest weekly outflow of 2026.** US spot BTC ETFs saw **−$1.256B of net outflows** over 5/18–22, with **−$648.64M in a single day on 5/18**. Separately, Phemex tallies 2026's worst weekly outflow at \~**$1.47B** (different measurement window). The nine-day outflow run weakened the core spot bid.
+• **(Macro/Fed) Hawkish tone weighs on risk assets:** US 2Y **3.99%**, 10Y **4.45%**, 30Y **4.98%**. Governor Waller's 5/22 hawkish remarks pushed back near-term cut expectations. May CPI is **due 6/10**.
 
-**3. (Macro/Fed) Hawkish tone weighs on risk assets.** US 2Y **3.99%**, 10Y **4.45%**, 30Y **4.98%**. Governor Waller's 5/22 hawkish remarks pushed back near-term cut expectations. May CPI is **due 6/10**.
+• **(DeFi/Security) Fees resilient, revenue mix shifting:** Weekly protocol fees: Tether **$102.3M**, Circle **$45.1M**, Hyperliquid **$13.27M**. Morpho (+44.2%) and Maple (+48.3%) grew double digits while Pendle (−72.3%) and PancakeSwap (−31.6%) fell sharply.
 
-**4. (DeFi/Security) Fees resilient, revenue mix shifting.** Weekly protocol fees: Tether **$102.3M**, Circle **$45.1M**, Hyperliquid **$13.27M**. Morpho (+44.2%) and Maple (+48.3%) grew double digits while Pendle (−72.3%) and PancakeSwap (−31.6%) fell sharply.
+• **(L1/L2 Hot Topic) Sui CME futures launch vs. network-stability concerns:** **CME SUI futures launched 5/29**, widening institutional access, but the same day saw a cumulative 9.5-hour outage. HyperEVM TVL was strong at **$3.33B (+13.3% WoW)**.
 
-**5. (L1/L2 Hot Topic) Sui CME futures launch vs. network-stability concerns.** **CME SUI futures launched 5/29**, widening institutional access, but the same day saw a cumulative 9.5-hour outage. HyperEVM TVL was strong at **$3.33B (+13.3% WoW)**.
+• **(RWA/Regulation) Framework debate + regulated perps:** The **CFTC approved Kalshi's BTCPERP on 5/29**, signaling a pivot toward regulated crypto perpetuals. A JPMorgan–Coinbase dispute over the CLARITY Act and stablecoin yield eligibility came to the fore.
 
-**6. (RWA/Regulation) Framework debate + regulated perps.** The **CFTC approved Kalshi's BTCPERP on 5/29**, signaling a pivot toward regulated crypto perpetuals. A JPMorgan–Coinbase dispute over the CLARITY Act and stablecoin yield eligibility came to the fore.
-
-**7. (Next Week Calendar) CPI and token unlocks in focus.** **May CPI 6/10**, **HYPE unlock 6/6** (Core Contributors, cliff). The June FOMC date is unconfirmed this cycle — to be added next issue.
+• **(Next Week Calendar) CPI and token unlocks in focus:** **May CPI 6/10**, **HYPE unlock 6/6** (Core Contributors, cliff). The June FOMC date is unconfirmed this cycle — to be added next issue.
 
 ---
 

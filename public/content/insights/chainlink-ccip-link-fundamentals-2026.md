@@ -2,14 +2,21 @@
 
 **By Nexus One Research Desk • May 29, 2026 • 35 min read**
 
-**TL;DR: Flight-to-Quality Turns CCIP Into the On-Chain Settlement Standard**
+---
 
-* **Catalyst:** The April 2026 Kelp DAO exploit (\~$292M, attributed to Lazarus Group) exposed single-verifier cross-chain risk and triggered a \~$13.5B DeFi TVL flight in 48 hours.
-* **Migration wave:** \~$4B of assets migrated (or began migrating) to Chainlink CCIP within a month — Lombard (\~$1B), Solv (\~$700M), Kraken (kBTC), and even Kelp DAO itself (OFT → CCT).
-* **Volume record:** CCIP weekly token-transfer volume broke its all-time high past \~$1.3B (+260% WoW); cumulative CCIP volume \~$19B; oracle TVE \~$27T.
-* **Price decoupling:** LINK rose \~4.5% on the week into a \~$9.50–$10.00 support zone while BTC fell to \~$77K–$78K and $1B of longs were liquidated market-wide.
-* **Tokenomics de-risked:** 72.7% circulating (727.1M / 1B); 2017 ICO cliff lock-ups fully concluded in 2024; Staking v0.2 locks \~45M LINK with a 28-day unbonding cooldown.
-* **Valuation caveat:** Mcap \~$7B–$7.5B (FDV \~$9.5B) implies PSR \~29x–97x vs. \~$75M–$250M revenue — rich, with crowded longs (L/S 1.93) raising short-term downside risk toward \~$8.
+## TL;DR
+
+• **Catalyst:** The April 2026 Kelp DAO exploit (\~$292M, attributed to Lazarus Group) exposed single-verifier cross-chain risk and triggered a \~$13.5B DeFi TVL flight in 48 hours.
+
+• **Migration wave:** \~$4B of assets migrated (or began migrating) to Chainlink CCIP within a month — Lombard (\~$1B), Solv (\~$700M), Kraken (kBTC), and even Kelp DAO itself (OFT → CCT).
+
+• **Volume record:** CCIP weekly token-transfer volume broke its all-time high past \~$1.3B (+260% WoW); cumulative CCIP volume \~$19B; oracle TVE \~$27T.
+
+• **Price decoupling:** LINK rose \~4.5% on the week into a \~$9.50–$10.00 support zone while BTC fell to \~$77K–$78K and $1B of longs were liquidated market-wide.
+
+• **Tokenomics de-risked:** 72.7% circulating (727.1M / 1B); 2017 ICO cliff lock-ups fully concluded in 2024; Staking v0.2 locks \~45M LINK with a 28-day unbonding cooldown.
+
+• **Valuation caveat:** Mcap \~$7B–$7.5B (FDV \~$9.5B) implies PSR \~29x–97x vs. \~$75M–$250M revenue — rich, with crowded longs (L/S 1.93) raising short-term downside risk toward \~$8.
 
 ---
 

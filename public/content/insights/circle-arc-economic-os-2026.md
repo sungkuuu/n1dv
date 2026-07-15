@@ -1,13 +1,20 @@
 # Circle Arc Blockchain and the ARC Token: A Deep Dive into the Next-Generation Economic OS Architecture and the Reshaping of Capital Markets
 
-**TL;DR: Circle Arc as a Defense Play Against Stablecoin Commoditization**
+---
 
-* **GENIUS Act fallout:** Federal stablecoin rules (July 2025) institutionalized issuance—but lowered barriers for banks, fintechs, and big tech (e.g., KlarnaUSD via Stripe Bridge), compressing USDC's scarcity premium.
-* **Arc = vertical integration:** Circle is not merely expanding USDC; it is capturing L1 settlement infrastructure to defend margin as third-party stablecoins commoditize issuance.
-* **Q1 2026 fundamentals:** $694M revenue (+20% YoY), $151M adj. EBITDA (+24%), $77B USDC in circulation (+28%), $21.5T onchain volume (+263%)—traffic Circle aims to internalize on Arc.
-* **$3B FDV presale:** $222M raised (a16z $75M, BlackRock, ICE, ARK, etc.) with a May 8, 2028 PoS transition put option for investors if decentralization fails.
-* **Architecture:** Modular consensus (Malachite BFT) + execution (Reth EVM); ~500ms testnet finality; $0.01 target gas in USDC; opt-in privacy via Aleo/USDCx; Agent Stack for M2M nanopayments.
-* **Open risks:** Burn economics vs 2–3% inflation without breakeven math; red-ocean vs Tether/Stripe/JPM; permissioned-validator centralization critique; unrelated "ARC" ticker confusion (AI Rig Complex).
+## TL;DR
+
+• **GENIUS Act fallout:** Federal stablecoin rules (July 2025) institutionalized issuance—but lowered barriers for banks, fintechs, and big tech (e.g., KlarnaUSD via Stripe Bridge), compressing USDC's scarcity premium.
+
+• **Arc = vertical integration:** Circle is not merely expanding USDC; it is capturing L1 settlement infrastructure to defend margin as third-party stablecoins commoditize issuance.
+
+• **Q1 2026 fundamentals:** $694M revenue (+20% YoY), $151M adj. EBITDA (+24%), $77B USDC in circulation (+28%), $21.5T onchain volume (+263%)—traffic Circle aims to internalize on Arc.
+
+• **$3B FDV presale:** $222M raised (a16z $75M, BlackRock, ICE, ARK, etc.) with a May 8, 2028 PoS transition put option for investors if decentralization fails.
+
+• **Architecture:** Modular consensus (Malachite BFT) + execution (Reth EVM); ~500ms testnet finality; $0.01 target gas in USDC; opt-in privacy via Aleo/USDCx; Agent Stack for M2M nanopayments.
+
+• **Open risks:** Burn economics vs 2–3% inflation without breakeven math; red-ocean vs Tether/Stripe/JPM; permissioned-validator centralization critique; unrelated "ARC" ticker confusion (AI Rig Complex).
 
 ---
 

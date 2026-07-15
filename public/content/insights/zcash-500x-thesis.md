@@ -5,6 +5,20 @@ Feb 13, 2026
 
 ---
 
+## TL;DR
+
+• **The claim:** Barry Silbert (DCG CEO) projected 500x growth for Zcash at Bitcoin Investor Week — implying ~$115,000 per ZEC and a $2 Trillion market cap.
+
+• **The math:** A static $2T is impossible (it would exceed Bitcoin's current $1.4T cap today); it is only conditionally possible as a "Super Bull Case" over 5–10 years in which Bitcoin reaches a $20T market cap and ZEC captures 10% of its value.
+
+• **The messenger risk:** DCG, one of the largest ZEC holders and under liquidity pressure from the Genesis bankruptcy, has a clear incentive to "talk up his book" — and the Grayscale ZCSH trust's -20% NAV discount is a binary regulatory bet, not free money.
+
+• **Directionally correct:** Shielded supply has grown from 8% to ~30% of ZEC, and FATF Travel Rule compliance via the encrypted memo field makes Zcash the only privacy asset Wall Street capital can legally touch — unlike Monero.
+
+• **Strategy:** Do not "bet the farm" on 500x. View Zcash as "Asymmetric Insurance" — a return to its All-Time High ($5,900) represents a far more realistic 25x target.
+
+---
+
 ## A critical verification of the $2 Trillion market cap thesis. Is privacy the next HTTPS of money, or a regulatory trap?
 
 By Nexus One Research Desk • Feb 13, 2026 • 25 min read

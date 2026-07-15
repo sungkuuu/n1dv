@@ -5,17 +5,21 @@ Feb 9, 2026
 
 ---
 
+## TL;DR
+
+• **The 17-Day Runway:** Under a "Six Sigma" scenario (-20% annualized funding like the 2022 Merge), Ethena's $62M Reserve Fund would be depleted in just **17.4 days**.
+
+• **Liquidity Test:** A single redemption event of 10% supply ($650M) during a liquidity crunch (2% slippage) would instantly vaporize **21%** of the Reserve Fund.
+
+• **Verdict:** USDe is not a "Stablecoin" but a **"Tokenized Market Neutral Hedge Fund"**. We recommend capping portfolio allocation at **<15%** and treating it as a low-risk investment asset, not cash.
+
+---
+
 Quantitative Analysis of Reserve Fund Survival & Tail Risks
 
 By Nexus One Research Desk • Feb 9, 2026 • 25 min read
 
 ---
-
-## Key Takeaways
-
-- **The 17-Day Runway:** Under a "Six Sigma" scenario (-20% annualized funding like the 2022 Merge), Ethena's $62M Reserve Fund would be depleted in just **17.4 days**.
-- **Liquidity Test:** A single redemption event of 10% supply ($650M) during a liquidity crunch (2% slippage) would instantly vaporize **21%** of the Reserve Fund.
-- **Verdict:** USDe is not a "Stablecoin" but a **"Tokenized Market Neutral Hedge Fund"**. We recommend capping portfolio allocation at **<15%** and treating it as a low-risk investment asset, not cash.
 
 ## 1. Introduction: Structural Experiment of Synthetic Dollars and the Status Quo in 2026
 

@@ -5,6 +5,20 @@ Mar 3, 2026
 
 ---
 
+## TL;DR
+
+• **The bar for M2M infrastructure:** Machine-to-machine economies demand sub-cent fees with predictable pricing, deterministic sub-second finality (ideally under 500ms), parallel execution at scale, and native machine identity — requirements first- and second-generation chains like Ethereum and Bitcoin cannot meet.
+
+• **Solana is the current leader:** Local Fee Markets isolate congestion (median fees held at ~0.00000861 SOL), Firedancer has demonstrated 1,000,000+ TPS in testnet, Alpenglow targets ~150ms finality, and DePIN anchors like Helium, Render, and Hivemapper give it first-mover ecosystem inertia.
+
+• **Sui is the strongest architectural challenger:** Its object-centric model lets owned-object transactions bypass global consensus entirely, delivering sub-500ms finality (390ms even for shared objects via Mysticeti) and up to 297,000 TPS in lab conditions.
+
+• **Specialists own their niches:** Peaq (W3C DID-based peaq IDs, 3.35M+ device addresses) is the unrivaled machine-identity registry; Hyperliquid (HyperEVM's direct order-book access, dual-block architecture) is the hub of agentic finance.
+
+• **Tron is out of the race:** USDT transfer fees of $2.02–$4.22 and 57-second finality make it economically and architecturally unviable for micro-payment-driven machine commerce.
+
+---
+
 ## 1. Introduction: The Advent of the Machine Economy and New Challenges for Blockchain Infrastructure
 
 > The most critical paradigm shift in the technological and financial landscape from 2026 onwards is the evolution from an internet for humans to an 'Economy of Things' for machines. A Machine-to-Machine (M2M) environment, where billions of IoT devices, autonomous vehicles, decentralized sensor networks, and AI agents interact and autonomously exchange value without human intervention, is fully materializing. Global payment giants like Stripe redefining AI agent commerce using stablecoins such as USDC serves as strong evidence of this transition.
