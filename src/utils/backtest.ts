@@ -7,7 +7,8 @@
 
 const COINGECKO_BASE = 'https://api.coingecko.com/api/v3';
 // Bumped the cache key so the yield-bearing recompute isn't masked by a stale 0%-yield cache.
-const CACHE_KEY = 'n1dv_backtest_365_v2';
+// v3: invalidates caches poisoned by silently-empty rate-limited fetches (fixed below).
+const CACHE_KEY = 'n1dv_backtest_365_v3';
 const CACHE_TTL_MS = 24 * 60 * 60 * 1000; // 24h
 
 const WEIGHTS = {
@@ -74,8 +75,14 @@ async function fetchMarketChart(coinId: string): Promise<PriceSeries> {
   const res = await fetch(url);
   if (res.status === 429) throw new Error('RATE_LIMIT');
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  const data = (await res.json()) as { prices?: [number, number][] };
+  const data = (await res.json()) as {
+    prices?: [number, number][];
+    // CoinGecko's free tier signals rate limiting via HTTP 200 + an error body.
+    status?: { error_code?: number };
+  };
+  if (data.status?.error_code === 429) throw new Error('RATE_LIMIT');
   const prices = data.prices ?? [];
+  if (prices.length === 0) throw new Error('EMPTY_SERIES');
   return pricesToDailySeries(prices);
 }
 
@@ -133,51 +140,80 @@ function alignAndCompute(
   return result;
 }
 
-export async function fetchBacktestData(): Promise<BacktestDataPoint[]> {
-  const cached = getCached();
-  if (cached) return cached;
+const COIN_IDS = ['bitcoin', 'ethereum', 'hyperliquid', 'pendle', 'aerodrome-finance'] as const;
 
-  const delay = (ms: number) => new Promise((r) => setTimeout(r, ms));
+const delay = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
-  let btc: PriceSeries = [];
-  let eth: PriceSeries = [];
-  let hype: PriceSeries = [];
-  let pendle: PriceSeries = [];
-  let aero: PriceSeries = [];
-
-  const fetchOne = async (
-    id: string,
-    setter: (s: PriceSeries) => void
-  ): Promise<void> => {
+/** Fetch one coin, retrying twice with backoff when CoinGecko rate-limits. */
+async function fetchWithRetry(id: string): Promise<PriceSeries> {
+  let lastError: unknown;
+  for (let attempt = 0; attempt < 3; attempt++) {
+    if (attempt > 0) await delay(2500 * attempt);
     try {
-      const series = await fetchMarketChart(id);
-      setter(series);
+      return await fetchMarketChart(id);
     } catch (e) {
-      if (e instanceof Error && e.message === 'RATE_LIMIT') throw e;
+      lastError = e;
     }
-    await delay(1300);
-  };
+  }
+  throw lastError;
+}
 
-  await fetchOne('bitcoin', (s) => (btc = s));
-  await fetchOne('ethereum', (s) => (eth = s));
-  await fetchOne('hyperliquid', (s) => (hype = s));
-  await fetchOne('pendle', (s) => (pendle = s));
-  await fetchOne('aerodrome-finance', (s) => (aero = s));
+/** True when the series is a full backfill reaching (at least) yesterday UTC. */
+function isComplete(out: BacktestDataPoint[]): boolean {
+  if (out.length < 300) return false;
+  const yesterday = toDayKey(Date.now() - 86_400_000);
+  return out[out.length - 1].date >= yesterday;
+}
 
-  if (btc.length < 2 || eth.length < 2) throw new Error('INSUFFICIENT_DATA');
+/** Dedupe concurrent callers (Home, vault page, Performance all want this). */
+let inFlight: Promise<BacktestDataPoint[]> | null = null;
+
+export function fetchBacktestData(): Promise<BacktestDataPoint[]> {
+  const cached = getCached();
+  if (cached?.fresh) return Promise.resolve(cached.data);
+
+  if (!inFlight) {
+    inFlight = doFetch().finally(() => {
+      inFlight = null;
+    });
+  }
+
+  // Stale-while-revalidate: paint the expired cache immediately, refresh behind it.
+  if (cached) {
+    void inFlight.catch(() => {});
+    return Promise.resolve(cached.data);
+  }
+  return inFlight;
+}
+
+async function doFetch(): Promise<BacktestDataPoint[]> {
+  // All five in parallel — the free tier tolerates a burst of 5; retry covers 429s.
+  const settled = await Promise.allSettled(COIN_IDS.map((id) => fetchWithRetry(id)));
+  const [btc, eth, hype, pendle, aero] = settled.map((s) =>
+    s.status === 'fulfilled' ? s.value : []
+  );
+
+  if (btc.length < 2 || eth.length < 2) {
+    const rateLimited = settled.some(
+      (s) => s.status === 'rejected' && (s.reason as Error)?.message === 'RATE_LIMIT'
+    );
+    throw new Error(rateLimited ? 'RATE_LIMIT' : 'INSUFFICIENT_DATA');
+  }
 
   const out = alignAndCompute(btc, eth, hype, pendle, aero);
-  setCached(out);
+  // Cache only a complete run — a partial fetch must not poison 24h of views.
+  const allOk = settled.every((s) => s.status === 'fulfilled');
+  if (allOk && isComplete(out)) setCached(out);
   return out;
 }
 
-function getCached(): BacktestDataPoint[] | null {
+function getCached(): { data: BacktestDataPoint[]; fresh: boolean } | null {
   try {
     const raw = localStorage.getItem(CACHE_KEY);
     if (!raw) return null;
     const { data, ts } = JSON.parse(raw) as { data: BacktestDataPoint[]; ts: number };
-    if (Date.now() - ts > CACHE_TTL_MS) return null;
-    return data;
+    if (!Array.isArray(data) || data.length === 0) return null;
+    return { data, fresh: Date.now() - ts <= CACHE_TTL_MS };
   } catch {
     return null;
   }
