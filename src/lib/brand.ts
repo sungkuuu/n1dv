@@ -1,18 +1,20 @@
 /**
- * One deployment serves three domains — n1dv.io, quadrix.finance and
- * insights.nexusonecap.com — off the same app + research pipeline. We branch the
- * header wordmark / <title> on hostname so each domain reads as its own brand,
- * while the footer stays Nexus One everywhere (the parent company) and research
- * always ships under the Nexus One Research Desk.
+ * One deployment serves n1dv.io and insights.nexusonecap.com off the same app +
+ * research pipeline. We branch the header wordmark / <title> on hostname so each
+ * domain reads as its own brand, while the footer stays Nexus One everywhere
+ * (the parent company) and research always ships under the Nexus One Research
+ * Desk.
  *
- *   quadrix.finance          → QUADRIX    (asset-management platform)
  *   n1dv.io                  → N1DV       (Deep Value active vault)
  *   *.nexusonecap.com        → NEXUS ONE  (company / Insight surface)
  *
+ * (quadrix.finance was served from here until 2026-07-20; it now points at the
+ * standalone Quadrix site, so its brand entry was removed.)
+ *
  * Dev/preview (localhost, *.pages.dev) has no branded host, so it falls back to
- * n1dv and honours a ?brand=quadrix|n1dv|nexus override for eyeballing skins.
+ * n1dv and honours a ?brand=n1dv|nexus override for eyeballing skins.
  */
-export type BrandId = 'quadrix' | 'n1dv' | 'nexus';
+export type BrandId = 'n1dv' | 'nexus';
 
 /** Nav destinations, keyed; each surface picks which ones it shows. */
 export type NavKey = 'letter' | 'vaults' | 'performance' | 'insights' | 'radar' | 'dashboard';
@@ -48,16 +50,6 @@ export interface Brand {
 const FULL_NAV: NavKey[] = ['letter', 'vaults', 'performance', 'insights', 'radar', 'dashboard'];
 
 const BRANDS: Record<BrandId, Brand> = {
-  quadrix: {
-    id: 'quadrix',
-    wordmark: 'QUADRIX',
-    tracking: '0.22em',
-    domain: 'quadrix.finance',
-    homeTitle: 'Quadrix | Onchain Asset Management',
-    nav: FULL_NAV,
-    showUserActions: true,
-    theme: 'dark',
-  },
   n1dv: {
     id: 'n1dv',
     wordmark: 'NEXUS ONE',
@@ -99,7 +91,6 @@ export function resolveBrand(
   if (override && (override as BrandId) in BRANDS) return BRANDS[override as BrandId];
 
   const h = hostname.toLowerCase();
-  if (h.includes('quadrix')) return BRANDS.quadrix;
   if (h.includes('nexusonecap')) return BRANDS.nexus;
   if (h.includes('n1dv')) return BRANDS.n1dv;
   return BRANDS.n1dv;

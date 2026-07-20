@@ -27,8 +27,8 @@ export function Layout({ children }: LayoutProps) {
   const [isVaultDrawerOpen, setIsVaultDrawerOpen] = useState(false);
   const [isReferralDrawerOpen, setIsReferralDrawerOpen] = useState(false);
 
-  // Same deployment, three domains: header wordmark + home <title> follow the
-  // hostname (n1dv.io / quadrix.finance / nexusonecap.com). Footer stays Nexus One.
+  // Same deployment, two domains: header wordmark + home <title> follow the
+  // hostname (n1dv.io / nexusonecap.com). Footer stays Nexus One.
   const brand = useMemo(() => resolveBrand(), []);
 
   const isDashboard = location.pathname === '/dashboard';

@@ -66,7 +66,7 @@
    dark utility vocabulary the app is written in (bg-[#0a0a0a], text-white,
    border-white/10, …) to the corporate nexusonecap.com palette: white bg,
    Poppins, #222/#333 text, #999 muted, #fafafa sections, black CTAs.
-   Scoped under html.theme-light so quadrix.finance / n1dv.io stay dark.
+   Scoped under html.theme-light so n1dv.io stays dark.
    ========================================================================== */
 
 @layer components {

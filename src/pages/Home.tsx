@@ -72,7 +72,6 @@ export function Home() {
   const navigate = useNavigate();
   const [isN1DVModalOpen, setIsN1DVModalOpen] = useState(false);
 
-  // n1dv.io = the vault, quadrix.finance = the platform: same sections, different framing.
   const copy = useMemo(() => HOME_COPY[resolveBrand().id], []);
 
   const [backtestData, setBacktestData] = useState<Awaited<ReturnType<typeof fetchBacktestData>> | null>(null);
