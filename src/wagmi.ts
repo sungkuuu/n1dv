@@ -3,7 +3,9 @@ import { injectedWallet, walletConnectWallet } from '@rainbow-me/rainbowkit/wall
 import { createConfig, http } from 'wagmi';
 import { arbitrum, mainnet } from 'wagmi/chains';
 
-const projectId = import.meta.env.VITE_WALLETCONNECT_PROJECT_ID || 'YOUR_PROJECT_ID';
+// Public WalletConnect (Reown) project id — ships in the client bundle by design.
+const projectId =
+  import.meta.env.VITE_WALLETCONNECT_PROJECT_ID || 'e474bb99175f1ac956a28903c55d5573';
 
 // Minimal connector set instead of getDefaultConfig(): injected covers the
 // MetaMask/Rabby/Brave browser extensions, WalletConnect covers mobile + the
