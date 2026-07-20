@@ -246,7 +246,7 @@ export function N1DVModal({ isOpen, onClose }: N1DVModalProps) {
                     <div className="text-lg leading-relaxed space-y-4">
                       <p className="text-gray-400">
                         Integrating Enzyme protocol with LLM Agents for automated risk control. Think "self-driving"
-                        for fund management, but with human oversight.
+                        for vault management, but with human oversight.
                       </p>
 
                       <div className="space-y-4 mt-6">
@@ -307,7 +307,7 @@ export function N1DVModal({ isOpen, onClose }: N1DVModalProps) {
 
                       <div className="mt-10 leading-relaxed">
                         <p className="text-gray-400">
-                          A truly omnichain fund that deploys capital based on opportunity, not tribal loyalty.
+                          A truly omnichain vault that deploys capital based on opportunity, not tribal loyalty.
                           The future of institutional crypto investing is chain-agnostic, AI-augmented, and
                           radically transparent.
                         </p>

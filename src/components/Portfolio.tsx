@@ -81,7 +81,7 @@ export const Portfolio = () => {
 
         <div className="border border-white/10 bg-[#111111] p-8 mb-8 rounded">
           <div className="flex items-center justify-between mb-8 pb-6 border-b border-white/10">
-            <h2 className="text-2xl font-bold text-white">Fund AUM (Live)</h2>
+            <h2 className="text-2xl font-bold text-white">Vault AUM (Live)</h2>
             <div className="relative">
               <select className="bg-black border border-white/10 text-white px-4 py-2 text-sm font-medium appearance-none pr-10 cursor-default rounded">
                 <option>N1 Deep Value (Current)</option>

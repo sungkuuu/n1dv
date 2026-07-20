@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useAccount } from 'wagmi';
 import { Layout } from '../components/Layout';
 import { CustomConnectButton } from '../components/CustomConnectButton';
-import { FundChart } from '../components/FundChart';
+import { VaultChart } from '../components/VaultChart';
 import {
   ResponsiveContainer,
   PieChart as RechartsPieChart,
@@ -90,7 +90,7 @@ export function VaultDetailN1DV() {
               <section className="border border-white/10 bg-white/[0.02] rounded-xl p-6 mb-8">
                 <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-3">
                   <TrendingUp size={20} className="text-gray-400" />
-                  Fund Performance
+                  Vault Performance
                   <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-500/15 border border-amber-500/30">
                     <span className="text-amber-400 text-xs font-semibold tracking-wider uppercase">Simulated</span>
                   </span>
@@ -101,7 +101,7 @@ export function VaultDetailN1DV() {
                     Full track record →
                   </button>
                 </h2>
-                <FundChart />
+                <VaultChart />
               </section>
 
               {/* Asset Allocation */}
@@ -221,7 +221,7 @@ export function VaultDetailN1DV() {
                   <div>
                     <h3 className="text-lg font-bold text-white mb-4">4. Future Roadmap: AI & Omnichain</h3>
                     <h4 className="text-base font-semibold text-gray-200 mb-3">Semi-Autonomous Driving</h4>
-                    <p className="mb-4">Integrating Enzyme protocol with LLM Agents for automated risk control. Think "self-driving" for fund management, but with human oversight.</p>
+                    <p className="mb-4">Integrating Enzyme protocol with LLM Agents for automated risk control. Think "self-driving" for vault management, but with human oversight.</p>
                     <ul className="space-y-3 mb-6">
                       <li><strong className="text-white">Auto-Rebalancing:</strong> Automatic shifts to USDT during panic/volatility spikes detected via onchain metrics.</li>
                       <li><strong className="text-white">Risk Monitoring:</strong> 24/7 portfolio health checks with instant alerts and corrective actions.</li>
@@ -234,7 +234,7 @@ export function VaultDetailN1DV() {
                       <li><strong className="text-white">Ethereum Mainnet:</strong> Access to battle-tested DeFi primitives like Curve, Aave, and Uniswap v4.</li>
                       <li><strong className="text-white">Cross-chain Arbitrage:</strong> Exploit pricing inefficiencies and yield differentials across ecosystems.</li>
                     </ul>
-                    <p>A truly omnichain fund that deploys capital based on opportunity, not tribal loyalty. The future of institutional crypto investing is chain-agnostic, AI-augmented, and radically transparent.</p>
+                    <p>A truly omnichain vault that deploys capital based on opportunity, not tribal loyalty. The future of institutional crypto investing is chain-agnostic, AI-augmented, and radically transparent.</p>
                   </div>
                 </div>
               </section>

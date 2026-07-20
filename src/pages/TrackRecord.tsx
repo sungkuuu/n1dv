@@ -195,7 +195,7 @@ export function TrackRecord() {
                     The stablecoin sleeve earns a conservative <span className="text-slate-300">5% APY</span> (the lower bound of the strategy's 5–10% working-capital target, deployed to DeFi yield venues), and no leverage is used.
                   </li>
                   <li>
-                    Gas and slippage are not deducted; at the fund's target size their impact on daily-rebalanced spot positions is estimated below 0.5% annually.
+                    Gas and slippage are not deducted; at the vault's target size their impact on daily-rebalanced spot positions is estimated below 0.5% annually.
                   </li>
                   <li>
                     Full methodology whitepaper (asset universe, rebalancing rules, cost assumptions) is available to investors in due diligence.

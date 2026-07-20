@@ -13,7 +13,7 @@ export function Insights() {
   const modalContentRef = useRef<HTMLDivElement>(null);
 
   // The corporate surface lists reports as stacked rows (date · title · chevron,
-  // hairline dividers) to match nexusonecap.com's list style; fund/platform
+  // hairline dividers) to match nexusonecap.com's list style; vault/platform
   // surfaces keep the card grid.
   const isCorporateList = useMemo(() => resolveBrand().id === 'nexus', []);
 

@@ -6,7 +6,7 @@
  * always ships under the Nexus One Research Desk.
  *
  *   quadrix.finance          → QUADRIX    (asset-management platform)
- *   n1dv.io                  → N1DV       (Deep Value active fund)
+ *   n1dv.io                  → N1DV       (Deep Value active vault)
  *   *.nexusonecap.com        → NEXUS ONE  (company / Insight surface)
  *
  * Dev/preview (localhost, *.pages.dev) has no branded host, so it falls back to
@@ -29,7 +29,7 @@ export interface Brand {
   homeTitle: string;
   /** Nav items shown for this surface, in order. */
   nav: NavKey[];
-  /** Referral + Connect Wallet actions (platform/fund only). */
+  /** Referral + Connect Wallet actions (platform/vault only). */
   showUserActions: boolean;
   /** Where '/' redirects for this surface (undefined = show Home). */
   landing?: string;
@@ -63,11 +63,11 @@ const BRANDS: Record<BrandId, Brand> = {
     wordmark: 'NEXUS ONE',
     tracking: '0.26em',
     domain: 'n1dv.io',
-    homeTitle: 'N1DV | Deep Value Digital Asset Fund',
+    homeTitle: 'N1DV | Deep Value Digital Asset Vault',
     nav: FULL_NAV,
     showUserActions: true,
     theme: 'dark',
-    // Fund site carries the parent-company mark (white, for the dark theme).
+    // Vault site carries the parent-company mark (white, for the dark theme).
     logoSrc: '/nexus-one-wordmark.png',
   },
   nexus: {

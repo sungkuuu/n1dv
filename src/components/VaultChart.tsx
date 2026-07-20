@@ -43,7 +43,7 @@ const TIME_RANGE_OPTIONS: { value: TimeRangeKey; label: string }[] = [
   { value: '1Y', label: '1Y' },
 ];
 
-export function FundChart() {
+export function VaultChart() {
   const [chartVisibility, setChartVisibility] = useState({
     n1dv: true,
     btc: false,

@@ -1,6 +1,6 @@
 /**
  * N1DV virtual backtest: fetch real price data from CoinGecko and compute
- * cumulative returns for the fund (40% USDT, 20% WBTC, 20% ETH, 10% HYPE, 5% PENDLE, 5% AERO).
+ * cumulative returns for the vault (40% USDT, 20% WBTC, 20% ETH, 10% HYPE, 5% PENDLE, 5% AERO).
  * The 40% stablecoin sleeve earns a conservative DeFi yield (STABLE_APY), matching
  * the strategy's "yield-bearing defense" — the working capital is never idle.
  */

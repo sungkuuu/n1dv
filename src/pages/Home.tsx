@@ -72,7 +72,7 @@ export function Home() {
   const navigate = useNavigate();
   const [isN1DVModalOpen, setIsN1DVModalOpen] = useState(false);
 
-  // n1dv.io = the fund, quadrix.finance = the platform: same sections, different framing.
+  // n1dv.io = the vault, quadrix.finance = the platform: same sections, different framing.
   const copy = useMemo(() => HOME_COPY[resolveBrand().id], []);
 
   const [backtestData, setBacktestData] = useState<Awaited<ReturnType<typeof fetchBacktestData>> | null>(null);
@@ -252,8 +252,8 @@ export function Home() {
       <section id="strategy-section" className="scroll-mt-36 px-4 py-20 border-t border-gray-800 bg-gradient-to-b from-[#0a0a0a] to-[#111111]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-5xl font-bold mb-4">{copy.fundsHeading}</h2>
-            <p className="text-gray-400 text-lg">{copy.fundsIntro}</p>
+            <h2 className="text-3xl sm:text-5xl font-bold mb-4">{copy.vaultsHeading}</h2>
+            <p className="text-gray-400 text-lg">{copy.vaultsIntro}</p>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
