@@ -1,21 +1,49 @@
 name: Supabase keep-alive
 
 # Free-tier Supabase projects pause after ~7 days without activity.
-# This pings the Data API every 3 days so the project stays awake.
+# Lesson from the 2026-07-19 pause: anonymous REST *reads* pinged fine on
+# 7/16 yet the project still paused by 7/19 — reads alone don't reliably
+# count as activity. So this now performs a real write+delete round-trip
+# with the service role every 2 days, and falls back to a read ping.
 on:
   schedule:
-    - cron: '17 3 */3 * *'
+    - cron: '17 3 */2 * *'
   workflow_dispatch: {}
 
 jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
-      - name: Ping Supabase Data API
+      - name: Write-ping (insert + delete a keepalive row)
+        env:
+          SB_URL: https://mevrwtzquadthtbzqmdu.supabase.co
+          SB_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: |
+          set -u
+          MARKER="keepalive@nexusonecap.invalid"
+
+          ins=$(curl -s -o /dev/null -w "%{http_code}" --max-time 30 \
+            -X POST "$SB_URL/rest/v1/newsletter_subscribers" \
+            -H "apikey: $SB_KEY" -H "Authorization: Bearer $SB_KEY" \
+            -H "Content-Type: application/json" -H "Prefer: return=minimal,resolution=ignore-duplicates" \
+            -d "{\"email\":\"$MARKER\",\"source\":\"keepalive\"}" || echo 000)
+          echo "insert: HTTP $ins"
+
+          del=$(curl -s -o /dev/null -w "%{http_code}" --max-time 30 \
+            -X DELETE "$SB_URL/rest/v1/newsletter_subscribers?email=eq.$MARKER" \
+            -H "apikey: $SB_KEY" -H "Authorization: Bearer $SB_KEY" || echo 000)
+          echo "delete: HTTP $del"
+
+          # write path healthy → done
+          if [ "$ins" -ge 200 ] && [ "$ins" -lt 300 ] && [ "$del" -ge 200 ] && [ "$del" -lt 300 ]; then
+            exit 0
+          fi
+
+          # fall back to a read ping so a missing/rotated secret doesn't
+          # mask a healthy database — but still fail loudly on 5xx/000
           code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 30 \
-            "https://mevrwtzquadthtbzqmdu.supabase.co/rest/v1/newsletter_subscribers?select=id&limit=1" \
-            -H "apikey: sb_publishable_lzHfxlE6TbRYfiYcKTxUSw_JRHpnqoX")
-          echo "Supabase responded with HTTP $code"
-          # 2xx/4xx both prove the database handled the request; fail only on no response / 5xx
+            "$SB_URL/rest/v1/newsletter_subscribers?select=id&limit=1" \
+            -H "apikey: sb_publishable_lzHfxlE6TbRYfiYcKTxUSw_JRHpnqoX" || echo 000)
+          echo "read fallback: HTTP $code"
           if [ "$code" -ge 500 ] || [ "$code" = "000" ]; then exit 1; fi
+          echo "::warning::write-ping failed (insert=$ins delete=$del) but read works — check SUPABASE_SERVICE_ROLE_KEY"
