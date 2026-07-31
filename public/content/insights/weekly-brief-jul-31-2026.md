@@ -1,8 +1,8 @@
 # Nexus One Weekly Digital Asset Market Report — July 27 to July 31, 2026
 
-**Published:** July 31, 2026 (Fri) · 09:00 KST · By Nexus One Digital Asset Research
+**Published:** July 31, 2026 (Fri) · By Nexus One Digital Asset Research
 
-> Figures that could not be verified against a primary source are omitted from the body and replaced with a qualitative statement or an explicit flag. Unless otherwise noted, data was retrieved as of 09:00 KST on 2026-07-31 — after the US Thursday (7/30) close and before the US Friday (7/31) open. Per the Friday-edition rule, WoW comparisons are versus the prior Monday (7/27). Source links are attached at the end of this report.
+> Figures that could not be verified against a primary source are omitted from the body and replaced with a qualitative statement or an explicit flag. Unless otherwise noted, data was retrieved on 2026-07-31 — after the US Thursday (7/30) close and before the US Friday (7/31) open. Per the Friday-edition rule, WoW comparisons are versus the prior Monday (7/27). Source links are attached at the end of this report.
 
 ---
 
@@ -74,7 +74,7 @@ Oil traded with extreme volatility. WTI plunged **-7.5%** to $82.61 on Monday as
 
 ### BTC/ETH Price Table
 
-| Asset | Spot (7/31 09:00 KST) | Prior Edition (7/27 close) | WoW | Weekly High | Weekly Low |
+| Asset | Spot (7/31) | Prior Edition (7/27 close) | WoW | Weekly High | Weekly Low |
 |---|---|---|---|---|---|
 | BTC | **$64,802.40** | $63,750.88 | **+1.65%** | $65,739.31 (7/27) | $62,726.80 (7/28) |
 | ETH | **$1,919.11** | $1,892.59 | **+1.40%** | $1,982.74 (7/27) | $1,856.45 (7/28) |
