@@ -17,6 +17,24 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'weekly-brief-jul-31-2026',
+    badge: {
+      text: 'WEEKLY BRIEF',
+      variant: 'outline-blue'
+    },
+    title: 'Nexus One Weekly Digital Asset Market Report - July 27 to July 31, 2026',
+    description:
+      'BTC +1.65% to $64.8K through a hawkish FOMC hold (9-3, three dissents for a hike; 30Y at 5.21%, highest since 2007); July BTC ETF inflows pacing the smallest month since launch, DeFi TVL $75.8B with $31.7M of bridge hacks, Hyperliquid equity-perp flash crash, tokenized RWA $34.7B, NFP 8/7 the next catalyst.',
+    date: '2026-07-31',
+    category: 'WEEKLY BRIEF',
+    summary:
+      'BTC +1.65% to $64.8K through a hawkish FOMC hold (9-3, three dissents for a hike; 30Y at 5.21%, highest since 2007); July BTC ETF inflows pacing the smallest month since launch, DeFi TVL $75.8B with $31.7M of bridge hacks, Hyperliquid equity-perp flash crash, tokenized RWA $34.7B, NFP 8/7 the next catalyst.',
+    readTime: '35 min read',
+    author: 'Nexus One Digital Asset Research',
+    content: '',
+    link: '/insights/weekly-brief-jul-31-2026'
+  },
+  {
     id: 'dat-unwind-forced-seller-2026',
     badge: {
       text: 'DEEP RESEARCH',
