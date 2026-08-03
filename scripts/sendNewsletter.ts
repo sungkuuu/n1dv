@@ -20,6 +20,33 @@ import { reports } from '../src/data/reports';
 const SITE = 'https://n1dv.io';
 const SUPABASE_URL = 'https://mevrwtzquadthtbzqmdu.supabase.co';
 const FROM = process.env.NEWSLETTER_FROM || 'Nexus One Research <research@n1dv.io>';
+
+/**
+ * Subscribers are routed to the site they signed up on. `source` is stored as
+ * host + pathname by both signup forms, so the host decides which variant a
+ * reader gets: the report link points at their own site and the footer names
+ * it. Rows predating the host prefix (pathname only) fall back to n1dv, which
+ * is provably where they came from — the nexusonecap form went live later.
+ *
+ * The sender stays brand-neutral ("Nexus One Research"). The nexusonecap
+ * address only takes effect once that domain is verified in Resend and
+ * NEWSLETTER_FROM_NEXUSONECAP is set; until then those readers get the
+ * verified n1dv sender with nexusonecap links.
+ */
+type SiteKey = 'nexusonecap' | 'n1dv';
+const SITES: Record<SiteKey, { origin: string; label: string; from: string }> = {
+  nexusonecap: {
+    origin: 'https://www.nexusonecap.com',
+    label: 'nexusonecap.com',
+    from: process.env.NEWSLETTER_FROM_NEXUSONECAP || FROM,
+  },
+  n1dv: { origin: SITE, label: 'n1dv.io', from: FROM },
+};
+
+/** nexusonecap.com (incl. www) → that site; everything else → n1dv. */
+function siteOf(source: string | null | undefined): SiteKey {
+  return /(^|\.)nexusonecap\.com(\/|$)/i.test(source ?? '') ? 'nexusonecap' : 'n1dv';
+}
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -86,7 +113,8 @@ export function emailHtml(
   description: string,
   url: string,
   category: string,
-  highlights: string[] = []
+  highlights: string[] = [],
+  siteLabel = 'n1dv.io'
 ): string {
   const badge = BADGE[category] ?? BADGE['DEEP RESEARCH'];
   const accent = badge.color;
@@ -125,7 +153,7 @@ export function emailHtml(
       </table>
       <hr style="border:none;border-top:1px solid #e5e7eb;margin:16px 0 20px;" />
       <p style="color:#9ca3af;font-size:12px;line-height:1.6;margin:0;">
-        You are receiving this because you subscribed on n1dv.io.
+        You are receiving this because you subscribed on ${siteLabel}.
         To unsubscribe, reply with "unsubscribe" or email
         <a href="mailto:partner@nexusonecap.com?subject=Unsubscribe" style="color:#6b7280;">partner@nexusonecap.com</a>.
         This email is for informational purposes only and is not investment advice.
@@ -164,24 +192,32 @@ async function main(): Promise<void> {
 
   const { data: subs, error: subErr } = await supabase
     .from('newsletter_subscribers')
-    .select('email');
+    .select('email, source');
   if (subErr) throw new Error(`subscriber read failed: ${subErr.message}`);
-  const emails = (subs ?? []).map((s) => s.email);
 
-  const url = `${SITE}${latest.link}`;
+  // group recipients by the site they subscribed on
+  const bySite = new Map<SiteKey, string[]>([['nexusonecap', []], ['n1dv', []]]);
+  for (const row of subs ?? []) bySite.get(siteOf(row.source))!.push(row.email);
+  for (const [k, v] of bySite) console.log(`[newsletter] ${k}: ${v.length} recipient(s)`);
+
   const description = (latest.description || latest.summary || '').slice(0, 400);
   const category = latest.badge?.text ?? latest.category;
   const highlights = extractHighlights(latest.id);
   let delivered = 0;
 
   // Resend allows 2 requests/sec and up to 100 messages per batch call.
-  // Space batches out and retry once on 429.
-  for (let i = 0; i < emails.length; i += 100) {
+  // Space batches out and retry once on 429. One pass per site so each
+  // reader gets the link and footer for the site they subscribed on.
+  for (const [key, emails] of bySite) {
+   if (emails.length === 0) continue;
+   const site = SITES[key];
+   const url = `${site.origin}${latest.link}`;
+   for (let i = 0; i < emails.length; i += 100) {
     const batch = emails.slice(i, i + 100).map((to) => ({
-      from: FROM,
+      from: site.from,
       to: [to],
       subject: `${category}: ${latest.title}`,
-      html: emailHtml(latest.title, description, url, category, highlights),
+      html: emailHtml(latest.title, description, url, category, highlights, site.label),
     }));
     let attempt = 0;
     for (;;) {
@@ -200,6 +236,7 @@ async function main(): Promise<void> {
     }
     delivered += batch.length;
     await new Promise((r) => setTimeout(r, 600)); // stay under 2 req/s
+   }
   }
 
   const { error: logErr } = await supabase

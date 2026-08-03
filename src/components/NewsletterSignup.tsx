@@ -24,7 +24,7 @@ export function NewsletterSignup() {
     try {
       const { error } = await supabase
         .from('newsletter_subscribers')
-        .insert({ email: trimmed, source: location.pathname });
+        .insert({ email: trimmed, source: location.host + location.pathname });
       if (error) {
         // 23505 = unique violation → this email is already subscribed
         setStatus(error.code === '23505' ? 'already' : 'error');
