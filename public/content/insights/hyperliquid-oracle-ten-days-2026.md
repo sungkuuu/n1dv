@@ -23,6 +23,12 @@ August 6, 2026 (event dates: July 28, August 6)
 
 ---
 
+![SKHXUSD 5-minute chart, July 22 – July 30, 2026](/content/insights/img/skhx-5m-jul-aug-2026.png)
+
+*xyz:SKHXUSD, 5-minute (KST). The isolated spike on July 28 is the one-share print. The $900s range on July 29–30 is a real regular-session decline.*
+
+---
+
 ## 1. One Share, $57.4M
 
 23:01 UTC on July 27 — 08:00 Seoul time, July 28. Seconds after Nextrade's pre-market opened, one share of SK Hynix traded at roughly $867, down 29.99% from the prior close. Limit-down, exactly. The session was thin enough that no competing orders existed, and that single fill briefly set the stock's price on that venue.
@@ -58,6 +64,8 @@ Ten days later it held.
 Nothing else moved. Nextrade still uses a single price source. The pre-market book is still thin. The daily limit is still ±30%. The oracle still tracks Seoul common stock. The one variable that changed was whether the feed was live during the first ten minutes of an extended-hours session.
 
 That gives us something rare in this business: a controlled comparison.
+
+*July 28 vs August 6: one variable changed*
 
 | | July 28 | August 6 |
 |---|---|---|
@@ -160,7 +168,7 @@ That question is open again. On June 18 the SEC and CFTC issued a joint request 
 
 The implication: even if the CFTC opens a door for on-chain perps, single-name products like NVDA, TSLA, or SKHYNIX do not walk through it. Index perps have a path and crypto perps have precedent; single-name goes to the SEC. And HIP-3's volume is concentrated in one deployer whose flagship products are single-name.
 
-There is a second-order problem here too. A single-name perpetual with a publicly demonstrated manipulation vector reads worse in an SEC review than one without. Section 8 is not only a trading risk — it is an input to the regulatory question, and it points the same direction.
+There is a second-order problem here too. A single-name perpetual with a publicly demonstrated manipulation vector reads worse in an SEC review than one without. The economics laid out above are not only a trading risk — they are an input to the regulatory question, and they point the same direction.
 
 So the valuation may be right while a load-bearing assumption is wrong. "Growth accelerates when the US opens" does not apply to HIP-3's main product line. SKHY becoming a Nasdaq-listed security moved that question from the grey zone to dead center.
 
