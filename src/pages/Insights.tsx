@@ -94,7 +94,7 @@ export function Insights() {
                 </div>
                 <div className="text-xs text-gray-500 mb-4">{report.date}</div>
                 <h3 className="text-xl font-bold mb-4 group-hover:text-gray-300 leading-tight text-white">{report.title}</h3>
-                <p className="text-gray-400 text-sm mb-6 leading-relaxed flex-1">{report.summary}</p>
+                <p className="text-gray-400 text-sm mb-6 leading-relaxed flex-1 line-clamp-6">{report.summary}</p>
                 <div className="flex items-center text-white group-hover:text-gray-300">
                   <span className="text-sm font-medium mr-2">Read Report</span>
                   <span className="text-lg">→</span>
