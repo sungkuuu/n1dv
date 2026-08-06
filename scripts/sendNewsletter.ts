@@ -143,11 +143,14 @@ export function emailHtml(
       ${highlightHtml}
       <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="margin-top:32px;">
         <tr>
-          <td align="left" style="vertical-align:middle;">
-            <a href="${url}" style="display:inline-block;background:#111827;color:#ffffff;font-weight:bold;font-size:14px;padding:13px 30px;border-radius:8px;text-decoration:none;">Read the full report &rarr;</a>
+          <!-- nowrap + a fixed cell width: on narrow phones the wordmark cell
+               used to claim the row and squeeze the CTA down to one character
+               per line. The image is now capped so it can never do that. -->
+          <td align="left" width="260" style="vertical-align:middle;white-space:nowrap;">
+            <a href="${url}" style="display:inline-block;background:#111827;color:#ffffff;font-weight:bold;font-size:14px;padding:13px 26px;border-radius:8px;text-decoration:none;white-space:nowrap;">Read the full report &rarr;</a>
           </td>
-          <td align="right" style="vertical-align:bottom;">
-            <img src="${SITE}/nexus-one-wordmark-dark.png" alt="NEXUS ONE" height="15" style="height:15px;width:auto;opacity:0.4;display:inline-block;" />
+          <td align="right" width="110" style="vertical-align:bottom;">
+            <img src="${SITE}/nexus-one-wordmark-dark.png" alt="NEXUS ONE" width="100" height="15" style="width:100px;max-width:100px;height:15px;opacity:0.4;display:inline-block;" />
           </td>
         </tr>
       </table>
