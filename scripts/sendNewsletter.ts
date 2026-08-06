@@ -19,7 +19,7 @@ import { reports } from '../src/data/reports';
 
 const SITE = 'https://n1dv.io';
 const SUPABASE_URL = 'https://mevrwtzquadthtbzqmdu.supabase.co';
-const FROM = process.env.NEWSLETTER_FROM || 'Nexus One Research <research@n1dv.io>';
+const FROM = process.env.NEWSLETTER_FROM || 'Nexus One Research <research@nexusonecap.com>';
 
 /**
  * Subscribers are routed to the site they signed up on. `source` is stored as
@@ -28,10 +28,12 @@ const FROM = process.env.NEWSLETTER_FROM || 'Nexus One Research <research@n1dv.i
  * it. Rows predating the host prefix (pathname only) fall back to n1dv, which
  * is provably where they came from — the nexusonecap form went live later.
  *
- * The sender stays brand-neutral ("Nexus One Research"). The nexusonecap
- * address only takes effect once that domain is verified in Resend and
- * NEWSLETTER_FROM_NEXUSONECAP is set; until then those readers get the
- * verified n1dv sender with nexusonecap links.
+ * The sender stays brand-neutral ("Nexus One Research"). Both groups send from
+ * the single Resend-verified domain, nexusonecap.com — the parent company, so
+ * no fund branding reaches a company-site reader. Splitting the addresses per
+ * site needs a second verified domain (paid plan): set NEWSLETTER_FROM to the
+ * n1dv address and NEWSLETTER_FROM_NEXUSONECAP to the company one, and the
+ * routing below picks them up with no code change.
  */
 type SiteKey = 'nexusonecap' | 'n1dv';
 const SITES: Record<SiteKey, { origin: string; label: string; from: string }> = {

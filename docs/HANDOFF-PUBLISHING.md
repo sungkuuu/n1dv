@@ -104,8 +104,17 @@ gh run view --repo sungkuuu/n1dv $(gh run list --repo sungkuuu/n1dv --workflow "
 
 구독자는 **가입한 사이트로 링크가 간다.** `source` 컬럼에 `host + pathname`이 저장되고(`nexusonecap.com/insights/...` vs `n1dv.io/insights/...`), `sendNewsletter.ts`가 host로 그룹을 나눠 사이트별로 한 번씩 보낸다. host 없는 옛 행은 n1dv로 폴백(그게 사실이라 맞음).
 
-- 발신 표시명은 브랜드 중립(`Nexus One Research`), 주소는 아직 `research@n1dv.io` 하나뿐
-- **남은 작업:** Resend에 nexusonecap.com 도메인 인증 → GitHub repo variables에 `NEWSLETTER_FROM_NEXUSONECAP` = `Nexus One Research <research@nexusonecap.com>` 추가하면 자동 전환. 변수 없으면 인증된 n1dv 주소로 안전 폴백
+- 발신 표시명은 양쪽 다 브랜드 중립(`Nexus One Research`)
+
+### 발신 도메인 — 왜 nexusonecap.com 하나인가 (2026-08-06 결정)
+
+Resend 무료 플랜은 **인증 도메인 1개**뿐이고, 2개로 늘리려면 Pro $20/mo다. 구독자가 실질 0명인 상태라 결제 대신 **그 한 칸을 n1dv.io → nexusonecap.com으로 스왑**했다.
+
+- 이유는 뉴스레터가 아니라 **회사 홈 문의 폼**(`nexusonecap/worker.js`)이었다. 그게 `research@n1dv.io`로 나가고 있어서, 회사 홈에 문의한 사람에게 펀드 도메인이 노출됐다 — "회사 홈에서 N1DV 언급 안 함" 결정 위반
+- 그래서 문의 폼·뉴스레터 **둘 다** `research@nexusonecap.com` 발신. n1dv 구독자도 모회사 주소로 받는다 (반대 방향 노출보다 낫다는 판단)
+- 링크·푸터는 여전히 사이트별로 갈린다. 바뀐 건 발신 주소뿐
+- **주소까지 사이트별로 분리하려면** Pro 결제 후 repo variables에 `NEWSLETTER_FROM`(n1dv 주소) + `NEWSLETTER_FROM_NEXUSONECAP`(회사 주소) 둘 다 등록. 코드는 이미 대응돼 있어 변수만 걸면 된다
+- **순서 철칙:** Resend 인증이 초록불이 된 뒤에 코드를 배포할 것. 미인증 주소로 먼저 배포하면 문의 폼이 502로 죽는다
 
 ## Supabase
 
