@@ -25,3 +25,6 @@ jobs:
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           NEWSLETTER_FROM: ${{ vars.NEWSLETTER_FROM }}
+          # Set once nexusonecap.com is verified in Resend; unset means those
+          # subscribers get the verified n1dv sender with nexusonecap links.
+          NEWSLETTER_FROM_NEXUSONECAP: ${{ vars.NEWSLETTER_FROM_NEXUSONECAP }}
