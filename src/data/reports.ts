@@ -17,6 +17,24 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'hyperliquid-oracle-ten-days-2026',
+    badge: {
+      text: 'DEEP RESEARCH',
+      variant: 'outline-green'
+    },
+    title: 'Eleven Shares, No Crash: What Hyperliquid Fixed in Ten Days',
+    description:
+      'Ten days after one share of SK Hynix at limit-down liquidated 960 accounts for $57.4M, eleven shares printed the same limit-down and the mark never moved. The only variable that changed was a ten-minute delay on the deployer\'s pre-market feed — a natural experiment isolating oracle policy from liquidity, the three gates the first print cleared, why price filters fail against a real limit-up, and the ADR the oracle still isn\'t reading.',
+    date: '2026-08-06',
+    category: 'DEEP RESEARCH',
+    summary:
+      'Ten days after one share of SK Hynix at limit-down liquidated 960 accounts for $57.4M, eleven shares printed the same limit-down and the mark never moved. The only variable that changed was a ten-minute delay on the deployer\'s pre-market feed — a natural experiment isolating oracle policy from liquidity, the three gates the first print cleared, why price filters fail against a real limit-up, and the ADR the oracle still isn\'t reading.',
+    readTime: '14 min read',
+    author: 'Nexus One Research Desk',
+    content: '',
+    link: '/insights/hyperliquid-oracle-ten-days-2026'
+  },
+  {
     id: 'weekly-brief-jul-31-2026',
     badge: {
       text: 'WEEKLY BRIEF',
