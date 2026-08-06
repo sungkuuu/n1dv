@@ -1,4 +1,4 @@
-# Eleven Shares, No Crash: What Hyperliquid Fixed in Ten Days
+# One Share Cost $57M, Eleven Shares Cost Nothing: What Hyperliquid Fixed in Ten Days — and What It Didn't
 
 **Nexus One Research**
 August 6, 2026 (event dates: July 28, August 6)
@@ -7,19 +7,19 @@ August 6, 2026 (event dates: July 28, August 6)
 
 ## TL;DR
 
-• **This morning:** At 08:00 Seoul time on August 6, eleven shares of SK Hynix traded at roughly $795 on Nextrade's pre-market — down 29.97%, a limit-down print. A volatility interruption kicked in, trading switched to a two-minute call auction, and the decline narrowed to 3–4% on resumption. Same setup as ten days ago.
+• **This morning:** At 08:00 Seoul time on August 6, eleven shares of SK Hynix traded at roughly $795 on Nextrade's pre-market — down 29.97%, a limit-down print. A volatility interruption triggered, trading switched to a two-minute call auction, and the decline narrowed to 3–4% on resumption. Same setup as ten days ago.
 
-• **The difference:** On July 28, one share at −29.99% sent the SKHYNIX perpetual on Hyperliquid from $1,127.90 to $917.25 and liquidated 960 long accounts, roughly $57.4M notional. This time the mark never moved. The chart shows a single vertical spike on July 28 and nothing on August 6.
+• **The difference:** On July 28, one share at −29.99% sent the SKHYNIX perpetual on Hyperliquid from $1,127.90 to $917.25 and liquidated 960 long accounts, roughly $57.4M notional. This time the mark held. No dislocation, no liquidation signature in volume.
 
 • **What changed was not the source.** Nextrade still runs one price feed. What changed is that Trade.xyz pushed its Korean pre-market coverage from 08:00 to 08:10 after the first incident — skipping the exact window where the bad print lives.
 
-• **Which makes this a natural experiment.** Same venue, same limit-down print, same thin book, same product. One variable moved. The outcome flipped.
+• **Binance never had the problem.** It held internal pricing ahead of the Korean main session rather than switching to external quotes immediately. Same asset, same corrupted print, no cascade. The difference was oracle policy, not liquidity.
 
-• **Binance never had the problem.** It holds internal pricing until the Korean main session opens rather than switching to external quotes immediately. Same asset, same corrupted print, no cascade. The difference was oracle policy, not liquidity.
+• **Filters were never the answer.** In ten days SK Hynix printed limit-down twice (July 28, August 6 — both erroneous) and limit-up once (July 31 — real, its first-ever limit-up close since the ±30% band). A filter blocking 29% moves blocks all three.
 
-• **Filters were never the answer.** In ten days SK Hynix printed limit-down twice (July 28, August 6 — both erroneous) and limit-up once (July 31 — real, its first-ever limit-up close since the ±30% band). A filter that blocks 29% moves blocks all three.
+• **The vector is public now.** Under $10,000 of spot moved a mark 18.7% on a 10x-leveraged contract. The deterrents that exist are legal and operational — not supplied by the oracle design.
 
-• **Still unresolved:** The SKHX oracle tracks Seoul common stock (000660.KS), not the Nasdaq ADR that has been listed since July 10. A ten-minute delay is a schedule patch, not a source fix.
+• **Not fixed — narrowed.** The delay closes ten minutes of one session. The after-hours window, the post-08:10 book, and every other HIP-3 market referencing a thin venue are untouched. The SKHX oracle still tracks Seoul common stock, not the Nasdaq ADR listed since July 10.
 
 ---
 
@@ -31,7 +31,7 @@ Four seconds after Nextrade opened, the SKHYNIX oracle price fell 15.6%. Liquida
 
 The stock recovered to the $1,160 range within two minutes. By then the oracle had already consumed and relayed the number.
 
-Per MarketsAlpha's on-chain tally: **960 long accounts, $57.4M notional, $17.3M in realized losses.** The backstop auto-deleveraged roughly 100 profitable short accounts. Open interest notional collapsed from about $508M to $388M, per HyperInsight.
+Per Allium's on-chain data: roughly **$60M in long positions force-liquidated**, with more than 900 users taking about $17.4M in realized losses. MarketsAlpha counted 960 accounts and $57.4M notional. Open interest notional collapsed from about $508M to $388M, per HyperInsight.
 
 We called Hyperliquid the bear market's exception in our Q2 report — $652.6B in quarterly volume, 47.1% of perp DEX activity, three ETF launches, an all-time high token. The growth engine behind that exception is where this broke.
 
@@ -41,11 +41,13 @@ We called Hyperliquid the bear market's exception in our Q2 report — $652.6B i
 
 A volatility interruption triggered, trading moved to a two-minute call auction, and on resumption the decline immediately narrowed to 3–4%. The 50-minute pre-market session closed down about 2%. Separately, SK Hynix fell as much as 9.8% during regular Korea Exchange hours, tracking semiconductor weakness after SanDisk guided below expectations — that part was real.
 
-And the SKHYNIX perpetual did not move.
+And the SKHYNIX perpetual held.
 
-The five-minute chart makes this unambiguous. July 28 shows a single vertical spike from the $1,200 range to the low $900s, isolated from every neighboring candle, with a volume bar that spikes to roughly 75K while everything around it sits near zero. August 6 shows nothing of the kind. The contract's 24-hour change of −10.08% tracks the real regular-session decline, not a dislocation.
+Three observations from the contract's own five-minute chart. The August 6 session shows a gradual decline from the $1,180 range to the $1,060s with no vertical dislocation of any kind. The session low sits near $1,058 — nowhere close to the roughly −19% bound the July print pushed the mark into. And volume across the 08:00 window is unremarkable, well below both the July 28 spike and the July 31 surge.
 
-The oracle never saw the print.
+That third point is the decisive one. A liquidation cascade cannot pass quietly — forced closes are market orders and they leave a volume signature. July 28 has one. August 6 does not.
+
+One caveat on precision: whether the oracle never received the print, or received it and the discovery bound absorbed it, cannot be distinguished from the chart alone. What is observable is the outcome. No cascade.
 
 ## 3. What Actually Changed
 
@@ -62,9 +64,11 @@ That gives us something rare in this business: a controlled comparison.
 | Nextrade print | −29.99% (1 share) | −29.97% (11 shares) |
 | Source structure | single feed | single feed, unchanged |
 | Trade.xyz coverage | from 08:00 | from 08:10 |
-| Hyperliquid mark | −18.7%, $57.4M liquidated | untouched |
+| Hyperliquid mark | −18.7%, ~$60M liquidated | held |
 
 Same venue, same corrupted print, same product, same thin book. One variable. Opposite outcome.
+
+The honest caveat: this is a single trial. Korea's own volatility interruption also fired faster on August 6, and the two effects cannot be fully separated from public data. But the direction is clear enough to act on.
 
 ## 4. Binance Never Had the Problem
 
@@ -74,9 +78,11 @@ Same asset. Same corrupted print. Same moment. Different result.
 
 This matters because it isolates the variable. The failure was not thin liquidity — thin liquidity existed for everyone. It was not leverage — leverage existed on both venues. It was the decision about when to start trusting an outside number.
 
+Which means the fix was available on day one, from a venue that had already implemented it.
+
 ## 5. The Three Gates the Print Passed in July
 
-Worth reconstructing what the first event actually cleared, because the source-level exposure is unchanged.
+Worth reconstructing what the first event cleared, because the source-level exposure is unchanged.
 
 First, the read that this was a protocol failure is wrong. Hyperliquid's HLP vault took neither loss nor gain in either event. HIP-3 markets are not backstopped by HLP. Each HIP-3 DEX runs its own backstop liquidator and squares solvency through ADL. That is the opposite of the March 2025 JELLY incident, where an attacker manipulated a thin token's spot price and pushed more than $12M of losses onto HLP. The core worked exactly as designed.
 
@@ -86,11 +92,13 @@ First, the read that this was a protocol failure is wrong. Hyperliquid's HLP vau
 
 **Gate 3 — Validators and margin mode.** Automated validator review triggers only when an external price moves more than 50% from the session open. An 18% event set off nothing. And while the same deployer's Samsung Electronics and Hyundai perpetuals were isolated-margin, SKHYNIX alone was cross-margined, letting the loss reach other collateral in the same account and widening the blast radius.
 
-Nobody at any of these gates had an obligation to stop it. Even when slashing fires, the deployer's stake is burned rather than distributed to victims. Which is why reimbursement came as a voluntary, one-time discretionary decision by Trade.xyz. And in the same statement, the sentence that defines this whole episode: the oracle "worked as intended per spec." That was offered as a defense. It is the problem.
+Nobody at any of these gates had an obligation to stop it. Even when slashing fires, the deployer's stake is burned rather than distributed to victims. Which is why reimbursement came as a voluntary, one-time discretionary decision by Trade.xyz. And in the same statement, the sentence that defines this episode: the oracle "worked as intended per spec." That was offered as a defense. It is the problem.
+
+All three gates remain exactly as they were. The delay does not touch any of them — it just keeps the feed offline during the ten minutes when bad prints are cheapest to produce.
 
 ## 6. The Source Is Still Wrong
 
-A ten-minute delay is a schedule patch. It works — today proved that — but it does not change what the oracle reads when it does read.
+A ten-minute delay is a schedule patch. It works — today demonstrated that — but it does not change what the oracle reads when it does read.
 
 SK Hynix ADRs have been listed on Nasdaq since July 10, ticker SKHY, priced at $149 per ADR across 177.9 million shares for roughly $26.5B raised. They are fungible with the Seoul common stock, so arbitrage keeps the two prices tethered.
 
@@ -102,7 +110,7 @@ The reason seems plain: the ADR was seventeen days old. The oracle spec had not 
 
 Which reframes the diagnosis. This was never "the oracle read a thin source." It is that a better source existed and nobody held the duty to update the spec. That is a process gap, not a code defect, and audits do not catch it.
 
-The delay window closes one door. The ADR question stays open.
+One door closed. The rest of the building is unchanged: the post-08:10 pre-market book, the 15:30–20:00 after-hours session, and every other HIP-3 market referencing a venue with the same characteristics.
 
 ## 7. Why Filters Were Never the Answer
 
@@ -118,11 +126,25 @@ Nextrade's own answer explains why the problem is structural rather than adversa
 
 That is not an excuse. It is a design declaration. Nextrade is telling you it does not do price discovery. An oracle was reading its output as a price discovery result.
 
-Both systems worked to spec. The combination was wrong. No manipulator was required — and both events look far more like fat-finger orders meeting an empty book than anything coordinated. Eleven shares cost more than one, the second recovery was slower than the first, and there was genuine bad news that morning.
+Both systems worked to spec. The combination was wrong. No manipulator was required — and both events look far more like fat-finger orders meeting an empty book than anything coordinated. Eleven shares cost more than one, the second recovery was slower, and there was genuine bad news that morning.
 
-A structure that misfires without an attacker is harder to fix than one that needs an attacker. Which is exactly why the ten-minute delay matters: it addressed the combination rather than hunting for a culprit.
+A structure that misfires without an attacker is harder to fix than one that needs an attacker. Which is exactly why the delay is the right shape of response: it addressed the combination rather than hunting for a culprit.
 
-## 8. "Still Cheap" — The Steelman
+## 8. The Vector Is Public Now
+
+The previous section concluded that neither event was an attack. The evidence supports that. But the question that follows is not about the past.
+
+Before July 28, few people knew this path existed. Now the mechanism, the timing, the cost, and the payoff are all documented in public. The accident became a manual.
+
+The economics explain why that matters. The actual size behind both prints was one share and eleven shares — under $10,000 in total. A limit-down bid rebounds within minutes, so realized cost is smaller still. On the other side, the mark moved 18.7% and the contract supports 10x leverage. The cost and the potential payoff are orders of magnitude apart.
+
+This is not a novel invention either. Pushing spot on a thin venue to harvest derivative positions on a deep one was executed at Mango Markets, and at Hyperliquid's own JELLY incident. The only difference here is that the underlying is a top-cap semiconductor name rather than a memecoin.
+
+The deterrents are real. Nextrade orders originate from name-verified accounts, market manipulation is a criminal offense under Korean capital markets law, and any link between a spot order and a derivatives position leaves no defensible story. The risk profile is nothing like an anonymous on-chain exploit. And the ten-minute delay has closed the cheapest window.
+
+So the conclusion is not that an attack is imminent. It is that the economics work, the deterrents operate at the legal and operational layer, and none of that is protection supplied by the oracle design. When the same structure recurs in a different jurisdiction, through harder-to-trace accounts, or in another HIP-3 market referencing a venue with weaker identity requirements, those deterrents do not travel with it.
+
+## 9. "Still Cheap" — The Steelman
 
 Take the bull case at full strength.
 
@@ -138,13 +160,15 @@ That question is open again. On June 18 the SEC and CFTC issued a joint request 
 
 The implication: even if the CFTC opens a door for on-chain perps, single-name products like NVDA, TSLA, or SKHYNIX do not walk through it. Index perps have a path and crypto perps have precedent; single-name goes to the SEC. And HIP-3's volume is concentrated in one deployer whose flagship products are single-name.
 
+There is a second-order problem here too. A single-name perpetual with a publicly demonstrated manipulation vector reads worse in an SEC review than one without. Section 8 is not only a trading risk — it is an input to the regulatory question, and it points the same direction.
+
 So the valuation may be right while a load-bearing assumption is wrong. "Growth accelerates when the US opens" does not apply to HIP-3's main product line. SKHY becoming a Nasdaq-listed security moved that question from the grey zone to dead center.
 
-## 9. Verdict Framework
+## 10. Verdict Framework
 
-**Deterioration sequence:** ① a third incident, particularly through a vector the delay does not cover → ② reimbursement not repeated (already stated as one-time) → ③ equity/RWA perp volume stalls → ④ buybacks shrink, valuation resets.
+**Deterioration sequence:** ① a third incident — particularly through a vector the delay does not cover (after-hours, post-08:10, another HIP-3 market), or one where the spot order and a derivatives position trace to the same party → ② reimbursement not repeated (already stated as one-time) → ③ equity/RWA perp volume stalls → ④ buybacks shrink, valuation resets.
 
-**Improvement sequence:** ① source-level fix ships — ADR inclusion, higher native-book weighting, delayed external adoption ahead of main sessions → ② cross-margin eligibility tightened → ③ validator auto-review threshold lowered → ④ RWA share keeps rising without incident. The delay window is step zero of this sequence, and it has now held once.
+**Improvement sequence:** ① source-level fix ships — ADR inclusion, higher native-book weighting, delayed external adoption across all sessions → ② cross-margin eligibility tightened → ③ validator auto-review threshold lowered → ④ RWA share keeps rising without incident. The delay window is step zero, and it has now held once.
 
 Three things to watch:
 
@@ -154,12 +178,12 @@ Three things to watch:
 
 We called Hyperliquid the bear market's exception in Q2, and that still holds — the fees, the buybacks, the share are all real. What ten days showed is narrower and more useful than another cautionary tale: the failure was a policy choice, and reversing the policy choice reversed the failure. No consensus change, no new primitive, no audit. A ten-minute delay.
 
-The source problem remains. A Nasdaq-listed, dollar-denominated ADR exists and is not being read. But the second event demonstrated something the first could not — that this class of failure is fixable by the deployer, unilaterally, in days.
+But narrowing a window is not closing a structure. All three gates stand where they stood. The oracle still reads a venue that says it does not do price discovery, while ignoring a Nasdaq-listed, dollar-denominated ADR that trades in the same hours. And the vector is now common knowledge.
 
 Roughly 1,000 Korean investors traded about $4.1B of these perpetuals over five months, per Tiger Research and Chainalysis. For them the relevant question was never whether the protocol was sound. It was whether the operator would notice, and how fast.
 
-This time: ten days.
+This time: ten days. There is no commitment that the next one will be as quick, and no guarantee the next trader gets reimbursed.
 
 ---
 
-*This material is for informational purposes only and is not investment advice. Figures are drawn from Trade.xyz and Hyperliquid public documentation, SEC and CFTC filings, Nextrade statements and press reporting, and on-chain analytics. Korean equity prices are converted from won at approximately ₩1,470/USD and are approximate. July 28 liquidation and ADL figures are third-party estimates not confirmed by either company; aggregate liquidation tallies as high as the $80M range have also been reported. The absence of a mark dislocation on August 6 is observed from Hyperliquid's own five-minute chart as of publication. Published August 6, 2026.*
+*This material is for informational purposes only and is not investment advice. Figures are drawn from Trade.xyz and Hyperliquid public documentation, SEC and CFTC filings, Nextrade statements and press reporting, and on-chain analytics from Allium, MarketsAlpha, and HyperInsight. Korean equity prices are converted from won at approximately ₩1,470/USD and are approximate. July 28 liquidation figures are third-party estimates not confirmed by either company; aggregate tallies as high as the $80M range have also been reported. The absence of a cascade on August 6 is observed from Hyperliquid's own five-minute chart and volume profile as of publication; no official statement from Trade.xyz on the second event had been issued at that time. Nothing here describes or endorses manipulation of any securities market. Published August 6, 2026.*

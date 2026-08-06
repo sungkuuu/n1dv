@@ -22,14 +22,14 @@ export const reports: Report[] = [
       text: 'DEEP RESEARCH',
       variant: 'outline-green'
     },
-    title: 'Eleven Shares, No Crash: What Hyperliquid Fixed in Ten Days',
+    title: 'One Share Cost $57M, Eleven Shares Cost Nothing: What Hyperliquid Fixed in Ten Days — and What It Didn\'t',
     description:
-      'Ten days after one share of SK Hynix at limit-down liquidated 960 accounts for $57.4M, eleven shares printed the same limit-down and the mark never moved. The only variable that changed was a ten-minute delay on the deployer\'s pre-market feed — a natural experiment isolating oracle policy from liquidity, the three gates the first print cleared, why price filters fail against a real limit-up, and the ADR the oracle still isn\'t reading.',
+      'Ten days after one share of SK Hynix at limit-down liquidated 960 accounts for ~$60M, eleven shares printed the same limit-down and the mark held. The only variable that changed was a ten-minute delay on the deployer\'s pre-market feed — a natural experiment isolating oracle policy from liquidity. The three gates the first print cleared all still stand, price filters fail against a real limit-up, the vector is now public at under $10,000 of spot, and the oracle still reads Seoul common stock instead of the Nasdaq ADR.',
     date: '2026-08-06',
     category: 'DEEP RESEARCH',
     summary:
-      'Ten days after one share of SK Hynix at limit-down liquidated 960 accounts for $57.4M, eleven shares printed the same limit-down and the mark never moved. The only variable that changed was a ten-minute delay on the deployer\'s pre-market feed — a natural experiment isolating oracle policy from liquidity, the three gates the first print cleared, why price filters fail against a real limit-up, and the ADR the oracle still isn\'t reading.',
-    readTime: '14 min read',
+      'Ten days after one share of SK Hynix at limit-down liquidated 960 accounts for ~$60M, eleven shares printed the same limit-down and the mark held. The only variable that changed was a ten-minute delay on the deployer\'s pre-market feed — a natural experiment isolating oracle policy from liquidity. The three gates the first print cleared all still stand, price filters fail against a real limit-up, the vector is now public at under $10,000 of spot, and the oracle still reads Seoul common stock instead of the Nasdaq ADR.',
+    readTime: '16 min read',
     author: 'Nexus One Research Desk',
     content: '',
     link: '/insights/hyperliquid-oracle-ten-days-2026'
