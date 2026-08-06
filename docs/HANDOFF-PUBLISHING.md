@@ -115,6 +115,9 @@ Resend 무료 플랜은 **인증 도메인 1개**뿐이고, 2개로 늘리려면
 - 링크·푸터는 여전히 사이트별로 갈린다. 바뀐 건 발신 주소뿐
 - **주소까지 사이트별로 분리하려면** Pro 결제 후 repo variables에 `NEWSLETTER_FROM`(n1dv 주소) + `NEWSLETTER_FROM_NEXUSONECAP`(회사 주소) 둘 다 등록. 코드는 이미 대응돼 있어 변수만 걸면 된다
 - **순서 철칙:** Resend 인증이 초록불이 된 뒤에 코드를 배포할 것. 미인증 주소로 먼저 배포하면 문의 폼이 502로 죽는다
+- **API 키는 반드시 Full access로 발급할 것.** 도메인 스코프 키(Sending access)는 그 도메인을 지우는 순간 같이 죽는다 — 스왑 때 실제로 당했다. 에러: `The associated domain with your API key is not verified`
+- 키를 갈면 **두 군데** 다 갈아야 한다: Cloudflare 워커 시크릿(문의 폼)과 GitHub `sungkuuu/n1dv` 시크릿(뉴스레터). 둘 다 이름은 `RESEND_API_KEY`
+- 문의 폼이 죽으면 `/api/contact` 응답의 `upstream` 값을 볼 것 (400/401=키, 429=레이트리밋). `/api/health`의 `v`는 배포 반영 확인용 마커 — 워커를 고칠 때마다 올린다
 
 ## Supabase
 
