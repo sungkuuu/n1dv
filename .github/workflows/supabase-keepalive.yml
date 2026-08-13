@@ -1,49 +1,73 @@
 name: Supabase keep-alive
 
-# Free-tier Supabase projects pause after ~7 days without activity.
-# Lesson from the 2026-07-19 pause: anonymous REST *reads* pinged fine on
-# 7/16 yet the project still paused by 7/19 — reads alone don't reliably
-# count as activity. So this now performs a real write+delete round-trip
-# with the service role every 2 days, and falls back to a read ping.
+# Free-tier Supabase projects pause after ~7 days of "insufficient activity".
+#
+# History:
+#   2026-07-19 — project paused. Anonymous REST *reads* had pinged fine on
+#     7/16, so reads alone don't count. Switched to a service-role
+#     write+delete round-trip every 2 days.
+#   2026-08-13 — Supabase sent an inactivity warning anyway, even though every
+#     2-day run logged insert 201 / delete 204. Two requests per run is
+#     evidently below whatever their scan counts. Now: daily, and each run
+#     issues a handful of real queries (write, read-back, aggregate, delete,
+#     verify) so the project registers as genuinely in use.
 on:
   schedule:
-    - cron: '17 3 */2 * *'
+    - cron: '17 3 * * *'
   workflow_dispatch: {}
 
 jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
-      - name: Write-ping (insert + delete a keepalive row)
+      - name: Exercise the database (write + read + aggregate + cleanup)
         env:
           SB_URL: https://mevrwtzquadthtbzqmdu.supabase.co
           SB_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: |
           set -u
           MARKER="keepalive@nexusonecap.invalid"
+          AUTH=(-H "apikey: $SB_KEY" -H "Authorization: Bearer $SB_KEY")
+          fail=0
 
-          ins=$(curl -s -o /dev/null -w "%{http_code}" --max-time 30 \
-            -X POST "$SB_URL/rest/v1/newsletter_subscribers" \
-            -H "apikey: $SB_KEY" -H "Authorization: Bearer $SB_KEY" \
-            -H "Content-Type: application/json" -H "Prefer: return=minimal,resolution=ignore-duplicates" \
-            -d "{\"email\":\"$MARKER\",\"source\":\"keepalive\"}" || echo 000)
-          echo "insert: HTTP $ins"
+          hit() { # name method url [data]
+            local name="$1" method="$2" url="$3" data="${4:-}"
+            local code
+            if [ -n "$data" ]; then
+              code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 30 -X "$method" "$url" \
+                "${AUTH[@]}" -H "Content-Type: application/json" \
+                -H "Prefer: return=minimal,resolution=ignore-duplicates" -d "$data" || echo 000)
+            else
+              code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 30 -X "$method" "$url" \
+                "${AUTH[@]}" || echo 000)
+            fi
+            echo "$name: HTTP $code"
+            case "$code" in 2*) ;; *) fail=1 ;; esac
+          }
 
-          del=$(curl -s -o /dev/null -w "%{http_code}" --max-time 30 \
-            -X DELETE "$SB_URL/rest/v1/newsletter_subscribers?email=eq.$MARKER" \
-            -H "apikey: $SB_KEY" -H "Authorization: Bearer $SB_KEY" || echo 000)
-          echo "delete: HTTP $del"
+          # a real write, then several reads that touch both tables, then cleanup
+          hit "insert       " POST   "$SB_URL/rest/v1/newsletter_subscribers" \
+              "{\"email\":\"$MARKER\",\"source\":\"keepalive\"}"
+          hit "read-back    " GET    "$SB_URL/rest/v1/newsletter_subscribers?select=id,email&email=eq.$MARKER"
+          hit "list         " GET    "$SB_URL/rest/v1/newsletter_subscribers?select=id,source&limit=50"
+          hit "sends        " GET    "$SB_URL/rest/v1/newsletter_sends?select=report_id,sent_at&order=sent_at.desc&limit=20"
+          hit "delete       " DELETE "$SB_URL/rest/v1/newsletter_subscribers?email=eq.$MARKER"
+          hit "verify-gone  " GET    "$SB_URL/rest/v1/newsletter_subscribers?select=id&email=eq.$MARKER"
 
-          # write path healthy → done
-          if [ "$ins" -ge 200 ] && [ "$ins" -lt 300 ] && [ "$del" -ge 200 ] && [ "$del" -lt 300 ]; then
+          if [ "$fail" -eq 0 ]; then
+            echo "keep-alive OK — database exercised"
             exit 0
           fi
 
-          # fall back to a read ping so a missing/rotated secret doesn't
-          # mask a healthy database — but still fail loudly on 5xx/000
+          # Something in the service-role path broke. Confirm the database is
+          # reachable at all before deciding whether this is our key or theirs.
           code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 30 \
             "$SB_URL/rest/v1/newsletter_subscribers?select=id&limit=1" \
             -H "apikey: sb_publishable_lzHfxlE6TbRYfiYcKTxUSw_JRHpnqoX" || echo 000)
-          echo "read fallback: HTTP $code"
-          if [ "$code" -ge 500 ] || [ "$code" = "000" ]; then exit 1; fi
-          echo "::warning::write-ping failed (insert=$ins delete=$del) but read works — check SUPABASE_SERVICE_ROLE_KEY"
+          echo "anon read fallback: HTTP $code"
+          if [ "$code" -ge 500 ] || [ "$code" = "000" ]; then
+            echo "database unreachable — it may be paused"
+            exit 1
+          fi
+          echo "::warning::service-role calls failed but the database answers anonymously — check SUPABASE_SERVICE_ROLE_KEY"
+          exit 1
