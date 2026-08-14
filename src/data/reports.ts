@@ -17,6 +17,24 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'weekly-brief-aug-14-2026',
+    badge: {
+      text: 'WEEKLY BRIEF',
+      variant: 'outline-blue'
+    },
+    title: 'Nexus One Weekly Digital Asset Market Report - August 7 to August 14, 2026',
+    description:
+      'BTC -2.20% to $63,498, handing back the payrolls-shock rally; BTC ETFs -$89.7M on the week while ETH ETFs took in +$138.7M. The 8/7 jobs shock (-23K) and an in-line 3.4% CPI pushed hike risk back. Harmony exploited for 26% of supply, Solana\'s 33-minute halt scare, on-chain RWA at $38.3B.',
+    date: '2026-08-14',
+    category: 'WEEKLY BRIEF',
+    summary:
+      'BTC -2.20% to $63,498, handing back the payrolls-shock rally; BTC ETFs -$89.7M on the week while ETH ETFs took in +$138.7M. The 8/7 jobs shock (-23K) and an in-line 3.4% CPI pushed hike risk back. Harmony exploited for 26% of supply, Solana\'s 33-minute halt scare, on-chain RWA at $38.3B.',
+    readTime: '35 min read',
+    author: 'Nexus One Digital Asset Research',
+    content: '',
+    link: '/insights/weekly-brief-aug-14-2026'
+  },
+  {
     id: 'hyperliquid-oracle-ten-days-2026',
     badge: {
       text: 'DEEP RESEARCH',
