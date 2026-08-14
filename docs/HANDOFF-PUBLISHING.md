@@ -24,8 +24,17 @@ npx tsx scripts/exportWebflowView.ts       # → out/webflow-view/export.json
 cp out/webflow-view/export.json ~/Desktop/nexusonecap/data/reports.json
 cd ~/Desktop/nexusonecap
 rm -rf insights && node scripts/buildView.mjs   # insights.html + insights/*.html 재생성
+git status --short | grep ' 2\.' || echo clean  # ★ iCloud 중복 확인 — 아래 참고
 # 3. 두 리포 각각 커밋 & 푸시 (푸시하면 자동 배포)
 ```
+
+**★ `rm -rf insights` 는 iCloud와 경합한다.** nexusonecap 리포가 Desktop 아래라
+동기화 대상이고, 폴더를 지운 직후 재생성하면 iCloud가 삭제분을 `"파일명 2.html"`
+사본으로 되살린다. 2026-08-14에 47개가 `git add -A`에 쓸려 커밋·배포됐다 —
+라이브에 200으로 뜨는 쓰레기 페이지가 된다. `.gitignore`에 패턴을 넣어 막아뒀지만
+커밋 전 위 `grep`을 습관화할 것. 이미 들어갔으면
+`git ls-files -z | grep -z ' 2\.' | xargs -0 git rm` 후 제거 커밋을 푸시.
+(Desktop 전반의 `' 2'` 중복 자체는 오너가 방치하기로 결정한 사안 — 리포 안에 들어온 것만 정리)
 
 Node 22 필요: `PATH="$HOME/.nvm/versions/node/v22.23.1/bin:$PATH"`
 
