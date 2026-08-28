@@ -269,7 +269,7 @@ export function Layout({ children }: LayoutProps) {
           </p>
 
           <a
-            href="mailto:partner@nexusonecap.com"
+            href="mailto:cs@nexusonecap.com"
             className="inline-block bg-gray-100 text-black font-bold px-6 py-3 text-sm hover:bg-gray-200 transition-colors mb-16"
           >
             Become a Partner →

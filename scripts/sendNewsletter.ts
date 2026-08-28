@@ -160,7 +160,7 @@ export function emailHtml(
       <p style="color:#9ca3af;font-size:12px;line-height:1.6;margin:0;">
         You are receiving this because you subscribed on ${siteLabel}.
         To unsubscribe, reply with "unsubscribe" or email
-        <a href="mailto:partner@nexusonecap.com?subject=Unsubscribe" style="color:#6b7280;">partner@nexusonecap.com</a>.
+        <a href="mailto:cs@nexusonecap.com?subject=Unsubscribe" style="color:#6b7280;">cs@nexusonecap.com</a>.
         This email is for informational purposes only and is not investment advice.
       </p>
     </div>

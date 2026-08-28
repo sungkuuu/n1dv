@@ -72,7 +72,7 @@ export function Partners() {
 
           <div className="text-center">
             <a
-              href="mailto:partner@nexusonecap.com?subject=Nexus One Partnership Inquiry"
+              href="mailto:cs@nexusonecap.com?subject=Nexus One Partnership Inquiry"
               className="inline-flex items-center px-12 py-5 bg-white text-black text-lg font-bold hover:bg-gray-200 transition-all"
             >
               <Mail className="mr-3" size={24} />
