@@ -29,7 +29,7 @@ export interface Brand {
   homeTitle: string;
   /** Nav items shown for this surface, in order. */
   nav: NavKey[];
-  /** Referral + Connect Wallet actions (platform/vault only). */
+  /** Connect Wallet action (platform/vault only). */
   showUserActions: boolean;
   /** Where '/' redirects for this surface (undefined = show Home). */
   landing?: string;

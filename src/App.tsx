@@ -39,7 +39,6 @@ const WeeklyBriefMar30 = page(() => import('./pages/WeeklyBriefMar30'), 'WeeklyB
 const WeeklyBriefApr05 = page(() => import('./pages/WeeklyBriefApr05'), 'WeeklyBriefApr05');
 const UniswapFeeSwitchDilemma = page(() => import('./pages/UniswapFeeSwitchDilemma'), 'UniswapFeeSwitchDilemma');
 const OptimismDCFAnalysis = page(() => import('./pages/OptimismDCFAnalysis'), 'OptimismDCFAnalysis');
-const ReferralRegister = page(() => import('./components/ReferralRegister'), 'ReferralRegister');
 const Dashboard = page(() => import('./pages/Dashboard'), 'Dashboard');
 const Vaults = page(() => import('./pages/Vaults'), 'Vaults');
 const VaultDetailN1DV = page(() => import('./pages/VaultDetailN1DV'), 'VaultDetailN1DV');
@@ -107,7 +106,6 @@ function App() {
           <Route path="/vaults" element={<Vaults />} />
           <Route path="/vaults/n1dv" element={<VaultDetailN1DV />} />
           <Route path="/vault" element={<Navigate to="/dashboard" replace />} />
-          <Route path="/referral" element={<ReferralRegister />} />
           <Route path="/radar" element={<YieldRadar />} />
           <Route path="/performance" element={<TrackRecord />} />
           {/* Generic insight route: any report in reports.ts with a matching

@@ -16,7 +16,7 @@ function getClient(): SupabaseClient {
   return _client;
 }
 
-/** Lazy-initialized Supabase client (avoids throw at module load so /referral can render). */
+/** Lazy-initialized Supabase client (avoids throwing at module load). */
 export const supabase = new Proxy({} as SupabaseClient, {
   get(_, prop) {
     return (getClient() as unknown as Record<string | symbol, unknown>)[prop];

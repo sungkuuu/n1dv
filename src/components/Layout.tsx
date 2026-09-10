@@ -3,7 +3,6 @@ import { Menu, X } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { CustomConnectButton } from './CustomConnectButton';
 import { VaultAccessDrawer } from './VaultAccessDrawer';
-import { ReferralDrawer } from './ReferralDrawer';
 import { NewsletterSignup } from './NewsletterSignup';
 import { resolveBrand, type NavKey } from '../lib/brand';
 
@@ -25,7 +24,6 @@ export function Layout({ children }: LayoutProps) {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isVaultDrawerOpen, setIsVaultDrawerOpen] = useState(false);
-  const [isReferralDrawerOpen, setIsReferralDrawerOpen] = useState(false);
 
   // Same deployment, three domains: header wordmark + home <title> follow the
   // hostname (n1dv.io / quadrix.finance / nexusonecap.com). Footer stays Nexus One.
@@ -123,12 +121,6 @@ export function Layout({ children }: LayoutProps) {
               <>
                 <div className="w-[1px] h-6 bg-gray-600 flex-shrink-0" aria-hidden />
                 <div className="flex items-center gap-6">
-                  <button
-                    onClick={() => setIsReferralDrawerOpen(true)}
-                    className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
-                  >
-                    Referral
-                  </button>
                   <CustomConnectButton />
                 </div>
               </>
@@ -145,7 +137,7 @@ export function Layout({ children }: LayoutProps) {
         </div>
       </nav>
 
-      {/* Mobile Menu — same order: Letter, Vaults, Insights, Dashboard | Referral, Connect Wallet */}
+      {/* Mobile Menu — same order: Letter, Vaults, Insights, Dashboard | Connect Wallet */}
       <div
         className={`fixed inset-0 z-50 bg-black/95 backdrop-blur-lg transition-opacity duration-300 md:hidden ${
           isMobileMenuOpen ? 'flex flex-col opacity-100' : 'hidden'
@@ -187,16 +179,6 @@ export function Layout({ children }: LayoutProps) {
               ))}
               {brand.showUserActions && (
                 <>
-                  <div className="my-2 border-t border-white/10" />
-                  <button
-                    onClick={() => {
-                      setIsMobileMenuOpen(false);
-                      setIsReferralDrawerOpen(true);
-                    }}
-                    className="text-left text-white text-lg font-medium py-4 px-4 hover:bg-white/5 transition-colors rounded-lg"
-                  >
-                    Referral
-                  </button>
                   <div className="mt-4 pt-4 border-t border-white/10 flex justify-center">
                     <CustomConnectButton variant="fullWidth" className="w-full max-w-xs" />
                   </div>
@@ -214,7 +196,6 @@ export function Layout({ children }: LayoutProps) {
       {isReportPage && <NewsletterSignup />}
 
       <VaultAccessDrawer isOpen={isVaultDrawerOpen} onClose={() => setIsVaultDrawerOpen(false)} />
-      <ReferralDrawer isOpen={isReferralDrawerOpen} onClose={() => setIsReferralDrawerOpen(false)} />
 
       {/* Corporate surface: match the nexusonecap.com footer exactly — pure
           black, wide container, logo/nav row + address/copyright row, no
