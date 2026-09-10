@@ -67,20 +67,9 @@ export function VaultAccessDrawer({ isOpen, onClose }: VaultAccessDrawerProps) {
           </p>
 
           <CustomConnectButton variant="fullWidth" />
-          <p className="text-center text-xs text-gray-500 mt-3 mb-10">
+          <p className="text-center text-xs text-gray-500 mt-3">
             MetaMask, WalletConnect 지원
           </p>
-
-          <div>
-            <label className="block text-xs font-medium text-gray-500 tracking-widest uppercase mb-3">
-              Referral Code
-            </label>
-            <input
-              type="text"
-              placeholder="초대 코드 입력"
-              className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-white/20 font-mono-num text-sm"
-            />
-          </div>
         </div>
       </div>
     </div>
