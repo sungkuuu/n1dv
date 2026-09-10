@@ -1,16 +1,31 @@
 /**
- * One deployment serves three domains — n1dv.io, quadrix.finance and
- * insights.nexusonecap.com — off the same app + research pipeline. We branch the
- * header wordmark / <title> on hostname so each domain reads as its own brand,
- * while the footer stays Nexus One everywhere (the parent company) and research
- * always ships under the Nexus One Research Desk.
+ * Hostname → brand skin. Only the n1dv entry is reachable; the other two are
+ * dead and kept only until someone does the removal.
  *
- *   quadrix.finance          → QUADRIX    (asset-management platform)
- *   n1dv.io                  → N1DV       (Deep Value active vault)
- *   *.nexusonecap.com        → NEXUS ONE  (company / Insight surface)
+ * This file was written 7/10-13 for a plan where ONE deployment would serve
+ * n1dv.io, quadrix.finance and insights.nexusonecap.com off the same bundle.
+ * That plan ended on 7/14, when Quadrix split into its own repo ("init: Quadrix
+ * platform scaffold") and later took its own Cloudflare Pages project. Measured
+ * state today:
+ *
+ *   n1dv.io                  → Pages project "n1dv" — THIS repo
+ *   quadrix.finance          → Pages project "quadrix" — separate repo, no
+ *                              brand.ts, its own bundle. Nothing here serves it.
+ *   insights.nexusonecap.com → no DNS record. Dead surface.
+ *   nexusonecap.com          → separate site (Webflow-family) behind Cloudflare.
+ *
+ * So the 'quadrix' and 'nexus' entries below can never be resolved in
+ * production, and retiring this repo has no effect on quadrix.finance. Do not
+ * read the presence of those entries as evidence that this deployment serves
+ * those domains — it does not.
+ *
+ * Removing them is a real refactor, not a two-line delete: it cascades into
+ * homeContent.ts (HOME_COPY is keyed by BrandId), the `brand.id === 'nexus'`
+ * branches in Layout.tsx and Insights.tsx, the theme bootstrap in main.tsx, and
+ * the html.theme-light layer in index.css.
  *
  * Dev/preview (localhost, *.pages.dev) has no branded host, so it falls back to
- * n1dv and honours a ?brand=quadrix|n1dv|nexus override for eyeballing skins.
+ * n1dv and honours a ?brand= override for eyeballing the dead skins.
  */
 export type BrandId = 'quadrix' | 'n1dv' | 'nexus';
 
