@@ -17,6 +17,24 @@ export interface Report {
 
 export const reports: Report[] = [
   {
+    id: 'weekly-brief-sep-21-2026',
+    badge: {
+      text: 'WEEKLY BRIEF',
+      variant: 'outline-blue'
+    },
+    title: 'Nexus One Weekly Digital Asset Market Report - September 14 to September 21, 2026',
+    description:
+      'BTC +3.83% to $81,183 after a V-shaped reversal off a $74,897 low; BTC ETFs +$6.1M on the week while ETH ETFs snapped a four-week inflow streak at -$140.6M. The FOMC hiked 25bp to 3.75-4.00% and the CLARITY Act died 49-50 in the Senate. NEAR +76%, Hyperliquid shipped manual borrowing, tokenized Treasuries at $14.82B.',
+    date: '2026-09-21',
+    category: 'WEEKLY BRIEF',
+    summary:
+      'BTC +3.83% to $81,183 after a V-shaped reversal off a $74,897 low; BTC ETFs +$6.1M on the week while ETH ETFs snapped a four-week inflow streak at -$140.6M. The FOMC hiked 25bp to 3.75-4.00% and the CLARITY Act died 49-50 in the Senate. NEAR +76%, Hyperliquid shipped manual borrowing, tokenized Treasuries at $14.82B.',
+    readTime: '50 min read',
+    author: 'Nexus One Digital Asset Research',
+    content: '',
+    link: '/insights/weekly-brief-sep-21-2026'
+  },
+  {
     id: 'weekly-brief-aug-14-2026',
     badge: {
       text: 'WEEKLY BRIEF',
