@@ -1,13 +1,18 @@
 name: Newsletter
 
-# When a new report card lands in reports.ts on main, email subscribers.
+# PAUSED 2026-09-22 (owner). n1dv.io was folded into nexusonecap.com, and the
+# list holds two addresses — the owner's own and a test entry. Every send since
+# July reached one or two people, none of them a reader, so the automatic push
+# trigger is off. The job still runs on demand; nothing has to be rebuilt to
+# resume. To resume, put the push trigger back.
+#
+# Sending itself is untouched and works: the sender defaults to
+# research@nexusonecap.com, whose Resend records (DKIM + send.nexusonecap.com)
+# are live in DNS.
+#
 # Safe to run repeatedly: sendNewsletter.ts dedupes via the newsletter_sends
 # table and skips quietly when secrets are missing or nothing is new.
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'src/data/reports.ts'
   workflow_dispatch: {}
 
 jobs:
