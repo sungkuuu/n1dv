@@ -17,39 +17,20 @@ import { fileURLToPath } from 'node:url';
 import { createClient } from '@supabase/supabase-js';
 import { reports } from '../src/data/reports';
 
-const SITE = 'https://n1dv.io';
+const SITE = 'https://www.nexusonecap.com';
+const SITE_LABEL = 'nexusonecap.com';
 const SUPABASE_URL = 'https://mevrwtzquadthtbzqmdu.supabase.co';
 const FROM = process.env.NEWSLETTER_FROM || 'Nexus One Research <research@nexusonecap.com>';
 
 /**
- * Subscribers are routed to the site they signed up on. `source` is stored as
- * host + pathname by both signup forms, so the host decides which variant a
- * reader gets: the report link points at their own site and the footer names
- * it. Rows predating the host prefix (pathname only) fall back to n1dv, which
- * is provably where they came from — the nexusonecap form went live later.
+ * Every subscriber gets a nexusonecap.com link. n1dv.io was folded into the
+ * company site in September 2026 — its worker now 301s the whole host across,
+ * and the paths line up (/insights/{slug}), so there is no second destination
+ * left to route to. The `source` column still records the signup host, which
+ * stays useful for attribution; it just no longer decides where a reader lands.
  *
- * The sender stays brand-neutral ("Nexus One Research"). Both groups send from
- * the single Resend-verified domain, nexusonecap.com — the parent company, so
- * no fund branding reaches a company-site reader. Splitting the addresses per
- * site needs a second verified domain (paid plan): set NEWSLETTER_FROM to the
- * n1dv address and NEWSLETTER_FROM_NEXUSONECAP to the company one, and the
- * routing below picks them up with no code change.
- */
-type SiteKey = 'nexusonecap' | 'n1dv';
-const SITES: Record<SiteKey, { origin: string; label: string; from: string }> = {
-  nexusonecap: {
-    origin: 'https://www.nexusonecap.com',
-    label: 'nexusonecap.com',
-    from: process.env.NEWSLETTER_FROM_NEXUSONECAP || FROM,
-  },
-  n1dv: { origin: SITE, label: 'n1dv.io', from: FROM },
-};
-
-/** nexusonecap.com (incl. www) → that site; everything else → n1dv. */
-function siteOf(source: string | null | undefined): SiteKey {
-  return /(^|\.)nexusonecap\.com(\/|$)/i.test(source ?? '') ? 'nexusonecap' : 'n1dv';
-}
-const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
+ * Sender is research@nexusonecap.com, the single Resend-verified domain.
+ */const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const resendKey = process.env.RESEND_API_KEY;
@@ -116,7 +97,7 @@ export function emailHtml(
   url: string,
   category: string,
   highlights: string[] = [],
-  siteLabel = 'n1dv.io'
+  siteLabel = SITE_LABEL
 ): string {
   const badge = BADGE[category] ?? BADGE['DEEP RESEARCH'];
   const accent = badge.color;
@@ -200,48 +181,41 @@ async function main(): Promise<void> {
     .select('email, source');
   if (subErr) throw new Error(`subscriber read failed: ${subErr.message}`);
 
-  // group recipients by the site they subscribed on
-  const bySite = new Map<SiteKey, string[]>([['nexusonecap', []], ['n1dv', []]]);
-  for (const row of subs ?? []) bySite.get(siteOf(row.source))!.push(row.email);
-  for (const [k, v] of bySite) console.log(`[newsletter] ${k}: ${v.length} recipient(s)`);
+  const emails = (subs ?? []).map((row) => row.email);
+  console.log(`[newsletter] ${emails.length} recipient(s)`);
 
   const description = (latest.description || latest.summary || '').slice(0, 400);
   const category = latest.badge?.text ?? latest.category;
   const highlights = extractHighlights(latest.id);
   let delivered = 0;
 
-  // Resend allows 2 requests/sec and up to 100 messages per batch call.
-  // Space batches out and retry once on 429. One pass per site so each
-  // reader gets the link and footer for the site they subscribed on.
-  for (const [key, emails] of bySite) {
-   if (emails.length === 0) continue;
-   const site = SITES[key];
-   const url = `${site.origin}${latest.link}`;
-   for (let i = 0; i < emails.length; i += 100) {
-    const batch = emails.slice(i, i + 100).map((to) => ({
-      from: site.from,
-      to: [to],
-      subject: `${category}: ${latest.title}`,
-      html: emailHtml(latest.title, description, url, category, highlights, site.label),
-    }));
-    let attempt = 0;
-    for (;;) {
-      const res = await fetch('https://api.resend.com/emails/batch', {
-        method: 'POST',
-        headers: { Authorization: `Bearer ${resendKey}`, 'Content-Type': 'application/json' },
-        body: JSON.stringify(batch),
-      });
-      if (res.ok) break;
-      if (res.status === 429 && attempt < 3) {
-        attempt++;
-        await new Promise((r) => setTimeout(r, 1000 * attempt));
-        continue;
-      }
-      throw new Error(`Resend HTTP ${res.status}: ${(await res.text()).slice(0, 300)}`);
-    }
-    delivered += batch.length;
-    await new Promise((r) => setTimeout(r, 600)); // stay under 2 req/s
+  // Resend allows 2 requests/sec and up to 100 messages per batch call,
+  // so batches are spaced out and retried once on 429.
+  const url = `${SITE}${latest.link}`;
+  for (let i = 0; i < emails.length; i += 100) {
+   const batch = emails.slice(i, i + 100).map((to) => ({
+     from: FROM,
+     to: [to],
+     subject: `${category}: ${latest.title}`,
+     html: emailHtml(latest.title, description, url, category, highlights, SITE_LABEL),
+   }));
+   let attempt = 0;
+   for (;;) {
+     const res = await fetch('https://api.resend.com/emails/batch', {
+       method: 'POST',
+       headers: { Authorization: `Bearer ${resendKey}`, 'Content-Type': 'application/json' },
+       body: JSON.stringify(batch),
+     });
+     if (res.ok) break;
+     if (res.status === 429 && attempt < 3) {
+       attempt++;
+       await new Promise((r) => setTimeout(r, 1000 * attempt));
+       continue;
+     }
+     throw new Error(`Resend HTTP ${res.status}: ${(await res.text()).slice(0, 300)}`);
    }
+   delivered += batch.length;
+   await new Promise((r) => setTimeout(r, 600)); // stay under 2 req/s
   }
 
   const { error: logErr } = await supabase
