@@ -45,8 +45,6 @@
 
 ## 1. Global Macroeconomic Trends
 
-### Key Indicators (WoW)
-
 | Indicator | 2026-09-14 | 2026-09-18 (latest) | WoW |
 |---|---|---|---|
 | US Treasury 2Y | 4.65% | **4.76%** | +11bp |
@@ -90,7 +88,7 @@ Commodities and FX tell a different story. WTI fell 2.2% on the week, but that i
 
 ## 3. BTC/ETH Trends, Technical Analysis, and ETF Flows
 
-### 3.1 Prices (full seven-day window)
+### BTC/ETH Price Table
 
 | Asset | Spot (9/21 09:00 KST) | Close 7d prior (9/14) | WoW | Weekly high | Weekly low |
 |---|---|---|---|---|---|
@@ -99,7 +97,7 @@ Commodities and FX tell a different story. WTI fell 2.2% on the week, but that i
 | SOL | **$111.22** | $102.52 | **+8.49%** | $114.31 (9/18) | $95.72 (9/15) |
 | HYPE | **$93.91** | $80.45 | **+16.74%** | $94.23 (9/19) | $75.27 (9/15) |
 
-### 3.2 Technical Analysis
+### Technical Analysis
 
 Bitcoin's weekly chart is a **clean V-shaped reversal**. It opened at $78,187 on 9/14, fell 4.2% to $74,897 on 9/15 on the CLARITY Act shock, then based for two sessions in a tight $74,900–$77,100 box at $75,587 (9/16) and $76,150 (9/17). The inflection was decisive on 9/18: an open at $76,365 to a close at $80,895, **+5.93% in a day**, on daily volume of 5,416 BTC versus 3,974 BTC the prior session — a 36% increase. It then set the $81,950 high on 9/19 and closed the week chopping in the $81,000–$81,500 area.
 
@@ -107,7 +105,7 @@ The structure worth watching is **support at $74,900 and resistance at $82,000**
 
 Ethereum carried more torque. It rebounded **13.2%** from a weekly low of $2,357 to a high of $2,669, and its +5.21% WoW beat BTC's +3.83%. The ETH/BTC ratio improved from 0.03217 to **0.03259**, +1.33% — the textbook pattern of alts outperforming through a risk-appetite recovery. Beta scaling up through Solana (+8.49%) and Hyperliquid (+16.74%) says the same thing.
 
-### 3.3 Eight Core Metrics (two-point WoW)
+### Key Metrics
 
 | Metric | 2026-09-14 | 2026-09-20~21 | WoW |
 |---|---|---|---|
@@ -120,7 +118,7 @@ Ethereum carried more torque. It rebounded **13.2%** from a weekly low of $2,357
 | Stablecoin total cap | $305.24B | **$304.90B** | -0.11% |
 | Fear & Greed Index | 61 (Greed) | **71 (Greed)** | +10 |
 
-### 3.4 Supplementary On-chain and Derivatives Metrics
+### Supplementary On-chain and Derivatives Metrics
 
 - **MVRV of 1.524** (at BTC $81,194.61). The 1.5 area is historically neutral-to-modestly-profitable, far from both euphoria (above 3.0) and capitulation (below 1.0).
 - **Funding (annualized APR):** Binance 3.65% / Bybit 2.34% / OKX 3.65% / Hyperliquid 3.65% / Deribit 5.49%. A simple average across the three major venues is roughly **3.21% APR** — mild long bias. That funding did not overheat even after the 9/18 squeeze suggests leverage rebuilt only modestly.
@@ -128,7 +126,7 @@ Ethereum carried more torque. It rebounded **13.2%** from a weekly low of $2,357
 - **Hashrate 914.39 EH/s, difficulty 132.76T.** The last adjustment was +4.16%; the next is estimated at -5.66%.
 - **Weekly liquidations (9/14–9/20): roughly $2.83B.** By day: 9/14 $213M, 9/15 ~$600M (longs $570M), 9/16 $477M (longs $363M), 9/17 $386M (shorts $247M), 9/18 $547M (shorts $469M), 9/19 $294M (shorts $229M), 9/20 $316M (longs $183M). Longs and shorts burned alternately across the first and second halves of the week — **two-sided destruction**.
 
-### 3.5 US Spot BTC ETF Flows
+### ETF Flows (9/14–9/18, $M, Farside)
 
 **Daily totals (US$ million)**
 
@@ -177,7 +175,7 @@ Among altcoin ETFs, SOL took **+$60.7M** (BSOL accounted for +$58.7M of it, incl
 
 ## 4. L1/L2 Protocol Status
 
-### 4.1 Core Chains (Base 5 + Flex 1)
+### Base 5 Core Chains + Flex Slot
 
 | Chain | Price (WoW) | DAA (24h) | Transactions (24h) | Fees (7d) | TVL (7d) | Distinctive metric | Weekly event |
 |---|---|---|---|---|---|---|---|
@@ -200,7 +198,7 @@ The contrast between Tron and Solana is instructive. Tron leads on DAA at 3.59 m
 
 NEAR is the week's headline. Its +76.0% is the largest move among major alts, yet chain fees are roughly $24,430 on a seven-day basis — effectively negligible. The driver was not chain activity but **a separate application layer called NEAR Intents** (see §11). NEAR Intents did $1.132B of DEX volume over seven days, 2.3 times the NEAR chain's entire DEX volume ($487.63M, +36.66% over seven days), because those trades route across 26 chains rather than settling inside NEAR. TVL falling 9.22% in 24 hours to $178.79M suggests early capital rotation has already begun after the spike.
 
-### 4.2 Major L2s
+### L2 Status
 
 | L2 | TVS | TVS 7d | Activity (UOPS) | UOPS 7d | Fees (7d) |
 |---|---|---|---|---|---|
@@ -219,7 +217,7 @@ The L2 sector posted an unusually uniform advance, with **TVS and activity risin
 
 ## 5. DeFi Trends
 
-### 5.1 Total TVL and Distribution by Chain
+### Total TVL and Distribution by Chain
 
 Total DeFi TVL stood at **$92.13B** (-0.72% on the day). Because DefiLlama does not publish a single seven-day change figure for aggregate TVL, we back-solved it by TVL-weighting the individual seven-day changes of the top ten chains. On that basis the top ten summed to **$84.25B** against **$80.45B** seven days prior, a **+4.7%** increase.
 
@@ -236,7 +234,7 @@ Total DeFi TVL stood at **$92.13B** (-0.72% on the day). Because DefiLlama does 
 | Avalanche | **$580.33M** | +19.44% | +23.02% | +31.16% |
 | Sui | **$494.75M** | +8.06% | +7.98% | +18.07% |
 
-### 5.2 Top Protocols by TVL
+### Top Protocols by TVL
 
 | Protocol | TVL | 7d |
 |---|---|---|
@@ -251,7 +249,7 @@ Total DeFi TVL stood at **$92.13B** (-0.72% on the day). Because DefiLlama does 
 | ether.fi | **$5.23B** | **-6.27%** |
 | Uniswap | **$3.681B** | **-7.22%** |
 
-### 5.3 DEX and Perps Volume (7d)
+### DEX and Perps Volume (7d)
 
 | Rank | DEX | 7d volume | | Perp DEX | 7d volume | OI |
 |---|---|---|---|---|---|---|
@@ -263,7 +261,7 @@ Total DeFi TVL stood at **$92.13B** (-0.72% on the day). Because DefiLlama does 
 
 Aggregate DEX volume fell **-6.29%** on the week while perps rose **+17.87%**. That divergence — spot shrinking, leverage expanding — describes the week precisely. While price traversed a 9.4% range from $74,900 to $81,950, participants responded with **directional bets rather than spot accumulation**, and $2.83B of weekly liquidations is the result.
 
-### 5.4 Top Seven Protocols by Revenue (DefiLlama 7d fees, single timestamp)
+### Top Protocols by Revenue (DefiLlama 7d fees, single timestamp)
 
 | Protocol | 7d fees | 7d revenue | Revenue/fees |
 |---|---|---|---|
@@ -279,7 +277,7 @@ Aggregate fees were $73.89M over 24 hours and $2.372B over 30 days, down **-9.32
 
 What to read in this table is not the ranking but the **revenue-to-fees ratio**. Tether and Circle run 100% structures where fees are revenue, confirming stablecoin issuers as still the largest cash-flow generators in the on-chain economy. Uniswap, by contrast, books only $3.07M (8.3%) of its $36.93M in fees as protocol revenue, with the rest accruing to LPs. Hyperliquid's **77.9%** is singular among exchange-type protocols, and that most fees flow to the protocol — and into HYPE buybacks — is the basis of its valuation. Compare on headline fees and Uniswap is twice Hyperliquid; compare on money that actually reaches the protocol and Hyperliquid is **4.7 times larger**.
 
-### 5.5 Stablecoins
+### Stablecoins
 
 Total capitalization **$304.90B** (-0.11% over seven days, -$349.06M; +0.81% over 30 days), USDT dominance **60.11%**.
 
@@ -317,7 +315,7 @@ Two events stood out: **a rush of new NFT projects in the Zcash ecosystem**, tra
 
 ## 7. RWA Trends
 
-### 7.1 Top Eight Products
+### Top 8 Products
 
 | Rank | Product | AUM | Issuer |
 |---|---|---|---|
@@ -334,7 +332,7 @@ Total tokenized US Treasuries stand at **$14.82B** (-5.25% over 30 days), with a
 
 Total RWA scale on DefiLlama is **$29.881B** in Active AUM and **$33.168B** in Onchain AUM, with RWA TVL inside DeFi at **$3.802B**.
 
-### 7.2 RWA Flows by Network (30-day net)
+### RWA Flows by Network (30-day net)
 
 | Network | 30d net flow | Major RWA protocols in DeFi |
 |---|---|---|
@@ -346,7 +344,7 @@ Total RWA scale on DefiLlama is **$29.881B** in Active AUM and **$33.168B** in O
 
 What the 30-day flows show is **a crack in Ethereum's monopoly**. While $1.9B left Ethereum, $1.5B went to ZKsync Era, $727.5M to Aptos and $308.5M to Solana. Yet the RWA collateral actually put to work inside DeFi remains concentrated in the Ethereum ecosystem — Morpho Blue $576.6M, Aave V3 $390.6M. This is a transitional state in which **issuance and custody are dispersing to cheaper chains while financial utilization still sits on Ethereum**.
 
-### 7.3 Regional Developments
+### Regional Developments
 
 **United States** — On 9/17 the SEC announced a five-year **Innovation Exemption** permitting tokenized US equities to trade on permissioned blockchain platforms using AMM and liquidity-pool designs. The same day the CFTC, through Staff Letter 26-25, exempted developers who provide only order-routing front ends from introducing-broker registration. Most of the $14.82B in tokenized Treasuries are US-issued products.
 
@@ -358,7 +356,7 @@ What the 30-day flows show is **a crack in Ethereum's monopoly**. While $1.9B le
 
 ## 8. On-chain Activity Analysis
 
-### 8.1 Top Eight Chains by DAA and Transactions
+### Top 8 Chains by DAA and Transactions
 
 | Rank | Chain | DAA (24h) | Daily transactions (converted) |
 |---|---|---|---|
@@ -373,13 +371,13 @@ What the 30-day flows show is **a crack in Ethereum's monopoly**. While $1.9B le
 
 Transaction counts convert Chainspect's measured TPS (one-hour average) to a 24-hour basis. Methodology variance is significant and worth flagging: at the same timestamp Blockchair reports Ethereum at 7.92M (main) and 11.89M (all events) and Tron at 16.20M (main) and 20.45M (all events), four to six times higher, depending on whether internal calls and token transfers are counted. For comparing real usage with bot traffic stripped out, **DAA is the more reliable measure**, and on that basis Tron, Solana and BSC together account for 8.5 million users, or 87% of total DAA across the top eight chains.
 
-### 8.2 Weekly Surges and Declines
+### Weekly Surges and Declines
 
 **Surges** — Avalanche led decisively with TVL +**23.02%** over seven days and +31.16% over 30. Robinhood Chain grew fastest among new chains at +9.58% over seven days and **+79.40%** over 30, and its fees of $2.61M (7d) and $38.72M (30d) already exceed Bitcoin's ($1.48M over seven days). Sui followed at TVL +7.98%.
 
 **Declines** — Spark posted the largest drawdown among major protocols at **-18.91%** over seven days, with ether.fi at **-6.27%** and Uniswap TVL at **-7.22%**. ether.fi's decline relates to an in-progress structural reallocation reducing EigenLayer exposure in favor of Symbiotic.
 
-### 8.3 Flows
+### Flows
 
 Exchange BTC flows averaged **+431.56 BTC** of net inflow per day through September, well above the quarterly average, but daily variance was extreme: +551 BTC on 9/10, +14 BTC on 9/12, **-1,292 BTC** on 9/14. That the large outflow (-1,292 BTC) landed immediately before the 9/15 drawdown suggests not pre-emptive withdrawal ahead of a decline but **movement to self-custody in preparation for buying the dip**.
 
@@ -391,9 +389,9 @@ Stablecoin supply was flat at -0.11% over seven days. That stablecoins did not g
 
 > Sector market caps and 24-hour changes come from CoinGecko category pages; individual token seven-day changes were computed by comparing the 9/14 close to the current price on CoinGecko coin pages. All figures are as of September 21, 2026, and may vary at the decimal level with query timing.
 
-### 9.1 AI — $21.7B (24h -1.9%)
+### 9.1 AI — $21.7B
 
-Four of six major tokens gained double digits, making the weekly trend strong despite the daily print. TAO, RENDER, WLD and VVV all rose more than 13%, and the King Charles III AI safety summit held in the UK on 9/17 — attended by the heads of Nvidia, OpenAI, Anthropic and Google DeepMind — triggered a +9.4% sector-wide rally.
+Four of six major tokens gained double digits, making the weekly trend strong despite a 1.9% dip on the day. TAO, RENDER, WLD and VVV all rose more than 13%, and the King Charles III AI safety summit held in the UK on 9/17 — attended by the heads of Nvidia, OpenAI, Anthropic and Google DeepMind — triggered a +9.4% sector-wide rally.
 
 | Token | Price | Market cap | 7d | 24h volume |
 |---|---|---|---|---|
@@ -408,9 +406,9 @@ Four of six major tokens gained double digits, making the weekly trend strong de
 
 **Reading** — The temperature gap inside a single sector was extreme. Compute and infrastructure names (TAO, RENDER, VVV) ran +13–27% while the agent-framework complex (ELIZAOS) was negative. This signals the AI narrative **rotating capital out of "agent tokens" and into actual compute resources**, a read supported by RENDER's 24-hour volume jumping 87.8% day over day.
 
-### 9.2 Meme — $34.86B (24h -1.4%)
+### 9.2 Meme — $34.86B
 
-Sector 24-hour volume was $2.71B. The daily print is a modest pullback, but all three majors were positive on a seven-day basis — a midweek rally that gave back ground on the final session.
+Sector 24-hour volume was $2.71B against a 1.4% decline on the day. The daily print is a modest pullback, but all three majors were positive on a seven-day basis — a midweek rally that gave back ground on the final session.
 
 | Token | Price | Market cap | 7d | 24h volume |
 |---|---|---|---|---|
@@ -422,9 +420,9 @@ Sector 24-hour volume was $2.71B. The daily print is a modest pullback, but all 
 
 **Reading** — The 3.8x spread between PEPE (+14.58%) and DOGE (+3.85%) is the point. Smaller caps bouncing harder says this meme rally was **high-beta positioning within a risk-appetite recovery** rather than new money arriving. DOGE's $953.58M of 24-hour volume is only 7% of its $13.55B cap, while PEPE's $530.44M is 32% of its $1.66B — a turnover ratio 4.5 times higher.
 
-### 9.3 GameFi — $3.45B (24h -2.3%)
+### 9.3 GameFi — $3.45B
 
-Among the smallest of the eight sectors in absolute terms; the three majors rose 5–10%, in line with the broad market bounce.
+Among the smallest of the eight sectors in absolute terms, down 2.3% on the day; the three majors rose 5–10%, in line with the broad market bounce.
 
 | Token | Price | Market cap | 7d | 24h volume |
 |---|---|---|---|---|
@@ -436,9 +434,9 @@ Among the smallest of the eight sectors in absolute terms; the three majors rose
 
 **Reading** — Total sector capitalization of $3.45B is one-sixth of Hyperliquid's single-token market cap ($20.24B). That a new game launch (RONIN) coincided with a price decline while a delisting announcement (GALA) coincided with a +10.10% week shows **market beta dominating individual fundamentals**. GameFi rode the tape this week without a catalyst of its own.
 
-### 9.4 DePIN — $9.24B (24h -3.3%)
+### 9.4 DePIN — $9.24B
 
-The second-largest daily drawdown among the eight sectors. The three majors rose 1–6%, underperforming the broad market.
+The second-largest daily drawdown among the eight sectors at -3.3%. The three majors rose 1–6%, underperforming the broad market.
 
 | Token | Price | Market cap | 7d | 24h volume |
 |---|---|---|---|---|
@@ -450,9 +448,9 @@ The second-largest daily drawdown among the eight sectors. The three majors rose
 
 **Reading** — DePIN was bypassed by this week's AI rally. RENDER, classified into the AI sector, surged +27.30% while AKT — in the same compute category — managed only +5.15%. With Akash's Q1 2026 lease revenue down 45% quarter over quarter, the market appears to be **selecting within DePIN for projects with live revenue momentum**.
 
-### 9.5 SocialFi — $2.64B (24h -1.9%)
+### 9.5 SocialFi — $2.64B
 
-The smallest of the eight sectors, and the one with the widest internal dispersion.
+The smallest of the eight sectors, down 1.9% on the day, and the one with the widest internal dispersion.
 
 | Token | Price | Market cap | 7d | 24h volume |
 |---|---|---|---|---|
@@ -464,9 +462,9 @@ The smallest of the eight sectors, and the one with the widest internal dispersi
 
 **Reading** — PUMP alone accounts for $2.02B of the sector's $2.64B, or 76.5% — extreme concentration. Strictly speaking PUMP is closer to a memecoin launchpad than traditional SocialFi, and excluding it leaves a real SocialFi market of only about $600M. ANTFUN's -11.45% is profit-taking straight off a record high, which shows **the sector has yet to establish a durable demand base**.
 
-### 9.6 Restaking — $1.59B (24h +0.2%)
+### 9.6 Restaking — $1.59B
 
-The only one of eight sectors positive on a 24-hour basis. Sector 24-hour volume was $202.81M.
+The only one of eight sectors positive on a 24-hour basis, at +0.2%. Sector 24-hour volume was $202.81M.
 
 | Token | Price | Market cap | 7d | 24h volume |
 |---|---|---|---|---|
@@ -478,9 +476,9 @@ The only one of eight sectors positive on a 24-hour basis. Sector 24-hour volume
 
 **Reading** — The gap between token prices (EIGEN +16.45%, ETHFI +14.58%) and protocol TVL is the thing to watch. EigenCloud TVL of $6.779B grew only 2.24% over seven days, and ether.fi TVL actually fell **-6.27%**. With ether.fi mid-way through shifting EigenLayer exposure to Symbiotic, tokens rose while TVL drained — which makes it likely the price is front-running the rebrand narrative.
 
-### 9.7 Perp DEX / Derivatives — ~$27B (24h -1.2%)
+### 9.7 Perps — ~$27B
 
-Sector 24-hour volume was $1.73B. On-chain perp volume rose 17.87% on the week, the strongest fundamental momentum of the eight sectors.
+Sector 24-hour volume was $1.73B against a 1.2% decline on the day. On-chain perp volume rose 17.87% on the week, the strongest fundamental momentum of the eight sectors.
 
 | Token | Price | Market cap | 7d | 24h volume |
 |---|---|---|---|---|
@@ -492,9 +490,9 @@ Sector 24-hour volume was $1.73B. On-chain perp volume rose 17.87% on the week, 
 
 **Reading** — The monopoly shows up in the data: HYPE alone is $20.24B of the sector's ~$27B, or 75%. Hyperliquid's $53.253B of seven-day volume is 3.2 times second-place Aster ($16.724B), while dYdX's seven-day volume has contracted to $220.43M. That DYDX nonetheless outperformed HYPE at +15.84% versus +13.28% is **a low-cap bounce untethered from fundamentals**, and a textbook instance of this week's recurring divergence in which the tokens of shrinking businesses rise fastest.
 
-### 9.8 DA (Data Availability) — $5.54B (24h -4.1%)
+### 9.8 DA (Data Availability) — $5.54B
 
-The largest daily drawdown of the eight sectors. Sector 24-hour volume was $1.11B.
+The largest daily drawdown of the eight sectors at -4.1%. Sector 24-hour volume was $1.11B.
 
 | Token | Price | Market cap | 7d | 24h volume |
 |---|---|---|---|---|
@@ -741,7 +739,7 @@ The things to watch are concentrated in the coming week. **The Deribit quarterly
 
 ## 14. Token Unlock Schedule (Major)
 
-### 14.1 Eight Major Unlocks (2026-09-21 to 10-05)
+### Eight Major Unlocks (2026-09-21 to 10-05)
 
 | Token | Date | Type | Amount (converted) | Unlock value | % of float |
 |---|---|---|---|---|---|
@@ -758,7 +756,7 @@ Amounts are unlock value divided by current price.
 
 **Totals** — Unlocks over the next seven days total **$353.56M** (cliff $249.27M + linear $104.29M), and over 30 days **$1.184B**. By day: 9/22 $51.38M, 9/23 $21.22M, 9/24 $76,439, 9/25 **$172.54M**, 9/26 $389,718, 9/27 $3.78M, 9/28 $5.16M, 9/29 $30.93M, 9/30 $6.81M.
 
-### 14.2 Analysis
+### Analysis
 
 TON is the largest in absolute dollars at $50.75M, but **the genuinely risky one for price is Humanity**. Its $21.1M is only 42% of TON's size, yet at **14.72% of float** it expands circulating supply by nearly 15% in a single day. TON, at 1.31% of float, leaves the market ample capacity to absorb it. This is a clean illustration of the principle that **unlock impact should be judged by percentage of existing float and multiple of daily volume, not by dollar headline**.
 
@@ -897,16 +895,6 @@ Attached: Source links are listed inline beside each footnote.
 125. [rekt.news — Liquid Network REKT](https://rekt.news/liquid-network-rekt)
 126. [CoinDesk — Crypto tech provider Haruko hit by cyberattack affecting 15 clients (9/18)](https://www.coindesk.com/business/2026/09/18/crypto-tech-provider-haruko-hit-by-cyberattack-affecting-15-clients-some-funds-lost)
 127. [DefiLlama — Hacks tracker](https://defillama.com/hacks)
-
----
-
-### Data Notes
-
-- Unless otherwise marked, price and market data are as of 09:00 KST on September 21, 2026, and WoW changes are computed against the close at the same hour on September 14, 2026.
-- DefiLlama does not publish a single seven-day change for aggregate DeFi TVL, so the figure used (+4.7%) was back-solved by TVL-weighting the individual seven-day changes of the top ten chains; the derivation is stated in the body.
-- No official monthly tally of September 2026 crypto hack losses has been published by SlowMist, PeckShield, CertiK or any other firm, as the month has not closed. The approximately $330M cited in the body is a reference figure summing individual incidents registered in the DefiLlama Hacks tracker (Liquid Network $320M plus 16 other incidents totaling roughly $10.7M).
-- Daily transaction counts by chain vary by a factor of four to six across sources depending on methodology (pure transactions versus inclusion of internal calls and token transfers). The body uses Chainspect's measured TPS conversion while noting the divergence against Blockchair.
-- Some CoinGecko figures may differ at the decimal level depending on query timing within a given minute.
 
 ---
 
